@@ -2,6 +2,8 @@
 知设 AI 装修顾问 · 自建 Agent 版
 A2A 0.2.5 协议服务端
 """
+import logging
+
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
@@ -9,13 +11,20 @@ from app.a2a.server import router as a2a_router
 from app.a2a.agent_card import get_agent_card
 from app.api.health import router as health_router
 from app.config import settings
+from app.observability import setup_logging, TimingMiddleware
 
+
+# === 结构化日志 + 响应时间中间件 ===
+setup_logging(settings.LOG_LEVEL)
+logging.getLogger("startup").info("app_boot", extra={"extra_version": "1.0.0"})
 
 app = FastAPI(
     title="知设 AI 装修顾问",
     description="沈阳本地化装修报价 · A2A 0.2.5 协议",
     version="1.0.0",
 )
+
+app.add_middleware(TimingMiddleware)
 
 app.include_router(a2a_router, prefix="/a2a", tags=["a2a"])
 app.include_router(health_router, prefix="/health", tags=["health"])

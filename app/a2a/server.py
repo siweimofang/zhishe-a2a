@@ -7,6 +7,7 @@ A2A 0.2.5 协议服务端
 """
 import uuid
 import logging
+import time
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
@@ -61,7 +62,7 @@ async def message_send(request: Request):
     method = body.get("method", "")
     params = body.get("params", {})
 
-    log.info(f"A2A call: method={method}, id={req_id}")
+    log.info("a2a_call", extra={"extra_method": method, "extra_req_id": req_id})
 
     if method == "message/stream":
         return JSONResponse(_jsonrpc_err(
@@ -86,7 +87,10 @@ async def message_send(request: Request):
             req_id, -32602, "No text content in message"
         ))
 
+    log.info("a2a_llm_start", extra={"extra_text_len": len(user_text), "extra_req_id": req_id})
+
     # 调 LLM
+    t0 = time.perf_counter()
     try:
         agent_text = await chat_with_skill(user_text)
     except Exception as e:
@@ -94,6 +98,16 @@ async def message_send(request: Request):
         return JSONResponse(_jsonrpc_err(
             req_id, -32603, f"Internal error: {str(e)}"
         ))
+    llm_ms = round((time.perf_counter() - t0) * 1000, 1)
+
+    log.info(
+        "a2a_llm_done",
+        extra={
+            "extra_req_id": req_id,
+            "extra_llm_latency_ms": llm_ms,
+            "extra_reply_len": len(agent_text),
+        },
+    )
 
     # 构造 A2A Task 响应
     task_id = f"task-{uuid.uuid4()}"
