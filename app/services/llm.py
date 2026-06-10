@@ -5,6 +5,7 @@ LLM 调用封装
 
 V1.0 简化:用 httpx 直连 DeepSeek(OpenAI 兼容)
 """
+import asyncio
 import logging
 import httpx
 
@@ -36,13 +37,25 @@ async def chat_with_skill(user_text: str) -> str:
         "model": DEEPSEEK_MODEL,
         "messages": messages,
         "temperature": 0.7,
-        "max_tokens": 2000,
+        "max_tokens": 1200,
     }
 
-    async with httpx.AsyncClient(timeout=30.0) as client:
-        resp = await client.post(DEEPSEEK_CHAT, headers=headers, json=payload)
-        resp.raise_for_status()
-        data = resp.json()
+    # 压测发现 30s 太短,提高到 90s;失败重试 1 次
+    last_err: Exception | None = None
+    for attempt in range(2):
+        try:
+            async with httpx.AsyncClient(timeout=90.0) as client:
+                resp = await client.post(DEEPSEEK_CHAT, headers=headers, json=payload)
+                resp.raise_for_status()
+                data = resp.json()
+            break
+        except Exception as e:
+            last_err = e
+            log.warning(f"DeepSeek call attempt {attempt + 1} failed: {e}")
+            if attempt == 0:
+                await asyncio.sleep(1.0)  # 重试前等 1 秒
+    else:
+        raise last_err  # type: ignore[misc]
 
     choice = data.get("choices", [{}])[0]
     reply = choice.get("message", {}).get("content", "")
