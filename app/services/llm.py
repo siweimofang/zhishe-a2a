@@ -25,7 +25,13 @@ async def chat_with_skill(user_text: str) -> str:
     from app.prompts.xiaozhi import XIAOZHI_SYSTEM_PROMPT
 
     messages = [
-        {"role": "system", "content": XIAOZHI_SYSTEM_PROMPT},
+        {
+            "role": "system",
+            "content": XIAOZHI_SYSTEM_PROMPT,
+            # DeepSeek prompt cache:标记 system prompt 缓存
+            # 多次请求中相同的 system prompt 命中 cache,降低首字延迟
+            "cache_control": {"type": "ephemeral"},
+        },
         {"role": "user", "content": user_text},
     ]
 

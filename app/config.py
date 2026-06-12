@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     PORT: int = 8000
     PUBLIC_BASE_URL: str = "http://localhost:8000"
 
+    # === 功能开关 ===
+    # A2A 流式 SSE 开关:千问支持后,把这个改成 "true" 即可启用,代码不用改
+    STREAMING_ENABLED: bool = False
+
     # === 日志 ===
     LOG_LEVEL: str = "INFO"
 
