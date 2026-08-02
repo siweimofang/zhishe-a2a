@@ -316,6 +316,147 @@ def search_kus(
     }
 
 
+# ── 自然语言回答层（第二层接口：给答案，不给数据） ──
+import urllib.request
+import urllib.error
+
+_ask_api_key = None
+
+def _get_ask_api_key():
+    """复用QueryRewriter的API key加载逻辑"""
+    global _ask_api_key
+    if _ask_api_key is not None:
+        return _ask_api_key
+    try:
+        env_path = GOTCHAS_DIR.parent / ".env"
+        if env_path.exists():
+            with open(env_path, "r", encoding="utf-8-sig") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("DEEPSEEK_API_KEY="):
+                        _ask_api_key = line.split("=", 1)[1].strip()
+                        return _ask_api_key
+    except Exception:
+        pass
+    _ask_api_key = ""
+    return _ask_api_key
+
+
+ASK_SYSTEM_PROMPT = """你是知设装修避坑顾问，一个有20年实战经验的装修老师傅。用户会问你装修相关问题，你基于提供的专业知识给出回答。
+
+回答规则：
+1. 用口语化、有温度的方式回答，像一个靠谱的老师傅在跟业主聊天
+2. 先给结论（该怎么做/正不正常），再给原因和细节
+3. 如果涉及具体数字（时间、尺寸、费用），必须准确引用知识中的数值
+4. 如果用户的问题可能涉及安全隐患，语气要严肃、明确告知风险
+5. 回答控制在150-300字，不要啰嗦
+6. 不要说"根据知识库"、"根据资料"这类话，就像你自己知道一样
+7. 如果提供的知识不能完全回答用户问题，诚实说"这个情况我建议你找现场确认一下"，不要编造"""
+
+
+@router.get("/ask")
+def ask_gotchas(
+    q: str = Query(..., min_length=2, description="你的装修问题（自然语言）"),
+    context_kus: int = Query(3, ge=1, le=5, description="内部参考知识条数"),
+):
+    """
+    装修避坑问答（自然语言回答）
+    
+    对外只返回AI生成的口语化回答 + 来源标题。
+    不暴露结构化KU数据（description/scenario/trigger_keywords/causal_chain）。
+    """
+    # 1. 内部检索（完整内容，不对外暴露）
+    if _hybrid_searcher is None:
+        raise HTTPException(status_code=503, detail="检索引擎未就绪")
+    
+    try:
+        results = _hybrid_searcher.search(q, top_n=context_kus, use_rewriter=True)
+    except Exception:
+        raise HTTPException(status_code=500, detail="检索失败")
+    
+    if not results:
+        return {
+            "question": q,
+            "answer": "这个问题我暂时没有找到对应的经验。建议你找当地靠谱的工长或监理现场确认一下。",
+            "sources": [],
+        }
+    
+    # 2. 构建上下文（内部使用，不返回给调用方）
+    context_parts = []
+    sources = []
+    for r in results:
+        ku = _ku_index.get(r["ku_id"], {})
+        title = ku.get("title", r.get("title", ""))
+        desc = ku.get("description", "")
+        scenario = ku.get("typical_scenario", "")
+        avoid = ku.get("how_to_avoid", "")
+        severity = ku.get("severity", "")
+        
+        context_parts.append(
+            f"【{title}】(严重度:{severity})\n"
+            f"问题：{desc}\n"
+            f"真实案例：{scenario}\n"
+            f"正确做法：{avoid}"
+        )
+        sources.append({"ku_id": r["ku_id"], "title": title})
+    
+    context_text = "\n\n".join(context_parts)
+    
+    # 3. 调用DeepSeek生成自然语言回答
+    api_key = _get_ask_api_key()
+    if not api_key:
+        # 无API key时降级：直接返回how_to_avoid摘要拼接
+        fallback_answer = results[0].get("avoid", "")[:200]
+        return {
+            "question": q,
+            "answer": fallback_answer,
+            "sources": sources,
+            "engine": "fallback_no_llm",
+        }
+    
+    user_msg = f"用户问题：{q}\n\n参考知识：\n{context_text}"
+    
+    try:
+        payload = json.dumps({
+            "model": "deepseek-chat",
+            "messages": [
+                {"role": "system", "content": ASK_SYSTEM_PROMPT},
+                {"role": "user", "content": user_msg},
+            ],
+            "temperature": 0.7,
+            "max_tokens": 500,
+        }).encode("utf-8")
+        
+        req = urllib.request.Request(
+            "https://api.deepseek.com/chat/completions",
+            data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {api_key}",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            answer = result["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        # LLM失败降级：返回第一条KU的how_to_avoid
+        answer = results[0].get("avoid", "暂时无法回答，请稍后再试。")[:300]
+        return {
+            "question": q,
+            "answer": answer,
+            "sources": sources,
+            "engine": "fallback_llm_error",
+        }
+    
+    return {
+        "question": q,
+        "answer": answer,
+        "sources": sources,
+        "engine": "gotchas_ask_v1",
+    }
+
+
 @router.get("/relations")
 def list_relations(
     ku_id: Optional[str] = Query(None, description="筛选某个KU的关联"),
