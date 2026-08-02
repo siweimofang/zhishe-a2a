@@ -1,0 +1,37 @@
+V1.2 doubao apply V0.1 (2026-06-16 07:59)
+
+1 file staged (doubao version of the 5-shells strategy, apply doc):
+
+- docs/V1.2_doubao_apply_V0.1_20260616.md
+  15 sections / 17 KB:
+  - 1. 智能体基础信息(coze 后台填写,名称/简介/头像/分类/标签)
+  - 2. 扣子"工作流"配置(核心 - 路径 A 主推,4 节点链设计 + JSON)
+  - 3. 预置问题(3-5 个,扣子无 ≤ 3 限制)
+  - 4. 欢迎语 Markdown(扣子支持)
+  - 5. 模型选型(外壳=豆包 1.5 Pro 格式转换,内壳=DeepSeek-v4-pro 主力)
+  - 6. 22 条知识库处理(关键差异 - 路径 A 不传平台,自留地后端)
+  - 7. 隐私政策(扣子默认托管)
+  - 8. 5 道调试题(对比 V1.0/V1.1/V1.2 三平台)
+  - 9. 审核 SOP(扣子极松特化)
+  - 10. 风险对策(5 类,路径 A+B 双保险)
+  - 11. V1.1 vs V1.2 关键差异(12 维度)
+  - 12. V1.2 豆包版上架清单(用户必做 8 步,30-60 min)
+  - 13. Mavis 必做清单(5 项)
+  - 14. 决策点(5 Q)
+  - 15. 后续动作
+
+Strategic value:
+- V1.2 路径 A (扣子工作流挂自留地) = 5 大外壳中自留地最干净版本
+- 知识库 100% 走自留地,扣子平台零知识库迁移成本
+- 外壳 LLM 永远平台自家(扣子=豆包 1.5 Pro)
+- 内壳 LLM 永远 DeepSeek-v4-pro(动态战略资产)
+
+User flow:
+- 5 min 注册(无需实名) + 15-20 min 工作流配置 + 30 天免费试用
+- 总时间比 V1.1 元宝版(1-3 天实名 + 30 min)还快 1 倍
+
+Paired with:
+- commit 3c0008e (V1.2 doubao access evaluation V0.1)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

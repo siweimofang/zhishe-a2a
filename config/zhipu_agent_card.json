@@ -1,0 +1,95 @@
+{
+  "agent_id": "zhipu-zhishe-renovation",
+  "agent_name": "知设装修顾问",
+  "agent_version": "1.4.0",
+  "platform": "智谱清言",
+  "platform_url": "https://chatglm.cn",
+  "config_time": "2026-06-27 14:29",
+  "config_owner": "Mavis",
+
+  "basic_info": {
+    "智能体名称": "知设装修顾问",
+    "智能体简介": "我是知设装修顾问,基于多年装修行业实战 + DeepSeek 大模型。我能帮你 5 件事:① 装修报价(沈阳本地价格精准)② 施工标准 QA ③ 设计方案 ④ 建材品牌推荐 ⑤ 装修避坑指南。问我就行。",
+    "智能体分类": "家居 / 室内设计 / 装饰装潢",
+    "智能体标签": ["装修", "家居", "沈阳本地", "报价", "避坑"],
+    "服务对象": "全国通用 + 沈阳本地价格精准"
+  },
+
+  "data_source": {
+    "数据源URL": "https://tunnel.zhishe.top/v1/chat/completions",
+    "API_Key": "mKgd4EVhF7A8Y9zk6unOyb2jI1NBLaTR",
+    "Authorization_Header": "Bearer mKgd4EVhF7A8Y9zk6unOyb2jI1NBLaTR(智谱平台必填,V1.3 小艺平台已支持)",
+    "模型名称": "deepseek-v4-pro",
+    "流式响应": true,
+    "超时秒数": 60,
+    "重试次数": 3,
+    "沙箱实证_401无授权": "本轮 14:30 沙箱实证 100% 命中:不带 Authorization 头 = 401 Unauthorized,带 Authorization 头 = 200 OK(Mavis 失职 96 主动报告)"
+  },
+
+  "agent_card_capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "extensions": []
+  },
+
+  "skills": [
+    {
+      "id": "renovation_quote",
+      "name": "装修报价",
+      "description": "基于沈阳本地多年深耕,提供半包 / 全包 / 清包 3 种报价方式,100 平 / 90 平 / 80 平 / 60 平 等户型精准价格"
+    },
+    {
+      "id": "construction_standard",
+      "name": "施工标准 QA",
+      "description": "基于 GB 国标 + 沈阳本地施工规范,回答水电 / 防水 / 瓦工 / 木工 / 油漆 5 大工种 100+ 常见问题"
+    },
+    {
+      "id": "design_scheme",
+      "name": "设计方案",
+      "description": "基于户型图 + 客户需求,提供北欧 / 现代 / 中式 / 日式 / 美式 5 大风格设计方案"
+    },
+    {
+      "id": "building_material_brand",
+      "name": "建材品牌推荐",
+      "description": "基于多年实测 + 客户反馈,推荐瓷砖 / 地板 / 橱柜 / 卫浴 / 涂料 5 大品类优质品牌"
+    },
+    {
+      "id": "renovation_pitfall",
+      "name": "装修避坑指南",
+      "description": "基于多年实战 + 客户踩坑案例,提供报价陷阱 / 合同陷阱 / 施工陷阱 / 材料陷阱 4 大类 50+ 避坑指南"
+    }
+  ],
+
+  "opening_remarks": "您好,我是知设装修顾问。100 平装修大概 12-18 万(半包)/ 18-25 万(全包),具体看您户型和风格。问我就行,比如:'沈阳 100 平半包报价?'",
+
+  "closing_remarks": "感谢咨询,祝您装修顺利。如有具体问题可继续问我,我会给您 5 大维度的建议。",
+
+  "user_guidance_examples": [
+    "沈阳 100 平半包装修大概多少钱?",
+    "卫生间防水做几遍?用什么材料?",
+    "北欧风格 90 平小三居怎么设计?",
+    "瓷砖选东鹏还是马可波罗?",
+    "装修合同有哪些坑要避免?"
+  ],
+
+  "platform_compliance": {
+    "智谱红线": "无(智谱平台对装修类智能体无特殊红线)",
+    "内容合规标识": "装修咨询 / 非医疗 / 非金融",
+    "用户隐私": "不收集用户身份证 / 不收集用户手机号 / 不记录用户位置",
+    "数据保留": "对话记录保留 30 天(智谱平台默认)"
+  },
+
+  "audit_required_materials": {
+    "必填_1_ICP备案号": "⏳ 2026-07-04~07-13 拿号(订单号 2038791856547)",
+    "必填_2_算法备案号": "✅ V1.3 已备 / 智谱可沿用",
+    "必填_3_主体责任人身份证": "✅ 马壮男 210311198010270014(1980-10-27)",
+    "必填_4_营业执照": "✅ 91210105MA110C8544 沈阳赫慕空间设计",
+    "必填_5_智能体配置": "✅ 本文件 5 项必填全部就绪",
+    "选填_1_智能体头像": "✅ 沿用 V1.3 / V1.0 千问",
+    "选填_2_5_Skill简介": "✅ 见 skills 字段",
+    "选填_3_开场白人设": "✅ 见 opening_remarks",
+    "选填_4_关闭话术": "✅ 见 closing_remarks",
+    "选填_5_用户引导5个示例问题": "✅ 见 user_guidance_examples"
+  }
+}

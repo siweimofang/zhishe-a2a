@@ -1,0 +1,63 @@
+5 shells strategic closure report V0.1 (2026-06-16 08:26)
+
+1 file staged (5-shell strategic closure for the 5-shells strategy):
+
+- docs/5shells_closure_report_V0.1_20260616.md
+  12 sections / 21.3 KB:
+  - 1. 5 大外壳战略全景图(5 版本总览 + 战略特征 + 内壳 LLM)
+  - 2. 5 大外壳"内壳/外壳"分工统一架构
+  - 3. 5 大外壳"自留地"策略演进(关键洞察)
+  - 4. 5 大外壳"主对话自动调起"战略价值
+  - 5. 5 大外壳"变现路径"对比
+  - 6. 5 大外壳"5 大平台存在"官方背书
+  - 7. 5 大外壳"用户必做清单"(待用户执行)
+  - 8. 5 大外壳"未来 3 个月运营节奏"
+  - 9. 5 大外壳"5 大战略认知"全面对齐
+  - 10. 5 大外壳战略价值总结
+  - 11. 5 大外壳战略后续节奏
+  - 12. 5 大外壳战略"双轨"愿景
+
+Strategic milestone:
+- "知设 AI 装修顾问" completes 5-shell strategic closure
+- Covers China AI 5 major ecosystems:
+  V1.0 qianwen (Alibaba) + V1.1 yuanbao (Tencent) +
+  V1.2 doubao (ByteDance) + V1.3 xiaoyi (Huawei) +
+  V1.4 zhipu (Tsinghua ecosystem)
+- 1/5 deployed (V1.0), 4/5 ready for user to execute
+- 2/5 auto-trigger (V1.3 + V1.4)
+- 5/5 data self-host (after V1.1 upgrade to "workflow + private API")
+- 5/5 share same inner LLM (DeepSeek-v4-pro dynamic strategic asset)
+- 5/5 share same knowledge base (22 entries V0.1)
+- 5/5 share same prompt (V1.6 9 cognitive principles)
+
+Key strategic insights:
+- 5-shell auto-trigger: V1.3 (1.8B DAU) + V1.4 (M-level + B-end)
+- 5-shell data self-host maturity: V1.0 weak -> V1.1 mid -> V1.2-V1.4 strong
+- 5-shell monetization ranking: V1.4 strongest (B-end high-value)
+- 5-shell audit efficiency: V1.4 fastest (1-3 days)
+- 5-shell HDC 2026 alignment: "intent-as-service" + "unified backend"
+
+Next steps (user):
+1. V1.1 yuanbao: go to yuanqi.tencent.com + register + paste ready materials
+2. V1.2 doubao: go to coze.cn + register + workflow + 30-day Pro trial
+3. V1.3 xiaoyi: go to developer.huawei.com + register + DevEco Studio + 1-2 wk audit
+4. V1.4 zhipu: go to bigmodel.cn + register + GLM Agent SDK + 1-3 day audit
+5. After all 4 run, Mavis will write 5-shell 5-question test report
+
+Mavis follow-up tasks (after user runs all 4):
+1. 5-question test comparison report (V1.0-V1.4)
+2. 5-shell monthly report V0.1 (operation)
+3. V1.1 upgrade to "workflow + private API" mode
+4. 5-shell strategy retrospective (2026 Q3)
+5. V1.5 reserve plan / V1.6 MiniMax far-term evaluation
+
+Paired with:
+- commit a96a06d (V1.4 zhipu apply V0.1, 454 ins)
+- commit 1f8198c (V1.4 zhipu access evaluation V0.1, 373 ins)
+- commit 5abb119 (V1.3 xiaoyi apply V0.1, 598 ins)
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

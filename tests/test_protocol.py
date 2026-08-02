@@ -21,7 +21,7 @@ def test_root_returns_service_metadata(client: TestClient):
     assert resp.status_code == 200
     body = resp.json()
     assert body["service"] == "zhishe-ai-renovation"
-    assert body["protocol"] == "A2A 0.2.5"
+    assert "A2A 0.2.5" in body["protocol"]  # 兼容 V2.0 OpenAI-compatible 后缀
     assert "endpoints" in body
 
 

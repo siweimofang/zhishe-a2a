@@ -17,6 +17,8 @@ from fastapi import APIRouter, Request, Header, HTTPException
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from app.services.llm import chat_with_skill
+from app.services.wait_self_check import wait_self_check_before_llm
+from app.services.quote import parse_user_intent
 from app.config import settings
 
 router = APIRouter()
@@ -111,10 +113,41 @@ async def message_send(request: Request):
 
     log.info("a2a_llm_start", extra={"extra_text_len": len(user_text), "extra_req_id": req_id})
 
+    # === Phase 1 Wait! 自纠错(2026-06-25 接入)===
+    # 先 parse 出 package/tier/area,触发自纠错
+    intent = parse_user_intent(user_text)
+    wait_text = ""
+    if intent.get("package") and intent.get("tier") and intent.get("area"):
+        try:
+            wait_text = wait_self_check_before_llm(
+                package=intent["package"],
+                tier=intent["tier"],
+                area=float(intent["area"]),
+                user_text=user_text,
+                city=None,  # V1.3 未解析 city,V2.0 加城市字段
+            )
+            if wait_text:
+                log.info(
+                    "wait_self_check_triggered",
+                    extra={
+                        "extra_req_id": req_id,
+                        "extra_confidence": "see_wait_text",
+                        "extra_warnings_count": wait_text.count("Wait!"),
+                    },
+                )
+        except Exception as e:
+            log.warning(f"wait_self_check_failed: {e}")
+            wait_text = ""
+
+    # 合并 Wait! 警告到 LLM prompt
+    llm_input = user_text
+    if wait_text:
+        llm_input = user_text + "\n\n" + wait_text
+
     # 调 LLM
     t0 = time.perf_counter()
     try:
-        agent_text = await chat_with_skill(user_text)
+        agent_text = await chat_with_skill(llm_input)
     except Exception as e:
         log.exception("LLM call failed")
         return JSONResponse(_jsonrpc_err(

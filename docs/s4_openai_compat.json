@@ -1,0 +1,17 @@
+{
+  "s4_http": 200,
+  "s4_latency": 8.46,
+  "s4_object": "chat.completion",
+  "s4_model": "zhishe-a2a",
+  "s4_choices_count": 1,
+  "s4_first_choice_role": "assistant",
+  "s4_first_choice_content_preview": "哈哈，朋友，我得先说明一下——我本人不“做”装修，我是咱们千问APP里的AI装修顾问“小知”，专门帮你梳理需求、避坑比价的。不过，关于**全包**的事儿，我可是门儿清！\n\n你看啊，全包在咱沈阳也叫大包，就是人工、辅材、主材都包了，你负责验收",
+  "s4_finish_reason": "stop",
+  "s4_usage_keys": [
+    "prompt_tokens",
+    "completion_tokens",
+    "total_tokens"
+  ],
+  "s4_usage_total_tokens": 353,
+  "s4_protocol_compat_pass": true
+}

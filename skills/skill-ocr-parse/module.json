@@ -1,0 +1,32 @@
+{
+  "name": "skill-ocr-parse",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "户型图 OCR 解析 - 上传户型图自动识别房间数/面积/朝向,生成结构化参数",
+  "triggerKeywords": ["户型图", "户型识别", "OCR", "看图", "图片识别", "上传户型"],
+  "notApplicableFor": ["无图片纯文字咨询"],
+  "toolDependencies": [
+    "floor-plan-parser"
+  ],
+  "toolCount": 1,
+  "permissions": ["network", "camera", "read-images"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "c_owner",
+    "upstream": [],
+    "downstream": ["skill-param-extract", "skill-layout"]
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

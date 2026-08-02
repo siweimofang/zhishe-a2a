@@ -1,0 +1,69 @@
+# 知设 Agent .dockerignore · V3.0 第二桌面专用
+# 镜像构建时排除以下文件/目录(减少镜像体积 + 防止敏感信息泄露)
+
+# === Python 缓存 ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# === 虚拟环境 ===
+.venv/
+venv/
+env/
+
+# === 测试代码 ===
+tests/
+test_*.py
+*_test.py
+pytest.ini
+.coverage
+htmlcov/
+
+# === 敏感配置(铁律 75 第 3 项:密钥管理) ===
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+
+# === 文档 + 报告(不进镜像) ===
+docs/
+*.md
+!skills/*/SKILL.md
+!skills/*/gotchas.md
+
+# === 日志 + 临时文件 ===
+logs/
+*.log
+tmp/
+temp/
+
+# === 版本控制 ===
+.git/
+.gitignore
+.gitattributes
+
+# === IDE 配置 ===
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === 系统文件 ===
+.DS_Store
+Thumbs.db
+
+# === 备份文件 ===
+*.bak
+*.bak-*
+*~
+*.tmp
+
+# === 数据备份 ===
+backups/
+*.sql
+*.sql.gz

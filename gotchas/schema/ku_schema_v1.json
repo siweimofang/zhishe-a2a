@@ -1,0 +1,263 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://zhishe.top/schema/ku_schema_v1.1.json",
+  "title": "知设Gotchas库 - 知识单元(KU) Schema V1.1",
+  "type": "object",
+  "required": [
+    "ku_id",
+    "title",
+    "stage",
+    "role",
+    "severity",
+    "description",
+    "how_to_avoid"
+  ],
+  "properties": {
+    "ku_id": {
+      "type": "string",
+      "pattern": "^GZ-SY-\\d{4,6}$"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "STAGE_01",
+        "STAGE_02",
+        "STAGE_03",
+        "STAGE_04",
+        "STAGE_05",
+        "STAGE_06",
+        "STAGE_07",
+        "STAGE_08"
+      ]
+    },
+    "role": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ROLE_OWNER",
+          "ROLE_DESIGNER",
+          "ROLE_CONTRACTOR",
+          "ROLE_INDUSTRY"
+        ]
+      },
+      "minItems": 1
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "SEV_CRITICAL",
+        "SEV_HIGH",
+        "SEV_MEDIUM",
+        "SEV_LOW"
+      ]
+    },
+    "problem_type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TYPE_FRAUD",
+          "TYPE_QUALITY",
+          "TYPE_OMISSION",
+          "TYPE_DELAY",
+          "TYPE_COST",
+          "TYPE_COMMUNICATION"
+        ]
+      }
+    },
+    "trade": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TRADE_DESIGN",
+          "TRADE_DEMOLISH",
+          "TRADE_PLUMBING",
+          "TRADE_WATERPROOF",
+          "TRADE_TILE",
+          "TRADE_CARPENTRY",
+          "TRADE_PAINT",
+          "TRADE_CABINET",
+          "TRADE_DOOR",
+          "TRADE_FLOOR",
+          "TRADE_BATHROOM",
+          "TRADE_ELECTRICAL"
+        ]
+      }
+    },
+    "material": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "MAT_PIPE",
+          "MAT_WIRE",
+          "MAT_CEMENT",
+          "MAT_TILE",
+          "MAT_PAINT",
+          "MAT_BOARD",
+          "MAT_GLUE",
+          "MAT_HARDWARE",
+          "MAT_APPLIANCE",
+          "MAT_FURNITURE"
+        ]
+      }
+    },
+    "description": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 500
+    },
+    "typical_scenario": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "how_to_avoid": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 500
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "official_report",
+            "legal_case",
+            "consumer_complaint",
+            "industry_standard",
+            "expert_opinion",
+            "user_feedback",
+            "media_report"
+          ]
+        },
+        "source_ref": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "极高频(>60%)",
+            "高频(30-60%)",
+            "中频(10-30%)",
+            "低频(<10%)"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "高(多源验证)",
+            "中(单源可靠)",
+            "低(待验证)"
+          ]
+        }
+      },
+      "required": [
+        "source_type",
+        "confidence"
+      ]
+    },
+    "related_ku_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "causal_chain": {
+      "type": "object",
+      "properties": {
+        "root_cause": {
+          "type": "string"
+        },
+        "direct_cause": {
+          "type": "string"
+        },
+        "consequence": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        },
+        "created_by": {
+          "type": "string",
+          "enum": [
+            "human",
+            "ai",
+            "hybrid"
+          ]
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "verify_method": {
+          "type": "string",
+          "enum": [
+            "human_review",
+            "multi_source",
+            "cross_validation",
+            "not_verified"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "source_file": {
+          "type": "string"
+        },
+        "quality_level": {
+          "type": "string",
+          "enum": [
+            "CERTIFIED",
+            "RELIABLE",
+            "REFERENCE",
+            "DRAFT"
+          ]
+        },
+        "expires_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+          "description": "知识过期日期，null表示永久有效。到期后需人工审查是否更新或淘汰。"
+        },
+        "last_reviewed_at": {
+          "type": "string",
+          "format": "date",
+          "description": "上次人工审查日期。建议每6个月审查一次。"
+        }
+      },
+      "required": [
+        "created_at",
+        "verified",
+        "quality_level"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "universal",
+        "regional:shenyang",
+        "regional:north",
+        "regional:south",
+        "regional:other"
+      ],
+      "description": "知识适用范围。universal=全国通用，regional:xxx=仅限特定地域"
+    }
+  },
+  "additionalProperties": false
+}

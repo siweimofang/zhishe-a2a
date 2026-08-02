@@ -1,0 +1,79 @@
+{
+  "version": "1.1",
+  "total_kus": 532,
+  "total_relations": 116,
+  "by_stage": {
+    "STAGE_01": 3,
+    "STAGE_02": 245,
+    "STAGE_03": 50,
+    "STAGE_04": 179,
+    "STAGE_05": 42,
+    "STAGE_06": 8,
+    "STAGE_07": 3,
+    "STAGE_08": 2
+  },
+  "by_severity": {
+    "SEV_CRITICAL": 27,
+    "SEV_HIGH": 146,
+    "SEV_LOW": 103,
+    "SEV_MEDIUM": 256
+  },
+  "by_scope": {
+    "regional:north": 14,
+    "regional:shenyang": 2,
+    "regional:south": 2,
+    "universal": 514
+  },
+  "by_role": {
+    "ROLE_CONTRACTOR": 157,
+    "ROLE_DESIGNER": 408,
+    "ROLE_INDUSTRY": 6,
+    "ROLE_OWNER": 524
+  },
+  "by_trade": {
+    "TRADE_BATHROOM": 38,
+    "TRADE_CABINET": 144,
+    "TRADE_CARPENTRY": 42,
+    "TRADE_DEMOLISH": 27,
+    "TRADE_DESIGN": 111,
+    "TRADE_DOOR": 16,
+    "TRADE_ELECTRICAL": 145,
+    "TRADE_FLOOR": 3,
+    "TRADE_PAINT": 34,
+    "TRADE_PLUMBING": 81,
+    "TRADE_TILE": 50,
+    "TRADE_WATERPROOF": 18
+  },
+  "by_material": {
+    "MAT_APPLIANCE": 43,
+    "MAT_BOARD": 109,
+    "MAT_CEMENT": 28,
+    "MAT_FURNITURE": 4,
+    "MAT_GLUE": 5,
+    "MAT_HARDWARE": 26,
+    "MAT_NONE": 2,
+    "MAT_PAINT": 31,
+    "MAT_PIPE": 46,
+    "MAT_TILE": 33,
+    "MAT_WIRE": 41
+  },
+  "quality_levels": {
+    "CERTIFIED": 1,
+    "DRAFT": 363,
+    "REFERENCE": 126,
+    "RELIABLE": 42
+  },
+  "coverage": {
+    "stages_covered": "8/8",
+    "trades_covered": "12/12",
+    "empty_stages": [],
+    "empty_trades": []
+  },
+  "phase1_target": {
+    "original": 10000,
+    "revised": "200-300 RELIABLE+",
+    "current_reliable_plus": 43,
+    "note": "Phase 1目标从1万条校准为200-300条高质量(RELIABLE/CERTIFIED)KU"
+  },
+  "last_updated": "2026-08-02"
+}

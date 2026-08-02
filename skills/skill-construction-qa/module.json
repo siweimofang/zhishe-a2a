@@ -1,0 +1,38 @@
+{
+  "name": "skill-construction-qa",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "施工标准咨询 - 水电改造/防水/墙面/地面等隐蔽工程和面子工程的施工标准与验收规范,基于 GB 国标",
+  "triggerKeywords": ["施工标准", "施工流程", "装修步骤", "验收标准", "隐蔽工程", "防水", "国标", "监理", "水电改造"],
+  "notApplicableFor": ["装修报价(请用 skill-quote)"],
+  "toolDependencies": [
+    "gb-standards-search"
+  ],
+  "toolCount": 1,
+  "permissions": ["network", "read-gb-standards"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "dataSources": [
+    "GB 50327-2001 住宅装饰装修工程施工规范",
+    "GB 50150-2016 电气装置安装工程电气设备交接试验标准",
+    "GB 50210 建筑装饰装修工程质量验收标准",
+    "skills/skill-construction-qa/config/gb_standards.json (7 条 GB 国标)"
+  ],
+  "orchestrator": {
+    "pipeline": "standalone",
+    "upstream": [],
+    "downstream": []
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

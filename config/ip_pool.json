@@ -1,0 +1,16 @@
+{
+  "_comment": "知设 IP 池配置 · V3.0 第二桌面专用 · 铁律 75 v2 第 7 项:默认私有",
+  "_version": "1.0.0",
+  "_created": "2026-06-28",
+  "_note": "当前仅 1 个 IP(39.105.140.201),等 ICP 备案号 2026-07-08~13 后再申请 5 个公网 IP",
+  "region": "cn-shanghai",
+  "ips": [
+    "39.105.140.201"
+  ],
+  "_pending_ips": [
+    "_待 ICP 备案号后申请 5 个公网 IP(同 cn-shanghai 机房,延迟 < 100ms)"
+  ],
+  "_rotation_threshold": 1000,
+  "_rotation_unit": "requests",
+  "_alert_threshold": 50
+}

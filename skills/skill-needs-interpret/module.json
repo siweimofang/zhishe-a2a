@@ -1,0 +1,32 @@
+{
+  "name": "skill-needs-interpret",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "需求解读 - 深度解读 B 端设计师的客户需求文档,提取关键诉求和潜在预算",
+  "triggerKeywords": ["客户需求", "需求文档", "PRD", "BRD", "客户背景", "客户画像"],
+  "notApplicableFor": ["C 端业主自装咨询"],
+  "toolDependencies": [
+    "needs-analyzer"
+  ],
+  "toolCount": 1,
+  "permissions": ["network"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "b_designer",
+    "upstream": ["skill-talk-analysis"],
+    "downstream": []
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

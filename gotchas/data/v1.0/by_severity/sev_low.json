@@ -1,0 +1,5858 @@
+[
+  {
+    "ku_id": "GZ-SY-00010",
+    "title": "阳台封窗不属于硬装范畴，通常需业主自找专业封窗公司",
+    "stage": "STAGE_03",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION",
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "客户以为阳台封窗包含在硬装报价内。实际上阳台封窗通常属于业主自购项目，需要找专业封窗公司做（不属于装修公司的施工范围）。封窗费用通常在5000-15000元（根据阳台面积和窗型），这笔费用不包含在装修公司的半包或全包报价中。如果没提前规划，会在装修中途临时加一笔预算。",
+    "typical_scenario": "沈阳某业主签约半包装修，入住前发现阳台没封窗，装修公司说'封窗不在合同内'。临时找封窗公司，报价1.2万，工期一周。期间阳台无法使用，且下雨进水影响已完工的地板。",
+    "how_to_avoid": "1. 做装修预算时单独列出阳台封窗费用（5000-15000元），不要包含在硬装预算内。2. 封窗时间应在硬装开工前或水电改造前完成，避免后期施工受雨水影响。3. 硬装合同中明确'不含阳台封窗'，或让装修公司代为协调封窗（但费用另计）。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "skill-quote/gotchas.md#5",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主不了解装修行业分工",
+      "direct_cause": "误以为阳台封窗属于硬装范围",
+      "consequence": "临时增加预算5000-15000元，且工期衔接出问题"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00007"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "skills/skill-quote/gotchas.md#5",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "封窗",
+      "阳台",
+      "半包",
+      "进水",
+      "工期"
+    ]
+  },
+  {
+    "ku_id": "GZ-SY-00035",
+    "title": "儿童房用普通乳胶漆不能擦洗，需要耐擦洗涂料但装修公司常不提前说明",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [
+      "MAT_PAINT"
+    ],
+    "description": "儿童房墙面经常被孩子涂画、手印弄脏，需要可擦洗功能。但标准装修报价中的乳胶漆通常不具备高耐擦洗性能（中端乳胶漆耐擦洗次数约3000-5000次）。如果需要可擦洗功能，需升级为专用耐擦洗涂料（耐擦洗次数≥10000次），或使用艺术漆（清洁性能更好，厂家直供价格约为市场价一半）。这个需求在初始报价阶段经常被忽视，等入住后孩子弄脏墙面才发现涂料不能擦洗，只能重新刷漆。",
+    "typical_scenario": "某项目儿童房按标准方案使用普通乳胶漆。入住半年后孩子在墙上画画、手印，用湿布擦拭后漆面起泡脱落。如需更换为耐擦洗涂料，需要铲除现有乳胶漆、重新批腻子、刷底漆+面漆，返工费用约2000-3000元，且施工期间儿童房无法使用。",
+    "how_to_avoid": "1. 有孩子的家庭在设计阶段就明确提出'儿童房需要可擦洗墙面'。2. 两种选择：耐擦洗乳胶漆（耐擦洗≥10000次，如立邦儿童漆、多乐士儿童漆）或艺术漆（清洁性能更好）。3. 艺术漆厂家直供价格约为市场价一半，值得考虑。4. 楼梯间等公共区域可用蛋壳光乳胶漆（有轻微光泽，较耐脏）。5. 在报价单中明确标注儿童房使用耐擦洗涂料，不与其他区域混淆。",
+    "evidence": {
+      "source_type": "user_feedback",
+      "source_ref": "预算与施工方案沟通会议（2026年7月）——艺术漆应用范围",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "装修公司在初始报价时未主动询问是否有儿童房需求",
+      "direct_cause": "儿童房使用普通乳胶漆，不具备可擦洗功能",
+      "consequence": "入住后墙面脏污无法擦洗，需返工重新刷漆（费用2000-3000元+无法使用房间1-2周）"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00009"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "会议纪要-预算与施工方案沟通（2026-07）",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "耐擦洗",
+      "乳胶漆",
+      "返工",
+      "儿童房",
+      "起泡"
+    ]
+  },
+  {
+    "ku_id": "GZ-SY-00041",
+    "title": "柔纱帘不可清洗入住后才发现，设计师应在选型时说明清洁方式",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION",
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [
+      "MAT_FURNITURE"
+    ],
+    "description": "窗帘/窗饰产品的清洁维护性能是选型时经常被忽视的维度。柔纱帘（一种轻薄半透明的窗饰）视觉效果优雅，但材质不可水洗，只能用专业干洗或吸尘器清洁，维护成本高且使用寿命较短（2-3年后容易发黄变脆）。对于有孩子或宠物的家庭，这个问题更加突出。设计师在推荐柔纱帘时往往只展示效果照片，不告知清洁限制，业主入住后才发现无法自行清洗，只能花钱请专业清洁或提前更换。",
+    "typical_scenario": "某项目原设计选用柔纱帘，效果很好。但在深化阶段发现柔纱帘不可清洗，对于有孩子的家庭不实用。最终改为斑马帘（同面料但可拆洗），解决了清洁问题。如果入住后才发现，更换窗帘的费用约2000-5000元。",
+    "how_to_avoid": "1. 窗帘选型时主动询问：能否拆洗？清洁方式是什么？使用寿命多久？2. 有孩子/宠物的家庭优先选择可拆洗的窗帘类型（斑马帘、百叶帘、布帘可拆洗款）。3. 设计师推荐窗饰产品时，必须同时告知清洁维护方式，写入材料说明表。4. 如坚持使用柔纱帘，预留更换预算（2-3年后可能需要更换）。",
+    "evidence": {
+      "source_type": "user_feedback",
+      "source_ref": "预算核对会议纪要（2026年7月）——柔纱帘改斑马帘",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计师只关注视觉效果，忽视窗帘清洁维护需求",
+      "direct_cause": "推荐不可清洗的柔纱帘，未告知清洁限制",
+      "consequence": "入住后窗帘脏了无法清洗，被迫提前更换（费用2000-5000元）"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00035"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "会议纪要-预算核对与设计方案调整（2026-07）",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "柔纱帘",
+      "斑马帘",
+      "清洗",
+      "清洁方式",
+      "窗帘更换"
+    ]
+  },
+  {
+    "ku_id": "GZ-SY-00050",
+    "title": "装修报价默认不含税，要开发票需额外补缴3-6%税点",
+    "stage": "STAGE_03",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_INDUSTRY"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COST",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [],
+    "material": [],
+    "description": "装修行业的报价通常不含税（即'不含税价'），如果业主需要开具发票（用于公积金提取、房贷装修贷款、公司报销等），需要额外支付税点。普票税率通常为3%（小规模纳税人）或6%（一般纳税人），专票税率可能更高。以80万装修总价为例，3%税点=2.4万，6%税点=4.8万，这笔费用在初始报价中不包含，业主提出开票需求时才被告知。部分装修公司以'开票需要走公账'为由拒绝或拖延，影响业主的贷款或报销流程。",
+    "typical_scenario": "某项目装修总价80万元，业主需要开具发票用于装修贷款。装修公司告知'当前报价不含税，开票需通过公账转账并补缴3%税点'，即额外支付2.4万元。业主事先不知道这笔费用，预算被打乱。",
+    "how_to_avoid": "1. 签约前明确询问'报价含不含税？开票需要额外付多少？'并写入合同。2. 如果需要发票（贷款/报销/公积金），在比价时就将税点纳入总成本对比。3. 要求装修公司提供普票和专票的税率说明（小规模3%、一般纳税人6-9%）。4. 合同中约定'如需开票，税点为X%，由业主/装修公司承担'。5. 付款时通过公账转账（银行转账至装修公司对公账户），保留完整的付款凭证。",
+    "evidence": {
+      "source_type": "user_feedback",
+      "source_ref": "施工流程与合同沟通会议（2026-05-16）——发票与税务说明",
+      "frequency": "高频(30-60%)",
+      "confidence": "高(多源验证)"
+    },
+    "causal_chain": {
+      "root_cause": "装修行业惯例报价不含税，业主不了解开票额外费用",
+      "direct_cause": "业主需要发票时被告知额外补缴3-6%税点",
+      "consequence": "80万总价需额外支付2.4-4.8万元税金，预算被打乱"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00004",
+      "GZ-SY-00048"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": true,
+      "verify_method": "multi_source",
+      "version": "1.0",
+      "source_file": "会议纪要-施工流程与合同沟通（2026-05-16）",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "发票",
+      "税点",
+      "报价不含税",
+      "公账转账",
+      "装修贷款"
+    ]
+  },
+  {
+    "title": "直接照明易产生眩光，影响舒适度",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "直接照明（如裸露的筒灯、射灯、吊灯）光线直接向下照射，90%-100%的光通量到达工作面，容易产生眩光。尤其在客厅看电视、餐厅用餐时，如果灯具位置不当或亮度过高，眼睛会感到刺眼、疲劳。照明区与非照明区亮度对比强烈，长时间处于这种环境会导致视觉不适。虽然这个问题不涉及大额经济损失，但严重影响居住舒适度，且更换灯具或调整位置需要额外花费。",
+    "typical_scenario": "李先生家客厅安装了6个明装筒灯，全部采用直接照明方式。晚上看电视时，筒灯的光线直射眼睛，即使调暗灯光，依然觉得刺眼。他不得不经常关掉筒灯，只开角落的落地灯，导致客厅整体昏暗。想更换为防眩光筒灯，每个需要额外花费80-150元，且需要电工重新安装。",
+    "how_to_avoid": "1. 选择灯具时，优先选用带防眩光设计的灯具（如深杯筒灯、磨砂灯罩、格栅灯）。2. 避免在视线高度（坐姿时眼睛高度约1.2米）范围内安装裸露光源。3. 对于客厅、餐厅等主要活动区域，采用间接照明（灯带、反射光）与直接照明结合的方式，降低亮度对比。4. 灯具安装前，用手机拍照模拟人眼视角，检查是否会有眩光。5. 在选购清单中明确标注'防眩光'要求，避免施工方随意替换。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主和设计师忽视眩光问题，只追求亮度而忽略灯具的配光角度和遮光设计",
+      "direct_cause": "选用无防眩光设计的直接照明灯具，且安装位置处于人眼视线范围内",
+      "consequence": "居住者视觉不适，看电视、用餐体验差，需更换灯具或调整照明方案"
+    },
+    "ku_id": "GZ-SY-00066",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#3",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "眩光",
+      "直接照明",
+      "防眩光",
+      "刺眼",
+      "落地灯"
+    ]
+  },
+  {
+    "title": "照明设计未分区导致能耗浪费",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COST"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "居室照明若未按功能分区设计独立开关或调光控制，导致'一灯全开'，无法实现'专光专用、无用无光'的节能原则。例如客厅只有主灯一个开关，晚上看电视时不得不开全亮，既刺眼又费电。长期浪费的电费虽单次不高，但累积可观，且不符合现代节能理念。损失量级通常低于1千元，但影响日常使用体验和电费支出。",
+    "typical_scenario": "业主装修时未要求设计师做分区照明，客厅只装了一个吸顶灯，没有筒灯、灯带或落地灯的分组控制。晚上想营造温馨氛围时只能开主灯，亮度刺眼且耗电，无法调节。后来想加装遥控调光模块，但发现开关盒未预留零线，无法安装，只能忍受。",
+    "how_to_avoid": "1. 设计阶段要求每个功能区域（如沙发区、阅读区、走廊）设置独立照明回路和开关。2. 主灯采用双控或智能控制，支持调光调色。3. 增加辅助照明（如灯带、壁灯、落地灯）并分组控制，满足不同场景需求。4. 开关面板选用带指示灯的，避免摸黑找开关。5. 施工时预留零线，为后期智能控制升级做准备。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深照明设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未遵循节能原则，照明分区不细致",
+      "direct_cause": "单一开关控制所有灯具，无法按需开启",
+      "consequence": "能耗浪费、使用不便，后期改造困难且成本高"
+    },
+    "ku_id": "GZ-SY-00070",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#4",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "分区照明",
+      "分组控制",
+      "调光",
+      "零线",
+      "能耗"
+    ]
+  },
+  {
+    "title": "光影设计缺失空间无灵魂",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "光影设计是利用照明装置在恰当的部位创造生动的光影效果来丰富室内空间，可以表现光为主、表现影为主或光影同时表现。好的光影设计能让空间有故事性和艺术感，比如用射灯在墙面上打出装饰画的阴影，或用镂空灯具在地面投射出花纹。很多业主装修时完全忽略光影设计，只追求亮度，导致空间虽然明亮但毫无特色和美感，浪费了通过光影提升空间品质的机会。虽然光影设计不直接影响功能使用，但缺乏设计的空间会显得平庸，无法体现业主的品味和个性。",
+    "typical_scenario": "业主装修时没有做任何光影设计，客厅只有一盏吸顶灯和几盏筒灯。虽然照明充足，但墙面光秃秃的，装饰画也没有重点打光，晚上开灯后整个空间毫无生气。朋友来参观都说装修得不错但没什么特色，业主自己也觉得家里缺少一种温馨的艺术氛围，但又不知道该怎么改进。",
+    "how_to_avoid": "1. 在装修设计阶段就考虑光影效果，与设计师讨论哪些区域适合做重点光影表现，如玄关、电视背景墙、走廊尽头等。2. 利用射灯或轨道灯对装饰画、雕塑、绿植等进行重点照明，让光影成为空间焦点。3. 使用带造型的灯具或镂空隔断，在墙面或地面投射出有趣的光影图案。4. 在柜体、楼梯等位置安装灯带，通过光影勾勒轮廓，增强立体感。5. 参考优秀案例，但不要过度设计，光影要服务于空间主题，避免杂乱。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深照明设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主缺乏光影设计意识，只关注照明功能",
+      "direct_cause": "照明方案中未包含任何光影造型设计",
+      "consequence": "空间缺乏艺术感和个性，居住体验平庸，后期改造难度大"
+    },
+    "ku_id": "GZ-SY-00075",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#5",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "光影设计",
+      "重点照明",
+      "装饰画",
+      "艺术感",
+      "无生气"
+    ]
+  },
+  {
+    "title": "壁灯安装高度错误影响使用",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY",
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "壁灯用于局部照明和装饰，安装高度有明确规范：一般灯具中心距地1.6-2.0米，床头壁灯1.0-1.2米。若安装过高或过低，照明效果差，影响使用舒适度。例如床头壁灯装成1.6米，光线直射眼睛，阅读时阴影严重。损失虽小但影响日常体验，整改需重新打孔。",
+    "typical_scenario": "业主在卧室床头安装壁灯，电工凭经验将灯中心装在1.5米处，结果躺床上时灯光直射眼睛，看书时书本阴影重。业主不得不要求返工，重新调整到1.1米，墙面留下多余孔洞，影响美观。",
+    "how_to_avoid": "1. 设计图纸中明确标注壁灯安装高度，尤其是床头壁灯。2. 施工前与电工交底，强调床头壁灯中心距地1.0-1.2米，其他壁灯1.6-2.0米。3. 安装时现场监督，使用卷尺测量。4. 安装后试灯，模拟使用场景（坐、躺）检查光线是否舒适。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "施工人员凭经验安装未按规范",
+      "direct_cause": "壁灯安装高度不符合标准",
+      "consequence": "照明效果差、返工、墙面损伤"
+    },
+    "ku_id": "GZ-SY-00078",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#7",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "壁灯",
+      "安装高度",
+      "床头",
+      "直射眼睛",
+      "阴影"
+    ]
+  },
+  {
+    "title": "夜灯安装高度不当失去作用",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY",
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "夜灯用于夜晚走道照明，应暗装在墙内，距地面高度0.2-0.4米。若安装过高，光线无法照亮地面，起不到引导作用；若过低则易被踢到或受潮。常见错误是电工按普通插座高度1.3米安装，导致夜灯形同虚设。损失虽小但影响夜间安全，尤其老人小孩。",
+    "typical_scenario": "业主在走廊安装夜灯，电工将其装在1.3米高的位置，夜晚开启后光线照在墙上，地面依然昏暗。老人起夜看不清路，差点绊倒。业主后来要求返工，重新在0.3米高度开槽安装，才解决问题。",
+    "how_to_avoid": "1. 设计阶段明确夜灯位置和高度，标注在施工图上。2. 施工交底时特别提醒电工夜灯高度为0.2-0.4米。3. 安装时现场确认，用尺测量。4. 安装后夜间测试，确保地面有足够照明。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "电工按常规插座高度安装夜灯",
+      "direct_cause": "夜灯安装高度过高",
+      "consequence": "照明失效、夜间安全隐患"
+    },
+    "ku_id": "GZ-SY-00079",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#7",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "夜灯",
+      "走廊",
+      "起夜",
+      "地面昏暗",
+      "0.3米"
+    ]
+  },
+  {
+    "title": "门厅照明单一无层次易显压抑",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "门厅照明设计常被简化为单一吸顶灯，导致空间缺乏层次感，玄关柜、装饰画、换鞋区光线不足，夜间回家体验压抑且使用不便。损失虽小（灯具更换成本低），但影响每日出入户的舒适度和整体设计质感，属于高频出现的细节疏漏。",
+    "typical_scenario": "业主装修时只让电工在门厅装了一个吸顶灯，入住后发现鞋柜区域昏暗，找鞋困难；装饰画上方无重点照明，显得平淡；穿衣镜前光线不足，化妆需借客厅灯光。想补装射灯却因未预留线路而需走明线，破坏美观。",
+    "how_to_avoid": "1. 设计阶段明确门厅功能分区（换鞋、装饰、穿衣镜），为每个区域规划独立照明。2. 采用分层照明：基础照明（筒灯或吊灯）保证整体亮度，重点照明（射灯）突出装饰品或画作，局部照明（壁灯、镜前灯）满足功能性需求。3. 提前在吊顶或墙面预留灯线，特别是射灯和灯带位置。4. 选择LED光源，节能且色温宜用3000K-4000K暖白光，营造温馨氛围。5. 若空间较小，可用灯带替代射灯，减少视觉杂乱。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计师或业主忽视门厅照明层次，仅考虑基础照明",
+      "direct_cause": "未按功能分区规划灯具类型和位置，未预留灯线",
+      "consequence": "门厅昏暗、使用不便，后期改造困难且影响美观"
+    },
+    "ku_id": "GZ-SY-00087",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#10",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "门厅",
+      "吸顶灯",
+      "鞋柜",
+      "穿衣镜",
+      "预留线路"
+    ]
+  },
+  {
+    "title": "阅读区灯光位置错误致眩光阴影",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "客厅阅读区照明若灯具位置不当，灯光从前方或正上方照射，会在书本上形成阴影，且阴影差过大会产生眩光，导致阅读疲劳和视力损伤。损失虽小（灯具调整费用低），但严重影响日常使用体验，且返工需重新布线或移位，破坏墙面。",
+    "typical_scenario": "业主在沙发旁安装了一盏吊灯用于阅读，灯光从头顶正上方照下，书本上出现大片阴影，且灯光直射眼睛产生眩光，每次阅读不到半小时就眼睛酸涩。设计师现场查看后发现灯具位置在阅读者正前方，而非肩膀后方。",
+    "how_to_avoid": "1. 设计阶段明确阅读区灯具位置，确保灯光从阅读者肩膀后方（左肩或右肩）照射。2. 优先选用漫射地灯或台灯（8W间接照明）或摇臂式地灯（5W直接照明），避免单一顶灯。3. 若使用射灯，选择可调角度款式，安装后现场调试，确保光线不直射眼睛。4. 在图纸上标注灯具距阅读者座位的相对位置和照射角度，施工时现场复核。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师照明设计经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "缺乏对阅读行为的光线角度认知",
+      "direct_cause": "灯具安装在阅读者前方或正上方，产生阴影和眩光",
+      "consequence": "阅读体验差，眼睛疲劳，需返工调整灯具位置"
+    },
+    "ku_id": "GZ-SY-00088",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#11",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "吊灯",
+      "眩光",
+      "阴影",
+      "阅读",
+      "眼睛酸涩"
+    ]
+  },
+  {
+    "title": "装饰画照明灯具选型错误效果差",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "客厅装饰画照明若使用普通灯具而非可调角度牛眼射灯，光线无法精准聚焦画作，产生过度散射或阴影，装饰效果大打折扣。同时，若灯具色温与画作色调不协调，会破坏整体氛围。损失虽小（灯具更换成本低），但影响客厅艺术氛围的呈现。",
+    "typical_scenario": "业主在装饰画上方安装了一盏普通筒灯，光线散开，画作中央亮度不足，边缘出现明显阴影，且灯光偏黄，画作色彩失真。设计师建议更换为LED可调角度牛眼射灯，调整角度后效果明显改善。",
+    "how_to_avoid": "1. 装饰画照明选用LED可调角度牛眼射灯，确保光线可精准聚焦。2. 安装时调整射灯角度，使光束覆盖画作主体，避免阴影。3. 选择与画作色调协调的色温（如暖白3000K适合暖色调画作）。4. 若画作较大，可设置多个射灯均匀布光。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师照明设计经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "忽视灯具光束角与画作尺寸的匹配",
+      "direct_cause": "使用普通筒灯，光线无法聚焦，产生散射和阴影",
+      "consequence": "装饰画效果差，需更换灯具，影响客厅艺术氛围"
+    },
+    "ku_id": "GZ-SY-00090",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#11",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "装饰画",
+      "筒灯",
+      "牛眼射灯",
+      "色彩失真",
+      "阴影"
+    ]
+  },
+  {
+    "title": "室内植物背光照明未设计导致氛围缺失",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "客厅室内植物若未设计背光照明，无法产生戏剧化的剪影效果，失去提升空间层次感和艺术氛围的机会。此问题属于设计遗漏，通常在软装阶段才发现，需临时增加灯具，可能破坏原有电路布局，产生额外费用约500-1000元。",
+    "typical_scenario": "业主在客厅角落摆放了一盆大型绿植，但装修时未预留任何照明。晚上绿植区域一片昏暗，无法成为视觉焦点。设计师建议在植物后方增加一盏地灯，但需重新布线，破坏了已完成的墙面。",
+    "how_to_avoid": "1. 设计阶段在客厅平面图上标注植物摆放位置，并预留照明点位。2. 在植物后方或侧后方设计背光照明（如地灯或射灯），营造剪影效果。3. 施工时预留独立回路，便于后期调整灯光角度。4. 若已完工，可选用无线充电式地灯或插电式落地灯，避免破坏墙面。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师照明设计经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未考虑植物照明需求",
+      "direct_cause": "未预留植物背光照明点位和电路",
+      "consequence": "植物区域缺乏氛围，后期增加灯具需破坏墙面或额外布线"
+    },
+    "ku_id": "GZ-SY-00091",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#11",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "绿植",
+      "地灯",
+      "氛围",
+      "布线",
+      "客厅角落"
+    ]
+  },
+  {
+    "title": "餐厅照明未分区控制，能耗高且氛围难调",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL",
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "餐厅照明设计时，将所有灯具（吊灯、灯带、射灯、壁灯）接在同一回路开关上，导致无法单独控制。日常用餐时只能全开或全关，无法根据场景（日常简餐、浪漫晚餐、朋友聚会）调节亮度与氛围。全开时能耗高，且刺眼；全关时又太暗。后期想改造成多回路，需重新布线，破坏墙面，费用约500-1500元。",
+    "typical_scenario": "张先生家餐厅装了吊灯、灯带和射灯，但电工把所有灯线并到一个开关。晚上想只开灯带营造氛围，结果一按开关全亮了，非常刺眼。想改造成三开开关，但线管已封，只能走明线，影响美观，最后只能放弃，平时都只开吊灯。",
+    "how_to_avoid": "1. 设计阶段就规划照明回路：环境照明（灯带/筒灯）一组、重点照明（吊灯/射灯）一组、装饰照明（壁灯/射灯）一组。2. 在水电交底时，明确告知电工每个回路的控制需求，并在开关底盒预留足够线管（至少3根控制线）。3. 开关面板选用多联开关（如三联单控），并标注每路控制对象。4. 若条件允许，可选用智能照明系统，通过手机或语音分区控制，但需提前预留零线。5. 施工完成后，逐一测试每个回路是否独立，避免并线。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深电工经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主未提出分区控制需求，电工为省事将所有灯并线",
+      "direct_cause": "设计图纸未标注回路划分，交底不充分",
+      "consequence": "照明无法按场景调节，能耗高，后期改造困难"
+    },
+    "ku_id": "GZ-SY-00095",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#13",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "分区控制",
+      "开关",
+      "灯带",
+      "能耗",
+      "刺眼"
+    ]
+  },
+  {
+    "title": "梳妆台照明未做防阴影设计",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "梳妆台只装顶部主灯，人站在镜子前时，光线从背后或正上方照下来，脸上会产生阴影，化妆时看不清细节，容易化浓或化歪。镜前灯应安装在镜子两侧或上方，且光线要均匀柔和，避免单侧强光。很多业主忽略这一点，入住后才发现化妆体验极差，加装镜前灯又涉及走线问题。",
+    "typical_scenario": "张女士卧室梳妆台正对窗户，白天化妆靠自然光还行，晚上只能开主灯，主灯在头顶正上方，光线照下来，额头和颧骨有阴影，眼妆和底妆细节根本看不清，经常化完出门才发现粉底不均匀。想加装镜前灯，但梳妆台墙面没预留电线，只能走明线，非常难看。",
+    "how_to_avoid": "1. 梳妆台区域单独预留镜前灯线路，建议在镜子两侧各装一盏壁灯，或镜子正上方装一盏带漫射的镜前灯。2. 灯光色温选择4000K左右中性光，显色指数Ra>90，保证妆容颜色真实。3. 镜前灯安装高度：灯中心距地面约1.6-1.7米，与视线平齐或略高。4. 若空间允许，可在镜子两侧安装竖向灯带，形成无影照明效果。5. 水电交底时明确梳妆台位置和镜子尺寸，确保灯位准确。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主未意识到梳妆照明需要专门设计",
+      "direct_cause": "只依赖主灯照明，未预留镜前灯线路",
+      "consequence": "化妆时面部阴影严重，影响妆容效果，后期加装困难"
+    },
+    "ku_id": "GZ-SY-00098",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#14",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "镜前灯",
+      "防阴影",
+      "化妆",
+      "预留电线",
+      "自然光"
+    ]
+  },
+  {
+    "title": "衣柜内部无照明找衣物困难",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "衣柜内部没有照明，打开柜门后内部光线昏暗，尤其是深色衣物和角落区域根本看不清，找衣服要拿手电筒或手机照明，非常不便。衣柜灯带不仅实用还有装饰效果，但很多业主定制衣柜时没考虑预留电源，后期想加装只能走明线或选电池款，效果大打折扣。",
+    "typical_scenario": "刘先生定制衣柜时觉得灯带是花哨功能，没让商家加。入住后每次找深色衬衫都要把头探进柜子里，还得用手机闪光灯照，非常麻烦。后来想加装感应灯带，但柜体已经装好，没有预留电源线，只能用充电式灯带，每隔几天就要充电，而且亮度不够，体验很差。",
+    "how_to_avoid": "1. 定制衣柜时主动要求加装柜内照明，通常每扇门对应一条灯带即可。2. 确认供电方式：预留220V电源线到柜顶或柜侧，通过变压器降压驱动灯带，比电池款更可靠。3. 选择感应式开关（开门亮、关门灭）或门碰开关，避免手动开关麻烦。4. 灯带色温建议4000K，显色指数高，能真实还原衣物颜色。5. 若柜体已装好，可选用带磁吸的充电式灯带，但需注意充电频率和亮度衰减问题。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主认为柜内照明非必需，定制时忽略",
+      "direct_cause": "未预留电源线，柜体安装后无法加装",
+      "consequence": "日常使用不便，后期补救效果差"
+    },
+    "ku_id": "GZ-SY-00099",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#14",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "衣柜灯带",
+      "感应灯",
+      "电源",
+      "充电式",
+      "找衣物"
+    ]
+  },
+  {
+    "title": "起夜灯过亮影响再次入睡",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "起夜照明如果照度过高，会刺激眼睛，导致睡意全无，影响再次入睡。很多业主在卧室装了普通壁灯或吸顶灯作为起夜灯，亮度太高，半夜开灯刺眼难受。理想的起夜灯应使用低照度（1-3勒克斯）的小夜灯，光线柔和，仅够看清地面轮廓即可。",
+    "typical_scenario": "赵先生半夜上厕所，习惯性打开床头壁灯，灯光刺眼得他瞬间清醒，回到床上后辗转反侧半小时才睡着。后来他换了个小夜灯插在墙角插座，光线柔和，起夜后能很快入睡，但小夜灯插在低位插座，光线被床沿挡住，脚下还是看不清，走路磕到椅子。",
+    "how_to_avoid": "1. 在卧室通往卫生间的动线上安装低位小夜灯（距地30-50厘米），光线贴地，不直射眼睛。2. 选择带光敏+人体感应功能的小夜灯，自动亮灭，无需手动开关。3. 照度控制在1-3勒克斯，色温2700K以下暖光，避免蓝光抑制褪黑素。4. 若用壁灯作为起夜灯，选择带调光功能的，夜间调至最低档。5. 在床头柜旁预留一个插座专门用于小夜灯，避免插线板。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主未区分起夜照明与一般照明的需求差异",
+      "direct_cause": "使用常规灯具作为起夜灯，亮度太高",
+      "consequence": "起夜后难以入睡，影响睡眠质量"
+    },
+    "ku_id": "GZ-SY-00100",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#14",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "起夜灯",
+      "小夜灯",
+      "亮度",
+      "入睡",
+      "低位插座"
+    ]
+  },
+  {
+    "title": "地台式卧室夜行灯带未预留",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "地台式卧室布局中，夜行照明灯带（4w）是提升安全性的必要选项，但常被忽略。地台边缘在夜间容易绊倒，尤其对老人小孩风险高。若未在水电阶段预留灯带电源和控制器位置，后期只能使用插电式落地灯，影响美观且占用空间。损失虽不大（几百元），但安全隐患持续存在。",
+    "typical_scenario": "业主做地台式卧室，设计师只规划了吊灯和射灯，未考虑夜行灯带。入住后夜间起床上厕所，地台边缘看不清，差点绊倒。想加装灯带，但地台已封板，无法走线，只能买感应小夜灯凑合，效果差且不美观。",
+    "how_to_avoid": "1. 地台式卧室设计时，主动将夜行灯带列入必要照明清单。2. 在地台侧面或底部预留灯带槽和变压器位置，并单独设置开关或感应器。3. 水电交底时，明确灯带电源线走向和控制器安装位置。4. 施工时确保灯带可拆卸更换，避免封死。5. 验收时测试夜行灯带是否正常工作。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑地台夜间安全需求",
+      "direct_cause": "水电阶段未预留夜行灯带电源",
+      "consequence": "安全隐患存在，后期加装困难"
+    },
+    "ku_id": "GZ-SY-00102",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#15",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "夜行灯带",
+      "地台",
+      "绊倒",
+      "走线",
+      "感应灯"
+    ]
+  },
+  {
+    "title": "书房电脑区灯光直射屏幕致眩光",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "书房电脑工作区若将灯光直接照射屏幕，会在屏幕上形成反射眩光，导致视觉疲劳、眼睛酸涩，长期影响视力健康。很多业主和设计师只关注整体亮度，忽略了光源与屏幕的相对位置，导致工作体验极差。此问题虽不涉及大额费用，但直接影响日常使用舒适度，返工调整灯具位置或更换灯具也会产生额外成本。",
+    "typical_scenario": "业主在书房布置了一张书桌，上方安装了一盏筒灯正对桌面。白天使用电脑时，屏幕反光严重，文字和图像模糊不清，需要频繁调整屏幕角度或拉上窗帘。晚上开灯后，眩光更明显，工作半小时就感到眼睛干涩、头痛，最终不得不重新调整灯具位置。",
+    "how_to_avoid": "1. 电脑工作区避免使用直射型灯具，优先选择漫射台灯、摇臂式台灯或地灯，让光线从侧面或上方柔和照射。2. 灯具位置应位于屏幕侧面或后方，避免光源与眼睛、屏幕形成反射角。3. 选用可调节角度的灯具，方便根据坐姿和屏幕位置微调。4. 若已安装固定灯具，可加装防眩光格栅或调光器，降低亮度并改变光线方向。5. 设计阶段就应绘制灯光布置图，标注灯具与书桌、屏幕的相对位置，避免后期返工。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "缺乏对光源与屏幕反射关系的认知",
+      "direct_cause": "灯具直射屏幕形成反射眩光",
+      "consequence": "视觉疲劳、工作效率下降，需返工调整"
+    },
+    "ku_id": "GZ-SY-00104",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#16",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "眩光",
+      "屏幕反光",
+      "筒灯",
+      "眼睛干涩",
+      "书桌"
+    ]
+  },
+  {
+    "title": "书房照明配置未按功能分区导致亮度失衡",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "书房兼具工作、阅读、休闲、社交等多种功能，若只安装一盏主灯，无法满足不同场景的照度需求。例如书写需要高亮度局部照明，书柜需要重点照明，休闲阅读需要柔和光线。照明配置不合理会导致空间过亮或过暗，影响使用体验，且后期增加灯具需要重新布线，成本较高。",
+    "typical_scenario": "业主在书房只安装了一盏吸顶灯，晚上看书时觉得光线刺眼，但书桌区域却不够亮，书柜上的书籍也难以看清。想增加台灯和书柜灯带，却发现没有预留插座和电源，只能使用插线板，电线凌乱且不安全。",
+    "how_to_avoid": "1. 设计阶段按功能分区规划照明：整体照明（吊灯或筒灯）、工作照明（台灯或摇臂灯）、书柜照明（灯带或轨道射灯）、氛围照明（地灯或灯带）。2. 参考配置：社交式书房可用吊灯24W+台灯8W+射灯33W+灯带24W+地灯5W；休闲式书房可用筒灯12W+地灯5W+台灯8W+灯带16W。3. 每个照明回路独立控制，方便按场景切换。4. 在电路设计时预留足够插座和灯线，避免后期增加灯具无电源。5. 与设计师沟通实际使用习惯，确定各区域照度需求，避免盲目堆砌灯具。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未按书房功能分区设计照明系统",
+      "direct_cause": "单一主灯无法满足不同场景照度需求",
+      "consequence": "使用体验差，后期改造困难且增加成本"
+    },
+    "ku_id": "GZ-SY-00106",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#16",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "亮度失衡",
+      "吸顶灯",
+      "插座",
+      "插线板",
+      "书柜"
+    ]
+  },
+  {
+    "title": "卫生间单一顶灯导致梳妆光线不均",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "很多业主装修卫生间时只装一个吸顶灯作为整体照明，忽略了镜前化妆、洗衣、淋浴、马桶阅读等细分功能照明需求。结果在洗漱化妆时，面部被顶光照射产生阴影，左右脸亮度不均，化妆效果差；洗衣时灯光昏暗看不清污渍；淋浴区光线不足且普通灯具易受潮损坏。虽然单个灯具成本不高，但后期改造需要重新布线开槽，破坏瓷砖和防水层，返工成本可达数千元。",
+    "typical_scenario": "王女士装修卫生间时，设计师建议多装几个灯，但她觉得浪费，只让电工在天花板中央装了一个吸顶灯。入住后每天早晨化妆都要歪着头凑近镜子，脸上总有阴影，粉底涂不匀。洗衣服时看不清领口污渍，好几次没洗干净。淋浴时水汽弥漫，灯光昏暗，还担心灯会进水漏电。她后悔当初没听建议，想加装镜前灯，但瓷砖已贴好，走线困难，只能走明线，非常难看。",
+    "how_to_avoid": "1. 在水电改造前，与设计师或电工明确卫生间各功能区的照明点位，至少包含：镜前区、洗衣区、淋浴区、马桶区。2. 镜前照明优先选用左右对称壁灯（距地1.5-1.6米，间距约30-40厘米），或镜子上方安装镜前灯/射灯，确保面部光线均匀无阴影。3. 淋浴区必须选用防雾、防潮的嵌入式筒灯或吸顶灯，防护等级IP44以上，避免水汽侵蚀。4. 洗衣区安装独立筒灯或射灯，照度充足，显色指数Ra≥80。5. 马桶前方天花预留一盏射灯，方便阅读。6. 在电路设计阶段预留独立回路和开关，方便分区控制。7. 所有灯具点位在木工吊顶和贴砖前确定，避免后期开槽破坏防水层。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主缺乏功能照明意识，只考虑整体照明",
+      "direct_cause": "设计阶段未规划分区照明点位，施工时仅安装单一顶灯",
+      "consequence": "梳妆阴影、洗衣看不清、淋浴安全隐患，后期改造困难且成本高"
+    },
+    "ku_id": "GZ-SY-00108",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#18",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "镜前灯",
+      "阴影",
+      "漏电",
+      "瓷砖",
+      "梳妆"
+    ]
+  },
+  {
+    "title": "照明开关分组不当致亮度突变不适",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "多灯具空间若未按使用场景合理分组线路，开关只能同时控制所有灯，导致开灯瞬间亮度剧变，造成视觉不适和眩光感。尤其在客厅、卧室等需要多种亮度层次的空间，单一开关控制所有灯具会破坏氛围，且无法满足阅读、观影、会客等不同活动的照明需求。损失虽小但严重影响日常舒适度，返工需拆墙改线，成本可达数千元。",
+    "typical_scenario": "业主在客厅安装了一组吊灯和一圈筒灯，电工将所有灯具接在同一开关回路。晚上回家一按开关，所有灯同时全亮，刺眼的光线让人瞬间不适。想只开筒灯看个电视，却只能忍受全亮或全暗，无奈之下只能后期加装遥控器，但线路已固定，效果大打折扣。",
+    "how_to_avoid": "1. 设计阶段明确各空间照明场景（如全亮、局部、夜灯），绘制开关分组图。2. 要求电工按分组独立布线，每组灯具对应一个开关回路。3. 在开关面板上标注每路控制区域，便于日常使用。4. 若已完工，可考虑更换智能开关或加装调光模块，但需确认线路兼容性。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "照明设计未考虑场景化分组",
+      "direct_cause": "电工将所有灯具接入同一回路",
+      "consequence": "亮度突变造成不适，无法灵活调节"
+    },
+    "ku_id": "GZ-SY-00113",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#23",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "开关分组",
+      "亮度突变",
+      "筒灯",
+      "吊灯",
+      "刺眼"
+    ]
+  },
+  {
+    "title": "光敏传感器误触发致照明频繁开关",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "光敏传感器依靠环境光强自动开关灯，但若安装位置不当（如靠近窗户、被家具遮挡或正对强光源），会导致误触发——白天云层飘过灯突然亮起，或夜晚车灯扫过灯又熄灭。频繁开关不仅影响使用体验，还会加速灯具和驱动老化。损失虽小，但日常烦扰大，且调整位置需重新打孔布线。",
+    "typical_scenario": "业主在玄关安装了光敏传感器，希望白天自然采光时灯不亮，天黑自动亮。但传感器正对窗户，下午阳光直射时灯一直不亮，傍晚阴天时又频繁闪烁。晚上楼下汽车灯光扫过，灯也会突然亮起，让人以为有动静，十分困扰。",
+    "how_to_avoid": "1. 安装前评估传感器位置，避免正对窗户、镜子或强光源。2. 选择可调节灵敏度或带延时功能的光敏传感器。3. 测试不同时段的光照情况，调整安装角度。4. 若环境复杂，可改用定时或智能联动方案替代纯光敏控制。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "传感器安装位置不当",
+      "direct_cause": "环境光变化干扰传感器判断",
+      "consequence": "灯具频繁开关，影响寿命和体验"
+    },
+    "ku_id": "GZ-SY-00115",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#23",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "光敏传感器",
+      "误触发",
+      "玄关",
+      "闪烁",
+      "干扰"
+    ]
+  },
+  {
+    "title": "智能开关场景设置复杂致业主弃用",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "智能开关虽能实现多种场景切换，但若未在交付时对业主进行充分培训，或场景设置过于复杂（如需要手机APP、语音助手联动），业主可能因不会操作而放弃使用，最终沦为普通开关。智能系统形同虚设，投入的数千元成本无法发挥价值，且后期自行摸索容易误操作导致场景混乱。",
+    "typical_scenario": "设计师为业主安装了智能开关，设置了会客、观影、夜起等多种场景。但交付时只简单演示了一遍，业主没记住。回家后想切换场景，发现需要打开APP再选择，还不如直接按开关方便。几天后业主就只用最基础的开关功能，智能场景完全闲置。",
+    "how_to_avoid": "1. 交付时安排至少30分钟智能系统使用培训，让业主亲手操作。2. 将常用场景设置为物理按键一键切换，减少对APP依赖。3. 提供简明操作卡贴在开关旁或发给业主。4. 建议业主从简单场景开始使用，逐步熟悉后再增加复杂联动。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "交付培训不足",
+      "direct_cause": "场景操作复杂超出业主使用习惯",
+      "consequence": "智能功能闲置，投资浪费"
+    },
+    "ku_id": "GZ-SY-00117",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#23",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "智能开关",
+      "场景设置",
+      "操作复杂",
+      "闲置",
+      "APP"
+    ]
+  },
+  {
+    "title": "欧式照明忽视局部气氛营造",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION",
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "欧式风格照明不仅需要主灯提供基础照明，更强调通过局部照明（如壁灯、落地灯、射灯、灯带）营造空间层次感和氛围。但业主和设计师常只关注主灯的样式和尺寸，忽略局部照明的设计和布置。导致空间照明单一，缺乏欧式风格应有的温馨、浪漫和层次感。例如客厅只有一盏主吊灯，没有壁灯或落地灯辅助，夜晚开灯后整个空间显得生硬平淡，无法体现欧式的精致与格调。局部照明的缺失还会影响功能使用，如阅读区没有台灯、装饰画没有射灯照射等。",
+    "typical_scenario": "业主完成欧式风格装修后，发现客厅虽然有一盏华丽的水晶吊灯，但晚上只开主灯时，空间显得过于明亮刺眼，缺乏温馨感。沙发角落的阅读区没有落地灯，装饰画也没有射灯照射，整体氛围远不如样板间。业主这才意识到设计师在图纸上标注了壁灯和射灯，但施工时因嫌麻烦和预算有限，被业主自己取消了。入住后想补装，却发现墙面没有预留电线，只能走明线，影响美观。",
+    "how_to_avoid": "1. 在设计阶段，要求设计师提供完整的照明设计方案，包括主灯、辅助灯（壁灯、落地灯、射灯、灯带）的位置和数量。2. 在水电改造阶段，提前为局部照明预留电线点位，特别是壁灯、射灯和灯带的位置。3. 根据空间功能配置局部照明：客厅沙发旁设落地灯或壁灯，装饰画上方设射灯，走廊设壁灯或地脚灯，卧室床头设壁灯或台灯。4. 使用调光开关或分路控制，实现主灯和辅助灯独立开关，灵活调节氛围。5. 预算有限时，优先保留功能性局部照明（如阅读灯、床头灯），再考虑装饰性照明。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主和设计师过度关注主灯，忽视局部照明对氛围和功能的重要性",
+      "direct_cause": "设计阶段未规划局部照明点位，或施工时因预算取消",
+      "consequence": "空间照明单一缺乏层次感，功能使用不便，后期补装需走明线影响美观"
+    },
+    "ku_id": "GZ-SY-00126",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#26",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "主灯",
+      "落地灯",
+      "射灯",
+      "刺眼",
+      "温馨感"
+    ]
+  },
+  {
+    "title": "中式灯具图案色彩搭配失当",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [
+      "MAT_FURNITURE"
+    ],
+    "scope": "universal",
+    "description": "中式风格灯具的图案和色彩是营造氛围的关键，但业主常随意选购，导致灯具与整体风格冲突。中式灯具崇尚自然情趣，图案多为花鸟鱼虫、精雕细琢，色彩以黑红为主，浓重成熟。若选用现代简约灯具或色彩过于鲜艳、图案过于繁复的灯具，会破坏中式空间的和谐统一，显得不伦不类。损失虽不直接体现在金额上，但影响整体设计效果，返工更换灯具也需额外支出。",
+    "typical_scenario": "李女士装修新中式住宅，在灯具市场看到一款欧式水晶吊灯，觉得华丽便买下。安装后，与中式红木家具和仿古地砖格格不入，水晶灯的闪亮与中式沉稳的色调形成冲突。家人朋友都说风格不搭，李女士只好重新选购中式羊皮灯，多花了近两千元，旧灯闲置。",
+    "how_to_avoid": "1. 选购灯具前，先确定整体风格基调，中式风格优先选择木质、羊皮、布艺、陶瓷等材质灯具。2. 图案上选择花鸟鱼虫、山水、回纹等传统纹样，避免过于抽象或卡通图案。3. 色彩以黑、红、深棕为主，可搭配金色点缀，避免大面积亮蓝、亮绿等现代色。4. 购买前用手机拍下空间照片，在灯具店对比效果，或让设计师陪同选购。5. 若网购，先买样品或确认可退换，避免色差和比例问题。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主缺乏中式风格知识，凭个人喜好选购灯具",
+      "direct_cause": "灯具图案、色彩与整体风格不匹配",
+      "consequence": "空间风格混乱，需返工更换，增加费用"
+    },
+    "ku_id": "GZ-SY-00128",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#27",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "水晶吊灯",
+      "羊皮灯",
+      "红木家具",
+      "仿古地砖",
+      "风格冲突"
+    ]
+  },
+  {
+    "title": "色温选错导致居住氛围不适",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "住宅照明中色温的选择直接影响居住舒适度。色温低于3300K为暖光源，适合卧室、餐厅等需要放松氛围的空间；3300-5300K为中间光源，适合客厅、书房等需要兼顾活动与阅读的区域；高于5300K为冷光源，容易让人精神紧张，不适合住宅。很多业主盲目追求冷白光觉得更亮，或设计师未与业主沟通色温偏好，导致卧室装了6000K冷光，晚上难以入睡，或书房装了2700K暖光，阅读时昏昏欲睡。损失量级：更换灯具或灯泡费用不高，但影响居住体验和健康。",
+    "typical_scenario": "业主在装修时让电工统一安装了4000K的中性光筒灯，但卧室床头阅读灯也用了4000K，晚上睡前看书觉得光线刺眼，难以放松。后来咨询设计师才知道卧室应该用2700-3000K的暖光，于是更换了床头灯，花费不到200元，但之前的不适感持续了两个月。",
+    "how_to_avoid": "1. 在照明设计阶段，明确每个空间的色温需求：卧室、餐厅用2700-3000K暖光，客厅、书房用3500-4000K中性光，厨房、卫生间可用4000-5000K。2. 与设计师沟通生活习惯，如是否经常在卧室阅读、是否对光线敏感。3. 选购灯具时注意色温标注，不要只看外观。4. 可选用可调色温的灯具，后期灵活调整。5. 安装后实际体验，若不适应及时更换灯泡，成本较低。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "照明设计规范及设计师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主和设计师对色温与空间功能的关系认知不足",
+      "direct_cause": "未按空间功能选择色温，导致氛围不适",
+      "consequence": "居住舒适度下降，影响睡眠和阅读体验"
+    },
+    "ku_id": "GZ-SY-00132",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "住宅舒适照明设计.txt#28",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T21:11:00+08:00"
+    },
+    "trigger_keywords": [
+      "色温",
+      "4000K",
+      "暖光",
+      "阅读灯",
+      "刺眼"
+    ]
+  },
+  {
+    "title": "甲供沙水泥套边线减价误算",
+    "stage": "STAGE_03",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COST"
+    ],
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [
+      "MAT_CEMENT"
+    ],
+    "scope": "universal",
+    "description": "当沙子水泥由业主自购（甲供）时，瓦工报价中的套边线（瓷砖踢脚线或波打线）单价应每平方米减按当期标准费用，但部分业主或施工方误将“每㎡”理解为“每m”，导致减价计算错误。例如，套边线总长20米，若按每米减按当期标准费用只减按当期标准费用，而按每平方米减按当期标准费用可能减数百元，造成业主少扣费用。损失虽小，但反映预算不严谨。",
+    "typical_scenario": "业主自购沙子水泥，瓦工报价单中套边线原价按当期标准单价/㎡，注明“甲供减按当期标准单价/㎡”。业主计算时误将20米套边线按每米减按当期标准费用，只扣了按当期标准费用，实际应按面积（如20㎡）扣按当期标准费用，但若面积更大，损失更多。",
+    "how_to_avoid": "1. 仔细阅读报价单中的减价条款，确认单位是“每㎡”还是“每m”。2. 要求施工方在报价单中明确标注计算方式，如“套边线面积=长度×宽度”。3. 结算时复核减价金额，用实际面积乘以单价差。4. 若不确定，可咨询第三方或设计师。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深瓦工设计师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "报价单单位表述不清，业主缺乏专业知识",
+      "direct_cause": "将每㎡误读为每m，导致减价计算错误",
+      "consequence": "业主少扣费用，预算超支"
+    },
+    "ku_id": "GZ-SY-00139",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "预算计算标准培训.txt#2",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T22:01:21+08:00"
+    },
+    "trigger_keywords": [
+      "甲供",
+      "沙子水泥",
+      "套边线",
+      "减价",
+      "面积计算"
+    ]
+  },
+  {
+    "title": "石膏板找平单价混淆，墙面与棚顶价差大",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COST",
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CARPENTRY",
+      "TRADE_PAINT"
+    ],
+    "material": [
+      "MAT_BOARD",
+      "MAT_PAINT"
+    ],
+    "scope": "universal",
+    "description": "捣制棚面石膏板找平单价为按当期标准单价/㎡，墙面为按当期标准单价/㎡，两者价差明显。若报价单未区分，施工方可能按高价统一收费，或漏报棚顶找平项。损失通常在500-按当期标准费用。",
+    "typical_scenario": "业主家装修，报价单上写“石膏板找平按当期标准单价/㎡”，业主以为全屋统一。施工时，工长称棚顶找平需按当期标准单价/㎡，因棚顶施工难度大。业主发现报价单未区分，但已施工，只能补差价。",
+    "how_to_avoid": "1. 在报价单中明确区分墙面和棚顶的找平单价，分别列出。2. 核对施工面积，确保棚顶面积单独计算。3. 签约前，询问是否包含棚顶找平，避免漏项。4. 若报价单未区分，要求补充说明，并写入合同。5. 施工前，确认找平工艺和材料，避免后期加价。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "墙面与棚顶找平工艺难度不同，成本差异大，但报价常笼统",
+      "direct_cause": "报价单未区分单价，施工时按高价收费",
+      "consequence": "预算超支，业主感到被欺骗"
+    },
+    "ku_id": "GZ-SY-00145",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "预算计算标准培训.txt#3",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T22:01:21+08:00"
+    },
+    "trigger_keywords": [
+      "找平",
+      "棚顶",
+      "单价",
+      "补差价",
+      "施工难度"
+    ]
+  },
+  {
+    "title": "小面积造型吊顶按单处收费易漏项",
+    "stage": "STAGE_03",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "石膏板造型吊棚面积小于2㎡时，行业惯例是按'单处造型棚'收费，而非并入大面积吊顶按面积计算。这个规则常被装修公司故意不说明，报价时按大面积吊顶单价计算，施工时再以'造型复杂、面积小'为由加收费用。单处造型棚费用通常比按面积算贵200-按当期标准费用，若全屋有3-5处小造型，额外费用可达1000-按当期标准费用。",
+    "typical_scenario": "业主家客厅吊顶设计了一个弧形造型，面积约1.5㎡。报价单中按'石膏板吊顶'按当期标准单价/㎡计算，总价按当期标准费用。施工时木工师傅说这种小面积造型要按'单处造型'收费，最低按当期标准费用一处。业主找装修公司理论，对方说这是行业规则，报价时没细说，最终业主多付按当期标准费用。",
+    "how_to_avoid": "1. 设计阶段明确所有吊顶造型的位置和面积，让设计师标注清楚。2. 报价时逐项询问：面积小于2㎡的造型是否按单处收费？单价多少？3. 要求报价单中单独列出'造型吊顶（单处）'项目，并注明数量。4. 签约前将所有造型项目拍照或画图附在合同后，作为依据。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "行业计价规则复杂，小面积造型有特殊计费方式",
+      "direct_cause": "报价单未单独列项，装修公司利用信息差后期加价",
+      "consequence": "业主预算超支，产生费用争议"
+    },
+    "ku_id": "GZ-SY-00164",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "预算计算标准培训.txt#8",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T22:01:21+08:00"
+    },
+    "trigger_keywords": [
+      "造型吊顶",
+      "弧形",
+      "漏项",
+      "计价",
+      "木工"
+    ]
+  },
+  {
+    "title": "弧形石膏线需加收基层处理费",
+    "stage": "STAGE_03",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "弧形石膏线不能直接贴在原始顶面，必须先做石膏板吊平棚作为基层，再在平棚上安装弧形石膏线。这个基层费用（石膏板吊平棚）经常被漏项，报价时只算石膏线本身，施工时才发现需要加做平棚。平棚费用按面积计算，通常80-按当期标准单价/㎡，一个客厅弧形造型可能增加500-按当期标准费用。",
+    "typical_scenario": "业主在客厅设计了一圈弧形石膏线，报价单中只列了'弧形石膏线'按当期标准费用/米。施工时油工师傅说弧形石膏线不能直接贴顶，需要先做石膏板吊平棚找平，平棚面积约8㎡，按按当期标准单价/㎡计算需加按当期标准费用。业主事先不知情，预算超支且工期延误。",
+    "how_to_avoid": "1. 设计阶段问清楚：弧形石膏线是否需要石膏板基层？基层费用是否包含？2. 报价单中要求分别列出'石膏板吊平棚'和'弧形石膏线'两项，并注明面积和单价。3. 若设计师说'直接贴'，要求书面承诺，避免后期扯皮。4. 签约前让设计师现场确认顶面平整度，判断是否需要基层。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "弧形石膏线安装工艺要求必须有基层，但报价常忽略",
+      "direct_cause": "报价单只列石膏线，未包含基层石膏板费用",
+      "consequence": "施工中增项，业主预算超支"
+    },
+    "ku_id": "GZ-SY-00165",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "预算计算标准培训.txt#8",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T22:01:21+08:00"
+    },
+    "trigger_keywords": [
+      "石膏线",
+      "基层处理",
+      "找平",
+      "增项",
+      "油工"
+    ]
+  },
+  {
+    "title": "瓷砖标识贴缺失导致验收纠纷",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [
+      "MAT_TILE"
+    ],
+    "scope": "universal",
+    "description": "瓷砖铺贴完成后，若未粘贴标识贴，无法追溯铺贴日期、瓦工姓名和瓷砖信息。空鼓检测后无标识，业主无法直观了解哪些砖合格、哪些不合格，后期出现问题时责任难以界定。标识贴也是竣工交付的验收记录，缺失会导致验收争议。损失量级：主要是沟通和追溯成本，返工责任不清时可能产生额外费用。",
+    "typical_scenario": "业主在验收时发现客厅地砖有空鼓声，但施工方否认是施工问题，称是瓷砖本身质量。由于没有标识贴记录铺贴日期和瓦工信息，业主无法证明空鼓是施工不当造成，双方争执不下，最终业主自费请第三方检测，耗时两周。",
+    "how_to_avoid": "1. 铺贴完成后，要求瓦工在每面墙阳角处粘贴标识贴，注明铺贴日期、瓦工姓名、瓷砖品牌型号。2. 空鼓检测后，在合格砖面贴绿色标识，不合格贴红色标识。3. 业主在验收时核对标识贴信息，拍照留存。4. 要求施工方在竣工交付时提供完整的标识贴记录。5. 若发现标识贴缺失，及时要求补贴，并记录在验收单上。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深瓦工施工经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "施工方未执行标识贴制度，验收记录缺失",
+      "direct_cause": "无法追溯施工信息和质量检测结果",
+      "consequence": "验收纠纷，责任界定困难，可能产生额外检测费用"
+    },
+    "ku_id": "GZ-SY-00194",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "施工展示厅讲解标准.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-01T22:43:27",
+    "source_material": "施工展示厅讲解标准.pdf",
+    "trigger_keywords": [
+      "标识贴",
+      "验收纠纷",
+      "空鼓声",
+      "铺贴记录",
+      "第三方检测"
+    ]
+  },
+  {
+    "title": "线管未固定导致移位变形",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_PLUMBING"
+    ],
+    "material": [
+      "MAT_WIRE"
+    ],
+    "scope": "universal",
+    "description": "线管未按标准每隔600mm用分线卡固定，或固定不牢，在浇筑或抹灰时线管容易移位、变形，导致电线受力不均，甚至压扁线管，影响穿线和散热。后期若需维修，难以定位线管位置。损失量级：虽不直接造成大额损失，但可能影响电路安全，维修定位困难。",
+    "typical_scenario": "业主在验收时，发现墙面某处线管有轻微凸起，用手按压可移动。电工解释是抹灰时未固定好。虽然不影响使用，但业主担心后期墙面开裂，要求返工。重新固定线管并修补墙面，花费约500元。",
+    "how_to_avoid": "1. 施工交底时，要求线管每隔600mm使用分线卡固定。2. 布管后、封槽前，检查线管是否牢固，用手轻拉不应移动。3. 拍照记录固定间距。4. 封槽时，提醒工人注意不要碰动线管。5. 验收时，检查墙面有无异常凸起。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深水电工程师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "施工方未按标准间距固定线管",
+      "direct_cause": "线管在抹灰时移位变形",
+      "consequence": "线管位置不准，影响散热和后期维修"
+    },
+    "ku_id": "GZ-SY-00225",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "施工展示厅讲解标准.txt#9",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-01T22:43:27",
+    "source_material": "施工展示厅讲解标准.pdf",
+    "trigger_keywords": [
+      "固定",
+      "凸起",
+      "按压",
+      "返工",
+      "变形"
+    ]
+  },
+  {
+    "title": "垃圾处理器电源未预留",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_PLUMBING",
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "垃圾处理器需水槽下方预留10A电源和下水接口，若未预留，后期无法安装或需改下水。损失约300-1000元。",
+    "typical_scenario": "业主想装垃圾处理器，但水槽下方没有预留插座，只能从旁边拉插排，且下水接口不匹配，需要改造，麻烦且不美观。",
+    "how_to_avoid": "1. 设计阶段确认是否安装垃圾处理器。2. 在水槽下方预留10A防水插座。3. 确认下水管接口尺寸匹配。4. 将安装要求写入水电交底。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未提前规划垃圾处理器",
+      "direct_cause": "电源和下水接口未预留",
+      "consequence": "无法安装或需改造"
+    },
+    "ku_id": "GZ-SY-00251",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "垃圾处理器",
+      "水槽",
+      "插座",
+      "下水",
+      "改造"
+    ]
+  },
+  {
+    "title": "卫生间吹风机插座未留防溅",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_WIRE"
+    ],
+    "scope": "universal",
+    "description": "卫生间镜旁需预留吹风机电源，且必须带防溅盒。若未预留，后期无法使用或存在安全隐患。损失约200-500元。",
+    "typical_scenario": "业主卫生间镜旁没留插座，吹头发只能去卧室，非常不便。后来想加装，但瓷砖已贴好，走线困难。",
+    "how_to_avoid": "1. 设计阶段在镜柜旁预留电源插座。2. 插座必须带防溅盒，高度距地面1.2-1.4m。3. 确认插座回路带漏电保护。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未考虑卫生间电器需求",
+      "direct_cause": "插座未预留或位置不当",
+      "consequence": "使用不便、安全隐患"
+    },
+    "ku_id": "GZ-SY-00252",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "插座",
+      "防溅",
+      "卫生间",
+      "走线",
+      "吹风机"
+    ]
+  },
+  {
+    "title": "扫地机器人充电位未预留",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_WIRE"
+    ],
+    "scope": "universal",
+    "description": "扫地机器人需靠墙充电底座和附近电源，若未预留，后期只能拉插排或改变摆放位置。损失约200-500元。",
+    "typical_scenario": "业主买了扫地机器人，发现客厅没有合适的靠墙插座，只能放在卧室充电，清扫路线受限。",
+    "how_to_avoid": "1. 设计阶段确定扫地机器人充电位置（通常客厅或阳台）。2. 在靠墙位置预留电源插座，高度距地面30cm。3. 确保充电位周围无遮挡。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未考虑智能家居设备",
+      "direct_cause": "充电位电源未预留",
+      "consequence": "使用不便、影响清扫效果"
+    },
+    "ku_id": "GZ-SY-00253",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "插座",
+      "充电",
+      "客厅",
+      "扫地机器人",
+      "靠墙"
+    ]
+  },
+  {
+    "title": "玄关走廊未设感应灯",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关入户、走廊、卫生间门口应设感应灯，人来即亮人走即灭。未设置的话，回家摸黑找开关、夜间上厕所开大灯刺眼且影响家人休息。后期加装感应灯座成本不高（50-200元），但需有电源位，未预留则只能使用电池款。",
+    "typical_scenario": "孙女士家玄关没有感应灯，每天加班回家都要摸黑换鞋，经常撞到鞋柜。后来买了电池感应灯贴在墙上，但亮度不足且需频繁换电池，体验不佳。",
+    "how_to_avoid": "1. 设计阶段在玄关、走廊、卫生间门口标注感应灯位。2. 预留电源线，确保感应灯有稳定供电。3. 选择色温2700-3000K的暖光，避免刺眼。4. 卫生间门口感应灯可联动排气扇，提升使用体验。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未考虑夜间动线照明需求",
+      "direct_cause": "玄关走廊未设感应灯",
+      "consequence": "夜间行动不便，后期加装效果受限"
+    },
+    "ku_id": "GZ-SY-00261",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "感应灯",
+      "玄关",
+      "摸黑",
+      "电池",
+      "走廊"
+    ]
+  },
+  {
+    "title": "床头未预留USB充电插座",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "床头两侧、沙发两侧、书桌上方应预留带USB的五孔插座，方便手机、平板等小电器充电。未预留的话，充电器占用五孔插座，且插头凸出影响家具靠墙。后期更换面板成本低（50-100元/个），但需确认底盒深度足够。",
+    "typical_scenario": "吴女士床头只有一个五孔插座，手机充电器插上后，台灯就没地方插了。想换USB面板，发现底盒太浅装不下，只能继续用充电头，床头电线凌乱。",
+    "how_to_avoid": "1. 设计阶段在床头两侧、沙发两侧、书桌上方标注带USB的五孔插座。2. 选择快充协议（如QC3.0/PD）的USB面板。3. 确认底盒深度≥5cm，否则装不下USB模块。4. 床头插座高度建议距地70-80cm，方便使用。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未考虑小电器充电需求",
+      "direct_cause": "床头未预留USB插座",
+      "consequence": "充电不便，插头凸出影响美观"
+    },
+    "ku_id": "GZ-SY-00262",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "USB",
+      "插座",
+      "床头",
+      "底盒",
+      "充电"
+    ]
+  },
+  {
+    "title": "起夜灯未设计导致夜间刺眼",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卧室床底或走廊踢脚线处应设低亮度感应夜灯（色温2700K以下），避免起夜开大灯刺眼，影响再次入睡。未设置的话，起夜只能开大灯，强光刺激后难以入睡，长期影响睡眠质量。后期加装电池款夜灯效果有限，亮度不足或需频繁充电。",
+    "typical_scenario": "林先生有起夜习惯，每次开床头灯都感觉刺眼，回到床上要很久才能再睡着。后来在床底贴了感应夜灯，但亮度不够，走路还是看不清。",
+    "how_to_avoid": "1. 设计阶段在卧室床底或走廊踢脚线处标注感应夜灯位。2. 预留电源线，确保稳定供电。3. 选择色温2700K以下、亮度可调的夜灯。4. 夜灯位置避免直射眼睛，建议距地30cm以下。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未考虑夜间起夜照明需求",
+      "direct_cause": "未设置低亮度感应夜灯",
+      "consequence": "起夜开大灯刺眼，影响睡眠质量"
+    },
+    "ku_id": "GZ-SY-00263",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "夜灯",
+      "起夜",
+      "刺眼",
+      "感应",
+      "床底"
+    ]
+  },
+  {
+    "title": "阳台养鱼养花误接软水，鱼死花枯",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_PLUMBING"
+    ],
+    "material": [
+      "MAT_PIPE"
+    ],
+    "scope": "universal",
+    "description": "软水机处理后的水含盐量高，对鱼类和植物有害。若阳台养鱼养花区域误接软水，会导致鱼死亡、植物枯萎。需在阳台或客厅预留不经软水机的自来水管，成本极低但常被忽略。",
+    "typical_scenario": "业主家安装了全屋软水系统，阳台鱼缸和绿植浇水都使用软水。一个月后鱼陆续死亡，绿植叶片发黄枯萎。经排查发现是软水中的盐分导致，最终请水电工从厨房冷水管单独引一路自来水到阳台，花费800元。",
+    "how_to_avoid": "1. 设计阶段确认阳台是否有养鱼养花需求。2. 如有需求，在水路图上标注一路不经软水机的自来水管。3. 该管路从入户总水管分支，在软水机前引出。4. 在阳台预留独立水龙头，并做明显标识区分软水与自来水。5. 施工时拍照记录管路走向，便于后期维护。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未考虑软水对生物的影响",
+      "direct_cause": "阳台用水误接软水",
+      "consequence": "鱼死亡、植物枯萎，需重新铺设水管"
+    },
+    "ku_id": "GZ-SY-00269",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "住宅功能配置7系统.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T12:52:38",
+    "source_material": "住宅类设计功能配置7系统.pdf",
+    "trigger_keywords": [
+      "软水",
+      "鱼缸",
+      "绿植",
+      "盐分",
+      "自来水"
+    ]
+  },
+  {
+    "title": "开槽前未拍照留档后期纠纷无据",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_DEMOLISH"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "开槽前对原始墙面、地面拍照留档，是避免后期纠纷的重要手段。若未拍照，后期出现墙面开裂、地面空鼓等问题时，无法判断是原始结构问题还是施工造成，责任难以界定。虽然单次损失可能不大，但纠纷处理成本高，且影响装修进度和心情。很多业主忽视这一步，认为没必要，实际在验收阶段可能成为关键证据。",
+    "typical_scenario": "孙先生在入住半年后发现客厅墙面出现裂缝，怀疑是装修质量问题。施工方辩称是原始墙体就有裂缝，只是被涂料遮盖。由于开槽前未拍照留档，孙先生无法证明裂缝是施工造成的，维权陷入僵局，最终只能自费修补。",
+    "how_to_avoid": "1. 在力工开槽前，用手机或相机对全屋原始墙面、地面进行拍照和录像。2. 重点拍摄有裂缝、空鼓、渗水痕迹的区域，并记录时间。3. 将照片和视频备份到云端，并发送一份给施工方确认。4. 在施工合同中注明原始状态记录作为附件，双方签字确认。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "监理工程师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主忽视原始状态留档",
+      "direct_cause": "后期问题无法界定责任",
+      "consequence": "维权困难和自费修补"
+    },
+    "ku_id": "GZ-SY-00293",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "施工进度计划表.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:07:27",
+    "source_material": "施工进度计划表(方林装饰)",
+    "trigger_keywords": [
+      "拍照留档",
+      "墙面裂缝",
+      "维权",
+      "施工质量",
+      "证据"
+    ]
+  },
+  {
+    "title": "智能面板安装时机不当致返工",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION",
+      "TYPE_DELAY"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL",
+      "TRADE_PAINT"
+    ],
+    "material": [
+      "MAT_WIRE"
+    ],
+    "scope": "universal",
+    "description": "智能面板、传感器、摄像头等设备应在墙面乳胶漆完全干透后再安装，否则安装时可能破坏未干透的漆面，留下指纹或压痕。同时，若在水电阶段未预留零线或底盒过浅，后期安装智能面板时会发现无法安装，需重新开槽布线，造成返工和墙面破坏。",
+    "typical_scenario": "业主在水电改造时未考虑智能家居需求，未预留零线。油工完成后安装智能开关面板时，电工发现盒内只有火线和控制线，无法供电。只能重新开槽布线，墙面被凿开，补漆后留下明显痕迹，且额外花费了800元人工费。",
+    "how_to_avoid": "1. 在水电交底时，明确所有智能设备（开关、传感器、摄像头）的安装位置和供电需求，预留零线和足够深度的底盒。2. 油工完成后，等待乳胶漆完全干透（至少3-5天）再安装面板。3. 安装时使用手套，避免指纹留在漆面上。4. 若已遗漏，需在油工施工前完成开槽布线，避免后期破坏墙面。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "智能家居安装工程师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "水电阶段未规划智能设备需求",
+      "direct_cause": "未预留零线或底盒过浅",
+      "consequence": "返工开槽、墙面破坏、额外费用"
+    },
+    "ku_id": "GZ-SY-00311",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "施工进度计划表.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:07:27",
+    "source_material": "施工进度计划表(方林装饰)",
+    "trigger_keywords": [
+      "智能开关",
+      "零线",
+      "开槽",
+      "布线",
+      "面板"
+    ]
+  },
+  {
+    "title": "餐具储藏未兼顾清洁与烹饪动线",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "常用餐具（碗、盘、筷、勺、刀叉）若放置位置不当，如远离水池或炉灶，会导致餐后清洗归位和餐前取用都需额外走动。设计时未将餐具收纳放在水池与炉灶之间的黄金区域，影响日常操作效率。",
+    "typical_scenario": "业主将餐具收纳在远离水池的吊柜中，餐后清洗完需端着湿碗走很远，且高度过高取放不便；餐前摆桌也需来回跑动，操作繁琐。",
+    "how_to_avoid": "1. 将常用餐具收纳位置规划在水池与炉灶之间的中部柜。2. 高度控制在伸手可及范围（距地70-180cm）。3. 使用抽屉或拉篮，便于分类存放和取用。4. 若空间不足，优先保证碗碟位置，筷勺可放抽屉。5. 与设计师确认餐具收纳位置，模拟餐后清洁流程验证。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "餐具收纳未结合清洁与烹饪双动线",
+      "direct_cause": "餐具位置偏离水池与炉灶之间的黄金区域",
+      "consequence": "餐前餐后操作效率低，使用不便"
+    },
+    "ku_id": "GZ-SY-00324",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "餐具收纳",
+      "动线",
+      "吊柜",
+      "取放不便",
+      "水池"
+    ]
+  },
+  {
+    "title": "观赏性餐具收纳方式不当",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "具有装饰价值的餐具若采用封闭式收纳，无法展示其美感，浪费厨房装饰潜力；而纯实用易乱的餐具若采用开放式展示，则会让厨房显得杂乱。设计时未区分观赏性与实用性物品的储藏方式，导致美观与实用失衡。",
+    "typical_scenario": "业主将精美的骨瓷餐具藏在封闭柜内，厨房显得单调；同时将杂乱的保鲜盒、塑料袋放在开放式搁板上，视觉上杂乱无章。",
+    "how_to_avoid": "1. 设计前区分观赏性餐具（精美盘、杯）和实用性餐具（保鲜盒、杂项）。2. 观赏性餐具使用开放格或玻璃柜门展示，提升厨房格调。3. 实用性易乱物品使用抽屉或不透明柜门隐藏收纳。4. 半透明柜门可作为折中方案，兼顾展示与遮挡。5. 与设计师沟通展示区域的位置和灯光，突出装饰效果。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未区分物品的观赏性与实用性属性",
+      "direct_cause": "收纳方式一刀切，未采用差异化设计",
+      "consequence": "美观与实用失衡，厨房视觉杂乱或单调"
+    },
+    "ku_id": "GZ-SY-00325",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "骨瓷餐具",
+      "封闭柜",
+      "开放式搁板",
+      "视觉杂乱",
+      "保鲜盒"
+    ]
+  },
+  {
+    "title": "中部柜高度设置不当影响使用",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "中部柜（操作台与吊柜之间）底面标高若设置不当，会严重影响使用便利性。当台面进深为700mm时，底面标高可降至1200mm以增加储物量；但台面进深为600mm时，若底面标高过低，会造成视线遮挡和碰头风险。很多业主忽视台面进深与中部柜高度的匹配关系，导致中部柜形同虚设或使用不便。调整费用虽不高，但影响日常操作效率。",
+    "typical_scenario": "张先生家厨房台面进深600mm，设计师将中部柜底面标高设为1200mm。实际使用中，张先生身高175cm，操作时视线被中部柜遮挡，无法看清台面后方区域，且弯腰取物时头部容易碰到柜体，中部柜使用频率极低。",
+    "how_to_avoid": "1. 设计时先确定台面进深，再匹配中部柜底面标高：进深700mm可降至1200mm，进深600mm需适当升高。2. 以实际使用者身高进行模拟，确保视线无遮挡、无碰头风险。3. 中部柜进深以250mm为宜，避免过深影响操作空间。4. 与设计师充分沟通使用习惯，必要时现场调整。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未根据台面进深匹配中部柜高度",
+      "direct_cause": "中部柜底面标高设置不合理",
+      "consequence": "视线遮挡、碰头风险，中部柜使用率低"
+    },
+    "ku_id": "GZ-SY-00328",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "中部柜",
+      "高度设置",
+      "遮挡视线",
+      "弯腰取物",
+      "台面进深"
+    ]
+  },
+  {
+    "title": "灶台后方墙面未装挡油板致清洁难",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET",
+      "TRADE_TILE"
+    ],
+    "material": [
+      "MAT_TILE"
+    ],
+    "scope": "universal",
+    "description": "灶台后方墙面长期受油溅，瓷砖缝隙和表面容易积油，清洁费力。若未在装修时安装铝箔挡油板或防油污板，后期油渍渗入瓷砖缝隙，发黄发黑，难以恢复。挡油板成本低（几十元），但能显著减少清洁工作量，是高频被遗漏的细节。",
+    "typical_scenario": "业主入住三个月后，发现灶台后方瓷砖缝隙里全是黄色油渍，用刷子也刷不干净。当初设计师没提挡油板，自己也忘了，现在只能贴防油贴纸，但边缘翘起，影响美观。",
+    "how_to_avoid": "1. 在橱柜设计阶段，明确要求灶台后方墙面安装铝箔挡油板或钢化玻璃防油板。2. 确认挡油板尺寸覆盖灶台正后方区域，高度至少30cm。3. 施工时在贴砖完成后、安装橱柜前安装挡油板，确保密封。4. 若已装修完，可选用耐高温防油贴纸临时补救，但需定期更换。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计遗漏灶台防油污措施",
+      "direct_cause": "瓷砖缝隙直接暴露于油溅",
+      "consequence": "油渍渗入难以清洁，影响美观和卫生"
+    },
+    "ku_id": "GZ-SY-00332",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "挡油板",
+      "油渍",
+      "瓷砖缝隙",
+      "清洁难",
+      "防油贴纸"
+    ]
+  },
+  {
+    "title": "水槽未装挡水板致台面积水",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_BATHROOM",
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "水槽洗菜洗碗时水花容易溅到相邻操作台面，导致台面长期潮湿，边缘密封胶发霉，柜体受潮变形。安装吸盘式挡水板成本极低（十几元），但能有效阻挡水花，是容易被忽略的细节。",
+    "typical_scenario": "业主洗菜时水总溅到旁边切菜区，每次切菜前都要擦干台面。时间久了，水槽与台面接缝处的玻璃胶发黑，还有霉味。当初装修时没人提醒装挡水板。",
+    "how_to_avoid": "1. 设计阶段在水槽周边预留挡水板安装位置。2. 选择与台面颜色协调的亚克力或硅胶挡水板。3. 安装时确保挡水板紧贴台面，底部用密封胶固定。4. 若已入住，可购买免打孔吸盘式挡水板，直接吸附在台面上。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计未考虑水花飞溅问题",
+      "direct_cause": "水槽与操作台之间无物理阻隔",
+      "consequence": "台面长期潮湿，密封胶发霉，柜体受潮"
+    },
+    "ku_id": "GZ-SY-00333",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "挡水板",
+      "积水",
+      "玻璃胶发黑",
+      "霉味",
+      "水槽"
+    ]
+  },
+  {
+    "title": "冰箱与橱柜间缝隙未利用致空间浪费",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "冰箱与橱柜之间常留出10-20cm的窄缝，若不利用，既积灰又浪费收纳空间。可塞入带滑轮的窄型置物架（宽约14cm），存放调料、罐头等，取用方便。很多业主装修时未考虑此缝隙，后期想加装又找不到合适尺寸的架子。",
+    "typical_scenario": "业主家冰箱旁有15cm的缝隙，一直空着，灰尘积了厚厚一层，还掉进过勺子。后来想买置物架，但网上尺寸都不合适，定制又贵，只能继续闲置。",
+    "how_to_avoid": "1. 设计阶段测量冰箱与橱柜之间的实际缝隙宽度。2. 在橱柜设计图中标注缝隙尺寸，并预留滑轮置物架的位置。3. 选购宽度比缝隙小1-2cm的带轮置物架，确保能自由拉出。4. 若已装修完，可定制窄型木板架或购买可伸缩缝隙收纳架。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑冰箱周边缝隙利用",
+      "direct_cause": "缝隙空间闲置",
+      "consequence": "空间浪费，积灰难清理"
+    },
+    "ku_id": "GZ-SY-00334",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "缝隙",
+      "置物架",
+      "空间浪费",
+      "定制"
+    ]
+  },
+  {
+    "title": "厨房吊柜顶部沦为杂物堆",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "厨房吊柜顶部（2500mm以上）因高度过高、取放不便，常被业主用来堆放不常用物品，但若未提前规划，该区域极易被闲置或堆满杂物，导致空间浪费。同时，吊柜顶部若放置重物，存在安全隐患，且清洁困难。损失量级虽小，但影响日常使用体验和厨房整洁度。",
+    "typical_scenario": "业主入住后，发现吊柜顶部太高，每次取物都要搬凳子，索性把不用的旧锅、空盒子全堆上去，半年后积满油灰，想清理却够不着，最终成为卫生死角。",
+    "how_to_avoid": "1. 设计阶段明确吊柜顶部为低频收纳区，仅存放轻质、不常用物品（如节日装饰）。2. 在吊柜顶部加装下拉式拉篮或升降挂篮，降低取放难度。3. 若预算有限，可预留电源和轨道，后期加装电动升降装置。4. 在图纸上标注该区域承重限制，避免业主后期堆放重物。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "垂直空间未按使用频率合理分区，且缺乏辅助取放设施",
+      "direct_cause": "吊柜顶部过高，取放不便，被弃用",
+      "consequence": "空间浪费、卫生死角、安全隐患"
+    },
+    "ku_id": "GZ-SY-00336",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "吊柜顶部",
+      "卫生死角",
+      "取物",
+      "油灰"
+    ]
+  },
+  {
+    "title": "地柜对开门取物不便被闲置",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "传统对开门地柜需弯腰下蹲才能取物，且内部深处物品难以够到，导致地柜空间利用率低，常用物品被塞在深处后逐渐遗忘，造成浪费。损失量级虽小，但影响收纳效率和日常便利性。",
+    "typical_scenario": "业主把不常用的电饭煲放在对开门地柜最里面，每次想用都要蹲下把外面的东西全搬出来，久而久之干脆不用，电饭煲被遗忘在角落。",
+    "how_to_avoid": "1. 地柜优先选用抽屉式设计，或加装拉篮，实现抽拉取物。2. 若已做对开门，可在内部加装可抽拉的隔板或置物架。3. 将常用物品放在地柜前部，不常用物品放后部，并定期整理。4. 设计阶段与橱柜商确认地柜内部五金方案，避免后期改造。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "地柜设计未考虑人体工学，取物动作不便",
+      "direct_cause": "对开门地柜深处物品难以取用",
+      "consequence": "空间浪费、物品遗忘、使用效率低"
+    },
+    "ku_id": "GZ-SY-00339",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "厨房精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:23:20",
+    "source_material": "厨房精细化设计指引.pdf",
+    "trigger_keywords": [
+      "地柜",
+      "对开门",
+      "取物不便",
+      "闲置"
+    ]
+  },
+  {
+    "title": "沙发固定方向限制空间灵活性",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [
+      "MAT_FURNITURE"
+    ],
+    "scope": "universal",
+    "description": "传统沙发（如L型或贵妃位）方向固定，只能朝向电视，无法适应观影、游戏、亲子互动等多种场景。当家庭成员想围坐聊天或陪孩子玩时，沙发成了障碍。更换沙发成本高，且固定沙发往往体积大，让客厅显得拥挤。",
+    "typical_scenario": "业主买了L型沙发，结果孩子想在客厅玩积木，需要一块空地，但沙发占了大半空间，且方向固定，家人只能挤在一边。想重新布置，沙发太重搬不动，只能将就，客厅功能单一。",
+    "how_to_avoid": "1. 选择低矮、轻便、可自由组合的模块沙发，方便随时调整方向。2. 避免购买带贵妃位或固定靠背的沙发。3. 设计时预留足够的活动空间，沙发不靠墙，留出后方通道。4. 根据家庭活动需求（观影、游戏、亲子）规划家具布局，而非固定单一方向。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "传统沙发设计固定方向，缺乏灵活性",
+      "direct_cause": "沙发体积大、方向固定",
+      "consequence": "客厅功能单一，无法适应多种家庭活动"
+    },
+    "ku_id": "GZ-SY-00346",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "L型沙发",
+      "空间灵活性",
+      "客厅布局",
+      "固定方向",
+      "功能单一"
+    ]
+  },
+  {
+    "title": "涂鸦书柜深度不足导致功能失效",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "涂鸦书柜设计为儿童绘画区，但若深度小于350mm，儿童画笔、画纸等物品无法收纳，且柜门容易碰头。深度不足还会导致书籍放不下，功能大打折扣。返工需重做柜体，损失数千元。",
+    "typical_scenario": "设计师为儿童房设计了涂鸦书柜，但柜体深度只有300mm。结果儿童绘本放不下，只能横着放，取用不便。孩子画画时，画笔没地方放，柜门还容易夹手。",
+    "how_to_avoid": "1. 设计涂鸦书柜时，深度至少350mm，确保能放下标准绘本和画具。2. 低区（900mm以下）设计为开放格，方便儿童取用。3. 高区设计为带门柜，收纳大人书籍。4. 与定制厂家确认尺寸，避免缩水。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑儿童物品尺寸",
+      "direct_cause": "柜体深度不足350mm",
+      "consequence": "收纳功能失效，儿童使用不便"
+    },
+    "ku_id": "GZ-SY-00349",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "书柜深度",
+      "涂鸦",
+      "绘本",
+      "儿童房",
+      "柜门"
+    ]
+  },
+  {
+    "title": "地台未预留灯带电源",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "地台设计常配氛围灯带，但很多业主在施工时没预留灯带电源，导致后期无法安装或只能走明线。灯带电源需在木工阶段预埋，若遗漏，后期加装需拆地台，损失数千元。",
+    "typical_scenario": "业主做了100mm高地台，想在地台边缘装灯带营造氛围。但木工施工时没预留电源，电工也没留线。后期想装，只能从附近插座拉线，地台边缘走明线，非常难看。",
+    "how_to_avoid": "1. 设计地台时，明确是否需要灯带，若需要，提前规划电源。2. 在木工施工前，与电工交底，在地台边缘预留电源线。3. 灯带变压器可隐藏在地台内部，预留检修口。4. 若已完工，可考虑用充电式灯带替代，但需定期充电。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "地台灯带未提前规划电源",
+      "direct_cause": "木工施工时未预留灯带电源线",
+      "consequence": "后期无法安装灯带，或走明线影响美观"
+    },
+    "ku_id": "GZ-SY-00351",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "地台",
+      "灯带",
+      "电源预留",
+      "明线",
+      "氛围"
+    ]
+  },
+  {
+    "title": "品茗吧台未预留电源致功能瘫痪",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [
+      "MAT_WIRE"
+    ],
+    "scope": "universal",
+    "description": "阳台一体化设计中，品茗吧台是核心功能区，但若在电路改造阶段未在吧台位置预留电源（含USB接口），后期泡茶、手机充电、使用小家电均需拉插线板，不仅影响美观，还存在安全隐患。重新布线需破坏墙面或地面，返工成本虽不高（数百元），但非常麻烦。",
+    "typical_scenario": "设计师在效果图中规划了阳台品茗吧台，但施工交底时未明确电源点位。水电工按常规只在阳台两侧留了插座，吧台位置恰好没有。业主入住后想用电热水壶泡茶，只能从远处拉插线板，电线横跨阳台，既不安全又难看，最终请电工开槽加装插座，破坏已铺好的瓷砖，损失约800元。",
+    "how_to_avoid": "1. 设计阶段明确吧台位置和尺寸，在电路图上标注电源点位。2. 水电改造时，在吧台下方或侧面预留至少2个五孔插座（带USB接口更佳）。3. 插座高度建议距地面300mm（吧台下方）或台面上方100mm（若吧台靠墙）。4. 若吧台兼作健身区补水点，需额外预留小冰箱电源。5. 施工完成后用相位检测仪测试每个插座通电情况。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计交底时遗漏吧台电源需求",
+      "direct_cause": "水电改造未在吧台位置预留插座",
+      "consequence": "功能无法使用，需返工开槽布线，破坏装修面"
+    },
+    "ku_id": "GZ-SY-00357",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "电源点位",
+      "吧台",
+      "插座",
+      "插线板",
+      "开槽"
+    ]
+  },
+  {
+    "title": "餐边柜储物格未设活动隔板致收纳灵活性差",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "餐边柜储物格若全部采用固定隔板，后期物品尺寸变化时无法调整，导致空间浪费。例如米面粮油袋高度不一、母婴用品大小各异，固定隔板无法适应。活动隔板成本增加有限（每块约50-100元），但能大幅提升收纳灵活性。常见问题是设计师为省事默认固定隔板，业主验收时未注意。",
+    "typical_scenario": "张先生家餐边柜干货储物格设计为固定隔板，高度300mm。入住后发现买的5kg大米袋高350mm放不进去，只能横放或堆叠，取用不便。想改活动隔板需重新打孔，柜体板材已固定，改造困难且影响美观。",
+    "how_to_avoid": "1. 设计阶段明确要求所有储物格采用活动隔板，并在图纸上标注；2. 确认隔板调节孔间距（建议30-50mm一个孔位）；3. 验收时逐格检查隔板能否自由调节高度；4. 与设计师确认活动隔板承重能力，避免后期放置重物变形；5. 在合同中注明活动隔板数量及位置。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计师为简化工艺采用固定隔板，未考虑收纳灵活性",
+      "direct_cause": "储物格隔板不可调节，无法适应不同尺寸物品",
+      "consequence": "收纳空间利用率低，后期改造困难"
+    },
+    "ku_id": "GZ-SY-00360",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "活动隔板",
+      "固定隔板",
+      "储物格",
+      "收纳",
+      "打孔"
+    ]
+  },
+  {
+    "title": "沙发背景墙全开放格显杂乱难打理",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_CARPENTRY"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "沙发背景墙收纳柜若全部做开放格，物品摆放稍乱即显杂乱，且开放格易积灰，清洁频繁。入住后杂物无处隐藏，整体美观度大打折扣。此坑在设计师未规划开放与封闭比例时常见，损失虽不大（清洁成本、视觉体验），但影响日常居住心情。",
+    "typical_scenario": "业主喜欢展示书籍和摆件，要求沙发背景墙全做开放格。入住三个月后，格子里堆满杂物、孩子的玩具，显得凌乱不堪，每周擦灰累人，后悔没做部分封闭柜门。",
+    "how_to_avoid": "1. 设计时遵循开放格与封闭柜门7:3比例，开放格放展示品，封闭柜藏杂物。2. 开放格建议设置在视线高度（1.2-1.6m），封闭柜放上下两端。3. 提前规划好开放格内要放什么，避免后期乱塞。4. 若已做全开放，可后期加装藤编篮或布艺收纳盒，遮挡杂乱。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未规划开放与封闭比例",
+      "direct_cause": "沙发背景墙全做开放格",
+      "consequence": "杂物外露显杂乱，积灰难打理"
+    },
+    "ku_id": "GZ-SY-00369",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "开放格",
+      "封闭柜门",
+      "清洁打理",
+      "展示收纳",
+      "杂物堆积"
+    ]
+  },
+  {
+    "title": "沙发背景墙柜体落地无悬空致扫地机卡困",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CARPENTRY",
+      "TRADE_DESIGN"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "沙发背景墙收纳柜底部直接落地，未做悬空设计，扫地机器人无法进入柜底清扫，灰尘毛发堆积。若柜体与地面间有缝隙，机器人还可能卡住。此坑在设计师未考虑智能家居清洁需求时常见，损失虽小（清洁死角），但影响日常使用便利性。",
+    "typical_scenario": "业主买了扫地机器人，但沙发背景墙柜体落地，机器人无法清扫柜底，灰尘越积越厚。想挪动柜子清洁，但柜子固定墙上，只能趴在地上用抹布擦，十分不便。",
+    "how_to_avoid": "1. 设计沙发背景墙柜体时，底部悬空150-200mm，方便扫地机器人通过。2. 悬空部分可加灯带，提升氛围感。3. 若已做落地柜，可后期加装踢脚板并留出机器人高度，或改用吸尘器手动清洁。4. 设计阶段与木工明确悬空高度，确保机器人能进入。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑扫地机器人清洁需求",
+      "direct_cause": "沙发背景墙柜体底部落地无悬空",
+      "consequence": "柜底成为清洁死角，灰尘堆积"
+    },
+    "ku_id": "GZ-SY-00370",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "扫地机器人",
+      "柜体落地",
+      "悬空设计",
+      "清洁死角",
+      "灰尘积累"
+    ]
+  },
+  {
+    "title": "玄关柜底部未悬空导致扫地机卡住",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关柜底部若未悬空150-200mm，扫地机器人无法通过，导致玄关区域成为清洁死角，灰尘和鞋底泥沙长期堆积。很多业主在定制柜体时忽略了扫地机器人的通行需求，等入住后才发现机器人每次都在玄关‘撞墙’返回，只能手动清理。虽然问题不大，但日积月累影响居住体验和清洁效率。",
+    "typical_scenario": "刘女士家购买了扫地机器人，但玄关柜落地设计，底部无缝隙。机器人每次清扫到玄关就被柜体挡住，无法进入，导致玄关区域永远需要手动拖地。刘女士想改造柜体，但涉及拆装和补漆，费用约800元，且影响美观，只能接受现状。",
+    "how_to_avoid": "1. 设计玄关柜时，明确底部悬空150-200mm，并告知定制厂家。2. 若已安装落地柜，可考虑加装支脚抬高柜体，但需确认柜体结构稳定性。3. 在购买扫地机器人前，测量其高度和通过性，确保能进入悬空区域。4. 在合同中注明柜体底部悬空尺寸，安装时现场验收。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑扫地机器人的通行需求",
+      "direct_cause": "玄关柜底部未悬空或悬空高度不足",
+      "consequence": "清洁死角，需手动清理，影响居住体验"
+    },
+    "ku_id": "GZ-SY-00377",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "扫地机器人",
+      "底部悬空",
+      "柜体",
+      "卡住",
+      "玄关"
+    ]
+  },
+  {
+    "title": "玄关地面与客厅同材质难清洁",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [
+      "MAT_TILE"
+    ],
+    "scope": "universal",
+    "description": "玄关区域若与客厅铺设相同材质（如木地板），鞋底带入的泥沙会划伤地板表面，且清洁困难。很多业主为了视觉统一，忽略了玄关作为‘污染缓冲区’的功能，导致入住后地板磨损明显，尤其雨天泥泞时更严重。更换地面材料涉及拆除和重铺，成本高，只能通过地垫缓解。",
+    "typical_scenario": "陈女士家全屋铺设木地板，玄关也不例外。入住半年后，玄关区域地板出现明显划痕和磨损，雨天鞋底带水导致地板边缘起翘。陈女士想更换为瓷砖，需拆除局部地板并找平，费用约3000元，且新瓷砖与旧地板衔接处难以处理，只能铺地垫遮挡。",
+    "how_to_avoid": "1. 设计阶段明确玄关地面与客厅材质区分，玄关选用瓷砖或石材，客厅用木地板。2. 若坚持统一材质，可在玄关铺设可拆卸地垫或地毯，并定期清洗。3. 在施工交底时，向工长明确玄关区域的地面材料，避免误铺。4. 在合同中注明各区域地面材料，验收时核对。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑玄关的清洁功能需求",
+      "direct_cause": "玄关与客厅铺设相同材质地面",
+      "consequence": "地板磨损、起翘，清洁困难，需额外花费修复"
+    },
+    "ku_id": "GZ-SY-00378",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "木地板",
+      "瓷砖",
+      "磨损",
+      "起翘",
+      "玄关地面"
+    ]
+  },
+  {
+    "title": "玄关照明不足摸黑找鞋",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关若仅依赖主灯照明，柜内和底部开放格光线不足，晚上回家摸黑找鞋、插钥匙极不方便。很多业主忽略了玄关的局部照明设计，导致使用体验差。虽然问题不大，但可通过感应灯和柜内灯带轻松解决，成本低且提升幸福感。",
+    "typical_scenario": "周先生家玄关只有一盏吸顶灯，柜内无照明。晚上加班回家，打开柜门后内部一片漆黑，只能靠手机手电筒找鞋。钥匙挂钩区域光线不足，经常摸半天才找到。周先生想加装感应灯，但需重新布线，费用约500元，一直拖延未处理。",
+    "how_to_avoid": "1. 设计玄关时，在柜体中部开放格底部预留LED灯带电源。2. 在玄关顶部或墙面安装感应灯（人来即亮），避免摸黑。3. 若已装修完成，可选用充电式感应灯或电池灯带，免布线安装。4. 在合同中注明玄关照明点位，水电交底时确认。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑玄关局部照明需求",
+      "direct_cause": "柜内和开放格无照明设施",
+      "consequence": "夜间使用不便，体验差，需额外加装"
+    },
+    "ku_id": "GZ-SY-00381",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "客餐厅精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T13:37:07",
+    "source_material": "客餐厅精细化设计指引.pdf",
+    "trigger_keywords": [
+      "照明",
+      "感应灯",
+      "柜内",
+      "吸顶灯",
+      "摸黑"
+    ]
+  },
+  {
+    "title": "台下柜空间浪费未利用管道周边",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_CABINET",
+      "TRADE_PLUMBING"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "洗手台下方柜体常因排水管道占用而空间零碎，若未合理设计隔板和抽屉，大瓶洗涤剂、水桶等无处存放，空间白白浪费。损失量级低，但影响日常使用便利性。",
+    "typical_scenario": "业主家的台下柜是整块层板，中间被下水管穿过，两侧空间无法利用，只能放几个小瓶子。大桶洗衣液和备用纸巾只能堆在卫生间角落，显得杂乱。想改造柜内结构，但定制柜体已固定，只能买收纳盒勉强整理。",
+    "how_to_avoid": "1. 定制台下柜时，要求设计师根据下水管位置设计U型或L型抽屉/隔板。2. 预留管道检修口，方便后期维护。3. 选择带滚轮的收纳箱，方便取用深处物品。4. 台下柜门可选用百叶门或镂空门，通风防潮。5. 在图纸上标注管道位置，确保柜体结构避开。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑管道对柜内空间的分割",
+      "direct_cause": "柜体内部结构未按管道位置定制",
+      "consequence": "空间利用率低，大件物品无处存放"
+    },
+    "ku_id": "GZ-SY-00389",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "台下柜",
+      "下水管",
+      "层板",
+      "收纳",
+      "洗衣液"
+    ]
+  },
+  {
+    "title": "卫浴柜门过宽开启占用人站立足空间",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_BATHROOM"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卫浴柜单扇门宽度若超过350mm，开启时会占用人站立的空间，尤其在狭小卫生间内，门打开后使用者需侧身才能取物，甚至门会碰到使用者身体。若柜门采用外开式，开启半径内若有其他卫浴设备（如马桶、洗衣机），还会造成碰撞。此问题虽不涉及大额费用，但严重影响日常使用舒适度。",
+    "typical_scenario": "业主在定制卫浴柜时，为了追求大气选择了600mm宽的单扇门。安装后才发现，卫生间宽度仅1.5米，柜门打开后几乎占满整个通道，人必须退到马桶旁才能开门。每次取用洗漱用品都要先关门再转身，非常狼狈。若卫生间再小一点，柜门甚至无法完全打开。",
+    "how_to_avoid": "1. 设计卫浴柜时，单扇门宽度严格控制在350mm以内，若柜体较宽可设计为双开门或三开门。2. 测量卫生间实际尺寸，模拟柜门开启后的占用空间，确保开启后仍有至少600mm的通行宽度。3. 优先选用推拉门或折叠门，彻底避免开启占空间的问题。4. 若必须使用外开门，在门开启半径内不要放置任何固定设备或家具。5. 定制前用纸板模拟柜门开启轨迹，实地验证使用空间是否足够。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时追求美观而忽略空间尺寸限制",
+      "direct_cause": "柜门过宽，开启后侵占站立空间",
+      "consequence": "日常取物不便，空间局促，使用体验差"
+    },
+    "ku_id": "GZ-SY-00392",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "柜门宽度",
+      "通道",
+      "开启",
+      "卫浴柜",
+      "站立足"
+    ]
+  },
+  {
+    "title": "水龙头与台盆边缘距离过近",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_BATHROOM"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "水龙头出水口与台盆边缘距离若小于50mm，手无法伸入盆沿与龙头之间进行清洗，导致洗手时手背常碰到龙头或盆壁，水流也容易溅出台面。若距离过大超过80mm，则水花易溅出台盆。此问题虽不涉及大额费用，但直接影响日常洗漱体验，且难以后期调整。",
+    "typical_scenario": "业主选购了一款造型独特的入墙式水龙头，安装时未注意与台盆边缘的距离，实际间距仅30mm。洗手时手指无法完全伸入盆内，只能侧着手掌冲洗，水花四溅弄湿台面和衣物。想调整龙头位置，但入墙式龙头已固定，需拆墙才能改动，只能勉强使用。",
+    "how_to_avoid": "1. 选购水龙头时，测量出水口与台盆边缘的适配距离，确保在50-80mm范围内。2. 安装前用实物或模型模拟使用动作，确认手能舒适伸入清洗区域。3. 若使用入墙式龙头，务必在预埋水管前确定精确位置，避免后期无法调整。4. 台盆安装后、龙头安装前，用卷尺实测距离，不符合标准立即调整。5. 选择龙头时优先考虑出水口可旋转的款式，增加使用灵活性。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑水龙头与台盆的尺寸配合",
+      "direct_cause": "间距过近，手无法正常伸入清洗",
+      "consequence": "洗漱不便，水花四溅，后期难以调整"
+    },
+    "ku_id": "GZ-SY-00393",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "水龙头",
+      "台盆边缘",
+      "间距",
+      "水花",
+      "入墙式"
+    ]
+  },
+  {
+    "title": "卫浴搁架间距不合理导致空间浪费",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_BATHROOM"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卫浴柜内部搁架间距若未根据存放物品高度设计，可能出现护肤品区间距过大浪费空间，或大瓶区间距过小导致物品无法放入。标准间距应为护肤品区150-200mm，大瓶区250-300mm。若间距不合理，收纳容量大打折扣，且后期调整搁架需重新打孔，可能损坏柜体。",
+    "typical_scenario": "业主定制镜柜时，设计师将所有搁架间距统一设为200mm。结果发现，常用的洗面奶瓶高180mm，放进去后上方空间完全浪费；而大瓶的洗发水高280mm，却因间距不够只能放在台面上。镜柜内空间看似不少，实际利用率不足一半，台面堆满瓶瓶罐罐。",
+    "how_to_avoid": "1. 设计搁架前，测量业主所有卫浴物品的高度，分类统计。2. 根据物品高度设置不同间距，护肤品区150-200mm，大瓶区250-300mm。3. 采用可调节搁架设计，方便后期根据实际需求调整间距。4. 在柜内预留部分灵活空间，应对未来新增物品。5. 定制前与业主确认物品清单，确保搁架设计符合实际使用需求。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑实际物品尺寸，采用统一间距",
+      "direct_cause": "搁架间距与物品高度不匹配",
+      "consequence": "收纳空间浪费，台面杂乱，使用不便"
+    },
+    "ku_id": "GZ-SY-00395",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "搁架间距",
+      "镜柜",
+      "洗面奶",
+      "洗发水",
+      "利用率"
+    ]
+  },
+  {
+    "title": "镜柜深度不足致镜面溅水",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET",
+      "TRADE_BATHROOM"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "镜柜深度过浅（如小于120mm）时，洗手时水花容易溅到镜面，且柜内物品（如牙膏、洗面奶）可能因深度不足而掉落。常见于追求薄型镜柜以节省空间，但忽略了实际使用需求。损失虽小（几百元），但日常清洁频繁，体验差。",
+    "typical_scenario": "业主选购了深度仅100mm的镜柜，安装后每次洗手水花溅到镜面，需频繁擦拭；柜内放标准尺寸的洗面奶瓶，关门时瓶身卡住，多次掉落摔坏。",
+    "how_to_avoid": "1. 选购镜柜时，深度至少选择150mm以上，确保标准洗漱用品能直立放入；2. 若空间受限，选择带防溅水边条或倾斜镜面的款式；3. 安装时镜柜底部距台面留出至少300mm，减少水花直接溅射；4. 柜内使用分隔盒，固定小物品位置，防止关门时碰撞。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "选型时忽略使用场景",
+      "direct_cause": "镜柜深度过浅",
+      "consequence": "溅水、物品掉落，使用体验差"
+    },
+    "ku_id": "GZ-SY-00397",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "镜柜",
+      "溅水",
+      "洗面奶瓶",
+      "深度不足",
+      "卡瓶"
+    ]
+  },
+  {
+    "title": "侧边柜宽度选错致空间浪费",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "侧边柜标准宽度有150mm、300mm、450mm三种，若未根据实际墙面尺寸和收纳需求选择，可能出现柜体过窄放不下常用化妆品，或过宽挤压洗手台空间。常见于业主自行选购成品柜，未测量墙面净宽。损失为柜体费用（几百元）及空间浪费。",
+    "typical_scenario": "卫生间墙面剩余宽度仅200mm，业主却购买了300mm宽的侧边柜，安装后柜体突出，洗手时手臂常碰到柜角，且挤压了洗手台活动空间，显得局促。",
+    "how_to_avoid": "1. 测量墙面净宽（从墙角到洗手台边缘），预留至少50mm活动余量；2. 根据常用物品尺寸选择宽度：化妆品小瓶选150mm，大瓶或毛巾选300mm，大件选450mm；3. 若墙面宽度不足，优先考虑壁龛或搁板替代；4. 定制柜时，要求设计师按实际墙面尺寸调整宽度。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未测量实际空间尺寸",
+      "direct_cause": "侧边柜宽度与墙面不匹配",
+      "consequence": "空间浪费或使用不便"
+    },
+    "ku_id": "GZ-SY-00398",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "侧边柜",
+      "宽度选错",
+      "碰手臂",
+      "空间浪费",
+      "洗手台"
+    ]
+  },
+  {
+    "title": "镜柜选型未考虑卫生间宽度",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "镜柜有单面、双面、三面三种形式，宽度和深度差异大。若未根据卫生间实际宽度选择，窄空间选三面镜柜会导致柜体过深，开门不便；宽空间选单面镜柜则浪费收纳和视觉扩展效果。常见于业主只看外观，忽略尺寸参数。损失为柜体费用（几百至千元）及使用不便。",
+    "typical_scenario": "卫生间宽度仅1.2米，业主选购了三面镜柜（深295mm），安装后镜柜突出，洗手时身体需侧倾，且两侧镜面打开时几乎贴到墙，取物困难。",
+    "how_to_avoid": "1. 测量卫生间净宽，小于1.5米选单面镜柜（深170mm），1.5-2米选双面（深425mm），大于2米可选三面；2. 同时考虑洗手台宽度，镜柜宽度应略小于台面宽度；3. 若空间有限，优先选单面镜柜+侧边柜补充收纳；4. 定制时要求设计师提供镜柜开门模拟图，确认不影响活动。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "选型未结合空间尺寸",
+      "direct_cause": "镜柜深度与卫生间宽度不匹配",
+      "consequence": "开门不便，空间局促"
+    },
+    "ku_id": "GZ-SY-00400",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "镜柜",
+      "卫生间宽度",
+      "侧倾",
+      "取物困难",
+      "三面镜"
+    ]
+  },
+  {
+    "title": "台下柜单一柜门致小件收纳混乱",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "台下柜若只做单柜门式，虽然大件物品存取方便，但缺少小件分类空间，洗发水、沐浴露、清洁剂等只能堆叠，取用时翻找困难，且容易倾倒。常见于追求简洁外观或预算有限时。损失为日常使用效率低，但可通过后期收纳盒改善。",
+    "typical_scenario": "业主定制了单柜门台下柜，内部无隔板，所有清洁用品堆在一起。每次找小瓶的洁厕灵都要翻半天，大瓶洗衣液倒下压住小瓶，瓶盖还摔裂了。",
+    "how_to_avoid": "1. 若空间允许，优先选择柜门+抽屉组合式，上层抽屉放小件，下层柜门放大件；2. 若已做单柜门，可购买可调节层板或收纳篮，将物品分类竖放；3. 使用带分隔的收纳盒，固定小瓶位置；4. 定期清理过期物品，保持柜内整洁。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "收纳设计未分类",
+      "direct_cause": "单一柜门缺乏分区",
+      "consequence": "小件物品混乱，取用不便"
+    },
+    "ku_id": "GZ-SY-00401",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "单柜门",
+      "隔板",
+      "收纳混乱",
+      "洁厕灵",
+      "翻找"
+    ]
+  },
+  {
+    "title": "花艺摆放忽略卫生间潮湿环境",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_BATHROOM"
+    ],
+    "material": [
+      "MAT_FURNITURE"
+    ],
+    "scope": "universal",
+    "description": "卫浴柜上摆放花艺虽能增添美感，但若选择不适合潮湿环境的花种，容易枯萎发霉，反而影响美观和卫生。常见于业主随意摆放鲜花，未考虑卫生间通风和光照条件。问题虽不严重，但频繁更换花艺增加额外开销，且发霉可能滋生细菌。",
+    "typical_scenario": "业主在卫浴柜上摆放了新鲜玫瑰，但卫生间通风差、湿度高，玫瑰两天就枯萎，花瓣散落，花茎发霉，散发异味。业主不得不频繁更换，每月花销近百元，后来在设计师建议下换成仿真花和耐湿绿植，问题才解决。",
+    "how_to_avoid": "1. 选择耐湿、耐阴的绿植，如绿萝、常春藤、蕨类植物。2. 避免摆放鲜花，可选用仿真花或干花。3. 确保卫生间有良好通风，或定期开窗除湿。4. 花艺容器需有排水孔，避免积水。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深卫浴设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未考虑卫生间潮湿环境对花艺的影响",
+      "direct_cause": "选择不适合的花种",
+      "consequence": "花艺枯萎发霉，影响美观和卫生"
+    },
+    "ku_id": "GZ-SY-00409",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "花艺",
+      "潮湿",
+      "发霉",
+      "异味",
+      "卫浴柜"
+    ]
+  },
+  {
+    "title": "女士化妆品与男士用品混放导致收纳混乱",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_BATHROOM"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卫生间收纳设计时若未考虑男女物品分区，女士化妆品、美发工具、美甲用品与男士剃须刀、洗面奶混放在同一镜柜或浴室柜，会导致找物困难、台面杂乱。女士物品通常数量多、种类杂（水乳、面膜、卸妆水、卷发棒、指甲油等），混放后每次使用需翻找，且瓶瓶罐罐易碰倒。虽然不涉及大额经济损失，但严重影响日常使用效率和心情，后期加装收纳架又破坏整体美观。",
+    "typical_scenario": "李女士和先生共用一个卫生间，设计师只做了一面镜柜。入住后李女士的护肤品、面膜、卷发棒和先生的剃须刀、洗面奶全堆在一起，镜柜门一开东西就往外掉。她每天化妆要先把先生的东西挪开，用完再放回去，台面永远乱糟糟。先生也抱怨找不到自己的东西，两人为此经常吵架。",
+    "how_to_avoid": "1. 设计前询问业主家庭成员构成，明确男女各自物品类型和数量。2. 镜柜内部做分区设计：上层或左侧设女士专区（美发组合、美甲组合、日化用品），下层或右侧设男士专区（剃须刀、洗面奶、须后水）。3. 若空间允许，设置独立上柜专门存放女士高频化妆品，镜柜只放两人共用物品（牙膏、牙刷）。4. 在图纸上标注每个分区的物品类别，与业主确认后再定制柜体。5. 提醒业主在定制柜体时选择可调节隔板，方便后期根据实际物品调整分区。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计阶段未考虑家庭成员性别差异和物品分类需求",
+      "direct_cause": "男女物品混放，女士物品多且杂导致取用困难",
+      "consequence": "日常使用效率低、台面杂乱，需后期加装收纳架补救"
+    },
+    "ku_id": "GZ-SY-00411",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "混放",
+      "镜柜",
+      "收纳混乱",
+      "护肤品",
+      "剃须刀"
+    ]
+  },
+  {
+    "title": "卫浴收纳未按使用者分区导致家庭成员互相干扰",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_DESIGNER",
+      "ROLE_OWNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卫浴收纳若未按使用者分区，男女主人、儿童的物品混放在一起，导致早晨高峰期互相干扰、找不到物品。例如女士的化妆品占用大量镜柜空间，男士的剃须刀无处安放；儿童洗漱用品放在成人够不到的高度，孩子无法独立使用。长期下来影响家庭和谐和使用效率。",
+    "typical_scenario": "夫妻二人共用卫浴，镜柜被女士的护肤品、化妆品塞满，男士的剃须刀、洗面奶只能放在台面上。早晨两人同时洗漱时，台面拥挤不堪，男士经常找不到自己的物品。家里5岁孩子的牙刷杯放在镜柜最上层，孩子够不到，每次都要家长帮忙拿取。",
+    "how_to_avoid": "1. 设计前统计家庭成员数量、年龄、性别及各自的卫浴物品清单。2. 按使用者划分收纳区域：女士美发美甲用品集中在上柜，男士用品设独立抽屉或隔层，儿童用品设置在孩子可及的高度（约900-1100mm）。3. 镜柜内部使用分隔件，为每位成员划分独立空间。4. 在图纸上标注各区域归属，施工时按图安装。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑家庭成员差异化需求，收纳空间统一规划",
+      "direct_cause": "物品混放、高度不适配，使用效率低",
+      "consequence": "家庭成员使用不便，互相干扰，降低生活品质"
+    },
+    "ku_id": "GZ-SY-00416",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#7",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "镜柜",
+      "分区收纳",
+      "台面拥挤",
+      "儿童取用",
+      "洗漱干扰"
+    ]
+  },
+  {
+    "title": "卫浴收纳藏露比例失衡导致视觉杂乱",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_DESIGNER",
+      "ROLE_OWNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卫浴收纳若未遵循藏露比例9:1原则，大量物品裸露在外，导致空间视觉杂乱。例如所有洗漱用品都摆在台面上、毛巾挂在显眼位置、清洁工具散落地面，即使收纳空间充足，卫浴看起来依然凌乱。影响空间美感，且清洁难度大。",
+    "typical_scenario": "业主家卫浴面积不小，也做了镜柜和浴室柜，但习惯将所有物品摆放在台面上：牙刷杯、洗面奶、护肤品、梳子、吹风机等十几件物品一字排开。每次洗完澡台面湿漉漉，物品东倒西歪，看起来非常杂乱，拍照都不好意思。",
+    "how_to_avoid": "1. 设计时明确藏露比例，90%物品收纳在柜内、抽屉内，仅10%美观物品（如香薰、绿植）展示在外。2. 台面尽量保持空无一物，日常用品全部入柜。3. 选择带镜柜的镜子，将洗漱用品收纳在镜柜内。4. 使用收纳盒将同类物品归类后放入柜内，避免散落。5. 养成随手归位的习惯，保持台面整洁。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "收纳设计未考虑藏露比例，开放空间过多",
+      "direct_cause": "物品裸露在外，视觉杂乱",
+      "consequence": "空间美感下降，清洁难度增加"
+    },
+    "ku_id": "GZ-SY-00418",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#7",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "藏露比例",
+      "台面摆放",
+      "视觉杂乱",
+      "浴室柜",
+      "物品东倒西歪"
+    ]
+  },
+  {
+    "title": "卫浴收纳未按使用频率分层导致取用不便",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_DESIGNER",
+      "ROLE_OWNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "卫浴收纳若未按使用频率分层，高频物品放在高处或低处，低频物品占据黄金区，导致日常取用需频繁踮脚、弯腰。例如每天使用的洗面奶放在镜柜最上层，而备用毛巾放在黄金区。长期下来不仅使用不便，还容易因取用不便导致物品随手乱放，破坏整洁。",
+    "typical_scenario": "业主家镜柜内部层板间距均等，所有物品按大小随意摆放。每天早晚使用的洗面奶、护肤品被放在最上层，身高160cm的业主需要踮脚才能拿到。而一年用不了几次的备用毛巾却放在中间黄金区。每次洗漱都感觉别扭，后来干脆把常用品放在台面上，镜柜成了摆设。",
+    "how_to_avoid": "1. 设计时明确黄金区（650-1850mm）用于存放高频物品，如牙刷、洗面奶、护肤品、毛巾。2. 低频物品（备用毛巾、囤货）放在高处或低处。3. 镜柜内部使用活动隔板，根据物品高度和使用频率灵活调整层板间距。4. 在图纸上标注各区域存放物品类别，施工时按此安装。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "收纳设计未考虑使用频率，层板间距和位置规划不合理",
+      "direct_cause": "高频物品不在黄金区，取用不便",
+      "consequence": "使用体验差，物品乱放，收纳功能失效"
+    },
+    "ku_id": "GZ-SY-00419",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卫浴精细化设计指引.txt#7",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T14:48:23",
+    "source_material": "卫浴精细化设计指引.pdf",
+    "trigger_keywords": [
+      "层板间距",
+      "使用频率",
+      "黄金区",
+      "踮脚取物",
+      "镜柜闲置"
+    ]
+  },
+  {
+    "title": "过季衣物未预留压缩收纳空间",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "北方冬季外套厚重，过季后需抽气压缩存放，但衣柜未预留高部柜或床箱空间，导致压缩袋无处安放，只能堆在阳台或床底，影响整洁和取用。损失虽小，但影响日常使用体验。",
+    "typical_scenario": "沈阳业主冬季羽绒服、棉服占满衣柜，春季换季时想收起来，发现衣柜顶部只有一层薄隔板，放不下压缩袋，只能把压缩袋塞到床底，下次找时翻箱倒柜。",
+    "how_to_avoid": "1. 设计衣柜时预留顶部高部柜（高度>400mm）用于放过季压缩袋。2. 若无高部柜，考虑床箱或独立储物箱，提前规划位置。3. 在图纸上标注“过季区”并告知设计师。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未规划过季衣物存放空间",
+      "direct_cause": "高部柜或床箱缺失",
+      "consequence": "过季衣物无处存放，影响整洁"
+    },
+    "ku_id": "GZ-SY-00425",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "压缩收纳",
+      "过季衣物",
+      "隔板空间",
+      "床底存放",
+      "换季翻找"
+    ]
+  },
+  {
+    "title": "毛衣悬挂导致变形拉长",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "针织面料（毛衣、T恤）悬挂会因重力逐渐拉长变形，肩部出现凸起，影响穿着和寿命。业主常误以为所有衣物都该挂起来，导致高价毛衣报废。损失虽小但常见。",
+    "typical_scenario": "业主把新买的羊绒毛衣挂在衣柜里，一个月后取出发现衣长明显变长，肩部有衣架撑出的痕迹，无法恢复，只能当居家服穿。",
+    "how_to_avoid": "1. 设计衣柜时明确区分悬挂区和折叠区，折叠区设置抽屉或层板。2. 收纳时把毛衣、T恤折叠平放，避免悬挂。3. 若必须悬挂，使用宽肩衣架或叠挂，减少局部受力。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "针织面料受重力拉伸",
+      "direct_cause": "错误悬挂收纳",
+      "consequence": "衣物变形，缩短使用寿命"
+    },
+    "ku_id": "GZ-SY-00426",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "羊绒毛衣",
+      "衣架",
+      "变形",
+      "衣柜",
+      "悬挂"
+    ]
+  },
+  {
+    "title": "裤架区高度不足导致空间浪费",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "裤架区若按衣架高度设计（600-800mm），但实际使用裤架对折悬挂后，下方空间常被浪费。若高度预留不足，高档西裤无法对折悬挂，只能折叠产生褶皱。损失小但影响使用效率。",
+    "typical_scenario": "设计师为业主设计了裤架区高度500mm，业主挂西裤时发现裤架放不下，只能把西裤折叠放层板，穿时皱巴巴，还得重新熨烫。",
+    "how_to_avoid": "1. 裤架区高度至少预留600-800mm，确保裤架能自由抽拉。2. 若空间紧张，可选用抽拉式裤架，节省竖向空间。3. 设计前确认裤架型号和尺寸，避免后期不匹配。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "未按裤架实际尺寸设计高度",
+      "direct_cause": "高度预留不足",
+      "consequence": "裤架无法使用，西裤折叠起皱"
+    },
+    "ku_id": "GZ-SY-00427",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "裤架",
+      "西裤",
+      "层板",
+      "熨烫",
+      "高度不足"
+    ]
+  },
+  {
+    "title": "抽屉装太高取用不便",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "卧室定制衣柜时，抽屉若安装在1200mm以上高度，人站立时无法俯视抽屉内部，取放小件物品需盲摸或踮脚，使用体验极差。此问题在装修完成后难以修改，返工成本高，属于典型的人体工程学设计失误。损失虽不直接体现在金钱上，但每日使用的不便长期累积，严重影响生活品质。",
+    "typical_scenario": "业主定制衣柜，设计师将内衣抽屉设计在1500mm高度，业主入住后发现每次拿取袜子都要踮脚，且完全看不到抽屉内物品，只能凭手感翻找，非常痛苦。想改抽屉位置需拆柜体，费用高且破坏柜体结构，只能忍痛使用。",
+    "how_to_avoid": "1. 设计衣柜时，明确抽屉安装高度不超过1200mm，最好在650-1200mm之间；2. 与设计师沟通时，要求其提供衣柜立面图并标注各区域高度，逐一确认抽屉位置；3. 若抽屉必须高于1200mm，改为平开门或上翻门，内部使用拉篮或分隔盒，方便盲取；4. 定制前可模拟使用场景，站在柜前比划手臂伸展范围，验证高度合理性。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑人体工程学，仅按美观或空间划分",
+      "direct_cause": "抽屉安装在1200mm以上，超出人眼俯视范围",
+      "consequence": "取用不便，日常使用体验差，后期改造困难"
+    },
+    "ku_id": "GZ-SY-00428",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "抽屉",
+      "踮脚",
+      "内衣",
+      "取用",
+      "柜体"
+    ]
+  },
+  {
+    "title": "高部收纳区设计不当难取用",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "衣柜高部区域（>1850mm）若设计为普通搁板，存放过季被褥等大件物品时，因高度过高，需踮脚或借助凳子才能取放，且物品沉重时极易失手砸落，存在安全隐患。若搁板间距不足400mm，大件物品无法放入，空间浪费。此问题在定制衣柜中常见，设计师未按物品尺寸规划高部空间。",
+    "typical_scenario": "业主将过季棉被叠好放入衣柜顶部搁板，因搁板高度1900mm，每次取放都要搬凳子，且棉被又重又大，有次差点从凳子上摔下来。搁板间距仅300mm，厚棉被塞不进去，只能硬压，导致棉被变形。",
+    "how_to_avoid": "1. 高部区域（>1850mm）仅放置极低频、轻便的大件物品，如过季被褥、枕头；2. 搁板间距至少400mm，确保厚被褥能轻松放入；3. 若条件允许，在高部区域安装下拉式挂衣杆或升降篮，避免踮脚取物；4. 不建议在高部放置重物，若必须放置，使用带轮储物箱，方便拉取；5. 设计时明确高部区域用途，并在图纸上标注尺寸。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑高部区域的实际使用场景和物品尺寸",
+      "direct_cause": "高部搁板间距不足或未配置辅助取用工具",
+      "consequence": "取用不便且有安全隐患，空间利用率低"
+    },
+    "ku_id": "GZ-SY-00432",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "搁板",
+      "棉被",
+      "凳子",
+      "顶部",
+      "取放"
+    ]
+  },
+  {
+    "title": "衣柜内部层板过多导致收纳效率低",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "衣柜内部设计时，很多人习惯用大量层板来分隔空间，但层板收纳折叠衣物时可视性差，叠放太高拿取困难，容易翻乱。相比之下，抽屉的收纳效率更高，可视性好，拿取方便。这个坑在定制衣柜时很常见，设计师默认做层板，业主也不懂，入住后才发现不好用。",
+    "typical_scenario": "业主定制衣柜时要求多做层板，觉得能放更多东西。实际使用发现层板上的衣物叠到第三层就不好拿，每次找衣服都要翻半天，而且层板间距固定，放高一点的东西放不下，放矮了又浪费空间。后来想改成抽屉，需要加钱定制。",
+    "how_to_avoid": "1. 设计衣柜内部时，优先用抽屉替代层板收纳折叠衣物。2. 若必须用层板，间距控制在300-400mm，并搭配收纳盒使用。3. 在图纸上标注每个功能区的用途，避免盲目做层板。4. 参考八大功能块设计，合理分配悬挂区、抽屉区、层板区比例。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主和设计师对收纳方式认知不足",
+      "direct_cause": "层板过多导致可视性差、取用不便",
+      "consequence": "收纳效率低，使用体验差"
+    },
+    "ku_id": "GZ-SY-00437",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "层板",
+      "收纳",
+      "抽屉",
+      "叠放",
+      "定制"
+    ]
+  },
+  {
+    "title": "保险箱嵌入位置不当导致取用困难",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_HARDWARE"
+    ],
+    "scope": "universal",
+    "description": "衣柜内嵌入保险箱（尺寸600×400×400mm）时，若安装位置过高或过低，或前方有挂衣杆遮挡，会导致日常取用极不方便，甚至无法打开。该问题属于细节设计失误，损失量级约500-1000元（重新安装或改造）。",
+    "typical_scenario": "业主将保险箱嵌入衣柜底部，但前方设计了挂衣杆，每次取用需先移开衣物，且保险箱门无法完全打开，输入密码都困难。",
+    "how_to_avoid": "1. 设计保险箱位置时，确保前方无遮挡，建议高度距地600-1200mm，便于站立操作。2. 避免将保险箱安装在挂衣区正后方，可设计在开放格或抽屉上方。3. 在图纸上标注保险箱位置和尺寸，现场复核。4. 安装后测试开合，确认无阻挡。5. 若已安装不当，可考虑调整挂衣杆位置或更换保险箱安装位。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "低频(<10%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "保险箱位置规划未考虑使用便利性",
+      "direct_cause": "安装位置被挂衣杆遮挡或高度不当",
+      "consequence": "取用困难，保险箱形同虚设"
+    },
+    "ku_id": "GZ-SY-00448",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "保险箱",
+      "嵌入位置",
+      "挂衣杆",
+      "取用困难",
+      "密码"
+    ]
+  },
+  {
+    "title": "儿童房衣柜未设低位悬挂区影响自主收纳",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "儿童房衣柜若按成人标准设计，挂衣杆高度过高，孩子无法自主挂取衣物，长期依赖家长整理，不利于培养独立收纳习惯。低位悬挂区（高度600-900mm）让孩子能够轻松够到，从小养成物归原位的好习惯。很多家长忽视这一点，等孩子长大后再改造，费时费力。",
+    "typical_scenario": "一位家长为5岁女儿装修儿童房，衣柜按成人标准做了1800mm挂衣杆。女儿想自己挂衣服，但够不到，每次都要喊妈妈帮忙。久而久之，女儿对整理衣物失去兴趣，衣物乱扔。家长后悔当初没设计低位悬挂区。",
+    "how_to_avoid": "1. 儿童房衣柜设计时，预留一段低位悬挂区，高度600-900mm，让孩子站立即可够到；2. 搭配可调节挂衣杆，随着孩子身高增长调整高度；3. 低位区下方配抽屉或收纳篮，放袜子、内衣等小件，方便孩子分类；4. 在图纸上明确标注儿童专用区域，与成人区域分开；5. 若已装完，可购买落地式儿童衣架作为补充，或后期更换挂衣杆。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑儿童身高和使用能力",
+      "direct_cause": "儿童房衣柜按成人标准设计，未设低位悬挂区",
+      "consequence": "孩子无法自主收纳，依赖家长，习惯养成受阻"
+    },
+    "ku_id": "GZ-SY-00457",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "卧室精细化设计指引.txt#7",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:15:16",
+    "source_material": "卧室精细化设计指引.pdf",
+    "trigger_keywords": [
+      "儿童房",
+      "低位悬挂",
+      "挂衣杆",
+      "自主收纳",
+      "衣柜"
+    ]
+  },
+  {
+    "title": "玄关无台面致随身物品随手乱放",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关缺少专门台面，钥匙、提包、帽子等随身物品只能放在餐桌或沙发上，造成视觉杂乱，出门时容易找不到钥匙。虽损失金额低，但严重影响日常便利性和居住心情。",
+    "typical_scenario": "业主装修时未在玄关设计台面，入住后每天回家钥匙随手丢在餐桌上，出门前翻找半天。快递单、零钱也堆在门口鞋柜上，玄关显得凌乱，客人来访第一印象不佳。",
+    "how_to_avoid": "1. 在玄关设计一个35-45cm深的悬空或落地台面，高度与腰齐平。2. 台面上方预留插座，方便充电或放置小夜灯。3. 台面下方留空或做抽屉，用于收纳钥匙盘、雨伞等。4. 若空间有限，可结合鞋柜顶部做开放格，或安装壁挂式小搁板。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时忽略玄关物品暂存功能需求",
+      "direct_cause": "未设置台面或收纳格",
+      "consequence": "随身物品乱放，出门效率低，空间杂乱"
+    },
+    "ku_id": "GZ-SY-00462",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "台面",
+      "钥匙",
+      "玄关",
+      "凌乱",
+      "收纳"
+    ]
+  },
+  {
+    "title": "玄关未设换鞋凳致换鞋不便",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关缺少换鞋凳，老人小孩或穿脱高靴时只能扶墙单脚站立，存在摔倒风险。即使有凳子，若位置离鞋柜太远，拿鞋仍需起身，体验不佳。损失金额低，但安全隐患不容忽视。",
+    "typical_scenario": "业主家玄关只做了鞋柜，没设计换鞋凳。每天下班回家换鞋都要扶着墙，冬天穿雪地靴时更是狼狈。有次老人换鞋时重心不稳差点摔倒，事后才后悔没装凳子。",
+    "how_to_avoid": "1. 在鞋柜旁预留换鞋凳位置，宽度不小于40cm，高度40-45cm。2. 凳子最好紧邻鞋柜，方便坐着拿取鞋子。3. 若空间不足，可选用可折叠壁挂式换鞋凳，或鞋柜底部留空15-20cm，将常穿鞋踢入，减少弯腰。4. 有老人小孩的家庭，凳面选防滑材质，并考虑扶手。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时忽略换鞋行为的人体工学需求",
+      "direct_cause": "未设置换鞋凳或位置不当",
+      "consequence": "换鞋不便，存在安全隐患"
+    },
+    "ku_id": "GZ-SY-00463",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "换鞋凳",
+      "老人",
+      "换鞋",
+      "防摔",
+      "玄关"
+    ]
+  },
+  {
+    "title": "玄关未设全身镜致仪容整理不便",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关缺少全身镜，出门前无法检查着装和仪容，尤其女士换高跟鞋后无法确认整体效果。后期加装镜子需打孔或购买落地镜，占用空间且影响美观。损失金额低，但影响日常体验。",
+    "typical_scenario": "业主装修时没在玄关装镜子，每天出门前只能跑到卫生间照镜子，来回折腾。有次重要会议前发现领带歪了，却已来不及整理，非常尴尬。",
+    "how_to_avoid": "1. 在玄关墙面预留全身镜位置，高度从地面至1.7米以上，宽度不小于40cm。2. 镜子可结合鞋柜门设计，做成柜门贴镜或推拉镜，节省空间。3. 若空间有限，选用可旋转或折叠的穿衣镜。4. 镜子附近预留插座，方便使用吹风机或卷发棒。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时忽略仪容整理行为需求",
+      "direct_cause": "未设置全身镜",
+      "consequence": "出门前无法检查仪容，需往返卫生间，体验差"
+    },
+    "ku_id": "GZ-SY-00466",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "全身镜",
+      "仪容",
+      "玄关",
+      "照镜子",
+      "出门"
+    ]
+  },
+  {
+    "title": "玄关照明不足致换鞋找物不便",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关仅一个吸顶灯，光线昏暗，换鞋、找钥匙、照镜子时看不清。后期加装灯带需重新布线，成本虽低但麻烦。照明不足还影响玄关氛围，给人压抑感。",
+    "typical_scenario": "业主家玄关只有一盏5W吸顶灯，晚上回家换鞋时鞋柜内部看不清，经常拿错鞋。想加装感应灯带，但装修已完工，只能买充电式灯条凑合，效果一般。",
+    "how_to_avoid": "1. 设计阶段规划玄关照明，主灯选用7-10W筒灯或吸顶灯，色温3000-4000K。2. 在鞋柜底部、台面上方加装感应灯带，提前预留电线。3. 若已完工，可选用充电式感应灯条，免布线安装。4. 镜子前设置局部照明，避免面部阴影。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时忽略玄关照明层次需求",
+      "direct_cause": "仅单一主灯，无局部照明",
+      "consequence": "换鞋找物不便，氛围压抑"
+    },
+    "ku_id": "GZ-SY-00468",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "照明",
+      "感应灯",
+      "鞋柜",
+      "换鞋",
+      "吸顶灯"
+    ]
+  },
+  {
+    "title": "玄关未设快递暂存区致包裹堆积",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "网购时代快递频繁，玄关若无暂存台面或收纳筐，包裹只能堆在地上，影响通行和美观。尤其生鲜或大件快递，临时放置不便。损失金额低，但高频发生。",
+    "typical_scenario": "业主家玄关没有专门放快递的地方，每次快递员送货时只能把箱子放门口地上，进出都要跨过。有次生鲜快递放地上被宠物撕咬，损失惨重。",
+    "how_to_avoid": "1. 在玄关设计一个开放式收纳格或编织筐，尺寸不小于40x40x50cm，用于临时存放快递。2. 台面下方留空，可放置大件快递。3. 门口安装挂钩或小桌板，方便签收时放置包裹。4. 若空间允许，设置一个带锁的小柜子存放贵重快递。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑快递暂存的生活需求",
+      "direct_cause": "无专门暂存空间",
+      "consequence": "包裹堆积门口，影响通行和美观，易损坏"
+    },
+    "ku_id": "GZ-SY-00469",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "快递",
+      "暂存区",
+      "包裹",
+      "玄关",
+      "堆积"
+    ]
+  },
+  {
+    "title": "玄关鞋柜未考虑男女主人行为差异",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "男女主人出门归家行为不同，女士需整理妆容、换高跟鞋、放手提包，若玄关设计未考虑这些差异，会导致女士使用不便。例如高跟鞋收纳区不足、无化妆镜、手提包无处放。损失金额低，但影响日常体验。",
+    "typical_scenario": "业主夫妻共用玄关，妻子高跟鞋有十几双，但鞋柜隔板高度只有15cm，高跟鞋放不进去只能横放。化妆镜也没有，每次出门前要跑卫生间。手提包只能挂在门后挂钩上，容易滑落。",
+    "how_to_avoid": "1. 设计鞋柜时统计男女主人鞋类，女士高跟鞋区隔板高度20-25cm，靴子区40-50cm。2. 玄关设置一个女士专用化妆镜，带灯光更佳。3. 在台面或挂钩区预留手提包位置，高度不低于1.2米。4. 考虑女士换鞋时需坐下，换鞋凳宽度不小于50cm。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未分析男女主人行为差异",
+      "direct_cause": "鞋柜结构、化妆镜、手提包收纳未针对性设计",
+      "consequence": "女士使用不便，收纳混乱"
+    },
+    "ku_id": "GZ-SY-00471",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#1",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "高跟鞋",
+      "隔板",
+      "化妆镜",
+      "手提包",
+      "收纳"
+    ]
+  },
+  {
+    "title": "鞋柜宽度未按男女鞋尺寸匹配设计",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "鞋柜内部宽度设计不合理，导致鞋子放不下或空间浪费。男鞋一双宽度约23mm，女鞋约18mm，三双男鞋和四双女鞋的宽度较为匹配，对应柜体宽度宜在740-800mm之间。如果柜体宽度过窄，鞋子只能斜放或挤压变形；过宽则浪费空间。虽然单次损失不大，但影响日常使用体验。",
+    "typical_scenario": "刘先生定制鞋柜时，设计师按每格500mm宽度设计，结果发现放三双男鞋刚好，但放四双女鞋就挤不下，导致女鞋只能叠放，拿取不便。后来测量发现，如果按740-800mm设计，就能完美匹配三男四女的鞋量。",
+    "how_to_avoid": "1. 设计鞋柜内部宽度时，先确定家庭成员的性别比例和鞋量。2. 若男女鞋都有，优先采用740-800mm的柜体宽度，可容纳三双男鞋或四双女鞋。3. 在图纸上标注每格宽度，并模拟摆放鞋子验证。4. 可设计可调节隔板，灵活调整宽度。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑男女鞋尺寸差异",
+      "direct_cause": "柜体宽度与鞋类尺寸不匹配",
+      "consequence": "鞋子存放不便或空间浪费"
+    },
+    "ku_id": "GZ-SY-00480",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "宽度",
+      "男鞋",
+      "女鞋",
+      "尺寸匹配",
+      "鞋柜"
+    ]
+  },
+  {
+    "title": "鞋柜底部不架空易积灰难清洁",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "玄关鞋柜若直接落地，底部与地面之间形成卫生死角，灰尘、毛发、小物件容易堆积且难以清扫。日常使用中，拖鞋、常用鞋只能堆放在柜外，影响玄关整洁和出入效率。虽然问题本身不涉及大额费用，但长期积累会降低居住体验，且后期改造困难。",
+    "typical_scenario": "业主入住后，发现鞋柜底部紧贴地面，扫把和吸尘器都伸不进去，灰尘越积越厚。每天回家换鞋时，拖鞋只能散落在柜前，显得杂乱。想加装踢脚板又担心影响美观，陷入两难。",
+    "how_to_avoid": "1. 设计阶段明确鞋柜底部架空高度，建议150-250mm，方便放置常穿鞋和清洁工具伸入。2. 若选择落地式，务必设计80-100mm的踢脚板，避免直接贴地。3. 架空式鞋柜可考虑内置感应灯带，提升便利性。4. 施工时与木工确认底部支撑结构，确保稳固且便于挪动。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时忽略底部卫生与收纳需求",
+      "direct_cause": "鞋柜直接落地无架空或踢脚板",
+      "consequence": "底部积灰难清理，常穿鞋无处安放，玄关杂乱"
+    },
+    "ku_id": "GZ-SY-00482",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "架空",
+      "积灰",
+      "清洁",
+      "踢脚板",
+      "鞋柜"
+    ]
+  },
+  {
+    "title": "鞋柜隔板无空隙积灰难清理",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "鞋柜隔板若与背板和门扇完全贴合，鞋底的灰尘和碎屑会堆积在隔板角落，无法清扫，长期积累滋生细菌和异味。设计时应在隔板与背板、门扇之间留有空隙，让灰尘能漏到最底层，方便定期清理。此细节常被忽略，但直接影响日常清洁便利性和柜内卫生。",
+    "typical_scenario": "业主入住后发现鞋柜隔板与背板之间没有缝隙，灰尘和泥沙卡在角落，用抹布也擦不到，只能用吸尘器勉强吸出，时间久了柜内散发异味。",
+    "how_to_avoid": "1. 设计时要求隔板与背板、门扇之间预留5-10mm空隙；2. 若采用活动隔板，可设计成可拆卸式，方便取下清洗；3. 在柜体底部设置可抽出的灰尘收集盘，便于清理；4. 与定制厂家确认隔板安装方式，避免完全固定密封。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计未考虑清洁需求，隔板与背板完全贴合",
+      "direct_cause": "灰尘无法漏到下层，堆积在隔板角落",
+      "consequence": "清洁困难，柜内卫生差，可能产生异味"
+    },
+    "ku_id": "GZ-SY-00488",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "积灰",
+      "隔板缝隙",
+      "清洁死角",
+      "异味",
+      "鞋柜"
+    ]
+  },
+  {
+    "title": "鞋柜门拉手位置不当易钩衣物",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_HARDWARE"
+    ],
+    "scope": "universal",
+    "description": "低柜门拉手若安装在门扇中间位置，站立时需弯腰才能开启，且突出的拉手容易钩住衣物或包包，尤其在玄关狭窄处。正确做法是拉手安装在门扇靠上位置，方便站立时自然开启，同时选择无尖锐边缘或内嵌式拉手，避免钩挂。",
+    "typical_scenario": "业主的鞋柜低柜拉手装在门扇正中央，每次开门都要弯腰，而且进出门时大衣下摆常被拉手钩住，有一次差点绊倒。",
+    "how_to_avoid": "1. 低柜门拉手安装在门扇上部1/3处，高度约900-1000mm；2. 选择内嵌式或长条形拉手，避免圆形突出拉手；3. 若空间允许，可选用按压式反弹器，无需拉手；4. 安装前模拟使用场景，确认开启方便且不钩衣物。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "拉手位置设计不合理，未考虑人体工学",
+      "direct_cause": "拉手位于门扇中部，需弯腰且易钩挂",
+      "consequence": "使用不便，衣物被钩，存在安全隐患"
+    },
+    "ku_id": "GZ-SY-00490",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "拉手",
+      "钩衣物",
+      "弯腰",
+      "玄关",
+      "安全隐患"
+    ]
+  },
+  {
+    "title": "鞋柜底部无灯光难看清",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL",
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "鞋柜底部若未架空或未设置灯光，换鞋时柜底区域处于阴影中，难以看清鞋子位置，尤其夜间回家时。设计时应将鞋柜离地架空250-300mm，并在架空空间设置感应灯或灯带，同时玄关照明开关应就近设置，避免摸黑。",
+    "typical_scenario": "业主的鞋柜直接落地或虽有架空但未装灯，晚上回家开玄关主灯后，柜底仍是一片阴影，老人只能用手摸索找鞋，有时还会踢到鞋子，非常不便。",
+    "how_to_avoid": "1. 设计时要求鞋柜底部架空250-300mm，便于放常穿鞋和清洁。2. 在架空空间预留灯带电源，安装感应式LED灯带，人靠近自动亮起。3. 灯带色温选择暖光（3000K），避免刺眼。4. 玄关照明开关设置在进门手边位置，避免绕路。5. 与电工确认预留线路，避免后期走明线。6. 若已落地，可加装柜底灯条，用感应式或遥控式。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计未考虑照明细节，鞋柜底部无光源",
+      "direct_cause": "柜底处于阴影，看不清鞋子",
+      "consequence": "换鞋不便，体验差，可能绊倒"
+    },
+    "ku_id": "GZ-SY-00491",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#5",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "灯光",
+      "阴影",
+      "老人",
+      "找鞋",
+      "架空"
+    ]
+  },
+  {
+    "title": "玄关鞋柜隔板固定无法调节",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "鞋柜内部隔板若为固定式，无法根据鞋子高度灵活调整，导致高帮鞋、靴子放不进去，矮鞋上方空间浪费。日本玄关鞋柜每隔3mm预留固定孔，活动隔板可自由调节，极大提升空间利用率。固定隔板鞋柜看似省事，实际使用中常因鞋型多样而空间不足。",
+    "typical_scenario": "业主定制鞋柜时未要求活动隔板，结果冬天想放长靴时发现隔板间距只有150mm，靴子完全放不进去，只能横放在地上。想调整隔板却发现是固定安装的，无法移动，只能将靴子放在其他房间，使用非常不便。",
+    "how_to_avoid": "1. 定制鞋柜时明确要求内部采用活动隔板，每隔3mm预留调节孔。2. 与设计师确认隔板可拆卸，方便后期调整。3. 若已做固定隔板，可购买可调节的鞋托或分层架来弥补。4. 在合同中注明活动隔板要求，避免商家默认做固定式。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "日本玄关设计经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑不同鞋型的高度差异",
+      "direct_cause": "鞋柜隔板固定，无法调节间距",
+      "consequence": "高帮鞋靴无处存放，空间利用率低"
+    },
+    "ku_id": "GZ-SY-00499",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "活动隔板",
+      "长靴",
+      "调节",
+      "固定",
+      "收纳"
+    ]
+  },
+  {
+    "title": "玄关鞋柜隔板不可冲洗易藏污",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "普通鞋柜隔板多为木质，鞋底泥土和灰尘渗入后难以清洁，长期积累滋生细菌和异味。日本设计采用可冲洗隔板（如塑料或金属材质），可直接取下用水冲洗，保持卫生。若忽略此细节，鞋柜内部易发霉发臭，影响玄关空气质量。",
+    "typical_scenario": "业主使用木质鞋柜两年后，发现隔板上有黑色霉斑，散发异味，怎么擦都擦不干净。拆开发现鞋底带入的泥土已渗入板材缝隙，只能更换隔板，费时费力。",
+    "how_to_avoid": "1. 定制鞋柜时选择可拆卸的塑料或金属隔板，便于冲洗。2. 若已用木质隔板，可在隔板上铺防滑垫或报纸，定期更换。3. 在隔板表面涂刷防水漆，减少污渍渗透。4. 与设计师确认隔板材质，优先选择易清洁材料。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "日本玄关设计经验",
+      "frequency": "低频(<10%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑鞋柜清洁便利性",
+      "direct_cause": "木质隔板无法冲洗，污渍渗入",
+      "consequence": "鞋柜内部发霉异味，影响健康"
+    },
+    "ku_id": "GZ-SY-00501",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "鞋柜",
+      "霉斑",
+      "异味",
+      "隔板",
+      "藏污"
+    ]
+  },
+  {
+    "title": "玄关无镜面老人难看来人",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "玄关未设置镜面时，老人听到门铃需起身走到门口才能看来人，对行动不便的老人造成负担。在玄关或客厅适当位置设置镜面，利用反射原理让老人坐在客厅即可看清门口来人，减少不必要的起身，提升安全感和便利性。",
+    "typical_scenario": "一位腿脚不便的老人独居，每次有人按门铃都要拄拐杖走到玄关从猫眼查看，非常吃力。后来子女在客厅墙面安装了一面镜子，老人坐在沙发上就能通过镜子看到门口情况，大大减轻了负担。",
+    "how_to_avoid": "1. 在玄关侧墙或客厅正对玄关的位置安装镜面。2. 镜面高度以老人坐姿时能看清门口为准。3. 可选用带镜面的鞋柜台面或挂墙镜。4. 与设计师沟通镜面位置，确保反射角度正确。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "适老化设计指引",
+      "frequency": "低频(<10%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑老人行动不便",
+      "direct_cause": "玄关无镜面，老人需起身查看访客",
+      "consequence": "老人频繁起身增加跌倒风险，生活不便"
+    },
+    "ku_id": "GZ-SY-00504",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "猫眼",
+      "镜子",
+      "老人",
+      "门铃",
+      "查看"
+    ]
+  },
+  {
+    "title": "玄关无挂衣钩外套随手乱放",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [
+      "MAT_HARDWARE"
+    ],
+    "scope": "universal",
+    "description": "玄关未设置挂衣钩，老人进门脱下的外套只能搭在椅背或沙发上，不仅影响整洁，还容易绊倒老人。设置挂衣钩可让老人进门顺手挂好外套，保持玄关通道畅通。挂衣钩高度需考虑老人可及性，一般距地1.2-1.4米。",
+    "typical_scenario": "老人家中玄关没有挂衣钩，进门后外套随手搭在换鞋凳上，某次起身时被外套绊了一下，差点摔倒。子女得知后立即在玄关安装了挂衣钩，问题解决。",
+    "how_to_avoid": "1. 在玄关换鞋凳旁或墙面安装挂衣钩，高度1.2-1.4米。2. 选择承重足够的挂钩，避免脱落。3. 挂衣钩位置避开通行动线，防止刮碰。4. 若空间允许，可设置小型衣帽柜。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "适老化设计指引",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时遗漏挂衣功能",
+      "direct_cause": "外套无处挂放，堆在通道上",
+      "consequence": "老人被衣物绊倒，玄关杂乱"
+    },
+    "ku_id": "GZ-SY-00505",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "玄关精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:35:46",
+    "source_material": "玄关精细化设计指引.pdf",
+    "trigger_keywords": [
+      "挂衣钩",
+      "外套",
+      "绊倒",
+      "换鞋凳",
+      "收纳"
+    ]
+  },
+  {
+    "title": "阳台清洁工具未做挂墙设计",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [
+      "MAT_HARDWARE"
+    ],
+    "scope": "universal",
+    "description": "拖把、扫把、吸尘器等高频使用工具如果收纳在柜子里，每次取用都要开门弯腰，使用后还要擦干放回，非常麻烦。很多家庭因此把工具随手靠在墙边，导致阳台墙面污渍、工具杂乱。挂墙设计能让工具一个动作取出，但常被忽略，造成日常使用不便和空间凌乱。",
+    "typical_scenario": "李先生家阳台做了整排地柜，拖把和扫把都塞在柜子里。每次拖地要弯腰取出，用完还要擦干再放回去，时间一长嫌麻烦就直接靠在阳台栏杆上，不仅难看，拖把水渍还弄脏了墙面和地面。",
+    "how_to_avoid": "1. 在阳台墙面规划洞洞板或挂杆区域，高度以抬手可取为准。2. 拖把、扫把等长柄工具用挂钩固定，吸尘器配壁挂支架。3. 挂墙区域下方预留滴水盘或防水垫，避免水渍污染墙面。4. 设计时与木工或瓦工确认墙面加固，确保承重。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "收纳设计未考虑使用动线",
+      "direct_cause": "高频工具收纳在柜内，取用不便",
+      "consequence": "工具乱放，墙面地面污染，空间凌乱"
+    },
+    "ku_id": "GZ-SY-00518",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "挂墙",
+      "拖把",
+      "扫把",
+      "水渍",
+      "地柜"
+    ]
+  },
+  {
+    "title": "阳台收纳柜未按物品频率设计",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "阳台收纳柜设计时如果不区分物品使用频率，把高频消耗品（洗衣液、卫生纸）放在高处或深处，把低频物品（换季被褥）放在黄金区域，会导致日常取用不便。正确做法是高频物品放吊柜下层或地柜上层，低频物品放顶部或底部，但很多设计师和业主都忽略了这一动线逻辑。",
+    "typical_scenario": "刘女士家阳台吊柜做得很深，洗衣液和柔顺剂放在最里面，每次洗衣服都要踮脚伸手去够，不小心还会碰倒其他瓶子。而换季被褥却放在地柜最上层，取用也不方便。后来不得不重新整理，但柜内隔板已固定，调整空间有限。",
+    "how_to_avoid": "1. 列出阳台所有收纳物品，按使用频率分为高频（每周）、中频（每月）、低频（每季）。2. 高频物品放在吊柜下层或地柜上层，高度在视线到腰部之间。3. 低频物品放在吊柜顶层或地柜底层。4. 设计柜体时先确定物品清单和尺寸，再规划隔板高度。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "收纳设计未基于使用频率规划",
+      "direct_cause": "高频物品存放位置不合理",
+      "consequence": "日常取用不便，收纳效率低"
+    },
+    "ku_id": "GZ-SY-00520",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#2",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "吊柜",
+      "频率",
+      "隔板",
+      "取用",
+      "收纳"
+    ]
+  },
+  {
+    "title": "搓衣池宽度不足致使用局促",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_QUALITY"
+    ],
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "搓衣池若宽度不足400mm，搓洗大件衣物时手臂活动受限，水花易溅出，使用体验差。若后期想更换更宽的搓衣池，需拆改台面和柜体，费用约500-1500元。",
+    "typical_scenario": "业主定制搓衣池时，设计师建议400mm，但业主觉得够用，选了350mm。实际使用中，搓洗床单时手臂经常碰到两侧，水溅到地面，十分不便。想更换，但台面已固定，需整体拆改。",
+    "how_to_avoid": "1. 设计搓衣池时，宽度至少预留400mm，深度建议450mm以上。2. 根据家庭成员身高和使用习惯，确定台面高度。3. 在图纸上标注搓衣池尺寸，并现场复核。4. 若空间有限，可考虑折叠搓衣板替代，但需确认承重。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "尺寸设计不合理",
+      "direct_cause": "搓衣池过窄",
+      "consequence": "使用不便，需拆改"
+    },
+    "ku_id": "GZ-SY-00526",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "搓衣池",
+      "宽度",
+      "台面",
+      "水溅",
+      "拆改"
+    ]
+  },
+  {
+    "title": "熨衣板未嵌入柜体致收纳混乱",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "若熨衣柜内未安装折叠式烫衣板，熨衣板只能另找地方存放，占用空间且使用不便。每次熨衣需搬出搬进，容易磕碰。后期加装折叠烫衣板费用约300-800元。",
+    "typical_scenario": "业主定制熨衣柜时，未要求安装折叠烫衣板，只做了挂杆和抽屉。入住后，熨衣板放在衣柜角落，每次熨衣都要搬出来，用完再放回，十分麻烦。后来网购折叠烫衣板，自己安装，但尺寸不匹配，效果不佳。",
+    "how_to_avoid": "1. 设计熨衣柜时，明确要求安装折叠式烫衣板，并确认尺寸。2. 烫衣板应安装在柜内合适高度，方便站立使用。3. 预留挂杆和抽屉，用于存放衣架和小件。4. 安装后测试折叠和展开是否顺畅。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "功能配置遗漏",
+      "direct_cause": "未安装折叠烫衣板",
+      "consequence": "收纳混乱，使用不便"
+    },
+    "ku_id": "GZ-SY-00528",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#3",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "熨衣板",
+      "折叠",
+      "柜体",
+      "尺寸不匹配",
+      "收纳"
+    ]
+  },
+  {
+    "title": "阳台运动器材收纳空间预留不足",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_BOARD"
+    ],
+    "scope": "universal",
+    "description": "阳台规划运动区时，折叠跑步机、瑜伽垫、哑铃等器材若未提前测量尺寸并设计对应收纳柜，会导致器材无处安放，只能堆放在阳台角落，影响日常通行和休闲功能。定制柜体时若未考虑器材高度和深度，柜门关不上或器材放不进去，造成空间浪费。损失量级较小，但影响使用体验和空间整洁度。",
+    "typical_scenario": "业主在阳台定制了一组到顶收纳柜，计划放置折叠跑步机和瑜伽垫。柜体深度设计为40cm，但跑步机折叠后宽度仍有55cm，完全放不进去。最终跑步机只能靠在阳台栏杆旁，占用了近1平米的活动空间，阳台显得拥挤杂乱，休闲区形同虚设。",
+    "how_to_avoid": "1. 在定制阳台柜前，列出所有计划收纳的运动器材清单，逐一测量折叠后的长宽高尺寸。2. 柜体深度至少比最大器材宽度多5-10cm，高度需考虑跑步机折叠后的高度。3. 柜内层板设计为可调节式，方便根据器材尺寸灵活调整。4. 若器材较重（如跑步机），柜体底部需加固，或设计为落地式开放格，避免搬运困难。5. 在图纸阶段与定制厂家确认每件器材的存放位置，模拟放入过程。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主未提前测量运动器材尺寸，设计师未主动询问",
+      "direct_cause": "定制柜体尺寸与器材实际尺寸不匹配",
+      "consequence": "器材无法收纳，阳台空间被占用，功能失效"
+    },
+    "ku_id": "GZ-SY-00530",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "收纳柜",
+      "深度",
+      "跑步机",
+      "空间预留",
+      "阳台"
+    ]
+  },
+  {
+    "title": "阳台多功能复合设计未留足通行宽度",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "scope": "universal",
+    "description": "阳台同时规划宠物区、运动区、休闲区、果园等多功能时，若未合理计算各区域尺寸和通行动线，会导致空间拥挤，功能之间互相干扰。例如跑步机展开后挡住去往宠物区的通道，休闲桌椅与种植箱间距过小无法正常落座。损失量级不大，但严重影响日常使用体验，造成空间浪费。",
+    "typical_scenario": "业主在4平米的阳台同时规划了宠物窝、折叠跑步机、双人休闲桌椅和三层花架。摆放后发现跑步机展开时占去1.2米宽，剩余通道仅剩40cm，人只能侧身通过。休闲桌椅与花架间距仅30cm，坐下后腿无法伸直。最终业主撤掉了花架，休闲区也改为单人椅，当初规划的果园功能被迫放弃。",
+    "how_to_avoid": "1. 设计前用CAD或纸面按1:1比例画出阳台平面图，标注门窗位置和尺寸。2. 列出所有功能区的家具尺寸清单，包括展开状态下的尺寸（如跑步机展开宽度）。3. 确保主要通行通道宽度不小于60cm，休闲区桌椅前方预留至少50cm腿部空间。4. 优先保证核心功能（如洗衣晾晒）的尺寸需求，再叠加次要功能。5. 若面积小于5平米，建议最多选择2-3个功能组合，避免贪多。6. 用纸板模拟家具摆放，实际走一遍动线验证。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "业主追求多功能但未精确计算空间尺寸",
+      "direct_cause": "各功能区尺寸叠加后超出阳台可用面积",
+      "consequence": "功能互相干扰，部分功能被迫放弃，空间利用率低"
+    },
+    "ku_id": "GZ-SY-00532",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#4",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "通道宽度",
+      "布局",
+      "空间规划",
+      "花架",
+      "通行"
+    ]
+  },
+  {
+    "title": "扫地机器人预留位未留电源和通道",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_LOW",
+    "problem_type": [
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_ELECTRICAL",
+      "TRADE_CABINET"
+    ],
+    "material": [
+      "MAT_APPLIANCE"
+    ],
+    "scope": "universal",
+    "description": "阳台柜底部为扫地机器人预留点位时，若未预留电源插座和足够的进出通道，机器人无法充电或无法自由进出，导致功能失效。很多业主装修时未考虑，后期想加装需重新布线或改造柜体，产生额外费用（300-1000元）。",
+    "typical_scenario": "业主孙先生装修阳台柜时，在底部留了空间但忘了留插座，扫地机器人买回来后发现没地方充电，只能放在客厅，阳台空间浪费。后来请电工从附近插座引线，凿墙开槽，花了600元。",
+    "how_to_avoid": "1. 设计阶段在阳台柜底部预留扫地机器人专用插座（离地30cm以内）。2. 确保柜底空间高度≥15cm，宽度≥40cm，方便机器人进出。3. 柜体底部不做固定踢脚线，或做成可拆卸式，保证通道畅通。4. 提前确认扫地机器人型号尺寸，按实际预留。5. 水电交底时明确标注预留点位。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "资深设计师实战经验",
+      "frequency": "中频(10-30%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "设计时未考虑扫地机器人充电和通行需求",
+      "direct_cause": "未预留电源插座和进出通道",
+      "consequence": "机器人无法使用，需后期改造增加费用"
+    },
+    "ku_id": "GZ-SY-00541",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-02",
+      "updated_at": "2026-08-02",
+      "created_by": "ai",
+      "verified": false,
+      "verify_method": "not_verified",
+      "version": "1.0",
+      "source_file": "阳台精细化设计指引.txt#6",
+      "quality_level": "DRAFT",
+      "expires_at": null,
+      "last_reviewed_at": null
+    },
+    "quality_level": "REFERENCE",
+    "verified": true,
+    "verify_method": "human_review",
+    "verified_at": "2026-08-02T15:55:40",
+    "source_material": "阳台精细化设计指引.pdf",
+    "trigger_keywords": [
+      "扫地机器人",
+      "插座",
+      "阳台柜",
+      "引线",
+      "开槽"
+    ]
+  }
+]

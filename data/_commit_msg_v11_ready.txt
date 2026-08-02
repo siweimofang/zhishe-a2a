@@ -1,0 +1,33 @@
+V1.1 yuanbao ready snapshot (2026-06-16 07:48)
+
+5 files staged (yuanbao version of the 5-shells strategy):
+
+- docs/V1.1_yuanbao_access_eval_V0.1_20260616.md
+  Access evaluation: yuanqi.tencent.com path / Hy3 preview model /
+  work estimate / risks / decision matrix / SOP
+  (Chinese-named original renamed to ASCII path due to PS 5.1 GBK
+   git add limitation; original archived in git history)
+
+- docs/V1.1_yuanbao_apply_V0.1_20260616.md
+  Ready-to-paste 12-section application:
+  prompt 902 chars / 3 preset questions / welcome markdown /
+  privacy policy / model select / 5 test questions / SOP
+
+- data/knowledge_yuanqi_import.csv (10.2 KB, utf-8-sig)
+  22 knowledge entries k001-k022 (price baseline / process /
+  building materials markets / pitfall guide 4 categories)
+  yuanqi CSV import-ready
+
+- data/knowledge_yuanqi_import.json (10.2 KB)
+  JSON backup of the 22 entries (for cross-platform reuse)
+
+- docs/zhishe_avatar.png (47 KB, 256x256)
+  Brand avatar: "zhi she" black on white with 4 gold triangles
+  (sourced from user's original 2026-05-18 WeChat screenshot,
+   resized via Pillow 12.2.0 from 1211x1213 -> 256x256)
+
+Strategic significance:
+- 1st "ready" anchor of the 5-shells multi-platform strategy
+- Paired with: V0.2 strategy arch (commit 30d3a25) + this commit
+- User next: register at yuanqi.tencent.com + copy-paste apply
+- Follow-up: after publish, commit "V1.1 online" snapshot

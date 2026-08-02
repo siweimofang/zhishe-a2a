@@ -1,0 +1,110 @@
+[
+  {
+    "ku_id": "GZ-SY-00020",
+    "title": "装修维权从第一天就要建证据档案，否则后期无法举证",
+    "stage": "STAGE_08",
+    "role": [
+      "ROLE_OWNER"
+    ],
+    "severity": "SEV_MEDIUM",
+    "problem_type": [
+      "TYPE_DELAY",
+      "TYPE_QUALITY"
+    ],
+    "trade": [],
+    "material": [],
+    "description": "装修出问题后维权的关键是证据链完整。很多业主到维权时才发现：合同找不到、报价单丢了、付款没留凭证、施工过程没拍照、微信聊天记录删除了。维权渠道包括：1)与施工方协商（保留微信记录）；2)12315平台（辽宁省/全国）；3)沈阳市消费者协会；4)法院起诉（装饰装修合同纠纷）。从装修第一天就建立'装修档案文件夹'存所有凭证是维权基础。",
+    "typical_scenario": "沈阳某业主装修完工一年后发现墙面大面积开裂，找装修公司要求质保维修，对方否认是施工问题说是'业主自己开窗通风导致'。业主找不到施工过程照片、合同也不知放哪里了，12315投诉后因证据不足无法有效维权。",
+    "how_to_avoid": "1. 从装修第一天建立'装修档案文件夹'（手机/电脑各存一份），包含：合同、报价单、付款凭证、微信记录、现场照片/视频。2. 每个施工阶段拍照存档（水电走管图尤其重要）。3. 所有沟通尽量用微信文字（而非电话），留下文字记录。4. 出问题时第一步：整理证据→第二步：书面通知施工方→第三步：12315/消协→第四步：法院。",
+    "evidence": {
+      "source_type": "consumer_complaint",
+      "source_ref": "knowledge.json k020；12315投诉平台",
+      "frequency": "高频(30-60%)",
+      "confidence": "高(多源验证)"
+    },
+    "causal_chain": {
+      "root_cause": "业主缺乏证据保全意识",
+      "direct_cause": "装修过程中未保留合同、照片、沟通记录等证据",
+      "consequence": "出现问题后无法举证，维权失败，自行承担修复费用"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00019",
+      "GZ-SY-00005"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": true,
+      "verify_method": "multi_source",
+      "version": "1.0",
+      "source_file": "data/knowledge.json#k020",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "维权",
+      "证据",
+      "质保",
+      "开裂",
+      "投诉"
+    ]
+  },
+  {
+    "title": "乳胶漆调色后开裂不保修",
+    "stage": "STAGE_08",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "problem_type": [
+      "TYPE_QUALITY",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [
+      "MAT_PAINT"
+    ],
+    "scope": "universal",
+    "description": "乳胶漆调色后，若后期墙面大白开裂，装修公司不保修。大白可修复，但乳胶漆颜色肯定不一致，因为调色漆无法完全复配。业主需自费重新调色刷漆，费用约1-3千元。常见于装修公司保修条款中的隐形免责，业主不知情。",
+    "typical_scenario": "业主墙面刷了浅灰色乳胶漆，一年后出现细微裂纹，报修后施工方只修复大白，不补乳胶漆，说调色漆无法保证一致。业主自己买漆找人刷，色差明显，整面墙重做。",
+    "how_to_avoid": "1. 签约时明确询问调色乳胶漆的保修政策，写入合同。2. 保留乳胶漆色号及调色配方，留一桶原漆备用。3. 若墙面开裂，要求施工方修复大白后，用备用漆修补，并接受轻微色差。4. 选择品牌成品色卡颜色，而非现场调色，便于后期补漆。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "设计师实战经验",
+      "frequency": "高频(30-60%)",
+      "confidence": "中(单源可靠)"
+    },
+    "causal_chain": {
+      "root_cause": "调色漆无法完全复配，保修条款规避责任",
+      "direct_cause": "墙面开裂后修复大白但乳胶漆颜色不一致",
+      "consequence": "业主自费补漆，色差影响美观"
+    },
+    "ku_id": "GZ-SY-00162",
+    "related_ku_ids": [],
+    "metadata": {
+      "created_at": "2026-08-01",
+      "updated_at": "2026-08-01",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "预算计算标准培训.txt#7",
+      "quality_level": "REFERENCE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01T22:01:21+08:00"
+    },
+    "trigger_keywords": [
+      "乳胶漆",
+      "调色",
+      "开裂",
+      "色差",
+      "保修"
+    ]
+  }
+]

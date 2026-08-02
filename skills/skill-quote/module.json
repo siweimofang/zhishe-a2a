@@ -1,0 +1,44 @@
+{
+  "name": "skill-quote",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "装修报价咨询 - 根据用户提供的城市/面积/户型/档次,给出市场参考价区间(经济型/中档/中高档/豪华),并附 5 大项分项与免责说明。",
+  "triggerKeywords": ["装修", "报价", "预算", "多少钱", "半包", "大包", "全案", "平米单价", "硬装报价", "软装预算"],
+  "notApplicableFor": ["仅问装修风格/设计", "仅问建材品牌(请用 skill-construction-qa)"],
+  "toolDependencies": [
+    "city-pricing-api",
+    "renovation-quote-calculator",
+    "area-calculator",
+    "gb-standard-checker"
+  ],
+  "toolCount": 4,
+  "permissions": [
+    "network",
+    "read-city-pricing"
+  ],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "c_owner",
+    "upstream": ["skill-param-extract", "skill-layout"],
+    "downstream": ["skill-case-match"]
+  },
+  "dataSources": [
+    "data/city_pricing.json",
+    "GB 50327-2001",
+    "GB 50150-2016",
+    "GB 50210"
+  ],
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

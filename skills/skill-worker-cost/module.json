@@ -1,0 +1,59 @@
+{
+  "name": "skill-worker-cost",
+  "version": "0.1.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "装修工人用工取费标准(装企内部成本计算)。用于装企老板/项目经理计算工人工资、项目成本、利润率。**不是 B→C 客户报价**(那是 skill-quote)。",
+  "triggerKeywords": ["工人取费标准", "人工费", "瓦工", "电工", "木工", "油漆工", "水工", "日工", "月工", "工人级别", "学徒", "熟练工", "老师傅", "工种系数", "难易系数", "管理费率", "沈阳装修工人", "工长", "项目经理", "监理", "装企成本", "装企利润", "V2.0 装企版", "OBP 反算"],
+  "notApplicableFor": ["C 端业主咨询报价(请用 skill-quote)", "装修风格设计(请用 skill-layout)"],
+  "toolDependencies": [
+    "worker-rate-api",
+    "cost-calculator",
+    "project-budget-decomposer",
+    "profit-reverse-calculator"
+  ],
+  "toolCount": 4,
+  "permissions": [
+    "network",
+    "read-worker-rates",
+    "read-management-rates"
+  ],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "b_owner",
+    "upstream": [],
+    "downstream": ["skill-quote", "skill-talk-analysis"]
+  },
+  "dataSources": [
+    "config/worker_rates.json",
+    "config/management_rates.json",
+    "config/trade_coefficients.json",
+    "config/profit_targets.json"
+  ],
+  "dataStatus": {
+    "worker_rates.json": "empty - 必 User 投喂",
+    "management_rates.json": "empty - 必 User 投喂",
+    "trade_coefficients.json": "empty - 必 User 投喂",
+    "profit_targets.json": "empty - 必 User 拍板"
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  },
+  "version_history": [
+    {
+      "version": "0.1.0",
+      "date": "2026-06-29",
+      "changes": "骨架创建,等 User 投喂数据",
+      "author": "Mavis"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "skill-talk-analysis",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "谈单分析 - 针对设计师/装企老板的谈单过程进行风险识别,识别客户犹豫/价格敏感/竞品对比等信号",
+  "triggerKeywords": ["谈单", "客户说", "客户想", "客户犹豫", "客户对比", "价格敏感", "客户预算", "签单"],
+  "notApplicableFor": ["C 端业主自装咨询"],
+  "toolDependencies": [
+    "risk-predictor"
+  ],
+  "toolCount": 1,
+  "permissions": ["network"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "b_designer",
+    "upstream": [],
+    "downstream": ["skill-needs-interpret"]
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

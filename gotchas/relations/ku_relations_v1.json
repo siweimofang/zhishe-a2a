@@ -1,0 +1,599 @@
+[
+  {
+    "source_ku_id": "GZ-SY-00001",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00001",
+    "target_ku_id": "GZ-SY-00012",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00002",
+    "target_ku_id": "GZ-SY-00003",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00002",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00002",
+    "target_ku_id": "GZ-SY-00005",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00003",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00003",
+    "target_ku_id": "GZ-SY-00011",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00004",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00004",
+    "target_ku_id": "GZ-SY-00006",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00004",
+    "target_ku_id": "GZ-SY-00007",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00005",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00005",
+    "target_ku_id": "GZ-SY-00006",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00006",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00006",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00007",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00007",
+    "target_ku_id": "GZ-SY-00009",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00008",
+    "target_ku_id": "GZ-SY-00009",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00008",
+    "target_ku_id": "GZ-SY-00006",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00009",
+    "target_ku_id": "GZ-SY-00008",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00010",
+    "target_ku_id": "GZ-SY-00007",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00011",
+    "target_ku_id": "GZ-SY-00012",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00011",
+    "target_ku_id": "GZ-SY-00015",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00012",
+    "target_ku_id": "GZ-SY-00011",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00012",
+    "target_ku_id": "GZ-SY-00003",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00013",
+    "target_ku_id": "GZ-SY-00012",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00013",
+    "target_ku_id": "GZ-SY-00011",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00014",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00014",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00015",
+    "target_ku_id": "GZ-SY-00001",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00015",
+    "target_ku_id": "GZ-SY-00011",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00016",
+    "target_ku_id": "GZ-SY-00001",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00017",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00017",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00018",
+    "target_ku_id": "GZ-SY-00006",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00019",
+    "target_ku_id": "GZ-SY-00005",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00020",
+    "target_ku_id": "GZ-SY-00019",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00020",
+    "target_ku_id": "GZ-SY-00005",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00021",
+    "target_ku_id": "GZ-SY-00022",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00021",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00022",
+    "target_ku_id": "GZ-SY-00021",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00022",
+    "target_ku_id": "GZ-SY-00023",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00022",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00023",
+    "target_ku_id": "GZ-SY-00022",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00023",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00024",
+    "target_ku_id": "GZ-SY-00011",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00024",
+    "target_ku_id": "GZ-SY-00026",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00025",
+    "target_ku_id": "GZ-SY-00021",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00025",
+    "target_ku_id": "GZ-SY-00022",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00025",
+    "target_ku_id": "GZ-SY-00023",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00025",
+    "target_ku_id": "GZ-SY-00026",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00026",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00026",
+    "target_ku_id": "GZ-SY-00024",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00027",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00027",
+    "target_ku_id": "GZ-SY-00017",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00028",
+    "target_ku_id": "GZ-SY-00022",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00028",
+    "target_ku_id": "GZ-SY-00001",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00029",
+    "target_ku_id": "GZ-SY-00030",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00029",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00030",
+    "target_ku_id": "GZ-SY-00029",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00031",
+    "target_ku_id": "GZ-SY-00018",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00031",
+    "target_ku_id": "GZ-SY-00006",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00031",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00032",
+    "target_ku_id": "GZ-SY-00033",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00032",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00033",
+    "target_ku_id": "GZ-SY-00029",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00033",
+    "target_ku_id": "GZ-SY-00034",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00034",
+    "target_ku_id": "GZ-SY-00001",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00034",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00034",
+    "target_ku_id": "GZ-SY-00022",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00035",
+    "target_ku_id": "GZ-SY-00009",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00036",
+    "target_ku_id": "GZ-SY-00035",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00036",
+    "target_ku_id": "GZ-SY-00008",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00037",
+    "target_ku_id": "GZ-SY-00029",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00037",
+    "target_ku_id": "GZ-SY-00038",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00038",
+    "target_ku_id": "GZ-SY-00037",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00038",
+    "target_ku_id": "GZ-SY-00031",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00039",
+    "target_ku_id": "GZ-SY-00031",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00039",
+    "target_ku_id": "GZ-SY-00040",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00040",
+    "target_ku_id": "GZ-SY-00002",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00040",
+    "target_ku_id": "GZ-SY-00037",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00041",
+    "target_ku_id": "GZ-SY-00035",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00042",
+    "target_ku_id": "GZ-SY-00039",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00042",
+    "target_ku_id": "GZ-SY-00031",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00043",
+    "target_ku_id": "GZ-SY-00032",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00043",
+    "target_ku_id": "GZ-SY-00029",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00044",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00044",
+    "target_ku_id": "GZ-SY-00027",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00045",
+    "target_ku_id": "GZ-SY-00028",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00045",
+    "target_ku_id": "GZ-SY-00027",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00046",
+    "target_ku_id": "GZ-SY-00037",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00046",
+    "target_ku_id": "GZ-SY-00033",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00047",
+    "target_ku_id": "GZ-SY-00024",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00047",
+    "target_ku_id": "GZ-SY-00011",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00048",
+    "target_ku_id": "GZ-SY-00005",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00048",
+    "target_ku_id": "GZ-SY-00019",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00049",
+    "target_ku_id": "GZ-SY-00001",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00049",
+    "target_ku_id": "GZ-SY-00034",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00050",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00050",
+    "target_ku_id": "GZ-SY-00048",
+    "relation_type": "CO_OCCURS"
+  },
+  {
+    "source_ku_id": "GZ-SY-00051",
+    "target_ku_id": "GZ-SY-00004",
+    "relation_type": "CO_OCCURS",
+    "description": "小瓷砖脱落与瓷砖铺贴质量问题相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00051",
+    "target_ku_id": "GZ-SY-00054",
+    "relation_type": "CO_OCCURS",
+    "description": "瓷砖问题与楼板开挖重做相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00052",
+    "target_ku_id": "GZ-SY-00053",
+    "relation_type": "CO_OCCURS",
+    "description": "排水倒灌与管道冻裂均涉及一楼水系统"
+  },
+  {
+    "source_ku_id": "GZ-SY-00052",
+    "target_ku_id": "GZ-SY-00054",
+    "relation_type": "CO_OCCURS",
+    "description": "排水与地热均受楼板开挖影响"
+  },
+  {
+    "source_ku_id": "GZ-SY-00052",
+    "target_ku_id": "GZ-SY-00056",
+    "relation_type": "CO_OCCURS",
+    "description": "排水走向与楼梯开口改动相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00053",
+    "target_ku_id": "GZ-SY-00025",
+    "relation_type": "CO_OCCURS",
+    "description": "冬季冻管与北方供暖城市施工注意事项相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00053",
+    "target_ku_id": "GZ-SY-00054",
+    "relation_type": "CO_OCCURS",
+    "description": "管道冻裂与地热重做均涉及供暖系统"
+  },
+  {
+    "source_ku_id": "GZ-SY-00054",
+    "target_ku_id": "GZ-SY-00045",
+    "relation_type": "CO_OCCURS",
+    "description": "地热重做与分水器布局冲突相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00055",
+    "target_ku_id": "GZ-SY-00052",
+    "relation_type": "CO_OCCURS",
+    "description": "新风除湿与排水系统相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00056",
+    "target_ku_id": "GZ-SY-00054",
+    "relation_type": "CO_OCCURS",
+    "description": "楼梯开口影响排水和地热"
+  },
+  {
+    "source_ku_id": "GZ-SY-00056",
+    "target_ku_id": "GZ-SY-00045",
+    "relation_type": "CO_OCCURS",
+    "description": "楼梯开口与设备布局冲突"
+  },
+  {
+    "source_ku_id": "GZ-SY-00057",
+    "target_ku_id": "GZ-SY-00055",
+    "relation_type": "CO_OCCURS",
+    "description": "煤气壁挂炉与新风系统均涉及设备选型与维护"
+  },
+  {
+    "source_ku_id": "GZ-SY-00058",
+    "target_ku_id": "GZ-SY-00048",
+    "relation_type": "CO_OCCURS",
+    "description": "合同终止违约金与首付比例过高相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00058",
+    "target_ku_id": "GZ-SY-00050",
+    "relation_type": "CO_OCCURS",
+    "description": "合同终止与报价不含税等隐性成本相关"
+  },
+  {
+    "source_ku_id": "GZ-SY-00059",
+    "target_ku_id": "GZ-SY-00055",
+    "relation_type": "CO_OCCURS",
+    "description": "管道新风积灰与新风除湿一体机管道积水均为管道维护问题"
+  },
+  {
+    "source_ku_id": "GZ-SY-00060",
+    "target_ku_id": "GZ-SY-00058",
+    "relation_type": "CO_OCCURS",
+    "description": "异地施工成本与合同终止费用均涉及预算管理"
+  },
+  {
+    "source_ku_id": "GZ-SY-00060",
+    "target_ku_id": "GZ-SY-00048",
+    "relation_type": "CO_OCCURS",
+    "description": "异地施工成本与首付比例均影响资金风险"
+  }
+]

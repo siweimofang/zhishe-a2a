@@ -1,0 +1,37 @@
+V1.3 xiaoyi postrun Mavis checklist V0.1 (2026-06-16 09:20)
+
+1 file staged (V1.3 postrun Mavis execution checklist):
+
+- docs/V1.3_postrun_mavis_checklist_V0.1_20260616.md
+  5 sections / ~6 KB:
+  - 触发条件: 用户在华为 HarmonyOS 平台跑通 V1.3 小艺版
+  - 6 步 Mavis 立即执行:
+    1. 收 5 道题数据(5 min)
+    2. 写 V1.3 5 道调试题对比报告(30-60 min)
+    3. git commit 报告(5 min)
+    4. 5 大外壳月报 V0.1 模板更新(30 min)
+    5. 5 大战略复盘(2026 Q3, 2026-09)
+    6. V1.5/V1.6 规划(待用户拍)
+  - 8 大评估维度 + 综合评分公式
+  - 用户必做清单(跑 5 道题 + 复制粘贴)
+  - 待办状态(V1.0-V1.4 完成,V1.3 跑通待用户执行)
+  - 时间预估: 跑通后 2-3 小时 Mavis 工作量
+
+Strategic value:
+- 用户跑通 V1.3 后无需再问"下一步",Mavis 直接执行 6 步
+- 5 道调试题对比报告 = 5 大平台 V1.0-V1.4 综合排名依据
+- 5 大战略月报 = 运营飞轮启动
+- 5 大战略复盘 = 2026 Q3 决策依据
+
+Paired with:
+- commit 241e74b (V1.3 xiaoyi ability code + 5-question report template, 552 ins)
+- commit 86584ab (5 shells strategic closure report V0.1, 336 ins)
+- commit a96a06d (V1.4 zhipu apply V0.1, 454 ins)
+- commit 1f8198c (V1.4 zhipu access evaluation V0.1, 373 ins)
+- commit 5abb119 (V1.3 xiaoyi apply V0.1, 598 ins)
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

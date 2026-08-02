@@ -1,0 +1,32 @@
+{
+  "name": "skill-case-match",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "案例匹配 - 根据用户房屋参数和风格偏好,匹配本地类似装修案例,提供参考",
+  "triggerKeywords": ["装修案例", "实景图", "样板间", "邻居装修", "类似户型", "参考", "看看别人家"],
+  "notApplicableFor": ["纯报价需求"],
+  "toolDependencies": [
+    "case-matcher"
+  ],
+  "toolCount": 1,
+  "permissions": ["network"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "c_owner",
+    "upstream": ["skill-quote"],
+    "downstream": []
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

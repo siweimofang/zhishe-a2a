@@ -1,0 +1,65 @@
+V1.3 xiaoyi ability code + 5-question report template (2026-06-16 09:09)
+
+2 files staged (V1.3 xiaoyi version, post-closure artifacts):
+
+- docs/V1.3_xiaoyi_ability_code_V0.1_20260616.md
+  ~5 KB / 3 user-copy-paste files:
+  - File 1: RenovationConsultAbility.ets (Service Extension Ability entry)
+    * Intent routing (intro / wechat / other)
+    * HTTP request to zhishe-a2a (DeepSeek-v4-pro inner LLM)
+    * Bearer Token: mKgd4EVhF7A8Y9zk6unOyb2jI1NBLaTR
+    * URL: https://tunnel.zhishe.top/v1/chat/completions
+  - File 2: oh-package.json5 (dependencies)
+  - File 3: module.json5 (abilities config, type=service, action=intent)
+  + 7-step validation
+  + 8-row error troubleshooting table
+  + 403 Cloudflare WAF issue documented (known V1.0 sandbox finding)
+
+- docs/V1.3_5questions_report_template_V0.1_20260616.md
+  5-question test comparison report template:
+  - 5 fixed questions (price / process / pitfall / whole-house / building-mat)
+  - 6-dimension per-question record (answer / latency / ask / CTA / etc.)
+  - 5-platform comparison matrix (V1.0/V1.1/V1.2/V1.3/V1.4)
+  - 8-evaluation-dimension scoring framework
+  - JSON + Markdown dual output format
+  - Composite score formula:
+    (quality 0.4) + (ask 0.2) + (CTA 0.2) + (industry 0.1) +
+    (GB 0.05) + (brand 0.025) + (local 0.025)
+
+User copy-paste flow (V1.3 next steps):
+1. Open DevEco Studio + paste 3 files
+2. Build + run simulator + test 3 questions
+3. Submit to Huawei AGC (1-2 week audit)
+4. After 5 platforms all online, Mavis writes 5-question test report
+
+Audit period parallel actions (Q3 option A):
+- Apply V1.4 zhipu (1-3 day audit)
+- Apply V1.1 yuanbao (1-3 day real-name)
+- Register V1.2 doubao (5 min)
+- Total: 0-1 week to 4 platforms all online
+
+Strategic value:
+- 5-shell closure complete (commit 86584ab)
+- 10 git commits since 2026-06-13
+- All 4 pending platforms (V1.1/V1.2/V1.3/V1.4) have:
+  * Ready-to-paste apply docs
+  * Knowledge base CSV (V1.1 22 entries)
+  * Avatar PNG (47 KB)
+  * Intent / workflow / SDK config code
+  * 5-question test report template
+- User only needs to:
+  * Register + verify (5 min to 1-3 days)
+  * Copy-paste 3-5 fields per platform
+  * Submit + wait for audit
+
+Paired with:
+- commit 86584ab (5 shells strategic closure report V0.1, 336 ins)
+- commit a96a06d (V1.4 zhipu apply V0.1, 454 ins)
+- commit 1f8198c (V1.4 zhipu access evaluation V0.1, 373 ins)
+- commit 5abb119 (V1.3 xiaoyi apply V0.1, 598 ins)
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

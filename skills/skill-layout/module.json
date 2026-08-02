@@ -1,0 +1,38 @@
+{
+  "name": "skill-layout",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "布局规划 - 基于户型参数,生成 2-3 套布局方案,并检查物理约束和行业规则",
+  "triggerKeywords": ["户型改造", "空间布局", "风格搭配", "动线设计", "拆墙改墙", "小户型", "扩容", "客厅", "阳台"],
+  "notApplicableFor": ["已确认装修预算(请用 skill-quote)"],
+  "toolDependencies": [
+    "constraint-checker",
+    "layout-scorer"
+  ],
+  "toolCount": 2,
+  "permissions": ["network"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "c_owner",
+    "upstream": ["skill-param-extract"],
+    "downstream": ["skill-quote"]
+  },
+  "constraints": [
+    "承重墙强制拦截",
+    "卫生间/厨房不允许移到承重墙",
+    "燃气管道改动必须标注"
+  ],
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

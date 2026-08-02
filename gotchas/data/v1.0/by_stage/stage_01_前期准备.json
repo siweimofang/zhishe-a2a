@@ -1,0 +1,173 @@
+[
+  {
+    "ku_id": "GZ-SY-00017",
+    "title": "没量房的报价都是估算，可能跟实际差30-50%",
+    "stage": "STAGE_01",
+    "role": [
+      "ROLE_OWNER"
+    ],
+    "severity": "SEV_MEDIUM",
+    "problem_type": [
+      "TYPE_COST",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "description": "正规装修公司量房免费（可同时让2-3家量房横向对比）。没有量房的报价都是'估算'，可能跟实际差30-50%。因为报价必须基于实测数据：房间长宽高、窗户/门洞位置和尺寸、水电点位现状、承重墙/梁位置、卫生间/厨房/阳台防水情况。部分装修公司电话里就给'大概多少钱'，这种报价没有任何参考价值。",
+    "typical_scenario": "沈阳某业主电话咨询三家装修公司，分别报价'90平半包大概5万''大概6万''大概4万'。量房后实测套内68平（不是90平建筑面积），加上水电改造和拆改，实际半包报价在5.5-7万之间。电话报价误差达30-50%。",
+    "how_to_avoid": "1. 至少让2-3家装修公司上门量房（免费的），拿到实测数据后再比价。2. 量房时在场确认：长宽高、门窗位置、水电点位、承重墙位置、防水现状。3. 只有基于量房数据的报价单才有意义，电话报价仅作参考。4. 量房后要求出具详细报价单（分项列出），不接受'一口价'。",
+    "evidence": {
+      "source_type": "expert_opinion",
+      "source_ref": "knowledge.json k019",
+      "frequency": "极高频(>60%)",
+      "confidence": "高(多源验证)"
+    },
+    "causal_chain": {
+      "root_cause": "业主急于获取价格参考，装修公司用模糊报价吸引客户",
+      "direct_cause": "未量房就给出报价",
+      "consequence": "报价与实际相差30-50%，导致预算规划失真"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00002",
+      "GZ-SY-00004"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": true,
+      "verify_method": "multi_source",
+      "version": "1.0",
+      "source_file": "data/knowledge.json#k019",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "量房",
+      "报价",
+      "套内面积",
+      "半包",
+      "估算"
+    ]
+  },
+  {
+    "ku_id": "GZ-SY-00025",
+    "title": "改造项目缺乏前置统筹，管道走向和平台抬升等事后调整埋下协同隐患",
+    "stage": "STAGE_01",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_CRITICAL",
+    "problem_type": [
+      "TYPE_COMMUNICATION",
+      "TYPE_OMISSION"
+    ],
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_PLUMBING"
+    ],
+    "material": [],
+    "description": "叠墅/联排/复式等多户共用结构的改造项目中，最常见的根本性问题是缺乏前置统筹。排水改向、管道共用、平台抬升、阳光房扩建等重大改动，往往是一方业主先施工后通知邻居，导致后期不得不协调补救。AI分析显示：多处'非标施工'暴露改造项目缺乏前置统筹，如排水改向、抬升平台等均属事后调整。此类问题不仅造成额外费用（会议中上叠业主因配合抬升已投入约4万元），更引发邻里纠纷，严重时导致法律诉讼。",
+    "typical_scenario": "沈阳某叠墅项目，下叠业主先行改造，将排水从北向改为东侧排放、抬升平台高度。上叠业主改造时才发现：排水路径已变（需重新协调管道走向）、平台高差导致阳光房排水方向改变（单向排水积聚，向邻户溢水）、原始设计尺寸与实际不符（护栏间距偏差达200mm）。上叠业主被迫额外投入约4万元进行配合性改造。",
+    "how_to_avoid": "1. 叠墅/联排改造前，必须召开上下户+施工方+物业四方协调会，逐一对齐改造方案。2. 涉及共用结构（排水、供水、墙体、平台）的改动，必须双方签字确认后才可施工。3. 聘请独立第三方设计师出整体改造方案图（涵盖上下两户），避免各自设计导致的冲突。4. 合同中写入'涉及共用结构的改造需邻居书面同意'条款，未经同意不得施工。5. 保留所有测量数据和原始图纸，作为后续改造的参考基准。",
+    "evidence": {
+      "source_type": "user_feedback",
+      "source_ref": "叠墅改造协调会议AI洞察——多处非标施工暴露缺乏前置统筹",
+      "frequency": "极高频(>60%)",
+      "confidence": "高(多源验证)"
+    },
+    "causal_chain": {
+      "root_cause": "多户共用结构的改造项目缺乏统一规划和协调机制",
+      "direct_cause": "一方先行施工，事后通知邻居",
+      "consequence": "邻居被迫配合性改造（额外4万+）、邻里纠纷、可能的法律诉讼"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00021",
+      "GZ-SY-00022",
+      "GZ-SY-00023",
+      "GZ-SY-00026"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "会议纪要-叠墅改造协调（2026-07）",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "regional:north",
+    "trigger_keywords": [
+      "统筹",
+      "管道走向",
+      "高差",
+      "护栏间距",
+      "协同"
+    ]
+  },
+  {
+    "ku_id": "GZ-SY-00027",
+    "title": "实际尺寸与原始图纸偏差可达200mm，所有尺寸必须现场复核",
+    "stage": "STAGE_01",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "problem_type": [
+      "TYPE_QUALITY",
+      "TYPE_COMMUNICATION"
+    ],
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "description": "房屋实际尺寸与原始建筑图纸或规划之间的偏差是装修行业常见问题。在叠墅/联排项目中尤其严重：护栏间距、平台高度、墙体位置等关键尺寸可能与图纸相差100-200mm。这种偏差可能源于早期土建施工不规范、后期改造累积误差、或图纸本身就是'理想化'的。如果设计方案基于图纸尺寸而未经现场复核，会导致窗帘盒被梁阻挡、家具塞不进预留空间、阳光房尺寸不匹配等连锁问题。",
+    "typical_scenario": "沈阳某叠墅项目协调会上，现场测量北窗外墙至护栏距离，初步测得约1.1米，对比隔壁单元标准间距约1.2米，偏差达100-200mm。最终确认最小差距约100mm，最大差距达200mm。怀疑可能存在占用相邻空间的情况。此外，原设计窗帘盒位置被梁阻挡，无法正常安装，需调整为'不进梁方案'。",
+    "how_to_avoid": "1. 设计方案确定前，所有关键尺寸必须现场实测：房间长宽高、门窗洞口、护栏间距、梁底高度、管道位置等。2. 实测数据与图纸数据逐项对照，偏差超过50mm的必须标注并在方案中考虑。3. 定制家具/阳光房/橱柜等需要精确尺寸的产品，必须在硬装完工后二次测量再下单。4. 保留现场测量的原始数据（照片+手写记录），作为争议时的证据。5. 图纸不做修改时，以实际尺寸为准进行施工。",
+    "evidence": {
+      "source_type": "user_feedback",
+      "source_ref": "叠墅改造协调会议（2026年7月）——实测护栏间距偏差200mm、窗帘盒被梁阻挡",
+      "frequency": "高频(30-60%)",
+      "confidence": "高(多源验证)"
+    },
+    "causal_chain": {
+      "root_cause": "设计方案基于图纸尺寸而非现场实测",
+      "direct_cause": "实际尺寸与图纸偏差100-200mm未被发现",
+      "consequence": "窗帘盒无法安装、阳光房尺寸不匹配、家具塞不进预留空间，需临时修改方案"
+    },
+    "related_ku_ids": [
+      "GZ-SY-00025",
+      "GZ-SY-00017"
+    ],
+    "metadata": {
+      "created_at": "2026-07-31",
+      "updated_at": "2026-07-31",
+      "created_by": "hybrid",
+      "verified": true,
+      "verify_method": "human_review",
+      "version": "1.0",
+      "source_file": "会议纪要-叠墅改造协调（2026-07）",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-01"
+    },
+    "scope": "universal",
+    "trigger_keywords": [
+      "尺寸偏差",
+      "现场复核",
+      "图纸",
+      "窗帘盒",
+      "梁"
+    ]
+  }
+]

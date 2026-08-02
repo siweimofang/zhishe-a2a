@@ -1,0 +1,46 @@
+{
+  "name": "skill-param-extract",
+  "version": "1.0.0",
+  "schema": "v6",
+  "entry": "SKILL.md",
+  "availableOn": ["phone", "tablet", "2in1"],
+  "description": "参数提取 - 通过 2 轮对话引导,提取用户房屋参数,生成结构化 JSON(用于 skill-quote / skill-layout)",
+  "triggerKeywords": ["装修", "量房", "户型", "面积", "房间数", "朝向", "楼层", "新房", "老房", "几室几厅"],
+  "notApplicableFor": ["已提供完整户型图(请用 skill-ocr-parse)"],
+  "toolDependencies": [
+    "param-normalizer",
+    "graph-builder"
+  ],
+  "toolCount": 2,
+  "permissions": ["network"],
+  "harmonyOS": {
+    "compileSdk": 20,
+    "targetSdk": 20,
+    "deviceTypes": ["phone", "tablet", "2in1"],
+    "runtimeOS": "OpenHarmony"
+  },
+  "orchestrator": {
+    "pipeline": "c_owner",
+    "upstream": [],
+    "downstream": ["skill-layout", "skill-quote"]
+  },
+  "outputSchema": {
+    "city": "string",
+    "district": "string",
+    "total_area": "number",
+    "room_count": "string",
+    "rooms": "array<{name,length,width,height,floor_type,wall_type}>",
+    "orientation": "string",
+    "floor_number": "number",
+    "decoration_age": "新房|老房",
+    "has_elevator": "boolean",
+    "package_type": "半包|大包|全案",
+    "tier": "经济型|中档|中高档|豪华"
+  },
+  "owner": {
+    "agentId": "agentd70403c6f6234856bdd73ecd3ec69226",
+    "company": "沈阳赫慕空间设计有限责任公司",
+    "legalRep": "马壮男",
+    "uscc": "91210105MA110C8544"
+  }
+}

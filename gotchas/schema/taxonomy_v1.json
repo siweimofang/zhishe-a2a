@@ -1,0 +1,304 @@
+{
+  "$id": "https://zhishe.top/schema/taxonomy_v1.json",
+  "title": "知设Gotchas库 - 分类标签枚举定义 V1.0",
+  "version": "1.1",
+  "last_updated": "2026-08-01",
+  "stage": {
+    "description": "装修阶段（8类）——主分类维度",
+    "values": {
+      "STAGE_01": {
+        "name": "前期准备",
+        "description": "收房验房、需求梳理、预算规划",
+        "priority": "P2"
+      },
+      "STAGE_02": {
+        "name": "设计阶段",
+        "description": "设计师选择、方案设计、效果图",
+        "priority": "P1"
+      },
+      "STAGE_03": {
+        "name": "报价签约",
+        "description": "报价审核、合同条款、付款方式",
+        "priority": "P0"
+      },
+      "STAGE_04": {
+        "name": "施工阶段",
+        "description": "拆改、水电、瓦工、木工、油工",
+        "priority": "P0"
+      },
+      "STAGE_05": {
+        "name": "主材安装",
+        "description": "地板、瓷砖、橱柜、卫浴、门窗",
+        "priority": "P1"
+      },
+      "STAGE_06": {
+        "name": "软装进场",
+        "description": "家具、窗帘、灯具、家电",
+        "priority": "P2"
+      },
+      "STAGE_07": {
+        "name": "验收交付",
+        "description": "整体验收、问题整改、尾款结算",
+        "priority": "P1"
+      },
+      "STAGE_08": {
+        "name": "售后维保",
+        "description": "质保期、维修响应、纠纷处理",
+        "priority": "P2"
+      }
+    }
+  },
+  "role": {
+    "description": "角色分类（4类）",
+    "values": {
+      "ROLE_OWNER": {
+        "name": "业主视角"
+      },
+      "ROLE_DESIGNER": {
+        "name": "设计师视角"
+      },
+      "ROLE_CONTRACTOR": {
+        "name": "施工方视角"
+      },
+      "ROLE_INDUSTRY": {
+        "name": "行业视角"
+      }
+    }
+  },
+  "severity": {
+    "description": "严重度分级（4级）",
+    "values": {
+      "SEV_CRITICAL": {
+        "name": "致命级",
+        "loss": ">2万元",
+        "safety_risk": true
+      },
+      "SEV_HIGH": {
+        "name": "高危级",
+        "loss": "5000-2万",
+        "safety_risk": "可能有"
+      },
+      "SEV_MEDIUM": {
+        "name": "中危级",
+        "loss": "1000-5000",
+        "safety_risk": false
+      },
+      "SEV_LOW": {
+        "name": "低危级",
+        "loss": "<1000元",
+        "safety_risk": false
+      }
+    }
+  },
+  "problem_type": {
+    "description": "问题类型（6类）",
+    "values": {
+      "TYPE_FRAUD": {
+        "name": "欺诈套路"
+      },
+      "TYPE_QUALITY": {
+        "name": "质量问题"
+      },
+      "TYPE_OMISSION": {
+        "name": "漏项遗漏"
+      },
+      "TYPE_DELAY": {
+        "name": "延期拖延"
+      },
+      "TYPE_COST": {
+        "name": "费用争议"
+      },
+      "TYPE_COMMUNICATION": {
+        "name": "沟通问题"
+      }
+    }
+  },
+  "trade": {
+    "description": "工种分类（12类）",
+    "values": {
+      "TRADE_DESIGN": {
+        "name": "设计"
+      },
+      "TRADE_DEMOLISH": {
+        "name": "拆改"
+      },
+      "TRADE_PLUMBING": {
+        "name": "水电"
+      },
+      "TRADE_WATERPROOF": {
+        "name": "防水"
+      },
+      "TRADE_TILE": {
+        "name": "瓦工/瓷砖"
+      },
+      "TRADE_CARPENTRY": {
+        "name": "木工"
+      },
+      "TRADE_PAINT": {
+        "name": "油工/涂料"
+      },
+      "TRADE_CABINET": {
+        "name": "橱柜定制"
+      },
+      "TRADE_DOOR": {
+        "name": "门窗"
+      },
+      "TRADE_FLOOR": {
+        "name": "地板"
+      },
+      "TRADE_BATHROOM": {
+        "name": "卫浴"
+      },
+      "TRADE_ELECTRICAL": {
+        "name": "电气/智能家居"
+      }
+    }
+  },
+  "material": {
+    "description": "材料分类（10类）",
+    "values": {
+      "MAT_PIPE": {
+        "name": "水管/管件"
+      },
+      "MAT_WIRE": {
+        "name": "电线/线管"
+      },
+      "MAT_CEMENT": {
+        "name": "水泥/砂浆"
+      },
+      "MAT_TILE": {
+        "name": "瓷砖/石材"
+      },
+      "MAT_PAINT": {
+        "name": "涂料/乳胶漆"
+      },
+      "MAT_BOARD": {
+        "name": "板材/木制品"
+      },
+      "MAT_GLUE": {
+        "name": "胶粘剂/密封胶"
+      },
+      "MAT_HARDWARE": {
+        "name": "五金件"
+      },
+      "MAT_APPLIANCE": {
+        "name": "家电/设备"
+      },
+      "MAT_FURNITURE": {
+        "name": "家具/软装"
+      }
+    }
+  },
+  "evidence_source_type": {
+    "description": "证据来源类型（7类）",
+    "values": {
+      "official_report": {
+        "name": "官方报告"
+      },
+      "legal_case": {
+        "name": "法律案例"
+      },
+      "consumer_complaint": {
+        "name": "消费者投诉"
+      },
+      "industry_standard": {
+        "name": "行业标准"
+      },
+      "expert_opinion": {
+        "name": "专家观点"
+      },
+      "user_feedback": {
+        "name": "用户反馈"
+      },
+      "media_report": {
+        "name": "媒体报道"
+      }
+    }
+  },
+  "evidence_confidence": {
+    "values": {
+      "高(多源验证)": "多个独立来源交叉验证",
+      "中(单源可靠)": "单一可信来源",
+      "低(待验证)": "待验证"
+    }
+  },
+  "evidence_frequency": {
+    "values": {
+      "极高频(>60%)": "几乎每个装修都会遇到",
+      "高频(30-60%)": "多数装修会遇到",
+      "中频(10-30%)": "部分装修会遇到",
+      "低频(<10%)": "少数情况才会遇到"
+    }
+  },
+  "quality_level": {
+    "description": "四级质量认证体系",
+    "values": {
+      "CERTIFIED": {
+        "name": "认证级",
+        "standard": "多源验证+人工审核+实地确认"
+      },
+      "RELIABLE": {
+        "name": "可靠级",
+        "standard": "单源可靠+人工审核"
+      },
+      "REFERENCE": {
+        "name": "参考级",
+        "standard": "AI提取+待人工验证"
+      },
+      "DRAFT": {
+        "name": "草稿级",
+        "standard": "AI提取未验证"
+      }
+    },
+    "upgrade_path": [
+      "DRAFT->REFERENCE:人工审核通过",
+      "REFERENCE->RELIABLE:找到第二来源验证",
+      "RELIABLE->CERTIFIED:多源验证+行业专家确认"
+    ]
+  },
+  "relation_type": {
+    "description": "KU关联关系类型（5类）",
+    "values": {
+      "CAUSES": {
+        "name": "因果关系"
+      },
+      "CO_OCCURS": {
+        "name": "并发关系"
+      },
+      "SOLVED_BY": {
+        "name": "解决关系"
+      },
+      "PREVENTED_BY": {
+        "name": "预防关系"
+      },
+      "ESCALATES_TO": {
+        "name": "升级关系"
+      }
+    }
+  },
+  "scope": {
+    "description": "知识适用范围（5类）",
+    "values": {
+      "universal": {
+        "name": "全国通用",
+        "description": "不受地域限制，全国装修市场均适用"
+      },
+      "regional:shenyang": {
+        "name": "沈阳特化",
+        "description": "仅适用于沈阳及周边地区（供暖、气候、政策相关）"
+      },
+      "regional:north": {
+        "name": "北方通用",
+        "description": "适用于北方供暖城市（沈阳/哈尔滨/长春/大连等）"
+      },
+      "regional:south": {
+        "name": "南方通用",
+        "description": "适用于南方非供暖城市（潮湿/梅雨季相关）"
+      },
+      "regional:other": {
+        "name": "其他地域",
+        "description": "特定城市或地区特有"
+      }
+    }
+  }
+}

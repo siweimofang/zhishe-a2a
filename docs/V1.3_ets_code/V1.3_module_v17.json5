@@ -1,0 +1,57 @@
+{
+  "module": {
+    "name": "zhishe-renovation-agent",
+    "type": "entry",
+    "description": "知设 AI 装修顾问 V1.7 V0.2 - 全国 + 沈阳双层定位",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "2in1",
+      "wearable",
+      "car"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "srcEntry": "ets/entryability/EntryAbility.ets",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": ["entity.system.home"],
+            "actions": ["action.system.home"]
+          }
+        ]
+      },
+      {
+        "name": "RenovationConsultAbility",
+        "srcEntry": "ets/entryability/RenovationConsultAbility.ets",
+        "description": "知设装修咨询服务 V0.2",
+        "icon": "$media:icon",
+        "type": "service",
+        "exported": true,
+        "skills": [
+          {
+            "entities": ["entity.ability.intent"],
+            "actions": ["action.ability.intent"],
+            "uris": [
+              {
+                "scheme": "zhishe",
+                "host": "renovation",
+                "path": "consult"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

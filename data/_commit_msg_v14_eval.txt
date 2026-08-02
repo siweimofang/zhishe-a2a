@@ -1,0 +1,48 @@
+V1.4 zhipu access evaluation V0.1 (2026-06-16 08:16)
+
+1 file staged (zhipu version of the 5-shells strategy, evaluation):
+
+- docs/V1.4_zhipu_access_eval_V0.1_20260616.md
+  12 sections / 22.8 KB:
+  - Strategic position (5th-shell closer, B-end high-value users)
+  - Platform info (BIGModel + GLM Agent SDK verified 2026-06-16)
+  - GLM-5.1 model specs (千亿参数 MoE, 128k ctx, 国内 Top 3 中文)
+  - Path selection (Path A GLM Agent SDK + private API self-host)
+  - Model selection (outer = GLM-5.1, inner = DeepSeek-v4-pro dynamic)
+  - Work estimate (20-30 min doc + 2-4 day user config + 1-3 day audit)
+  - Risk matrix (5 risks, all covered by Path A self-host)
+  - V1.3 vs V1.4 diff matrix (20 dimensions)
+  - V0.2 strategy alignment (7/7 + 5-shell closure bonus)
+  - User flow (8 steps, 2-4 day + 1-3 day audit)
+  - Mavis must-do (6 items)
+  - Decision recommendations (5 Qs for user)
+  - Follow-up actions
+
+Key strategic insights:
+- V1.4 = 5th-shell "closer" + 5-shell strategic closure
+- 5 shells cover China AI 5 major ecosystems:
+  V1.0 qianwen (Alibaba) + V1.1 yuanbao (Tencent) +
+  V1.2 doubao (ByteDance) + V1.3 xiaoyi (Huawei) +
+  V1.4 zhipu (Tsinghua ecosystem)
+- V1.4 = "best overall experience" version:
+  - Fastest audit (1-3 days, 5x faster than V1.3)
+  - Most mature self-host (SDK native private API support)
+  - Strongest monetization (B-end high-value users)
+  - Same auto-trigger + self-host as V1.3
+- 2/5 shells auto-trigger (V1.3 + V1.4)
+  V1.3: 1.8B DAU (Huawei ecosystem)
+  V1.4: 千万级 + B-end (Tsinghua ecosystem)
+
+Audit reality check:
+- 1-3 day Zhipu audit = 5x faster than V1.3 (1-2 wk)
+- B-end high-value users justify the wait
+- Path A data self-host = no risk if SDK changes
+
+Paired with:
+- commit 5abb119 (V1.3 xiaoyi apply V0.1, 598 ins)
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

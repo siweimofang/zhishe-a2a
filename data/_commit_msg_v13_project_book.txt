@@ -1,0 +1,64 @@
+V1.3 xiaoyi project book V0.1 (2026-06-16)
+
+1 file staged (V1.3 xiaoyi project book, based on V1.0+V1.2 books):
+
+- docs/V1.3_xiaoyi_project_book_V0.1_20260616.md
+  30 KB / 11 sections:
+  - Section 0: V1.3 vs V1.0+V1.2 differences table (12 dimensions)
+  - 1. 项目概述(name / vision / mission / values / one-liner)
+  - 2. 项目背景(industry / opportunity / pain / competitor / reason)
+  - 3. 项目目标(long-term / short-term / KPI / acceptance)
+  - 4. 技术架构(unified arch / V1.3 arch / data flow / tech stack)
+  - 5. 执行计划(milestones M0-M6 / 7-step user flow / resources / critical path)
+  - 6. 财务规划(budget / monetization / ROI / break-even)
+  - 7. 风险评估(tech 7 / market 5 / policy 3 / contingency 3)
+  - 8. 运营策略(launch / content / data flywheel / user growth)
+  - 9. 合规与法务(privacy / security / IP / disclaimer)
+  - 10. 附录(terms / references / revision history)
+
+Reuse from V1.0+V1.2:
+- Overall 4-layer architecture (access / harness / model / capability)
+- 报价引擎 V1.6
+- 22-entry knowledge base V0.1
+- Prompt V1.6 (9 industry principles)
+- 3-tier conversion system
+- 7 core guiding principles (1-person startup)
+
+Adaptation for V1.3:
+- Access layer: V1.0 Python bailian app + V1.2 RedSkill web
+  -> V1.3 DevEco Studio + Service Extension Ability (local IDE)
+- Intent routing: V1.0/V1.2 web UI -> V1.3 module.json5 + 5 intents
+- Main-conversation auto-trigger (UNIQUE to V1.3):
+  1.8B DAU HarmonyOS devices, no other V has this
+
+Strategic value:
+- 1st complete V1.3 project book (V0.1 was 19KB eval + 25KB apply)
+- Project book = 作战地图 (operational map)
+- Eval + apply = 操作手册 (operation manual)
+- 2 docs together = full V1.3 lifecycle coverage
+- 5-shells strategy closure complete (commit 86584ab)
+- User can now do V1.3 with full planning + full execution
+
+User V1.3 7-step flow reference (section 5.2):
+1. Huawei developer registration + real-name (1-3 days)
+2. DevEco Studio 26.0.0 Beta1 + CodeGenie 26.0.0 Beta1 (30-60 min)
+3. DevEco Studio create project zhishe-renovation-agent (1-2 hours)
+4. Copy 3 core files (RenovationConsultAbility.ets + oh-package.json5 + module.json5) (15-20 min)
+5. Build + simulator test 3 questions (30-60 min)
+6. Package + upload Huawei AGC + apply (30-60 min)
+7. Huawei audit (1-2 weeks) + run 5 questions (30 min)
+Total: 3-7 day config + 1-2 week audit = 3-4 weeks to online
+
+Paired with:
+- commit b4f0aa0 (V1.3 postrun Mavis checklist V0.1, 174 ins)
+- commit 241e74b (V1.3 ability code + 5-question template, 552 ins)
+- commit 86584ab (5 shells strategic closure V0.1, 336 ins)
+- commit a96a06d (V1.4 zhipu apply V0.1, 454 ins)
+- commit 1f8198c (V1.4 zhipu access evaluation V0.1, 373 ins)
+- commit 5abb119 (V1.3 xiaoyi apply V0.1, 598 ins)
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

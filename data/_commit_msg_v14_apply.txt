@@ -1,0 +1,64 @@
+V1.4 zhipu apply V0.1 (2026-06-16 08:16)
+
+1 file staged (zhipu version of the 5-shells strategy, apply doc):
+
+- docs/V1.4_zhipu_apply_V0.1_20260616.md
+  17 sections / 22.6 KB:
+  - 1. 智能体基础信息(智谱开放平台后台)
+  - 2. GLM 智能体 SDK + 私有 API 配置
+    (核心 - 路径 A 主推,JSON 请求体 + 工具配置表)
+  - 3. 预置问题(3-5 个,智谱无明确限制)
+  - 4. 欢迎语 Markdown(智谱支持)
+  - 5. 智能体"提示词"配置(自我介绍 + 工具调用 + 转化引导)
+  - 6. 意图注册(关键差异 - 5 大外壳中"主对话自动调起"双雄之一)
+  - 7. 模型选型(外壳=GLM-5.1 意图识别,内壳=DeepSeek-v4-pro 主力)
+  - 8. 22 条知识库处理(关键差异 - 路径 A 不传智谱云,自留地后端)
+  - 9. 隐私政策(智谱默认托管)
+  - 10. 5 道调试题(对比 V1.0/V1.1/V1.2/V1.3/V1.4 五平台)
+  - 11. 审核 SOP(智谱特化,1-3 天审核 - 5 大外壳最快)
+  - 12. 风险对策(5 类,路径 A+B 双保险)
+  - 13. V1.3 vs V1.4 关键差异(20 维度)
+  - 14. V1.4 智谱清言版上架清单(用户必做 8 步,2-4 天 + 1-3 天审核)
+  - 15. Mavis 必做清单(5 项)
+  - 16. 5 大外壳战略闭环(收官标志)
+  - 17. 后续动作
+
+Key technical artifacts:
+- GLM 智能体 SDK 私有 API 节点配置(JSON 请求体 + 工具配置表)
+- 智能体"提示词"完整内容(自我介绍 + 工具调用路由 + 转化引导)
+- 意图注册 5 类(zhishe.renovation.quote/process/pitfall/intro/wechat)
+- 智谱开放平台"主对话关键词"配置(5 大外壳中"V1.3 + V1.4"主对话自动调起双雄)
+
+Strategic value:
+- V1.4 = 5th-shell "closer" + 5-shell strategic closure
+- 5 shells cover China AI 5 major ecosystems:
+  V1.0 qianwen (Alibaba) + V1.1 yuanbao (Tencent) +
+  V1.2 doubao (ByteDance) + V1.3 xiaoyi (Huawei) +
+  V1.4 zhipu (Tsinghua ecosystem)
+- V1.4 = "best overall experience" version:
+  - Fastest audit (1-3 days, 5x faster than V1.3)
+  - Most mature self-host (SDK native private API support)
+  - Strongest monetization (B-end high-value users)
+  - Same auto-trigger + self-host as V1.3
+- 2/5 shells auto-trigger (V1.3 + V1.4)
+
+5-Shell strategic closure (V1.0-V1.4):
+| V | Platform | Outer LLM | Auto-trigger | Status |
+|---|---|---|---|---|
+| V1.0 | qianwen / bailian | Qwen-Plus | No | Deployed |
+| V1.1 | yuanbao / yuanqi | Hunyuan Hy3 | No | Ready |
+| V1.2 | doubao / coze | Doubao 1.5 Pro | No | Eval+Apply ready |
+| V1.3 | xiaoyi / HarmonyOS | Pangu | Yes (1.8B) | Eval+Apply ready |
+| V1.4 | zhipu / BIGModel | GLM-5.1 | Yes (M-level + B-end) | Eval+Apply ready |
+
+= Full China AI market presence for "zhishe AI renovation consultant"
+
+Paired with:
+- commit 1f8198c (V1.4 zhipu access evaluation V0.1, 373 ins)
+- commit 5abb119 (V1.3 xiaoyi apply V0.1, 598 ins)
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)

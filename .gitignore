@@ -31,3 +31,21 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Monitoring / health check artifacts
+backend_health_*
+public_monitor_*
+keepalive_*
+health_check_*
+restart_*.py
+restart_*.ps1
+verify_*.py
+prepend_*.py
+audit_phase0.py
+agent_json_snapshot.json
+baseline_metrics.txt
+*.bak-*
+uvicorn.log.err
+
+# Gotchas retriever binary index (rebuildable)
+gotchas/retriever/*.pkl

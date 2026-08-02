@@ -1,0 +1,50 @@
+V1.3 xiaoyi apply V0.1 (2026-06-16 08:10)
+
+1 file staged (xiaoyi version of the 5-shells strategy, apply doc):
+
+- docs/V1.3_xiaoyi_apply_V0.1_20260616.md
+  16 sections / 24.7 KB:
+  - 1. 智能体基础信息(华为开发者联盟后台)
+  - 2. HarmonyOS 智能体框架 2.0 + Service Extension Ability 配置
+    (核心 - 路径 A 主推,3 个关键文件 ETS 代码)
+  - 3. 预置问题(3-5 个,华为无明确限制)
+  - 4. 欢迎语 Markdown(华为支持)
+  - 5. 意图注册(关键差异 - 5 大外壳中"主对话自动调起"唯一版本)
+  - 6. 模型选型(外壳=盘古意图识别,内壳=DeepSeek-v4-pro 主力)
+  - 7. 22 条知识库处理(关键差异 - 路径 A 不传华为云,自留地后端)
+  - 8. 隐私政策(华为默认托管 + HarmonyOS 隐私声明)
+  - 9. 5 道调试题(对比 V1.0/V1.1/V1.2/V1.3 四平台)
+  - 10. 审核 SOP(华为特化,1-2 周审核)
+  - 11. 风险对策(7 类,路径 A+B 双保险)
+  - 12. V1.2 vs V1.3 关键差异(15 维度)
+  - 13. V1.3 小艺版上架清单(用户必做 7 步,3-7 天 + 1-2 周审核)
+  - 14. Mavis 必做清单(5 项)
+  - 15. 决策点(5 Q)
+  - 16. 后续动作
+
+Key technical artifacts:
+- Service Extension Ability 完整 ETS 代码
+  (RenovationConsultAbility.ets + oh-package.json5 + module.json5)
+- 意图注册 5 类(zhishe.renovation.quote/process/pitfall/intro/wechat)
+- DevEco Studio 项目结构(zhishe-renovation-agent/)
+- HarmonyOS 设备兼容 6 类(phone/tablet/2in1/wearable/tv/car)
+
+Strategic value:
+- V1.3 = 5th-shell "auto-trigger" ONLY version (1.8B DAU Pangu)
+- Same self-host strategy as V1.2 (扣子工作流 vs Service Extension)
+- HDC 2026 framework 2.0 = zhishe strategy 100% isomorphic
+  ("intent-as-service" + "unified backend + multi-platform front")
+- V1.3 + V1.2 + V1.1 + V1.0 = "千问+元宝+豆包+小艺"四巨头
+
+Audit reality check:
+- 1-2 week Huawei audit (longer than V1.0/V1.1/V1.2)
+- But the 1.8B DAU auto-trigger justifies the wait
+- Path A data self-host = no risk if framework changes
+
+Paired with:
+- commit 25b9f88 (V1.3 xiaoyi access evaluation V0.1, 347 ins)
+- commit 925072c (V1.2 doubao apply V0.1, 411 ins)
+- commit 3c0008e (V1.2 doubao access evaluation V0.1, 333 ins)
+- commit 4e8c41e (V1.1 yuanbao ready snapshot, 5 files / 781 ins)
+- commit 30d3a25 (V0.2 strategy arch)
+- commit a50ecff (V1.0 qianwen occupation)
