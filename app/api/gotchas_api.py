@@ -56,6 +56,27 @@ def _load_data():
 # 模块加载时初始化
 _load_data()
 
+# ── P0-P6 检索系统初始化 ──
+_hybrid_searcher = None
+
+def _init_retriever():
+    """初始化GotchasHybrid检索器（懒加载，失败不影响其他API）"""
+    global _hybrid_searcher
+    try:
+        import sys
+        sys.path.insert(0, str(GOTCHAS_DIR.parent))
+        from gotchas.retriever import GotchasHybrid, QueryRewriter
+        _hybrid_searcher = GotchasHybrid(str(GOTCHAS_DIR))
+        _hybrid_searcher.build_index()
+        rewriter = QueryRewriter()
+        _hybrid_searcher.enable_rewriter(rewriter)
+        print(f"[Gotchas] Retriever initialized: {len(_hybrid_searcher.all_ku)} docs, rewriter={'on' if rewriter.enabled else 'domain-only'}")
+    except Exception as e:
+        print(f"[Gotchas] Retriever init failed (fallback to substring): {e}")
+        _hybrid_searcher = None
+
+_init_retriever()
+
 
 # ── 辅助函数 ──
 def _filter_kus(
@@ -212,9 +233,53 @@ def get_gaps():
 def search_kus(
     q: str = Query(..., min_length=1, description="搜索关键词"),
     stage: Optional[str] = None,
-    limit: int = Query(20, ge=1, le=50),
+    trade: Optional[str] = None,
+    min_severity: Optional[str] = None,
+    limit: int = Query(10, ge=1, le=50),
+    use_rewriter: bool = Query(True, description="启用P5+P6查询改写"),
 ):
-    """在KU的title/description/how_to_avoid中搜索关键词。"""
+    """
+    Gotchas智能检索（P0-P6全链路）
+    
+    检索链路: 领域映射 -> LLM扩展 -> BM25+TF-IDF双路 -> RRF融合 -> 精排
+    降级策略: 检索器不可用时回退到子串匹配
+    """
+    # 优先使用Hybrid检索器
+    if _hybrid_searcher is not None:
+        try:
+            results = _hybrid_searcher.search(
+                q, top_n=limit,
+                stage=stage, trade=trade,
+                min_severity=min_severity,
+                use_rewriter=use_rewriter
+            )
+            return {
+                "query": q,
+                "engine": "hybrid_p6",
+                "total": len(results),
+                "results": [
+                    {
+                        "score": r["score"],
+                        "rank_bm25": r["rank_bm25"],
+                        "rank_tfidf": r["rank_tfidf"],
+                        "ku": {
+                            "ku_id": r["ku_id"],
+                            "title": r["title"],
+                            "severity": r["severity"],
+                            "stage": r["stage"],
+                            "trade": r["trade"],
+                            "typical_scenario": r["scenario"],
+                            "how_to_avoid": r["avoid"],
+                            "trigger_keywords": r["keywords"],
+                        }
+                    }
+                    for r in results
+                ],
+            }
+        except Exception as e:
+            pass  # 降级到子串匹配
+
+    # 降级: 子串匹配
     q_lower = q.lower()
     results = []
     for ku in _ku_cache:
@@ -233,6 +298,7 @@ def search_kus(
     results.sort(key=lambda x: x["score"], reverse=True)
     return {
         "query": q,
+        "engine": "substring_fallback",
         "total": len(results),
         "results": results[:limit],
     }
