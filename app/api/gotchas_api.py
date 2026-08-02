@@ -115,6 +115,20 @@ def _filter_kus(
     return result
 
 
+# ── 公开摘要（防爬：外部只返回骨架，不返回完整知识内容） ──
+def _public_summary(ku: dict) -> dict:
+    """将完整KU裁剪为公开摘要，隐藏核心知识内容"""
+    avoid = ku.get("how_to_avoid", "")
+    return {
+        "ku_id": ku.get("ku_id"),
+        "title": ku.get("title"),
+        "severity": ku.get("severity"),
+        "stage": ku.get("stage"),
+        "trade": ku.get("trade", []),
+        "how_to_avoid_brief": avoid[:50] + "..." if len(avoid) > 50 else avoid,
+    }
+
+
 # ── 请求/响应模型 ──
 class UsageLogEntry(BaseModel):
     ku_id: str
@@ -157,7 +171,7 @@ def list_kus(
         "offset": offset,
         "limit": limit,
         "count": len(page),
-        "kus": page,
+        "kus": [_public_summary(ku) for ku in page],
     }
 
 
@@ -262,16 +276,14 @@ def search_kus(
                         "score": r["score"],
                         "rank_bm25": r["rank_bm25"],
                         "rank_tfidf": r["rank_tfidf"],
-                        "ku": {
+                        "ku": _public_summary({
                             "ku_id": r["ku_id"],
                             "title": r["title"],
                             "severity": r["severity"],
                             "stage": r["stage"],
                             "trade": r["trade"],
-                            "typical_scenario": r["scenario"],
                             "how_to_avoid": r["avoid"],
-                            "trigger_keywords": r["keywords"],
-                        }
+                        })
                     }
                     for r in results
                 ],
@@ -300,7 +312,7 @@ def search_kus(
         "query": q,
         "engine": "substring_fallback",
         "total": len(results),
-        "results": results[:limit],
+        "results": [{"score": r["score"], "ku": _public_summary(r["ku"])} for r in results[:limit]],
     }
 
 
@@ -323,11 +335,11 @@ def list_relations(
 
 @router.get("/{ku_id}")
 def get_ku(ku_id: str):
-    """获取单条KU详情。"""
+    """获取单条KU公开摘要（完整内容需授权）。"""
     ku = _ku_index.get(ku_id)
     if not ku:
         raise HTTPException(status_code=404, detail=f"KU not found: {ku_id}")
-    return ku
+    return _public_summary(ku)
 
 
 @router.get("/{ku_id}/related")
@@ -350,7 +362,7 @@ def get_related_kus(ku_id: str):
             related.append({
                 "relation_type": rel.get("relation_type"),
                 "description": rel.get("description", ""),
-                "ku": other_ku,
+                "ku": _public_summary(other_ku),
             })
 
     # 从KU自身的related_ku_ids中找（可能有未在relations文件中记录的）
@@ -362,7 +374,7 @@ def get_related_kus(ku_id: str):
                 related.append({
                     "relation_type": "CO_OCCURS",
                     "description": "KU自身标注的关联",
-                    "ku": other,
+                    "ku": _public_summary(other),
                 })
 
     return {
