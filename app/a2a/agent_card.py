@@ -41,9 +41,11 @@ def get_agent_card(base_url: str = "https://example.com") -> AgentCard:
         description=(
             "装修 AI 顾问,提供报价、施工标准、设计方案、建材品牌的咨询,助你避坑。"
             "基于装修行业多年实战经验,不提供具体承诺价,建议实地量房。"
+            "本智能体为任务型工具智能体(AI 咨询助手),非持证监理/设计师/施工企业,"
+            "不提供需要法定资质的鉴定与验收结论;信息仅供参考,以实际勘察和合同为准。"
         ),
         url=f"{base_url}/a2a",
-        version="1.3.0",
+        version="1.4.0",
         protocolVersion="0.2.5",
         capabilities=AgentCapabilities(streaming=True),  # V1.3.1:后端 openai_compat.py 早已支持 SSE,此处开启让客户端知道(V1.4 准备)
         security=["apiKey"],

@@ -35,7 +35,9 @@ async def chat_with_skill(user_text: str) -> str:
     3. 把精确数据拼到 system prompt 后面
     4. 让 LLM 基于真实数据组织语言,而不是瞎编
     """
-    from app.prompts.xiaozhi import XIAOZHI_SYSTEM_PROMPT
+    # V1.7 接线(2026-08-04):全国+沈阳双层定位正式上线(此前 v17 写好未引用)
+    # 说明:V1.7 已含 V1.7.3 合规强化(身份边界声明,依据 2026-07-15 新规)
+    from app.prompts.xiaozhi_v17 import XIAOZHI_SYSTEM_PROMPT_V17
 
     # === V1.0 报价数据注入 ===
     quote_data_block = ""
@@ -62,7 +64,7 @@ async def chat_with_skill(user_text: str) -> str:
     if kb_block:
         log.info("kb_results_injected", extra={"extra_kb_count": len(kb_results)})
 
-    system_content = XIAOZHI_SYSTEM_PROMPT + quote_data_block + ("\n\n" + kb_block if kb_block else "")
+    system_content = XIAOZHI_SYSTEM_PROMPT_V17 + quote_data_block + ("\n\n" + kb_block if kb_block else "")
 
     messages = [
         {

@@ -112,7 +112,7 @@ async def openai_models():
 async def root():
     return {
         "service": "zhishe-ai-renovation",
-        "version": "1.0.0",
+        "version": "1.4.0",
         "protocol": "A2A 0.2.5 + OpenAI-compatible",
         "agent_card": "/.well-known/agent.json",
         "endpoints": {
