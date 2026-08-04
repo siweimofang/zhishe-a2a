@@ -314,6 +314,7 @@ class GotchasHybrid:
             output.append({
                 'ku_id': ku.get('ku_id', ''),
                 'title': ku.get('title', ''),
+                'knowledge_type': ku.get('knowledge_type', 'gotcha'),
                 'score': round(final_score, 5),
                 'rank_bm25': bm25_ranks.get(idx, '-'),
                 'rank_tfidf': tfidf_ranks.get(idx, '-'),

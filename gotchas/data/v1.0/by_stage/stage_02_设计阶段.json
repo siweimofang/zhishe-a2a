@@ -14007,5 +14007,329 @@
       "乳胶漆",
       "阳台顶"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00546",
+    "title": "涉及主体和承重结构改动必须由原设计单位或同等资质设计单位核验",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_DEMOLISH"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章与GB 50210-2018共用的强制性条文。这是结构安全底线——任何拆墙、开门洞、增加荷载（如砌墙、放浴缸）的行为，都必须经过结构工程师验算确认。未经核验擅自改动承重结构属于违法行为，后果可能是整栋楼的结构安全受损。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "承重结构",
+      "结构安全",
+      "设计单位核验",
+      "承重墙改动",
+      "增加荷载",
+      "结构核验"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00001",
+      "GZ-SY-00049"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 3 + GB 50210-2018",
+    "standard_authority": "national",
+    "standard_requirement": "涉及主体和承重结构改动或增加荷载时，必须由原结构设计单位或具备相应资质的设计单位核查有关原始资料，对既有建筑结构的安全性进行核验、确认。",
+    "compliance_criteria": "任何涉及承重墙、梁、柱、楼板的改动，施工前必须持有原结构设计单位或同等资质设计单位出具的书面核验确认文件。无书面确认文件不得施工。",
+    "verification_method": "检查设计单位出具的结构性核验确认文件（盖章原件），核查设计单位资质等级是否匹配。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00577",
+    "title": "既有建筑装饰装修涉及承重结构变动必须出具设计方案",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_DEMOLISH"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第3.1.4条，这是国家强制性条文，必须严格执行。与JGJ/T 304-2013 Chapter 3的结构安全要求一致但更加具体——明确要求'委托原结构设计单位或具有相应资质的设计单位提出设计方案'。这是装修中涉及结构安全的法律底线。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止（住建部公告），相关内容由全文强制标准GB 55032-2022《建筑与市政工程施工质量控制通用规范》第3.3.7条第1款承接执行，要求不变。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "承重结构变动",
+      "设计方案",
+      "结构安全鉴定",
+      "强制性条文",
+      "3.1.4",
+      "既有建筑"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00546",
+      "GZ-SY-00001"
+    ],
+    "standard_number": "GB 50210-2018 第3.1.4条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "既有建筑装饰装修工程设计涉及主体和承重结构变动时，必须在施工前委托原结构设计单位或者具有相应资质条件的设计单位提出设计方案，或由检测鉴定单位对建筑结构的安全性进行鉴定。未经设计或鉴定，不得擅自施工。 【效力说明】原强制性条文已于2023-03-01废止，由GB 55032-2022第3.3.7条第1款承接：既有建筑装饰装修涉及主体和承重结构变动时，应在施工前委托原结构设计单位或具有相应资质等级的设计单位提出设计方案，或由鉴定单位对建筑结构的安全性进行鉴定。",
+    "compliance_criteria": "施工前必须持有设计单位出具的设计方案（盖章原件）或检测鉴定单位的结构安全鉴定报告。无方案或无鉴定报告不得开工。",
+    "verification_method": "检查设计方案或结构安全鉴定报告（原件，盖章）；核查设计/鉴定单位资质。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00592",
+    "title": "幕墙与主体结构连接的预埋件数量规格位置和防腐处理必须符合设计要求",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第11.1.12条（原强制性条文）：幕墙与主体结构连接的各种预埋件，其数量、规格、位置和防腐处理必须符合设计要求。【效力说明】本条自2023年3月1日起废止，GB 55032-2022未再单列幕墙专门条款，预埋件质量要求由第3.2节材料、构配件及设备质量控制的一般规定承接。幕墙预埋件偏差过大或漏埋会直接威胁幕墙整体安全，住宅装修中涉及石材/铝板背景墙、阳光房等重载干挂项目同样适用。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "幕墙",
+      "预埋件",
+      "11.1.12",
+      "拉拔",
+      "干挂",
+      "后置埋件",
+      "防腐"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00577"
+    ],
+    "standard_number": "GB 50210-2018 第11.1.12条（强制性条文，2023-03-01废止，GB 55032-2022承接）",
+    "standard_authority": "national",
+    "standard_requirement": "幕墙与主体结构连接的各种预埋件，其数量、规格、位置和防腐处理必须符合设计要求。后置埋件和槽式预埋件应进行现场拉拔力检验。",
+    "compliance_criteria": "预埋件数量、规格、位置与施工图一致；防腐处理到位；后置埋件现场拉拔力符合设计要求（有检验报告）。",
+    "verification_method": "核对施工图与现场预埋件；检查后置埋件现场拉拔力检验报告；检查隐蔽工程验收记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第11.1.12条（强制性条文，2023-03-01废止，GB 55032-2022承接）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00604",
+    "title": "住宅装饰装修严禁使用国家明令淘汰的材料",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第3.2.2条（强制性条文，建标[2001]266号公告确认）。装修选材的合规底线：国家明令淘汰的材料（如含石棉制品、含铅油漆、淘汰型PVC给水管材、旧版淘汰胶粘剂等）严禁使用。材料合规性由3.2.1（品种规格性能符合设计与现行标准）、3.2.4（进场验收、合格证书、检测报告）共同构成完整链条。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "明令淘汰",
+      "淘汰材料",
+      "石棉",
+      "铅",
+      "禁用材料",
+      "材料合规",
+      "3.2.2",
+      "强条"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00544",
+      "GZ-SY-00543"
+    ],
+    "standard_number": "GB 50327-2001 第3.2.2条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "住宅装饰装修严禁使用国家明令淘汰的材料。所用材料的品种、规格、性能应符合设计要求及国家现行有关标准的规定（3.2.1）；施工单位应对进场主要材料的品种、规格、性能进行验收，主要材料应有产品合格证书，有特殊要求的应有相应的性能检测报告和中文说明书（3.2.4）。",
+    "compliance_criteria": "材料清单中无国家明令淘汰品种；进场材料有合格证书与检测报告；材料品种规格与设计一致。",
+    "verification_method": "核对材料清单与《淘汰落后生产能力、工艺和产品的目录》等现行名录；检查产品合格证书、性能检测报告。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 第3.2.2条（强制性条文）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 住建部建标[2001]266号公告 + 建标库GB 50327-2001/GB 50096-2011全文",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00605",
+    "title": "施工单位必须制定施工防火安全制度施工人员必须严格遵守",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第4.1.1条（强制性条文）。防火管理制度是装修现场安全的组织保障：无制度、不执行制度是多数工地火灾的根源。与4.3.4/4.3.6/4.3.7（现场防火措施）、4.4（电气防火）、4.5（消防设施保护）构成防火强条组合。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "防火",
+      "消防",
+      "安全制度",
+      "现场防火",
+      "4.1.1",
+      "强条",
+      "动火",
+      "火灾"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00586",
+      "GZ-SY-00585"
+    ],
+    "standard_number": "GB 50327-2001 第4.1.1条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工单位必须制定施工防火安全制度，施工人员必须严格遵守。配套要求：材料燃烧性能等级应符合GB 50222《建筑内部装修设计防火规范》（4.1.2）；施工现场严禁吸烟和动用明火，确需动用明火时应办理审批手续、清除可燃物并设专人监护（4.3.4/4.3.6/4.3.7）。",
+    "compliance_criteria": "施工单位有书面防火安全制度；施工人员知晓并遵守；动火作业有审批与监护记录。",
+    "verification_method": "检查防火安全制度文件与交底记录；现场巡查吸烟、明火、易燃物堆放情况。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 第4.1.1条（强制性条文）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 住建部建标[2001]266号公告 + 建标库GB 50327-2001/GB 50096-2011全文",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00607",
+    "title": "卧室起居室室内净高不低于2.40米局部不低于2.10米且面积不大于使用面积三分之一",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "description": "GB 50096-2011第5.5.2条（强制性条文，公告1093号）。吊顶、地暖、中央空调会压缩净高——设计阶段必须核对完成后净高是否达标。配套：厨房、卫生间净高不应低于2.20m（5.5.4）；厨卫排水横管下表面与楼地面净距不得低于1.90m且不得影响门窗扇开启（5.5.5）。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "净高",
+      "2.40",
+      "2.1",
+      "吊顶后高度",
+      "层高",
+      "压抑",
+      "5.5.2",
+      "净高不足"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00575",
+      "GZ-SY-00583"
+    ],
+    "standard_number": "GB 50096-2011 第5.5.2条（强制性条文）+ 第5.5.4条 + 第5.5.5条",
+    "standard_authority": "national",
+    "standard_requirement": "(1)卧室、起居室（厅）的室内净高不应低于2.40m，局部净高不应低于2.10m，且局部净高的室内面积不应大于室内使用面积的1/3（强条）；(2)厨房、卫生间的室内净高不应低于2.20m；(3)厨房、卫生间内排水横管下表面与楼面、地面净距不得低于1.90m，且不得影响门、窗扇开启。",
+    "compliance_criteria": "装修完成后卧室/起居室净高≥2.40m；局部低于2.10m的区域面积≤使用面积1/3；厨卫净高≥2.20m；排水横管下净距≥1.90m。",
+    "verification_method": "激光测距仪/钢卷尺实测各房间净高；核对吊顶、地暖、管道占用高度后的完成面净高。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50096-2011 第5.5.2条（强制性条文）+ 第5.5.4条 + 第5.5.5条",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 住建部建标[2001]266号公告 + 建标库GB 50327-2001/GB 50096-2011全文",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
   }
 ]

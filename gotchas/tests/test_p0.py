@@ -167,10 +167,19 @@ def run_schema_tests():
             blocking_errors.append(f"{kid}: ku_id重复")
         all_ids.add(kid)
 
-        # 必填字段
-        for field in ["title", "stage", "severity", "description", "how_to_avoid"]:
+        # 必填字段（V2.0: 按knowledge_type区分）
+        # gotcha(避坑): title/stage/severity/description/how_to_avoid
+        # standard(尺子): title/stage/severity/description/standard_number/standard_requirement
+        # process/material/design: 暂按通用必填
+        ktype = ku.get("knowledge_type", "gotcha")
+        if ktype == "standard":
+            required_fields = ["title", "stage", "severity", "description",
+                               "standard_number", "standard_requirement"]
+        else:
+            required_fields = ["title", "stage", "severity", "description", "how_to_avoid"]
+        for field in required_fields:
             if not ku.get(field):
-                blocking_errors.append(f"{kid}: 缺少必填字段 '{field}'")
+                blocking_errors.append(f"{kid}: 缺少必填字段 '{field}' (type={ktype})")
 
         # 枚举
         if ku.get("stage") and ku["stage"] not in VALID_STAGES:

@@ -1,48 +1,48 @@
 {
   "version": "1.1",
-  "total_kus": 532,
+  "total_kus": 598,
   "total_relations": 116,
   "by_stage": {
     "STAGE_01": 3,
-    "STAGE_02": 245,
+    "STAGE_02": 251,
     "STAGE_03": 50,
-    "STAGE_04": 179,
-    "STAGE_05": 42,
-    "STAGE_06": 8,
-    "STAGE_07": 3,
-    "STAGE_08": 2
+    "STAGE_04": 200,
+    "STAGE_05": 45,
+    "STAGE_06": 37,
+    "STAGE_07": 9,
+    "STAGE_08": 3
   },
   "by_severity": {
-    "SEV_CRITICAL": 27,
-    "SEV_HIGH": 146,
-    "SEV_LOW": 103,
-    "SEV_MEDIUM": 256
+    "SEV_CRITICAL": 41,
+    "SEV_HIGH": 167,
+    "SEV_LOW": 106,
+    "SEV_MEDIUM": 284
   },
   "by_scope": {
     "regional:north": 14,
     "regional:shenyang": 2,
     "regional:south": 2,
-    "universal": 514
+    "universal": 580
   },
   "by_role": {
-    "ROLE_CONTRACTOR": 157,
-    "ROLE_DESIGNER": 408,
+    "ROLE_CONTRACTOR": 223,
+    "ROLE_DESIGNER": 418,
     "ROLE_INDUSTRY": 6,
-    "ROLE_OWNER": 524
+    "ROLE_OWNER": 578
   },
   "by_trade": {
-    "TRADE_BATHROOM": 38,
-    "TRADE_CABINET": 144,
-    "TRADE_CARPENTRY": 42,
-    "TRADE_DEMOLISH": 27,
-    "TRADE_DESIGN": 111,
-    "TRADE_DOOR": 16,
-    "TRADE_ELECTRICAL": 145,
-    "TRADE_FLOOR": 3,
-    "TRADE_PAINT": 34,
-    "TRADE_PLUMBING": 81,
-    "TRADE_TILE": 50,
-    "TRADE_WATERPROOF": 18
+    "TRADE_BATHROOM": 39,
+    "TRADE_CABINET": 145,
+    "TRADE_CARPENTRY": 51,
+    "TRADE_DEMOLISH": 29,
+    "TRADE_DESIGN": 117,
+    "TRADE_DOOR": 22,
+    "TRADE_ELECTRICAL": 150,
+    "TRADE_FLOOR": 4,
+    "TRADE_PAINT": 39,
+    "TRADE_PLUMBING": 85,
+    "TRADE_TILE": 55,
+    "TRADE_WATERPROOF": 23
   },
   "by_material": {
     "MAT_APPLIANCE": 43,
@@ -61,7 +61,7 @@
     "CERTIFIED": 1,
     "DRAFT": 363,
     "REFERENCE": 126,
-    "RELIABLE": 42
+    "RELIABLE": 108
   },
   "coverage": {
     "stages_covered": "8/8",
@@ -72,8 +72,8 @@
   "phase1_target": {
     "original": 10000,
     "revised": "200-300 RELIABLE+",
-    "current_reliable_plus": 43,
+    "current_reliable_plus": 109,
     "note": "Phase 1目标从1万条校准为200-300条高质量(RELIABLE/CERTIFIED)KU"
   },
-  "last_updated": "2026-08-02"
+  "last_updated": "2026-08-04"
 }

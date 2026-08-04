@@ -1,7 +1,7 @@
 [
   {
     "ku_id": "GZ-SY-00011",
-    "title": "防水必须刷2-3遍+48小时闭水试验，仅刷一遍等于没做",
+    "title": "防水必须刷2-3遍+24小时闭水试验，仅刷一遍等于没做",
     "stage": "STAGE_04",
     "role": [
       "ROLE_OWNER",
@@ -17,9 +17,9 @@
     "material": [
       "MAT_CEMENT"
     ],
-    "description": "卫生间防水必须刷2-3遍（JS聚合物或聚氨酯），每遍干透后再刷下一遍，防水层上翻至1800mm。完工后必须做48小时闭水试验（水位不低于20mm），楼下无渗漏为合格。厨房防水上翻30cm+洗菜区1.2m，阳台地上翻30cm。防水偷工是最常见且后果最严重的施工问题之一，漏水会导致楼下邻居索赔、自家墙体发霉，修复费用极高。",
+    "description": "卫生间防水必须刷2-3遍（JS聚合物或聚氨酯），每遍干透后再刷下一遍，防水层上翻至1800mm。完工后必须做闭水试验（水位不低于20mm），行业实际执行标准为24小时——若防水层存在缺陷（针眼、裂缝、管道根部密封不严），2-3小时内即会显现渗漏，无需机械等待48小时。24小时楼下无渗漏即为合格。厨房防水上翻30cm+洗菜区1.2m，阳台地上翻30cm。防水偷工是最常见且后果最严重的施工问题之一，漏水会导致楼下邻居索赔、自家墙体发霉，修复费用极高。",
     "typical_scenario": "沈阳某业主新房入住三个月，楼下邻居反映天花板漏水。检查发现卫生间防水只刷了一遍且未做闭水试验，漏水位置在淋浴区墙角。修复需要拆除瓷砖重做防水，总费用约8000元+赔偿楼下3000元。",
-    "how_to_avoid": "1. 施工中确认防水涂刷遍数（要求工人每遍刷完后拍照记录时间）。2. 闭水试验48小时必须业主现场陪同验收，楼下检查无渗漏后签字确认。3. 防水层上翻高度现场用尺测量（卫生间≥1800mm）。4. 合同中约定防水质保5年（国标要求），漏水由施工方全责修复。",
+    "how_to_avoid": "1. 施工中确认防水涂刷遍数（要求工人每遍刷完后拍照记录时间）。2. 闭水试验蓄水24小时，期间到楼下检查2-3次（尤其前2小时重点观察管道根部和墙角）。若2-3小时内楼下已出现渗，说明防水层有明确缺陷，无需等满24小时，直接返工修补。3. 防水层上翻高度现场用尺测量（卫生间≥1800mm）。4. 合同中约定防水质保5年以上（有的装饰企业承诺质保终身），漏水由施工方全责修复。",
     "evidence": {
       "source_type": "industry_standard",
       "source_ref": "GB 50210建筑装饰装修工程质量验收标准；skill-construction-qa/gotchas.md#1",
@@ -28,7 +28,7 @@
     },
     "causal_chain": {
       "root_cause": "施工方为节省材料和工时偷工减料",
-      "direct_cause": "防水只刷一遍或未做闭水试验",
+      "direct_cause": "防水只刷一遍或未做闭水试验（24小时）",
       "consequence": "漏水导致楼下索赔+自家修复费用8000-15000元，影响邻里关系"
     },
     "related_ku_ids": [
@@ -37,15 +37,15 @@
     ],
     "metadata": {
       "created_at": "2026-07-31",
-      "updated_at": "2026-07-31",
+      "updated_at": "2026-08-02",
       "created_by": "hybrid",
       "verified": true,
       "verify_method": "multi_source",
-      "version": "1.0",
+      "version": "1.1",
       "source_file": "data/knowledge.json#k008,skill-construction-qa/gotchas.md#1",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-01"
+      "last_reviewed_at": "2026-08-02"
     },
     "scope": "universal",
     "trigger_keywords": [
@@ -3717,7 +3717,7 @@
     ]
   },
   {
-    "title": "电视墙未预埋50管致线路外露",
+    "title": "电视墙50管预埋验收：管径、弯头角度与穿线通畅性确认",
     "stage": "STAGE_04",
     "role": [
       "ROLE_OWNER",
@@ -3736,33 +3736,33 @@
       "MAT_PIPE"
     ],
     "scope": "universal",
-    "description": "电视背景墙若未预埋50mm穿线管，电视信号线、电源线、HDMI线等只能裸露在外，杂乱不堪，严重影响美观。后期想加装穿线管需破坏墙面，返工成本高，损失约2000-5000元。",
-    "typical_scenario": "业主装修完入住，挂上电视后发现HDMI线、网线、电源线从电视背后垂落到电视柜上，十分碍眼。想重新走线，必须拆下电视、凿开墙面、重新开槽埋管、再补漆修复，耗时一周，费用超两千元。用理线槽也盖不住，非常难看。",
-    "how_to_avoid": "1. 设计阶段在电视墙图纸上明确标注预埋50mm穿线管位置，从电视挂点向下引至电视柜后方插座区。2. 确认管径50mm，满足HDMI线+网线+电源线同穿。3. 两端用45度弯头+喇叭口处理，确保穿线顺畅。4. 水电施工时同步预埋，管内穿牵引线，方便后期穿线和更换线缆。5. 预埋后拍照留底标注位置，避免后期安装打孔破坏。6. 验收时用铁丝试穿，确认管道通畅。",
+    "description": "电视背景墙预埋50mm穿线管是行业标准做法，正规施工团队均会执行。本条重点不在'是否预埋'，而在验收细节：管径是否达到50mm（满足HDMI+网线+电源同穿）、两端弯头是否为45度（90度弯头后期穿线困难）、管道是否通畅（有无水泥堵管）。实际出问题的场景：①设计方案中途变更（电视墙位置移动）导致原预埋管作废；②非正规散工/游击队施工遗漏；③老房翻新时原有线管老化堵塞。若管道不通或遗漏，后期开槽返工费用2000-5000元。",
+    "typical_scenario": "业主水电完工后决定将电视墙左移60cm（原方案居中，现改为偏向沙发一侧）。原预埋的50管位置作废，新位置需重新开槽埋管。因墙面已刷完一遍腻子，开槽后需重新挂网、批腻子、打磨、刷漆，返工周期5天，费用约2500元。教训：电视墙定位必须在水电交底时终确认，避免后期调整。",
+    "how_to_avoid": "1. 水电验收时重点检查：管径≥50mm、两端45度弯头+喇叭口、管内已穿牵引铁丝。2. 用铁丝试穿确认管道通畅（无水泥堵管），拍照标注管口位置。3. 电视墙方案必须在水电交底前终确认（含电视尺寸、挂装高度、插座位置），避免后期变更。4. 若为老房翻新，检查原有线管是否老化/堵塞，必要时全部更换。5. 合同中注明：因设计变更导致的线管改位费用归属。",
     "evidence": {
       "source_type": "expert_opinion",
-      "source_ref": "资深设计师实战经验",
-      "frequency": "高频(30-60%)",
+      "source_ref": "资深设计师实战经验（20年行业经验校准）",
+      "frequency": "中频(10-30%)",
       "confidence": "中(单源可靠)"
     },
     "causal_chain": {
-      "root_cause": "设计阶段未考虑电视线缆隐藏需求",
-      "direct_cause": "水电施工时未预埋穿线管",
-      "consequence": "电视线缆外露，影响美观，后期改造困难"
+      "root_cause": "设计方案未在水电交底前终确认，或验收时未检查管道通畅性",
+      "direct_cause": "管位作废/管道堵塞/弯头角度不当",
+      "consequence": "后期开槽返工2000-5000元，破坏已完工墙面"
     },
     "ku_id": "GZ-SY-00208",
     "related_ku_ids": [],
     "metadata": {
       "created_at": "2026-08-01",
-      "updated_at": "2026-08-01",
+      "updated_at": "2026-08-02",
       "created_by": "ai",
       "verified": false,
       "verify_method": "not_verified",
-      "version": "1.0",
+      "version": "1.1",
       "source_file": "施工展示厅讲解标准.txt#6",
       "quality_level": "DRAFT",
       "expires_at": null,
-      "last_reviewed_at": null
+      "last_reviewed_at": "2026-08-02"
     },
     "quality_level": "REFERENCE",
     "verified": true,
@@ -6526,7 +6526,7 @@
     ]
   },
   {
-    "title": "闭水试验未做或时间不足致漏水",
+    "title": "闭水试验未做或走过场致防水缺陷遗漏",
     "stage": "STAGE_04",
     "role": [
       "ROLE_OWNER",
@@ -6545,9 +6545,9 @@
       "MAT_CEMENT"
     ],
     "scope": "universal",
-    "description": "卫生间防水施工后必须做闭水试验，蓄水24-48小时并到楼下检查。若未做或时间不足，防水层存在针眼、开裂等缺陷未被发现，后期使用中漏水渗到楼下，导致邻里纠纷、赔偿损失。维修需砸开瓷砖重做防水，费用1-3万元，且影响正常居住。损失量级：漏水赔偿+返工费通常超过2万元，属致命级问题。",
+    "description": "卫生间防水施工后必须做闭水试验，蓄水深度2-3cm，时间不少于24小时，并到楼下检查。行业实战经验：若防水层有明确缺陷（管道根部裂缝、墙角针眼），2-3小时内楼下即会显现渗漏，不必机械等满48小时。24小时无渗漏即可判定合格，进入瓦工铺贴工序。关键风险点：①完全跳过闭水试验直接贴砖；②蓄水时间不足（仅几小时）；③只蓄水不到楼下检查。以上任一情况均可能导致防水缺陷遗漏，后期漏水维修需砸砖重做，费用1-3万元。",
     "typical_scenario": "业主为赶工期，要求瓦工跳过闭水试验直接贴砖。入住三个月后，楼下邻居反映卫生间顶棚渗水发霉。排查发现防水层在管道根部有裂缝，需砸掉全部地砖和墙砖，重做防水并闭水试验，再重新铺贴，工期20天，费用2.5万元，还赔偿邻居维修费3000元。",
-    "how_to_avoid": "1. 防水施工完成后，封堵地漏和门口，蓄水深度2-3cm。2. 蓄水时间至少24小时，建议48小时。3. 到楼下住户查看顶棚、管道根部有无渗漏，并拍照记录。4. 闭水试验合格后方可进行瓦工铺贴。5. 试验过程留存视频和签字确认单，作为验收依据。",
+    "how_to_avoid": "1. 防水施工完成后，封堵地漏和门口，蓄水深度2-3cm。2. 蓄水时间不少于24小时（行业实际执行标准，48小时为规范上限，非必须）。3. 前2小时为重点观察期：到楼下查看管道根部、墙角有无渗漏，发现即返工，无需等满。4. 24小时后最终确认：楼下顶棚、管道根部无渗漏，拍照+签字。5. 闭水试验合格后方可进行瓦工铺贴，试验记录作为验收依据存档。",
     "evidence": {
       "source_type": "expert_opinion",
       "source_ref": "资深监理经验",
@@ -6556,7 +6556,7 @@
     },
     "causal_chain": {
       "root_cause": "防水层缺陷未在铺贴前发现",
-      "direct_cause": "闭水试验未做或时间不足",
+      "direct_cause": "闭水试验未做、时间不足或未下楼检查",
       "consequence": "后期漏水渗到楼下，砸砖返工，赔偿损失"
     },
     "ku_id": "GZ-SY-00298",
@@ -6567,11 +6567,11 @@
       "created_by": "ai",
       "verified": false,
       "verify_method": "not_verified",
-      "version": "1.0",
+      "version": "1.1",
       "source_file": "施工进度计划表.txt#3",
       "quality_level": "DRAFT",
       "expires_at": null,
-      "last_reviewed_at": null
+      "last_reviewed_at": "2026-08-02"
     },
     "quality_level": "REFERENCE",
     "verified": true,
@@ -10575,5 +10575,1081 @@
       "台面",
       "潮湿"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00545",
+    "title": "施工环境温度不应低于5摄氏度否则必须采取质量保证措施",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章对施工环境温度的强制性要求。低于5°C时，水泥砂浆凝结速度显著减慢、防水涂料成膜不良、乳胶漆无法正常干燥，会导致空鼓、脱落、开裂等质量问题。北方冬季施工尤其需要注意这条标准。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "施工温度",
+      "5度",
+      "冬季施工",
+      "环境温度",
+      "低温施工",
+      "保温措施"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 3",
+    "standard_authority": "industry",
+    "standard_requirement": "室内装饰装修工程施工的环境条件应满足施工工艺的要求，施工环境温度不应低于5°C；当必须在低于5°C气温下施工时，应采取保证工程质量的有效措施。",
+    "compliance_criteria": "施工期间每日记录环境温度。温度低于5°C时，必须书面记录采取的保温措施（如加热设备、防冻剂等），并经监理确认。无有效措施时不得施工。",
+    "verification_method": "现场温度计测量，施工日志记录环境温度及保温措施。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00547",
+    "title": "施工前必须进行设计交底并了解物业管理规定",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章规定的施工前置程序。设计交底是确保施工方准确理解设计意图的关键环节，避免'图纸一套、施工一套'。物业管理规定包括施工时间限制、电梯使用规定、垃圾堆放要求等，不了解可能导致被物业叫停施工。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "设计交底",
+      "施工前",
+      "物业管理",
+      "开工准备",
+      "交底记录"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 3",
+    "standard_authority": "industry",
+    "standard_requirement": "施工前应进行设计交底工作，了解物业管理的有关规定。",
+    "compliance_criteria": "开工前必须形成书面的设计交底记录，由设计师、施工负责人双方签字确认。交底内容应包括设计意图、关键节点做法、材料要求等。同时应了解物业对施工时间、材料搬运、垃圾清运等的规定。",
+    "verification_method": "检查设计交底记录（双方签字），物业管理规定知悉确认。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00549",
+    "title": "隐蔽工程在隐蔽前必须通知验收并形成验收文件",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章结合GB 50300-2013的强制性要求。隐蔽工程一旦覆盖就无法再检查，所以必须在覆盖前完成验收。常见的隐蔽节点包括：水电管线（瓦工贴砖前）、防水层（地面层施工前）、吊顶龙骨（封板前）、墙体隔音填充（封板前）。不经验就隐蔽等于埋下定时炸弹。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "隐蔽工程",
+      "隐蔽验收",
+      "验收记录",
+      "覆盖前验收",
+      "水电验收",
+      "防水验收"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00012",
+      "GZ-SY-00011"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 3 + GB 50300-2013",
+    "standard_authority": "national",
+    "standard_requirement": "隐蔽工程在隐蔽前应由施工单位通知有关单位进行验收，并应形成验收文件。未经隐蔽验收或验收不合格的，不得进行下一道工序施工。",
+    "compliance_criteria": "水电管线覆盖前、防水层覆盖前、吊顶封板前等所有隐蔽节点，必须通知业主或监理到场验收，形成书面隐蔽工程验收记录，三方签字（施工方、业主、监理）后方可隐蔽。",
+    "verification_method": "检查隐蔽工程验收记录，核对签字完整性；现场抽查隐蔽部位与记录是否一致。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00550",
+    "title": "防水层沿墙面卷起高度不低于30厘米浴室不低于1.8米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_WATERPROOF"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第5章防水工程的核心指标，与GB 50327-2001一致。防水涂刷高度不够是卫生间渗漏到隔壁墙面（导致墙面发霉、隔壁房间地板起鼓）的最常见原因。淋浴区1.8米是因为花洒喷水高度通常在1.8-2.0米范围，低于此高度墙面长期受水渗透。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "防水高度",
+      "1.8米",
+      "30厘米",
+      "卷起高度",
+      "涂刷高度",
+      "防水标准"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00011"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 5 + GB 50327-2001",
+    "standard_authority": "national",
+    "standard_requirement": "防水层沿墙面卷起高度应不低于300mm（30厘米），浴室（淋浴区）防水层涂刷高度不得低于1800mm（1.8米）。卫生间、厨房、阳台均须做防水层，防水层严禁渗漏。",
+    "compliance_criteria": "用钢卷尺测量防水层涂刷高度：非淋浴区墙面从地面起不低于30cm，淋浴区墙面从地面起不低于1.8m。低于标准值即为不合格，必须补刷。",
+    "verification_method": "钢卷尺测量涂刷高度；24小时蓄水试验验证无渗漏。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 5",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00551",
+    "title": "防水层施工完成后和地面层施工完成后必须分别做24小时蓄水试验",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_WATERPROOF"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第5章结合GB 50327-2001的强制性要求。两次蓄水试验缺一不可——第一次验证防水层本身是否完好，第二次验证贴地砖施工过程中是否破坏了防水层。很多渗漏发生在第二次（贴砖时工人踩坏防水层），所以两次试验缺一不可。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "蓄水试验",
+      "24小时",
+      "闭水试验",
+      "防水检测",
+      "两次蓄水",
+      "渗漏检测"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00011"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 5 + GB 50327-2001",
+    "standard_authority": "national",
+    "standard_requirement": "防水层施工完成且地面层施工完成后应分别做24小时蓄水试验。即防水层做完后做一次24小时蓄水试验，贴完地砖后再做一次24小时蓄水试验，共计两次。蓄水深度不低于20mm。",
+    "compliance_criteria": "堵住卫生间所有下水口，在地面蓄水深度不低于20mm，静置24小时。24小时后到楼下对应位置检查天花板有无渗漏、水印。无渗漏为合格，有渗漏必须返工重做。",
+    "verification_method": "蓄水试验：堵漏+蓄水20mm深+24小时观察+楼下检查。两次蓄水试验均需拍照记录并签字确认。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 5",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00552",
+    "title": "卫生间厨房阳台必须做防水层且严禁渗漏",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_WATERPROOF"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第5章的基本要求。卫生间、厨房、阳台是用水区域，不做防水或防水层失效会导致水渗透到楼下邻居天花板，造成纠纷和赔偿。这是装修中最不能省的一道工序。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "防水层",
+      "卫生间防水",
+      "厨房防水",
+      "阳台防水",
+      "严禁渗漏",
+      "涂膜防水"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00011"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 5",
+    "standard_authority": "industry",
+    "standard_requirement": "卫生间、厨房、阳台必须做防水层。防水层严禁渗漏。涂膜防水层厚度应满足设计要求，卷材防水层搭接宽度应满足规范要求。",
+    "compliance_criteria": "卫生间（含地面和墙面）、厨房地面、阳台地面均须设置防水层。防水层完成后目测无起泡、空鼓、翘边、裂纹等缺陷。蓄水试验无渗漏。",
+    "verification_method": "目测检查防水层外观质量；蓄水试验检验防水效果。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 5",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00555",
+    "title": "轻质隔墙必须满足防火和防潮处理要求",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第8章轻质隔墙工程要求。轻质隔墙常用于室内空间分隔，防火处理不到位会在火灾中加速蔓延。卫生间等潮湿区域的隔墙不做防潮处理，会导致墙面返潮发霉、板材膨胀变形。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "轻质隔墙",
+      "防火处理",
+      "防潮处理",
+      "板材隔墙",
+      "骨架隔墙",
+      "隔墙验收"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 8",
+    "standard_authority": "industry",
+    "standard_requirement": "轻质隔墙工程包括板材隔墙、骨架隔墙和玻璃隔墙。板材隔墙和骨架隔墙必须进行防火和防潮处理。防火处理包括使用防火板材或涂刷防火涂料；潮湿区域（卫生间隔墙等）必须做防潮处理。",
+    "compliance_criteria": "检查板材的防火等级检测报告；骨架隔墙内填充材料的燃烧性能等级；潮湿区域隔墙底部和侧面防潮层设置情况。",
+    "verification_method": "检查材料防火等级检测报告；观察防潮层设置；检查隐蔽工程验收记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 8",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00561",
+    "title": "卫生间等潮湿场所必须做等电位联结防止触电",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第15章电气工程中的强制性安全要求。卫生间是最容易发生触电事故的场所——人体湿润时电阻极低，微小的电位差就可能致命。等电位联结让所有金属部件处于同一电位，即使漏电也不会形成电流通过人体的回路。这是保命的措施。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "等电位",
+      "等电位联结",
+      "卫生间触电",
+      "金属管道",
+      "防触电",
+      "联结端子箱"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00013"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 15",
+    "standard_authority": "industry",
+    "standard_requirement": "卫生间等潮湿场所必须进行等电位联结。等电位联结是将卫生间内所有可导电的金属部件（金属管道、金属地漏、浴缸、花洒金属件等）用导线连接到等电位联结端子箱，使各金属部件之间电位相等，消除电位差。",
+    "compliance_criteria": "检查卫生间是否设有等电位联结端子箱；用万用表测量各金属部件与等电位端子之间的电阻值（应≤3Ω）；所有金属部件均应连接到位。",
+    "verification_method": "万用表/低电阻测试仪测量等电位联结导通电阻；观察检查联结端子箱和连接导线。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 15",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00562",
+    "title": "给水管道必须进行水压试验且合格后方可隐蔽",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_PLUMBING"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第17章给水管道验收的核心指标。水压试验是检验水管接头焊接/热熔质量的唯一可靠方法——不试压就封管，万一有渗漏点藏在墙内或地下，维修代价极大（砸墙砸地）。打压测试必须在隐蔽前完成。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "水压试验",
+      "打压测试",
+      "水管试压",
+      "0.8MPa",
+      "压力降",
+      "水管验收"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00012"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 17 + GB 50327-2001",
+    "standard_authority": "national",
+    "standard_requirement": "给水管道安装完成后必须进行水压试验。试验压力应为工作压力的1.5倍且不小于0.6MPa。金属及复合管在试验压力下观测10分钟，压力降不大于0.02MPa后降至工作压力检查不渗不漏为合格；塑料管在试验压力下稳压1小时，压力降不大于0.05MPa后补压至试验压力下稳压2小时，压力降不大于0.03MPa且各连接处不渗不漏为合格。",
+    "compliance_criteria": "按管材类型执行对应的试压标准：金属管10分钟压降≤0.02MPa；塑料管2小时稳压压降≤0.03MPa。所有接头、阀门处无渗漏为合格。试压需业主或监理在场见证。",
+    "verification_method": "手动或电动打压泵加压至试验压力；压力表观测压力降；逐接头检查有无渗漏。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 17",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00569",
+    "title": "装修前必须做分户交接检验填写附录B记录表",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第20章和附录B的要求。分户交接检验是装修的'体检报告'——在装修前记录房屋的原始状态，明确开发商/前工序的质量责任。不做交接检验就装修，日后发现基层问题（如墙面空鼓、地面不平、原有防水失效）责任说不清。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "交接检验",
+      "分户交接",
+      "附录B",
+      "装修前检验",
+      "毛坯房验收",
+      "基层检查"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 20 + 附录B",
+    "standard_authority": "industry",
+    "standard_requirement": "住宅室内装饰装修前，必须对毛坯房或与其他工序交接的已完成工程进行分户交接检验，填写附录B《住宅室内装饰装修前分户交接检验记录表》。必检项目包括：基层净距、基层净高、防水状况、电气设施、给水排水系统。",
+    "compliance_criteria": "装修开工前必须完成交接检验并填写记录表。记录表需详细记录各检查项目的现状（合格/不合格/有缺陷），三方签字确认。基层存在问题的必须先整改再进入装修工序。",
+    "verification_method": "检查附录B记录表是否填写完整、签字齐全；现场核对记录与实际情况是否一致。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 20",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00574",
+    "title": "基层工程验收：墙面地面顶棚平整度垂直度必须达标且无空鼓",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第4章基层工程验收要求。基层质量是装修的根基——基层不平会导致面层瓷砖空鼓、乳胶漆开裂、地板起拱。基层空鼓不处理直接贴砖，日后瓷砖脱落概率极高。验房时必须逐面墙、逐块地面检查基层质量。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "基层验收",
+      "平整度",
+      "垂直度",
+      "空鼓",
+      "墙面基层",
+      "地面基层",
+      "顶棚基层"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 4",
+    "standard_authority": "industry",
+    "standard_requirement": "基层工程验收要求：(1)墙面基层应平整、垂直，无空鼓、裂缝、起砂；(2)地面基层应平整，无空鼓、起砂、油污；(3)顶棚基层应平整，无脱层、空鼓、裂缝；(4)基层净距和净高应符合设计要求，偏差应在允许范围内。",
+    "compliance_criteria": "用2m靠尺和塞尺检查平整度（偏差≤4mm）；用2m靠尺和塞尺检查垂直度（偏差≤4mm）；用小锤逐块敲击检查空鼓（空鼓面积不超过规定值）。",
+    "verification_method": "2m靠尺+塞尺测量平整度和垂直度；小锤轻击检查空鼓；激光测距仪测量净距和净高。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 4",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: JGJ/T 304-2013",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00575",
+    "title": "基层净距和净高应符合设计要求偏差须在规定范围内",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第4.5条和附录A的要求。净距和净高是装修后空间舒适度的基础指标——装修会占用一定的空间（吊顶降低高度、墙面找平增加厚度），装修前必须确认基层的净距净高满足设计要求，否则装修完成后空间会明显低于预期。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "净距",
+      "净高",
+      "基层净距",
+      "层高",
+      "空间尺寸",
+      "附录A"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 4.5 + 附录A",
+    "standard_authority": "industry",
+    "standard_requirement": "室内墙面基层之间的净距和墙面基层与室内其他界面之间的净距应符合设计要求。室内地面基层表面与顶棚基层底面之间的净高应符合设计要求。偏差值应填写附录A《室内净距、净高尺寸检验记录表》。",
+    "compliance_criteria": "用激光测距仪逐间测量净距和净高，与设计要求值对比。偏差超过允许值需记录并要求整改。",
+    "verification_method": "激光测距仪测量；填写附录A记录表。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 4.5",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: JGJ/T 304-2013",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00576",
+    "title": "楼地面孔洞封堵必须密实且找平层强度不低于规定值",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_WATERPROOF"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第5.2和5.3条的要求。管道孔洞封堵不密实是卫生间渗漏到楼下的常见原因之一——水沿管道外壁与混凝土之间的缝隙渗透。找平层起砂会导致防水层与基层粘结不牢，防水层空鼓脱落。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "孔洞封堵",
+      "找平层",
+      "管道孔洞",
+      "细石混凝土",
+      "起砂",
+      "保护层"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00550",
+      "GZ-SY-00551"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 5.2 + 5.3",
+    "standard_authority": "industry",
+    "standard_requirement": "楼（地）面孔洞封堵要求：(1)管道穿越楼板和地面的孔洞应采用细石混凝土分两次浇筑封堵密实；(2)水泥砂浆找平层应平整、压光，不得有酥松、起砂现象；(3)找平层施工完成后应做保护层，保护层施工前不得破坏找平层。",
+    "compliance_criteria": "检查孔洞封堵是否分两次浇筑、是否密实无裂缝；检查找平层表面是否平整、无起砂酥松；检查保护层是否在找平层完成后及时施工。",
+    "verification_method": "观察检查孔洞封堵质量；手摸检查找平层表面质量；检查施工记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 5.2-5.3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: JGJ/T 304-2013",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00584",
+    "title": "施工中严禁损坏绝热设施和受力钢筋严禁超载堆放",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第3.1.3条，国家强制性条文。四条'严禁'是装修施工的红线：损坏绝热设施导致能耗增加和结露发霉；切断受力钢筋削弱结构承载力；超载堆放导致楼板开裂；预制空心楼板上打孔直接打穿楼板。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "严禁损坏",
+      "绝热设施",
+      "受力钢筋",
+      "超载堆放",
+      "预制楼板",
+      "强制性条文",
+      "3.1.3"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00546",
+      "GZ-SY-00001"
+    ],
+    "standard_number": "GB 50327-2001 第3.1.3条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工中严禁损坏房屋原有绝热设施；严禁损坏受力钢筋；严禁超荷载集中堆放物品；严禁在预制混凝土空心楼板上打孔安装埋件。",
+    "compliance_criteria": "施工现场逐条检查：不得切断或损伤楼板/梁/柱中的钢筋；不得破坏外墙和屋面的保温层；不得在楼板上集中堆放超重材料（如大量砖块、砂石）；不得在预制空心楼板上打孔。",
+    "verification_method": "现场巡查；检查钢筋探测仪扫描记录；检查材料堆放位置和重量。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00585",
+    "title": "施工现场用电必须设临时系统开关箱必须装漏电保护器",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "GB 50327-2001第3.1.7条，国家强制性条文。施工现场触电事故是装修行业致死率最高的事故类型。漏电保护器是保命的最后一道防线——没有它，一旦触电就是致命电流通过人体。临时用电系统必须由持证电工操作，不得私拉乱接。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "施工用电",
+      "漏电保护器",
+      "临时用电",
+      "持证电工",
+      "开关箱",
+      "强制性条文",
+      "3.1.7"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00560"
+    ],
+    "standard_number": "GB 50327-2001 第3.1.7条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工现场用电5项规定：(1)用电应从户表以后设临时施工用电系统；(2)安装、维修或拆除临时用电系统须由持证电工完成；(3)开关箱必须装设漏电保护器，电源线不得用插销连接；(4)线路应避开易燃易爆物品堆放地；(5)暂停施工时应切断电源。",
+    "compliance_criteria": "检查临时用电系统是否从户表后独立设置；检查电工是否持证上岗；检查每个开关箱是否装有漏电保护器；检查电源线连接方式是否安全。",
+    "verification_method": "检查电工操作证；检查漏电保护器安装情况；检查临时用电系统布线。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00586",
+    "title": "施工现场严禁吸烟明火作业必须清除可燃物并设专人监护",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第4章防火安全的强制性条文。装修施工现场可燃材料多（木板、油漆、稀释剂），一旦起火蔓延极快。施工现场吸烟是装修火灾的首要原因——一个未熄灭的烟头掉在刨花堆上就能引发大火。动火作业（电焊、气割）必须有专人监护并配备灭火器。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "施工现场",
+      "严禁吸烟",
+      "明火作业",
+      "防火安全",
+      "动火审批",
+      "强制性条文",
+      "4.3.6"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "GB 50327-2001 第4.3.4条 + 4.3.6条 + 4.3.7条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工现场防火安全强制性规定：(1)施工单位必须制定施工防火安全制度（4.1.1）；(2)明火作业前必须清除周围及焊渣滴落区的可燃物质并设专人监督（4.3.4）；(3)严禁在施工现场吸烟（4.3.6）；(4)严禁在运行中的管道、装有易燃易爆的容器和受力构件上进行焊接和切割（4.3.7）。",
+    "compliance_criteria": "检查现场是否张贴禁烟标志并严格执行；检查动火作业是否有审批手续和监护人；检查焊接作业区域是否清除了可燃物。",
+    "verification_method": "现场巡查；检查动火审批记录；检查消防器材配备。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 4",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00587",
+    "title": "电气安装工程：导线必须穿管保护管内电线截面积不超过管截面积40%",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "GB 50327-2001第16章电气安装工程的核心要求。导线不穿管直接埋墙，绝缘层老化后漏电无法检修；管内导线过多导致散热不良，长期运行加速绝缘老化引发火灾；强弱电间距不够导致信号干扰。40%的填充率是保证散热和便于抽换线的安全线。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "穿管保护",
+      "40%",
+      "电线穿管",
+      "强弱电间距",
+      "300毫米",
+      "管内截面积",
+      "电气施工"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00560",
+      "GZ-SY-00013"
+    ],
+    "standard_number": "GB 50327-2001 Chapter 16（电气安装工程）",
+    "standard_authority": "national",
+    "standard_requirement": "电气安装工程关键要求：(1)导线必须穿管（PVC管或金属管）保护，不得直接埋设在墙内或地面下；(2)穿管导线的总截面积（包括绝缘层）不应超过管内截面积的40%；(3)强弱电线路平行间距应≥300mm；(4)同一回路的相线、零线应穿在同一管内。",
+    "compliance_criteria": "检查所有导线是否穿管保护；计算管内导线总截面积是否超过管截面积的40%；测量强弱电平行间距是否≥300mm。",
+    "verification_method": "观察检查穿管情况；计算截面积占比；钢卷尺测量间距。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 16",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00588",
+    "title": "卫生器具及管道安装：冷热水管左热右冷间距150毫米管卡间距600至800毫米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_PLUMBING"
+    ],
+    "material": [],
+    "description": "GB 50327-2001第15章卫生器具及管道安装工程的施工规范。左热右冷是国标统一规定，不遵守会导致混水阀装不上或冷热水接反；管卡间距过大导致管道晃动、接头受力渗漏。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "冷热水管",
+      "左热右冷",
+      "150毫米",
+      "管卡间距",
+      "600毫米",
+      "800毫米",
+      "管道安装"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00562"
+    ],
+    "standard_number": "GB 50327-2001 Chapter 15（卫生器具及管道安装工程）",
+    "standard_authority": "national",
+    "standard_requirement": "卫生器具及管道安装要求：(1)冷热水管布置应遵循'左热右冷'原则；(2)冷热水管间距应为150mm；(3)水管管卡应每隔600-800mm设置一个固定；(4)管道安装完成后应做水压试验。",
+    "compliance_criteria": "钢卷尺检查冷热水管间距（150mm）和管卡间距（600-800mm）；观察检查左热右冷布置是否正确。",
+    "verification_method": "钢卷尺测量间距；观察检查管道走向和固定情况。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 15",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00591",
+    "title": "水管打压测试：加压至0.6至0.8兆帕保压30分钟降压不超过0.05兆帕为合格",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_PLUMBING"
+    ],
+    "material": [],
+    "description": "GB 50327-2001和GB 50210-2018对水管水压试验的通用要求。打压测试是检验水管安装质量的核心手段——0.6-0.8MPa模拟了极端水压条件（正常自来水压力约0.3-0.4MPa），30分钟保压能暴露所有潜在的渗漏点。不试压就封管等于赌博。 GB 50210-2018不涵盖给排水工程（其第15章为装饰装修分部验收），水压试验的权威依据是GB 50242-2002（给水管道水压试验）与GB 50327-2001、JGJ/T 304-2013。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "打压测试",
+      "0.8兆帕",
+      "0.6兆帕",
+      "30分钟",
+      "0.05兆帕",
+      "水压试验",
+      "水管验收"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00562",
+      "GZ-SY-00012"
+    ],
+    "standard_number": "GB 50327-2001 Chapter 15 + GB 50242-2002（建筑给水排水及采暖工程施工质量验收规范）+ JGJ/T 304-2013 Chapter 17",
+    "standard_authority": "national",
+    "standard_requirement": "给水管路水压试验标准（行业通用做法）：加压至0.6-0.8MPa（约为正常工作压力的1.5倍），保压30分钟，压力降不超过0.05MPa为合格。所有接头、阀门处应无渗漏。试验应在隐蔽前完成并由业主或监理见证。",
+    "compliance_criteria": "使用手动打压泵加压至0.6-0.8MPa；稳压30分钟观察压力表读数；压力降≤0.05MPa且所有接头无渗漏为合格。",
+    "verification_method": "打压泵加压；压力表读数；逐接头目测检查渗漏。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 + GB 50210-2018 Chapter 15",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001 + GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00602",
+    "title": "外墙防水工程验收：防水层不得渗漏应做雨后或现场淋水检验涂膜厚度用针测法或割样卡尺检查",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_WATERPROOF"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第5.2、5.3条（外墙防水工程，2018版新增章节）。外墙渗漏水在南方多雨地区严重影响使用。验收关键：砂浆/涂膜防水层不得有渗漏（检查雨后或现场淋水检验记录）；砂浆防水层与基层及各层之间应粘结牢固不得空鼓；涂膜防水层厚度用针测法或割取20mm×20mm实样卡尺测量。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "外墙渗漏",
+      "外墙防水",
+      "淋水试验",
+      "渗水",
+      "涂膜",
+      "厚度",
+      "针测",
+      "空鼓",
+      "5.3.3",
+      "5.3.6"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00550",
+      "GZ-SY-00552"
+    ],
+    "standard_number": "GB 50210-2018 第5.2.3条 + 第5.3.3条 + 第5.3.6条（外墙防水工程）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)砂浆防水层不得有渗漏现象，检验方法为检查雨后或现场淋水检验记录；(2)砂浆防水层与基层之间及防水层各层之间应粘结牢固，不得有空鼓（观察+小锤轻击）；(3)砂浆防水层表面应密实、平整，不得有裂纹、起砂和麻面；(4)涂膜防水层不得有渗漏现象，与基层应粘结牢固，表面平整、涂刷均匀，不得有流坠、露底、气泡、皱折和翘边；(5)涂膜防水层的厚度应符合设计要求，用针测法或割取20mm×20mm实样用卡尺测量。",
+    "compliance_criteria": "有雨后或现场淋水检验记录且无渗漏；砂浆防水层无空鼓、裂纹、起砂；涂膜厚度实测符合设计。",
+    "verification_method": "检查雨后或现场淋水检验记录；小锤轻击检查空鼓；针测法或割样卡尺测涂膜厚度。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第5.2.3条 + 第5.3.3条 + 第5.3.6条（外墙防水工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00608",
+    "title": "外墙外保温系统与外墙及各层之间连接必须牢固",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [],
+    "description": "GB 55032-2022第3.3.7条第2款（全文强制标准强条）：建筑外墙外保温系统与外墙的连接应牢固，保温系统各层之间的连接应牢固。北方旧房改造外墙保温层脱落伤人事件多发，锚固件数量不足、粘结面积不够、面层开裂进水是主因；南方多雨地区外墙保温渗水同样高发。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "外墙保温",
+      "外保温",
+      "脱落",
+      "锚固",
+      "保温层",
+      "薄抹灰",
+      "3.3.7",
+      "GB 55032"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00550",
+      "GZ-SY-00602"
+    ],
+    "standard_number": "GB 55032-2022 第3.3.7条第2款（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "建筑外墙外保温系统与外墙的连接应牢固，保温系统各层之间的连接应牢固。施工应符合《外墙外保温工程技术标准》JGJ 144 等现行标准：锚固件数量与锚固深度、粘结面积率、网格布搭接、抗裂面层等满足设计要求。",
+    "compliance_criteria": "锚固件数量、粘结面积符合设计；保温板与基层、各层之间无空鼓松动；面层无开裂。",
+    "verification_method": "现场抽查锚固件数量与间距；敲击检查空鼓；检查隐蔽工程验收记录与材料复验报告。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 55032-2022 第3.3.7条第2款（强制性条文）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 住建部建标[2001]266号公告 + 建标库GB 50327-2001/GB 50096-2011全文",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
   }
 ]

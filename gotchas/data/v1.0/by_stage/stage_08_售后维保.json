@@ -106,5 +106,60 @@
       "色差",
       "保修"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00603",
+    "title": "装饰装修分部验收：抽查样本允许20%以下外观缺陷但允许偏差最大不得超过规定值的1.5倍",
+    "knowledge_type": "standard",
+    "stage": "STAGE_08",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "trade": [
+      "TRADE_DESIGN"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第15.0.4条（条文说明）给出的分部验收容忍规则：涉及安全、主要使用功能、节能、环保的项目列为主控项目必须全部合格；一般项目多为外观质量，允许20%以下的抽查样本存在既不影响使用功能也不明显影响装饰效果的缺陷，但其中允许偏差的检验项目最大偏差不得超过规定值的1.5倍。这也是验收时扯皮最少的依据。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "验收",
+      "主控项目",
+      "一般项目",
+      "允许偏差",
+      "1.5倍",
+      "20%",
+      "合格标准",
+      "15.0.4"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00567",
+      "GZ-SY-00568"
+    ],
+    "standard_number": "GB 50210-2018 第15.0.4条（分部工程质量验收）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)主控项目（涉及安全、主要使用功能、节能、环保的项目）必须全部合格；(2)一般项目允许20%以下的抽查样本存在既不影响使用功能也不明显影响装饰效果的缺陷；(3)有允许偏差的检验项目，其最大偏差不得超过标准规定允许偏差的1.5倍；(4)分部工程验收时应对质量控制资料、文件和记录、安全和功能检验报告及观感质量进行核查。",
+    "compliance_criteria": "主控项目无不合格项；一般项目缺陷样本<20%；实测偏差≤规定允许偏差×1.5。",
+    "verification_method": "按检验批核查主控项目记录；抽测允许偏差项目并计算1.5倍上限；核查质量控制资料与观感质量。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第15.0.4条（分部工程质量验收）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
   }
 ]

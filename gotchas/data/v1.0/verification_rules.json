@@ -1,0 +1,710 @@
+{
+ "version": "0.1",
+ "created_at": "2026-08-04",
+ "description": "知设知识库确定性规则真理表（Layer-1 Gate 数据源）。数值均来自已核实强制性条文/规范原文，验证引擎以此为准比对 KU 文本中的数值。规则不覆盖的条目标 WARN，由 Layer-2 独立模型验证。",
+ "unit_aliases": {
+  "mg/m³": [
+   "mg/m³",
+   "毫克每立方米",
+   "mg/m3",
+   "毫克/立方米"
+  ],
+  "Bq/m³": [
+   "Bq/m³",
+   "Bq/m3",
+   "贝克每立方米",
+   "贝可每立方米"
+  ],
+  "m": [
+   "m",
+   "米"
+  ],
+  "mm": [
+   "mm",
+   "毫米"
+  ],
+  "MPa": [
+   "MPa",
+   "兆帕"
+  ],
+  "h": [
+   "h",
+   "小时"
+  ],
+  "℃": [
+   "℃",
+   "°C",
+   "摄氏度"
+  ],
+  "%": [
+   "%",
+   "百分之",
+   "百分比"
+  ]
+ },
+ "rules": [
+  {
+   "id": "air_fa",
+   "topic": "室内甲醛浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "甲醛",
+    "formaldehyde"
+   ],
+   "checks": [
+    {
+     "label": "甲醛浓度限值",
+     "operator": "<=",
+     "value": 0.07,
+     "unit": "mg/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_ben",
+   "topic": "室内苯浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "苯",
+    "benzene"
+   ],
+   "checks": [
+    {
+     "label": "苯浓度限值",
+     "operator": "<=",
+     "value": 0.06,
+     "unit": "mg/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_jia",
+   "topic": "室内甲苯浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "甲苯"
+   ],
+   "checks": [
+    {
+     "label": "甲苯浓度限值",
+     "operator": "<=",
+     "value": 0.15,
+     "unit": "mg/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_erjia",
+   "topic": "室内二甲苯浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "二甲苯"
+   ],
+   "checks": [
+    {
+     "label": "二甲苯浓度限值",
+     "operator": "<=",
+     "value": 0.2,
+     "unit": "mg/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_tvoc",
+   "topic": "室内TVOC浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "TVOC",
+    "总挥发性有机化合物"
+   ],
+   "checks": [
+    {
+     "label": "TVOC浓度限值",
+     "operator": "<=",
+     "value": 0.45,
+     "unit": "mg/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_an",
+   "topic": "室内氨浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "氨"
+   ],
+   "checks": [
+    {
+     "label": "氨浓度限值",
+     "operator": "<=",
+     "value": 0.15,
+     "unit": "mg/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_radon",
+   "topic": "室内氡浓度",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.4",
+   "mandatory": true,
+   "keywords": [
+    "氡"
+   ],
+   "checks": [
+    {
+     "label": "氡浓度限值",
+     "operator": "<=",
+     "value": 150,
+     "unit": "Bq/m³"
+    }
+   ]
+  },
+  {
+   "id": "air_test_cond",
+   "topic": "空气检测前置条件",
+   "standard": "GB 50325-2020",
+   "clause": "6.0.x",
+   "mandatory": true,
+   "keywords": [
+    "检测前",
+    "关闭门窗",
+    "7天"
+   ],
+   "checks": [
+    {
+     "label": "完工后最短检测间隔",
+     "operator": ">=",
+     "value": 7,
+     "unit": "天",
+     "note": "完工至少7天后检测"
+    },
+    {
+     "label": "检测前门窗关闭时长",
+     "operator": "==",
+     "value": 12,
+     "unit": "h"
+    }
+   ]
+  },
+  {
+   "id": "water_proof_up",
+   "topic": "防水卷起高度",
+   "standard": "JGJ/T 304-2013 + GB 50327-2001",
+   "clause": "5.x",
+   "mandatory": false,
+   "keywords": [
+    "卷起",
+    "上翻",
+    "翻边",
+    "防水层高度"
+   ],
+   "checks": [
+    {
+     "label": "墙面防水卷起高度",
+     "operator": ">=",
+     "value": 300,
+     "unit": "mm"
+    },
+    {
+     "label": "淋浴区防水高度",
+     "operator": ">=",
+     "value": 1800,
+     "unit": "mm"
+    }
+   ]
+  },
+  {
+   "id": "water_proof_hold",
+   "topic": "蓄水试验",
+   "standard": "GB 50327-2001 + JGJ/T 304-2013",
+   "clause": "5.x",
+   "mandatory": false,
+   "keywords": [
+    "蓄水",
+    "闭水",
+    "24小时"
+   ],
+   "checks": [
+    {
+     "label": "蓄水时长",
+     "operator": ">=",
+     "value": 24,
+     "unit": "h"
+    },
+    {
+     "label": "蓄水深度",
+     "operator": ">=",
+     "value": 20,
+     "unit": "mm"
+    }
+   ]
+  },
+  {
+   "id": "railing_h",
+   "topic": "临空护栏高度",
+   "standard": "GB 50096-2011 + GB 50210-2018 + GB 55032-2022",
+   "clause": "6.1.3 / 14.5.4 / 3.3.7(4)",
+   "mandatory": true,
+   "keywords": [
+    "护栏高度",
+    "栏杆高度",
+    "临空"
+   ],
+   "checks": [
+    {
+     "label": "临空<24m护栏高度",
+     "operator": ">=",
+     "value": 1.05,
+     "unit": "m"
+    },
+    {
+     "label": "临空≥24m护栏高度",
+     "operator": ">=",
+     "value": 1.1,
+     "unit": "m"
+    }
+   ]
+  },
+  {
+   "id": "railing_gap",
+   "topic": "护栏杆件净距",
+   "standard": "GB 50096-2011 + GB 50210-2018",
+   "clause": "6.1.3 / 14.5.4",
+   "mandatory": true,
+   "keywords": [
+    "杆件",
+    "间距",
+    "净距"
+   ],
+   "checks": [
+    {
+     "label": "垂直杆件净距",
+     "operator": "<=",
+     "value": 0.11,
+     "unit": "m"
+    }
+   ]
+  },
+  {
+   "id": "stair_rail",
+   "topic": "楼梯扶手高度",
+   "standard": "GB 50096-2011",
+   "clause": "6.3.2",
+   "mandatory": true,
+   "keywords": [
+    "楼梯扶手",
+    "扶手高度"
+   ],
+   "checks": [
+    {
+     "label": "楼梯扶手高度",
+     "operator": ">=",
+     "value": 0.9,
+     "unit": "m"
+    },
+    {
+     "label": "水平段超0.5m扶手高度",
+     "operator": ">=",
+     "value": 1.05,
+     "unit": "m"
+    }
+   ]
+  },
+  {
+   "id": "stair_well",
+   "topic": "楼梯井防攀滑",
+   "standard": "GB 50096-2011",
+   "clause": "6.3.5",
+   "mandatory": true,
+   "keywords": [
+    "楼梯井"
+   ],
+   "checks": [
+    {
+     "label": "楼梯井净宽判定",
+     "operator": ">",
+     "value": 0.11,
+     "unit": "m",
+     "note": "净宽大于0.11m时必须采取防攀滑措施"
+    }
+   ]
+  },
+  {
+   "id": "sill_low",
+   "topic": "低窗台防护",
+   "standard": "GB 50096-2011",
+   "clause": "5.8.1",
+   "mandatory": true,
+   "keywords": [
+    "窗台",
+    "低窗台",
+    "防护栏杆"
+   ],
+   "checks": [
+    {
+     "label": "低窗台判定",
+     "operator": "<",
+     "value": 0.9,
+     "unit": "m",
+     "note": "窗台净高低于0.90m时必须设防护"
+    }
+   ]
+  },
+  {
+   "id": "net_height",
+   "topic": "室内净高",
+   "standard": "GB 50096-2011",
+   "clause": "5.5.2 / 5.5.4 / 5.5.5",
+   "mandatory": true,
+   "keywords": [
+    "净高",
+    "层高",
+    "室内高度"
+   ],
+   "checks": [
+    {
+     "label": "卧室起居室净高",
+     "operator": ">=",
+     "value": 2.4,
+     "unit": "m"
+    },
+    {
+     "label": "局部净高",
+     "operator": ">=",
+     "value": 2.1,
+     "unit": "m"
+    },
+    {
+     "label": "厨卫净高",
+     "operator": ">=",
+     "value": 2.2,
+     "unit": "m"
+    },
+    {
+     "label": "排水横管下净距",
+     "operator": ">=",
+     "value": 1.9,
+     "unit": "m"
+    }
+   ]
+  },
+  {
+   "id": "pipe_pressure",
+   "topic": "给水水压试验",
+   "standard": "GB 50327-2001 + GB 50242-2002 + JGJ/T 304-2013",
+   "clause": "GB 50242-2002 4.2.1（金属/塑料管分档）；0.6~0.8MPa 为行业口径（JGJ/T 304-2013 17.2.1条文说明：1.5倍且≥0.6MPa）",
+   "mandatory": false,
+   "keywords": [
+    "水压试验",
+    "试压",
+    "打压",
+    "试验压力"
+   ],
+   "checks": [
+    {
+     "label": "试验压力下限",
+     "operator": ">=",
+     "value": 0.6,
+     "unit": "MPa",
+     "source": "行业口径/JGJ/T 304-2013 17.2.1条文说明"
+    },
+    {
+     "label": "试验压力上限",
+     "operator": "<=",
+     "value": 0.8,
+     "unit": "MPa",
+     "source": "行业口径（无正文条文）"
+    },
+    {
+     "label": "金属管压降(10min)",
+     "operator": "<=",
+     "value": 0.02,
+     "unit": "MPa",
+     "source": "GB 50242-2002 4.2.1"
+    },
+    {
+     "label": "塑料管压降(1h)",
+     "operator": "<=",
+     "value": 0.05,
+     "unit": "MPa",
+     "source": "GB 50242-2002 4.2.1"
+    },
+    {
+     "label": "塑料管压降(2h)",
+     "operator": "<=",
+     "value": 0.03,
+     "unit": "MPa",
+     "source": "GB 50242-2002 4.2.1"
+    }
+   ],
+   "note": "2026-08-04 Layer-3 复核：0.6~0.8MPa 为行业通用做法（条文说明级），分档压降为 GB 50242-2002 4.2.1 正文要求。"
+  },
+  {
+   "id": "tile_hollow",
+   "topic": "饰面砖空鼓率",
+   "standard": "JGJ/T 304-2013 + GB 50209-2010",
+   "clause": "JGJ/T 304-2013 4.2.1/4.3.2；GB 50209-2010 6.2.7",
+   "mandatory": false,
+   "keywords": [
+    "空鼓"
+   ],
+   "checks": [
+    {
+     "label": "基层空鼓单处面积",
+     "operator": "<=",
+     "value": 0.04,
+     "unit": "m²",
+     "source": "JGJ/T 304-2013 第4.2.1条/第4.3.2条"
+    },
+    {
+     "label": "基层空鼓每间处数",
+     "operator": "<=",
+     "value": 2,
+     "unit": "处",
+     "source": "JGJ/T 304-2013 第4.2.1条/第4.3.2条"
+    },
+    {
+     "label": "楼地面砖空鼓砖数占比",
+     "operator": "<=",
+     "value": 5,
+     "unit": "%",
+     "source": "GB 50209-2010 第6.2.7条（仅允许单块砖边角局部空鼓）"
+    }
+   ],
+   "note": "2026-08-04 Layer-3 复核修正：原'单块空鼓面积≤10%'无国标条文依据，已移除。饰面砖本身按 GB 50210-2018 10.2.4/10.3.5（内墙大面阳角无空鼓、外墙无空鼓）判定，数值放宽仅适用于基层检验与楼地面砖面层。"
+  },
+  {
+   "id": "plaster_flat",
+   "topic": "抹灰平整度偏差",
+   "standard": "GB 50210-2018",
+   "clause": "4.x",
+   "mandatory": false,
+   "keywords": [
+    "普通抹灰",
+    "高级抹灰",
+    "抹灰",
+    "平整度"
+   ],
+   "checks": [
+    {
+     "label": "普通抹灰平整度",
+     "operator": "<=",
+     "value": 4,
+     "unit": "mm"
+    },
+    {
+     "label": "高级抹灰平整度",
+     "operator": "<=",
+     "value": 3,
+     "unit": "mm"
+    }
+   ]
+  },
+  {
+   "id": "ceiling_bracket",
+   "topic": "吊顶主龙骨吊点",
+   "standard": "GB 50210-2018",
+   "clause": "7.x",
+   "mandatory": false,
+   "keywords": [
+    "吊点",
+    "主龙骨"
+   ],
+   "checks": [
+    {
+     "label": "主龙骨吊点间距",
+     "operator": "<=",
+     "value": 1200,
+     "unit": "mm"
+    }
+   ]
+  },
+  {
+   "id": "wire_cond",
+   "topic": "导线穿管与强弱电间距",
+   "standard": "GB 50327-2001",
+   "clause": "16.x",
+   "mandatory": false,
+   "keywords": [
+    "穿管",
+    "强弱电"
+   ],
+   "checks": [
+    {
+     "label": "管内导线截面积占比",
+     "operator": "<=",
+     "value": 40,
+     "unit": "%"
+    },
+    {
+     "label": "强弱电平行间距",
+     "operator": ">=",
+     "value": 300,
+     "unit": "mm"
+    }
+   ]
+  },
+  {
+   "id": "water_pipe_apart",
+   "topic": "冷热水管间距与管卡",
+   "standard": "行业通行做法（无国标强制条文）",
+   "clause": "JGJ/T 304-2013 17.2.7（仅左热右冷+间距与设备接口匹配）",
+   "mandatory": false,
+   "keywords": [
+    "冷热水",
+    "左热右冷",
+    "管卡"
+   ],
+   "checks": [
+    {
+     "label": "冷热水管间距",
+     "operator": ">=",
+     "value": 150,
+     "unit": "mm",
+     "source": "行业通行做法（无国标条文）"
+    },
+    {
+     "label": "管卡间距",
+     "operator": "<=",
+     "value": 800,
+     "unit": "mm",
+     "source": "行业通行做法（无国标条文）"
+    }
+   ],
+   "note": "2026-08-04 Layer-3 复核修正：150mm/600~800mm 无国标强制条文，属行业通行做法，规则保留作 WARN 参考而非强条判据。"
+  },
+  {
+   "id": "base_moisture",
+   "topic": "基层含水率",
+   "standard": "GB 50210-2018",
+   "clause": "12.1.5 / 13.1.4",
+   "mandatory": false,
+   "keywords": [
+    "含水率",
+    "基层含水"
+   ],
+   "checks": [
+    {
+     "label": "溶剂型涂料基层含水率",
+     "operator": "<=",
+     "value": 8,
+     "unit": "%"
+    },
+    {
+     "label": "乳液型涂料基层含水率",
+     "operator": "<=",
+     "value": 10,
+     "unit": "%"
+    },
+    {
+     "label": "木材基层含水率",
+     "operator": "<=",
+     "value": 12,
+     "unit": "%"
+    },
+    {
+     "label": "裱糊混凝土/抹灰基层含水率",
+     "operator": "<=",
+     "value": 8,
+     "unit": "%"
+    }
+   ]
+  },
+  {
+   "id": "temp_env",
+   "topic": "施工环境温度",
+   "standard": "JGJ/T 304-2013 + GB 50210-2018",
+   "clause": "Ch3 / 12.1.6",
+   "mandatory": false,
+   "keywords": [
+    "环境温度",
+    "施工温度",
+    "温度不应"
+   ],
+   "checks": [
+    {
+     "label": "施工环境温度下限",
+     "operator": ">=",
+     "value": 5,
+     "unit": "℃"
+    },
+    {
+     "label": "水性涂料施工温度上限",
+     "operator": "<=",
+     "value": 35,
+     "unit": "℃"
+    }
+   ]
+  },
+  {
+   "id": "window_bracket",
+   "topic": "塑料门窗固定片间距",
+   "standard": "GB 50210-2018",
+   "clause": "6.4.2",
+   "mandatory": false,
+   "keywords": [
+    "固定片",
+    "塑料门窗"
+   ],
+   "checks": [
+    {
+     "label": "固定片间距",
+     "operator": "<=",
+     "value": 600,
+     "unit": "mm"
+    }
+   ]
+  },
+  {
+   "id": "accept_main",
+   "topic": "验收主控与一般项目",
+   "standard": "GB 50210-2018 + GB 50300-2013",
+   "clause": "15.x / 5.x",
+   "mandatory": false,
+   "keywords": [
+    "主控项目",
+    "一般项目"
+   ],
+   "checks": [
+    {
+     "label": "一般项目缺陷样本上限",
+     "operator": "<=",
+     "value": 20,
+     "unit": "%"
+    },
+    {
+     "label": "最大偏差倍数",
+     "operator": "<=",
+     "value": 1.5,
+     "unit": "倍"
+    }
+   ]
+  },
+  {
+   "id": "water_proof_external",
+   "topic": "外墙防水淋水检验",
+   "standard": "GB 50210-2018",
+   "clause": "5.3.3",
+   "mandatory": false,
+   "keywords": [
+    "外墙防水",
+    "淋水",
+    "雨后"
+   ],
+   "checks": []
+  }
+ ]
+}

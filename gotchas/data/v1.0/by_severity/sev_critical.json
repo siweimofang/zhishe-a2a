@@ -76,7 +76,7 @@
     ],
     "description": "卫生间防水必须刷2-3遍（JS聚合物或聚氨酯），每遍干透后再刷下一遍，防水层上翻至1800mm。完工后必须做闭水试验（水位不低于20mm），行业实际执行标准为24小时——若防水层存在缺陷（针眼、裂缝、管道根部密封不严），2-3小时内即会显现渗漏，无需机械等待48小时。24小时楼下无渗漏即为合格。厨房防水上翻30cm+洗菜区1.2m，阳台地上翻30cm。防水偷工是最常见且后果最严重的施工问题之一，漏水会导致楼下邻居索赔、自家墙体发霉，修复费用极高。",
     "typical_scenario": "沈阳某业主新房入住三个月，楼下邻居反映天花板漏水。检查发现卫生间防水只刷了一遍且未做闭水试验，漏水位置在淋浴区墙角。修复需要拆除瓷砖重做防水，总费用约8000元+赔偿楼下3000元。",
-    "how_to_avoid": "1. 施工中确认防水涂刷遍数（要求工人每遍刷完后拍照记录时间）。2. 闭水试验蓄水24小时，期间到楼下检查2-3次（尤其前2小时重点观察管道根部和墙角）。若2-3小时内楼下已出现渗，说明防水层有明确缺陷，无需等满24小时，直接返工修补。3. 防水层上翻高度现场用尺测量（卫生间≥1800mm）。4. 合同中约定防水质保5年（国标要求），漏水由施工方全责修复。",
+    "how_to_avoid": "1. 施工中确认防水涂刷遍数（要求工人每遍刷完后拍照记录时间）。2. 闭水试验蓄水24小时，期间到楼下检查2-3次（尤其前2小时重点观察管道根部和墙角）。若2-3小时内楼下已出现渗，说明防水层有明确缺陷，无需等满24小时，直接返工修补。3. 防水层上翻高度现场用尺测量（卫生间≥1800mm）。4. 合同中约定防水质保5年以上（有的装饰企业承诺质保终身），漏水由施工方全责修复。",
     "evidence": {
       "source_type": "industry_standard",
       "source_ref": "GB 50210建筑装饰装修工程质量验收标准；skill-construction-qa/gotchas.md#1",
@@ -1582,5 +1582,744 @@
       "水管",
       "泡水"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00546",
+    "title": "涉及主体和承重结构改动必须由原设计单位或同等资质设计单位核验",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_DEMOLISH"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章与GB 50210-2018共用的强制性条文。这是结构安全底线——任何拆墙、开门洞、增加荷载（如砌墙、放浴缸）的行为，都必须经过结构工程师验算确认。未经核验擅自改动承重结构属于违法行为，后果可能是整栋楼的结构安全受损。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "承重结构",
+      "结构安全",
+      "设计单位核验",
+      "承重墙改动",
+      "增加荷载",
+      "结构核验"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00001",
+      "GZ-SY-00049"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 3 + GB 50210-2018",
+    "standard_authority": "national",
+    "standard_requirement": "涉及主体和承重结构改动或增加荷载时，必须由原结构设计单位或具备相应资质的设计单位核查有关原始资料，对既有建筑结构的安全性进行核验、确认。",
+    "compliance_criteria": "任何涉及承重墙、梁、柱、楼板的改动，施工前必须持有原结构设计单位或同等资质设计单位出具的书面核验确认文件。无书面确认文件不得施工。",
+    "verification_method": "检查设计单位出具的结构性核验确认文件（盖章原件），核查设计单位资质等级是否匹配。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00552",
+    "title": "卫生间厨房阳台必须做防水层且严禁渗漏",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_WATERPROOF"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第5章的基本要求。卫生间、厨房、阳台是用水区域，不做防水或防水层失效会导致水渗透到楼下邻居天花板，造成纠纷和赔偿。这是装修中最不能省的一道工序。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "防水层",
+      "卫生间防水",
+      "厨房防水",
+      "阳台防水",
+      "严禁渗漏",
+      "涂膜防水"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00011"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 5",
+    "standard_authority": "industry",
+    "standard_requirement": "卫生间、厨房、阳台必须做防水层。防水层严禁渗漏。涂膜防水层厚度应满足设计要求，卷材防水层搭接宽度应满足规范要求。",
+    "compliance_criteria": "卫生间（含地面和墙面）、厨房地面、阳台地面均须设置防水层。防水层完成后目测无起泡、空鼓、翘边、裂纹等缺陷。蓄水试验无渗漏。",
+    "verification_method": "目测检查防水层外观质量；蓄水试验检验防水效果。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 5",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00559",
+    "title": "护栏扶手必须安装牢固且高度和间距必须满足安全标准",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第12章细部工程中护栏扶手的安全标准。护栏高度和竖杆间距直接关系到儿童安全——间距大于11cm儿童头部可能穿过坠落。临空高度不同（24米为界）护栏最低高度也不同。这是涉及人身安全的主控项目，不合格必须返工。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "护栏",
+      "扶手",
+      "护栏高度",
+      "1.05米",
+      "间距0.11米",
+      "坠落防护",
+      "阳台护栏"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 12",
+    "standard_authority": "industry",
+    "standard_requirement": "护栏和扶手制作与安装的主控项目：(1)护栏和扶手的材质、规格、型号应符合设计要求；(2)护栏和扶手安装必须牢固；(3)护栏高度不应低于1.05m（临空高度24m以下）或1.10m（临空高度24m及以上）；(4)护栏垂直杆件间距不应大于0.11m。",
+    "compliance_criteria": "手扳检查牢固度；钢卷尺测量护栏高度（从可踏面起算）和杆件间距。高度不足或间距过大必须返工——这是儿童坠落防护的生命线。",
+    "verification_method": "手扳检查安装牢固度；钢卷尺测量高度和间距；检查产品合格证书。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 12",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00560",
+    "title": "电气工程主控项目：配电箱布线开关插座照明灯具必须安全合规",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第15章电气工程的核心安全要求。电气安全直接关系到人身安全——漏电保护失效可能触电致死；导线不分色给日后维修带来极大风险；等电位联结缺失是卫生间触电事故的主要原因。这些全部是主控项目，必须逐一点检。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "电气验收",
+      "配电箱",
+      "漏电保护",
+      "导线分色",
+      "等电位",
+      "开关插座",
+      "相位检测"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00013"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 15",
+    "standard_authority": "industry",
+    "standard_requirement": "电气工程主控项目：(1)家居配电箱的回路设置、漏电保护应符合设计和安全要求；(2)室内布线必须穿管保护，导线分色规范（火线红色、零线蓝色、地线黄绿双色）；(3)开关插座安装牢固、接线正确、功能正常；(4)照明灯具安装牢固、接线正确；(5)卫生间等潮湿场所必须做等电位联结。",
+    "compliance_criteria": "逐回路测试漏电保护器动作是否灵敏（按试验按钮）；用相位检测器检查每个插座的接线是否正确（左零右火上接地）；检查导线分色是否规范；检查等电位联结是否连通。",
+    "verification_method": "电笔/相位检测器逐孔检查；漏电保护器试验按钮测试；绝缘电阻测试仪测量绝缘电阻；观察检查导线分色和布线规范。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 15",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00561",
+    "title": "卫生间等潮湿场所必须做等电位联结防止触电",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第15章电气工程中的强制性安全要求。卫生间是最容易发生触电事故的场所——人体湿润时电阻极低，微小的电位差就可能致命。等电位联结让所有金属部件处于同一电位，即使漏电也不会形成电流通过人体的回路。这是保命的措施。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "等电位",
+      "等电位联结",
+      "卫生间触电",
+      "金属管道",
+      "防触电",
+      "联结端子箱"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00013"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 15",
+    "standard_authority": "industry",
+    "standard_requirement": "卫生间等潮湿场所必须进行等电位联结。等电位联结是将卫生间内所有可导电的金属部件（金属管道、金属地漏、浴缸、花洒金属件等）用导线连接到等电位联结端子箱，使各金属部件之间电位相等，消除电位差。",
+    "compliance_criteria": "检查卫生间是否设有等电位联结端子箱；用万用表测量各金属部件与等电位端子之间的电阻值（应≤3Ω）；所有金属部件均应连接到位。",
+    "verification_method": "万用表/低电阻测试仪测量等电位联结导通电阻；观察检查联结端子箱和连接导线。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 15",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00577",
+    "title": "既有建筑装饰装修涉及承重结构变动必须出具设计方案",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DESIGN",
+      "TRADE_DEMOLISH"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第3.1.4条，这是国家强制性条文，必须严格执行。与JGJ/T 304-2013 Chapter 3的结构安全要求一致但更加具体——明确要求'委托原结构设计单位或具有相应资质的设计单位提出设计方案'。这是装修中涉及结构安全的法律底线。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止（住建部公告），相关内容由全文强制标准GB 55032-2022《建筑与市政工程施工质量控制通用规范》第3.3.7条第1款承接执行，要求不变。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "承重结构变动",
+      "设计方案",
+      "结构安全鉴定",
+      "强制性条文",
+      "3.1.4",
+      "既有建筑"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00546",
+      "GZ-SY-00001"
+    ],
+    "standard_number": "GB 50210-2018 第3.1.4条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "既有建筑装饰装修工程设计涉及主体和承重结构变动时，必须在施工前委托原结构设计单位或者具有相应资质条件的设计单位提出设计方案，或由检测鉴定单位对建筑结构的安全性进行鉴定。未经设计或鉴定，不得擅自施工。 【效力说明】原强制性条文已于2023-03-01废止，由GB 55032-2022第3.3.7条第1款承接：既有建筑装饰装修涉及主体和承重结构变动时，应在施工前委托原结构设计单位或具有相应资质等级的设计单位提出设计方案，或由鉴定单位对建筑结构的安全性进行鉴定。",
+    "compliance_criteria": "施工前必须持有设计单位出具的设计方案（盖章原件）或检测鉴定单位的结构安全鉴定报告。无方案或无鉴定报告不得开工。",
+    "verification_method": "检查设计方案或结构安全鉴定报告（原件，盖章）；核查设计/鉴定单位资质。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00578",
+    "title": "建筑外门窗安装必须牢固砌体上严禁用射钉固定",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第6.1.11条，国家强制性条文。射钉在砌体（砖墙、砌块墙）中的握裹力极差，受风力或振动后容易松动脱落，高层外窗脱落有致命风险。必须使用预埋件或膨胀螺栓固定。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止；GB 55032-2022未再单列'砌体上严禁射钉'条款，门窗安装牢固要求由GB 55032-2022第3.3.7条第3款承接。砌体（砖、砌块、灰缝）强度低，射钉固定遇冲击易松动脱落，仍属行业公认高风险做法，应避免。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "门窗安装",
+      "射钉",
+      "砌体",
+      "固定方式",
+      "强制性条文",
+      "6.1.11",
+      "外窗脱落"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553"
+    ],
+    "standard_number": "GB 50210-2018 第6.1.11条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "建筑外门窗安装必须牢固。在砌体上安装门窗严禁采用射钉固定。应采用预埋件连接或膨胀螺栓固定，固定点间距应满足设计要求。",
+    "compliance_criteria": "逐樘检查：手扳检查牢固度；检查固定方式——砌体墙上不得使用射钉；检查固定点数量和间距是否符合设计。",
+    "verification_method": "手扳检查安装牢固度；观察检查固定方式；检查隐蔽工程验收记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 6",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00579",
+    "title": "推拉门窗扇必须牢固必须安装防脱落装置",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第6.1.12条，国家强制性条文。推拉门窗如果没有防脱落装置，在大风或人为用力推拉时，门扇可能从上方轨道脱出坠落，造成人身伤害。这是容易被忽视但极其重要的安全装置。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止，由全文强制标准GB 55032-2022第3.3.7条第3款承接：建筑外门窗应安装牢固，推拉门窗扇应配备防脱落装置。要求不变。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "推拉门窗",
+      "防脱落",
+      "强制性条文",
+      "6.1.12",
+      "门窗安全",
+      "坠落"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553"
+    ],
+    "standard_number": "GB 50210-2018 第6.1.12条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "推拉门窗扇必须牢固，必须安装防脱落装置。防脱落装置应能有效防止门窗扇在风力或外力作用下从轨道中脱出。",
+    "compliance_criteria": "逐樘检查：确认推拉门窗扇安装了防脱落装置；反复推拉5次检查运行是否顺畅、有无脱轨风险。",
+    "verification_method": "手扳检查牢固度；反复启闭检查防脱落装置有效性。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 6",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00580",
+    "title": "重型设备和有振动荷载的设备严禁安装在吊顶龙骨上",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第7.1.12条，国家强制性条文。吊顶龙骨的设计承重有限，重型设备（如大型吊灯、中央空调内机、投影仪）直接挂在龙骨上会导致龙骨变形、吊顶下沉甚至坍塌。振动设备（如排气扇）长期振动会导致龙骨连接松动。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止，由全文强制标准GB 55032-2022第3.3.7条第5款承接，且范围扩大为：重量较大的灯具，以及电风扇、投影仪、音箱等有振动荷载的设备仪器，不应安装在吊顶工程的龙骨上。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "吊顶承重",
+      "重型设备",
+      "龙骨",
+      "独立吊挂",
+      "强制性条文",
+      "7.1.12",
+      "吊顶坍塌"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00554"
+    ],
+    "standard_number": "GB 50210-2018 第7.1.12条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "重型设备和有振动荷载的设备严禁安装在吊顶工程的龙骨上。此类设备必须单独设置吊挂系统，直接固定在建筑结构上。",
+    "compliance_criteria": "检查吊顶内是否有重型设备（大型灯具、投影仪、空调内机等）直接固定在龙骨上。如有，必须改为独立吊挂系统。",
+    "verification_method": "观察检查吊顶内设备安装方式；检查设备吊挂系统的固定点是否在建筑结构上。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 7",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00584",
+    "title": "施工中严禁损坏绝热设施和受力钢筋严禁超载堆放",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第3.1.3条，国家强制性条文。四条'严禁'是装修施工的红线：损坏绝热设施导致能耗增加和结露发霉；切断受力钢筋削弱结构承载力；超载堆放导致楼板开裂；预制空心楼板上打孔直接打穿楼板。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "严禁损坏",
+      "绝热设施",
+      "受力钢筋",
+      "超载堆放",
+      "预制楼板",
+      "强制性条文",
+      "3.1.3"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00546",
+      "GZ-SY-00001"
+    ],
+    "standard_number": "GB 50327-2001 第3.1.3条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工中严禁损坏房屋原有绝热设施；严禁损坏受力钢筋；严禁超荷载集中堆放物品；严禁在预制混凝土空心楼板上打孔安装埋件。",
+    "compliance_criteria": "施工现场逐条检查：不得切断或损伤楼板/梁/柱中的钢筋；不得破坏外墙和屋面的保温层；不得在楼板上集中堆放超重材料（如大量砖块、砂石）；不得在预制空心楼板上打孔。",
+    "verification_method": "现场巡查；检查钢筋探测仪扫描记录；检查材料堆放位置和重量。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00585",
+    "title": "施工现场用电必须设临时系统开关箱必须装漏电保护器",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "GB 50327-2001第3.1.7条，国家强制性条文。施工现场触电事故是装修行业致死率最高的事故类型。漏电保护器是保命的最后一道防线——没有它，一旦触电就是致命电流通过人体。临时用电系统必须由持证电工操作，不得私拉乱接。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "施工用电",
+      "漏电保护器",
+      "临时用电",
+      "持证电工",
+      "开关箱",
+      "强制性条文",
+      "3.1.7"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00560"
+    ],
+    "standard_number": "GB 50327-2001 第3.1.7条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工现场用电5项规定：(1)用电应从户表以后设临时施工用电系统；(2)安装、维修或拆除临时用电系统须由持证电工完成；(3)开关箱必须装设漏电保护器，电源线不得用插销连接；(4)线路应避开易燃易爆物品堆放地；(5)暂停施工时应切断电源。",
+    "compliance_criteria": "检查临时用电系统是否从户表后独立设置；检查电工是否持证上岗；检查每个开关箱是否装有漏电保护器；检查电源线连接方式是否安全。",
+    "verification_method": "检查电工操作证；检查漏电保护器安装情况；检查临时用电系统布线。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00586",
+    "title": "施工现场严禁吸烟明火作业必须清除可燃物并设专人监护",
+    "knowledge_type": "standard",
+    "stage": "STAGE_04",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第4章防火安全的强制性条文。装修施工现场可燃材料多（木板、油漆、稀释剂），一旦起火蔓延极快。施工现场吸烟是装修火灾的首要原因——一个未熄灭的烟头掉在刨花堆上就能引发大火。动火作业（电焊、气割）必须有专人监护并配备灭火器。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "施工现场",
+      "严禁吸烟",
+      "明火作业",
+      "防火安全",
+      "动火审批",
+      "强制性条文",
+      "4.3.6"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "GB 50327-2001 第4.3.4条 + 4.3.6条 + 4.3.7条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工现场防火安全强制性规定：(1)施工单位必须制定施工防火安全制度（4.1.1）；(2)明火作业前必须清除周围及焊渣滴落区的可燃物质并设专人监督（4.3.4）；(3)严禁在施工现场吸烟（4.3.6）；(4)严禁在运行中的管道、装有易燃易爆的容器和受力构件上进行焊接和切割（4.3.7）。",
+    "compliance_criteria": "检查现场是否张贴禁烟标志并严格执行；检查动火作业是否有审批手续和监护人；检查焊接作业区域是否清除了可燃物。",
+    "verification_method": "现场巡查；检查动火审批记录；检查消防器材配备。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 4",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00596",
+    "title": "临空栏杆净高：六层及以下不低于1.05米七层及以上不低于1.10米垂直杆件净距不大于0.11米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "护栏高度与杆件间距关系到坠落安全，是验收红线。GB 50096-2011《住宅设计规范》第6.1.3条（临空栏杆）与第5.6.3条（阳台栏板）：六层及六层以下不应低于1.05m，七层及七层以上不应低于1.10m；垂直杆件间净距不应大于0.11m；防护栏杆必须采用防止儿童攀登的构造。GB 50210-2018第14.5.4条要求护栏高度、栏杆间距、安装位置符合设计且安装牢固；GB 55032-2022第3.3.7条第4款（强条）明确临空设置的防护栏杆应与主体结构连接牢固。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "护栏",
+      "栏杆",
+      "高度",
+      "1.05",
+      "1.10",
+      "0.11",
+      "净距",
+      "阳台",
+      "飘窗",
+      "扶手",
+      "防坠落",
+      "14.5"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00559",
+      "GZ-SY-00597"
+    ],
+    "standard_number": "GB 50096-2011 第6.1.3条+第5.6.3条 + GB 50210-2018 第14.5.4条 + GB 55032-2022 第3.3.7条第4款",
+    "standard_authority": "national",
+    "standard_requirement": "(1)外廊、内天井及上人屋面等临空处栏杆净高：六层及六层以下不应低于1.05m，七层及七层以上不应低于1.10m；(2)阳台栏板或栏杆净高同上述标准；(3)栏杆垂直杆件间净距不应大于0.11m；(4)防护栏杆必须采用防止儿童攀登的构造；(5)临空设置的用于防护的栏杆应与主体结构连接牢固（GB 55032-2022强条）；(6)护栏高度、栏杆间距、安装位置应符合设计要求（GB 50210-2018 14.5.4）。",
+    "compliance_criteria": "实测净高≥1.05m（≤6层）/≥1.10m（≥7层）；垂直杆件净距≤0.11m；无儿童可攀爬构造；手扳无晃动，与主体结构连接可靠。",
+    "verification_method": "钢卷尺测量净高与杆件净距；手扳检查牢固度；观察儿童攀登构造；检查隐蔽工程验收记录（预埋件连接节点）。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50096-2011 第6.1.3条+第5.6.3条 + GB 50210-2018 第14.5.4条 + GB 55032-2022 第3.3.7条第4款",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00605",
+    "title": "施工单位必须制定施工防火安全制度施工人员必须严格遵守",
+    "knowledge_type": "standard",
+    "stage": "STAGE_02",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [],
+    "material": [],
+    "description": "GB 50327-2001第4.1.1条（强制性条文）。防火管理制度是装修现场安全的组织保障：无制度、不执行制度是多数工地火灾的根源。与4.3.4/4.3.6/4.3.7（现场防火措施）、4.4（电气防火）、4.5（消防设施保护）构成防火强条组合。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "防火",
+      "消防",
+      "安全制度",
+      "现场防火",
+      "4.1.1",
+      "强条",
+      "动火",
+      "火灾"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00586",
+      "GZ-SY-00585"
+    ],
+    "standard_number": "GB 50327-2001 第4.1.1条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "施工单位必须制定施工防火安全制度，施工人员必须严格遵守。配套要求：材料燃烧性能等级应符合GB 50222《建筑内部装修设计防火规范》（4.1.2）；施工现场严禁吸烟和动用明火，确需动用明火时应办理审批手续、清除可燃物并设专人监护（4.3.4/4.3.6/4.3.7）。",
+    "compliance_criteria": "施工单位有书面防火安全制度；施工人员知晓并遵守；动火作业有审批与监护记录。",
+    "verification_method": "检查防火安全制度文件与交底记录；现场巡查吸烟、明火、易燃物堆放情况。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 第4.1.1条（强制性条文）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 住建部建标[2001]266号公告 + 建标库GB 50327-2001/GB 50096-2011全文",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
   }
 ]

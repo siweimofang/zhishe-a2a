@@ -29,20 +29,22 @@ def test_agent_card_protocol_version_is_0_2_5():
     assert card.protocolVersion == "0.2.5"
 
 
-def test_agent_card_capabilities_streaming_false_in_v1():
-    """V1.0 streaming 必须为 False(message/stream 还没实现)"""
+def test_agent_card_capabilities_streaming_true_in_v1_3():
+    """V1.3.1+ streaming 必须为 True(openai_compat 后端已支持 SSE)"""
     card = get_agent_card()
     assert isinstance(card.capabilities, AgentCapabilities)
-    assert card.capabilities.streaming is False
+    assert card.capabilities.streaming is True
 
 
-def test_agent_card_has_three_required_skills():
-    """必须包含 3 个核心 skill:报价、避坑、流程"""
+def test_agent_card_has_five_required_skills():
+    """必须包含 5 个核心 skill:报价、施工标准、设计、材料品牌、避坑"""
     card = get_agent_card()
     skill_ids = {s.id for s in card.skills}
-    assert "shenyang-renovation-quote" in skill_ids
-    assert "renovation-pitfall-advice" in skill_ids
-    assert "renovation-process" in skill_ids
+    assert "renovation_quote" in skill_ids
+    assert "construction_standard" in skill_ids
+    assert "design_scheme" in skill_ids
+    assert "building_material_brand" in skill_ids
+    assert "renovation_pitfall" in skill_ids
 
 
 def test_each_skill_has_examples():

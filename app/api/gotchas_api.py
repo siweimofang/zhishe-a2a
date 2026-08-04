@@ -119,14 +119,16 @@ def _filter_kus(
 def _public_summary(ku: dict) -> dict:
     """将完整KU裁剪为公开摘要，隐藏核心知识内容"""
     avoid = ku.get("how_to_avoid", "")
-    return {
+    summary = {
         "ku_id": ku.get("ku_id"),
         "title": ku.get("title"),
+        "knowledge_type": ku.get("knowledge_type", "gotcha"),
         "severity": ku.get("severity"),
         "stage": ku.get("stage"),
         "trade": ku.get("trade", []),
         "how_to_avoid_brief": avoid[:50] + "..." if len(avoid) > 50 else avoid,
     }
+    return summary
 
 
 # ── 请求/响应模型 ──
@@ -279,6 +281,7 @@ def search_kus(
                         "ku": _public_summary({
                             "ku_id": r["ku_id"],
                             "title": r["title"],
+                            "knowledge_type": r.get("knowledge_type", "gotcha"),
                             "severity": r["severity"],
                             "stage": r["stage"],
                             "trade": r["trade"],
@@ -346,12 +349,45 @@ ASK_SYSTEM_PROMPT = """你是知设装修避坑顾问，一个有20年实战经�
 
 回答规则：
 1. 用口语化、有温度的方式回答，像一个靠谱的老师傅在跟业主聊天
-2. 先给结论（该怎么做/正不正常），再给原因和细节
-3. 如果涉及具体数字（时间、尺寸、费用），必须准确引用知识中的数值
-4. 如果用户的问题可能涉及安全隐患，语气要严肃、明确告知风险
-5. 回答控制在150-300字，不要啰嗦
-6. 不要说"根据知识库"、"根据资料"这类话，就像你自己知道一样
-7. 如果提供的知识不能完全回答用户问题，诚实说"这个情况我建议你找现场确认一下"，不要编造"""
+2. 称呼用户直接用"你"，不要用"兄弟""哥们""老铁"等性别化称呼，因为你不知道对方是男是女
+3. 先给结论（该怎么做/正不正常），再给原因和细节
+4. 如果涉及具体数字（时间、尺寸、费用），必须准确引用知识中的数值，不要自己编造或夸大金额
+5. 如果用户的问题可能涉及安全隐患，语气要严肃、明确告知风险
+6. 回答控制在150-300字，不要啰嗦
+7. 不要说"根据知识库"、"根据资料"这类话，就像你自己知道一样
+8. 如果提供的知识不能完全回答用户问题，诚实说"这个情况我建议你找现场确认一下"，不要编造
+9. 注意逻辑合理性：装修期间的房子没有通网、没有入住，不要说"网速卡""电视雪花"这类入住后才有的体验描述，应说"入住后网络信号受干扰"
+10. 装修业主对价格极度敏感：金额必须来自知识原文，不许自行编造、夸大或举不真实的例子。宁可不说金额，也不要说错"""
+
+# 标准尺子类型的系统提示 —— 语气更专业、更精确
+ASK_STANDARD_PROMPT = """你是知设装修验收顾问，精通国家装修验收标准。用户会问你装修验收标准相关问题，你基于提供的国家标准条文给出专业回答。
+
+回答规则：
+1. 用专业但易懂的方式回答，像一个靠谱的监理在跟业主解释标准
+2. 称呼用户直接用"你"
+3. 先直接告诉用户标准要求的数值或做法，再解释为什么这样规定
+4. 必须准确引用标准中的数值（如"不低于1.8米""≤0.07mg/m³"），不得编造或修改数值
+5. 如果涉及强制性条文，要明确告知这是"国家强制标准"，必须执行
+6. 提到标准编号时自然带出（如"按国标要求""按行业标准"），不要生硬罗列编号
+7. 回答控制在150-300字
+8. 如果用户问的问题涉及安全或环保（如甲醛、结构安全），语气要严肃
+9. 如果提供的知识不能完全回答用户问题，诚实说"具体数值建议查阅当地最新标准"，不要编造
+10. 可以适当补充实际操作中的注意事项，但核心是先给出标准尺子"""
+
+# 混合类型（标准+避坑同时出现）的系统提示
+ASK_MIXED_PROMPT = """你是知设装修顾问，兼具20年实战经验和扎实的国家标准功底。用户会问你装修相关问题，你基于提供的专业知识和国家标准给出回答。
+
+回答规则：
+1. 先给出国家标准的"尺子"（具体数值和要求），再补充实战经验中的注意事项
+2. 称呼用户直接用"你"
+3. 标准数值必须准确引用，不得编造或修改
+4. 涉及强制性条文时明确告知"这是国家强制标准"
+5. 实战经验部分用口语化的方式表达，像老师傅在分享心得
+6. 回答控制在150-300字
+7. 不要说"根据知识库"、"根据资料"这类话
+8. 如果涉及安全隐患，语气要严肃
+9. 结构：先标准（尺子）→ 再经验（避坑）→ 最后建议（行动）
+10. 金额必须来自知识原文，不许编造"""
 
 
 @router.get("/ask")
@@ -381,32 +417,84 @@ def ask_gotchas(
             "sources": [],
         }
     
-    # 2. 构建上下文（内部使用，不返回给调用方）
+    # 2. 构建上下文（内部使用，不返回给调用方）—— 按知识类型区分格式
     context_parts = []
     sources = []
+    has_standard = False
+    has_gotcha = False
+    
     for r in results:
         ku = _ku_index.get(r["ku_id"], {})
         title = ku.get("title", r.get("title", ""))
-        desc = ku.get("description", "")
-        scenario = ku.get("typical_scenario", "")
-        avoid = ku.get("how_to_avoid", "")
+        knowledge_type = ku.get("knowledge_type", "gotcha")
         severity = ku.get("severity", "")
         
-        context_parts.append(
-            f"【{title}】(严重度:{severity})\n"
-            f"问题：{desc}\n"
-            f"真实案例：{scenario}\n"
-            f"正确做法：{avoid}"
-        )
-        sources.append({"ku_id": r["ku_id"], "title": title})
+        if knowledge_type == "standard":
+            # 标准尺子类型 —— 提取标准专属字段
+            has_standard = True
+            std_number = ku.get("standard_number", "")
+            std_authority = ku.get("standard_authority", "")
+            std_requirement = ku.get("standard_requirement", "")
+            compliance = ku.get("compliance_criteria", "")
+            verification = ku.get("verification_method", "")
+            desc = ku.get("description", "")
+            
+            authority_label = {"national": "国家强制", "industry": "行业标准", "local": "地方标准", "enterprise": "企业标准"}.get(std_authority, std_authority)
+            
+            context_parts.append(
+                f"【{title}】(标准类型:{authority_label})\n"
+                f"标准编号：{std_number}\n"
+                f"标准要求：{std_requirement}\n"
+                f"达标判据：{compliance}\n"
+                f"检验方法：{verification}\n"
+                f"说明：{desc}"
+            )
+        else:
+            # 避坑经验类型 —— 保持原有格式
+            has_gotcha = True
+            desc = ku.get("description", "")
+            scenario = ku.get("typical_scenario", "")
+            avoid = ku.get("how_to_avoid", "")
+            
+            context_parts.append(
+                f"【{title}】(严重度:{severity})\n"
+                f"问题：{desc}\n"
+                f"真实案例：{scenario}\n"
+                f"正确做法：{avoid}"
+            )
+        
+        sources.append({"ku_id": r["ku_id"], "title": title, "knowledge_type": knowledge_type})
     
     context_text = "\n\n".join(context_parts)
     
-    # 3. 调用DeepSeek生成自然语言回答
+    # 3. 根据知识类型选择系统提示
+    if has_standard and not has_gotcha:
+        system_prompt = ASK_STANDARD_PROMPT
+        engine_tag = "standard_ask_v1"
+    elif has_standard and has_gotcha:
+        # 混合类型 —— 使用融合提示
+        system_prompt = ASK_MIXED_PROMPT
+        engine_tag = "mixed_ask_v1"
+    else:
+        system_prompt = ASK_SYSTEM_PROMPT
+        engine_tag = "gotchas_ask_v1"
+    
+    # 4. 调用DeepSeek生成自然语言回答
     api_key = _get_ask_api_key()
     if not api_key:
-        # 无API key时降级：直接返回how_to_avoid摘要拼接
-        fallback_answer = results[0].get("avoid", "")[:200]
+        # 无API key时降级
+        if has_standard:
+            # 标准类型降级：拼接标准要求
+            fallback_parts = []
+            for r in results:
+                ku = _ku_index.get(r["ku_id"], {})
+                if ku.get("knowledge_type") == "standard":
+                    fallback_parts.append(ku.get("standard_requirement", "")[:150])
+                else:
+                    fallback_parts.append(ku.get("how_to_avoid", "")[:150])
+            fallback_answer = "；".join(filter(None, fallback_parts))[:300]
+        else:
+            fallback_answer = results[0].get("avoid", "")[:200]
         return {
             "question": q,
             "answer": fallback_answer,
@@ -420,7 +508,7 @@ def ask_gotchas(
         payload = json.dumps({
             "model": "deepseek-chat",
             "messages": [
-                {"role": "system", "content": ASK_SYSTEM_PROMPT},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_msg},
             ],
             "temperature": 0.7,
@@ -440,8 +528,18 @@ def ask_gotchas(
             result = json.loads(resp.read().decode("utf-8"))
             answer = result["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        # LLM失败降级：返回第一条KU的how_to_avoid
-        answer = results[0].get("avoid", "暂时无法回答，请稍后再试。")[:300]
+        # LLM失败降级
+        if has_standard:
+            fallback_parts = []
+            for r in results:
+                ku = _ku_index.get(r["ku_id"], {})
+                if ku.get("knowledge_type") == "standard":
+                    fallback_parts.append(ku.get("standard_requirement", "")[:150])
+                else:
+                    fallback_parts.append(ku.get("how_to_avoid", "")[:150])
+            answer = "；".join(filter(None, fallback_parts))[:300]
+        else:
+            answer = results[0].get("avoid", "暂时无法回答，请稍后再试。")[:300]
         return {
             "question": q,
             "answer": answer,
@@ -453,7 +551,7 @@ def ask_gotchas(
         "question": q,
         "answer": answer,
         "sources": sources,
-        "engine": "gotchas_ask_v1",
+        "engine": engine_tag,
     }
 
 

@@ -436,5 +436,1559 @@
       "异味",
       "卫浴柜"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00553",
+    "title": "门窗工程主控项目：规格型号连接固定排水构造启闭密封必须合格",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第6章门窗工程的主控项目要求。门窗是装修中费用较高的项目，规格型号不对等于花钱买错货；固定不牢有坠落风险（尤其高层）；排水不畅导致积水渗漏；密封不严导致漏风漏雨。四项主控全部合格才能验收通过。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "门窗验收",
+      "门窗规格",
+      "连接固定",
+      "排水构造",
+      "启闭密封",
+      "门窗主控"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 6",
+    "standard_authority": "industry",
+    "standard_requirement": "门窗工程主控项目包括：(1)门窗的品种、类型、规格、型号应符合设计要求；(2)门窗框与墙体之间的连接固定方式和固定点数量应符合设计要求；(3)门窗的排水构造应通畅；(4)门窗启闭应灵活、密封应严密。以上为主控项目，不合格必须返工。",
+    "compliance_criteria": "逐樘检查：核对门窗与合同/设计指定的品种型号是否一致；检查固定点数量和间距；浇水试验验证排水孔通畅；反复启闭5次检查灵活性和密封性。",
+    "verification_method": "观察检查+手扳检查+尺量+浇水试验。检查产品合格证书和安装记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 6",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00554",
+    "title": "吊顶工程必须满足防开裂平整度和防火处理要求",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第7章吊顶工程的核心要求。吊顶开裂是最常见的装修质量问题之一，主要原因是龙骨间距过大、石膏板接缝处理不当。防火处理是安全底线——吊顶内部空间封闭，一旦起火蔓延极快，木质材料必须涂刷防火涂料。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "吊顶验收",
+      "防开裂",
+      "平整度",
+      "防火处理",
+      "暗龙骨",
+      "明龙骨",
+      "吊顶裂缝"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 7",
+    "standard_authority": "industry",
+    "standard_requirement": "吊顶工程验收要求：(1)暗龙骨吊顶和明龙骨吊顶的标高、尺寸、起拱应符合设计要求；(2)吊顶面层应平整、无翘曲、无裂缝、无缺损；(3)木质吊顶及木质龙骨必须进行防火处理；(4)吊顶内管线设备安装完成后应进行隐蔽验收。",
+    "compliance_criteria": "用2m靠尺和塞尺检查平整度（偏差≤3mm）；目测无裂缝翘曲；检查防火涂料涂刷记录；吊顶封板前检查管线安装隐蔽验收记录。",
+    "verification_method": "2m靠尺+塞尺测量平整度；观察检查外观质量；检查防火处理记录；隐蔽工程验收记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 7",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00556",
+    "title": "饰面砖工程主控项目：品种规格颜色必须符合设计且粘贴牢固无空鼓",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第9章墙饰面工程中饰面砖的验收标准。空鼓是瓷砖最常见的问题——敲击声音发空说明粘结不牢，日后可能脱落。卫生间墙砖空鼓还可能导致水渗入墙体。验收时必须逐块敲击检查。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "饰面砖",
+      "空鼓",
+      "瓷砖验收",
+      "粘贴牢固",
+      "墙面砖",
+      "小锤检查"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 9",
+    "standard_authority": "industry",
+    "standard_requirement": "饰面砖工程主控项目：(1)饰面砖的品种、规格、颜色、图案应符合设计要求；(2)饰面砖必须粘贴牢固，无空鼓、无裂缝；(3)有排水要求的部位应做滴水线（槽）。满粘法施工的饰面砖工程应无空鼓。",
+    "compliance_criteria": "逐间检查：核对砖的品种颜色与设计一致；用小锤逐块敲击检查空鼓（空鼓面积单处不超过400cm²且每自然间不超过总数的5%）；检查勾缝质量。",
+    "verification_method": "小锤轻击检查空鼓；观察检查表面质量；尺量检查平整度和缝格顺直度。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 9",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00557",
+    "title": "木地板工程主控项目：材质等级含水率必须符合设计要求且安装牢固",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_FLOOR"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第10章楼地面饰面工程中木地板的验收标准。含水率是木地板质量的关键指标——含水率过高安装后会收缩变形、开裂；含水率过低会吸湿膨胀起拱。不同地区气候不同，含水率控制标准也不同。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "木地板",
+      "含水率",
+      "地板验收",
+      "地板松动",
+      "异响",
+      "地板安装"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 10",
+    "standard_authority": "industry",
+    "standard_requirement": "木地板工程主控项目：(1)木地板的材质、等级、含水率应符合设计要求；(2)木地板铺设应牢固、无松动、行走无异响；(3)面层与基层的粘结应牢固，无空鼓。木地板含水率应根据地区气候条件控制。",
+    "compliance_criteria": "检查地板材质检测报告和含水率检测值；行走检查有无异响和松动；目测检查表面有无划痕、色差、翘曲。",
+    "verification_method": "行走试验检查异响和松动；观察检查表面质量；检查产品合格证书和含水率检测报告。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 10",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00558",
+    "title": "涂饰工程主控项目：涂料品种颜色必须符合设计且涂刷均匀无流坠起皮",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第11章涂饰工程的验收标准。涂刷质量直接影响室内整体观感。流坠（涂料往下淌形成的痕迹）、起皮（涂层与基层脱离）、透底（能看到底层颜色）都是不合格的表现。偷工减料常见于少刷底漆或只刷一遍面漆。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "涂饰验收",
+      "乳胶漆",
+      "流坠",
+      "起皮",
+      "涂刷均匀",
+      "墙面涂料"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00009"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 11",
+    "standard_authority": "industry",
+    "standard_requirement": "涂饰工程主控项目：(1)涂料的品种、型号和颜色应符合设计要求；(2)涂饰层应粘结牢固，不得漏涂、透底、起皮、掉粉；(3)涂饰应均匀，不得有流坠、疙瘩、刷纹；(4)水性涂料涂饰和环境温度应满足产品说明书要求。",
+    "compliance_criteria": "距墙面1.5m处观察：颜色均匀一致、无明显色差；无流坠、起皮、透底；手摸无掉粉。检查涂料桶标签与设计指定品牌型号一致。",
+    "verification_method": "观察检查颜色和均匀度；手摸检查附着力；核对涂料产品合格证书。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 11",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00559",
+    "title": "护栏扶手必须安装牢固且高度和间距必须满足安全标准",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第12章细部工程中护栏扶手的安全标准。护栏高度和竖杆间距直接关系到儿童安全——间距大于11cm儿童头部可能穿过坠落。临空高度不同（24米为界）护栏最低高度也不同。这是涉及人身安全的主控项目，不合格必须返工。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "护栏",
+      "扶手",
+      "护栏高度",
+      "1.05米",
+      "间距0.11米",
+      "坠落防护",
+      "阳台护栏"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 12",
+    "standard_authority": "industry",
+    "standard_requirement": "护栏和扶手制作与安装的主控项目：(1)护栏和扶手的材质、规格、型号应符合设计要求；(2)护栏和扶手安装必须牢固；(3)护栏高度不应低于1.05m（临空高度24m以下）或1.10m（临空高度24m及以上）；(4)护栏垂直杆件间距不应大于0.11m。",
+    "compliance_criteria": "手扳检查牢固度；钢卷尺测量护栏高度（从可踏面起算）和杆件间距。高度不足或间距过大必须返工——这是儿童坠落防护的生命线。",
+    "verification_method": "手扳检查安装牢固度；钢卷尺测量高度和间距；检查产品合格证书。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 12",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00560",
+    "title": "电气工程主控项目：配电箱布线开关插座照明灯具必须安全合规",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第15章电气工程的核心安全要求。电气安全直接关系到人身安全——漏电保护失效可能触电致死；导线不分色给日后维修带来极大风险；等电位联结缺失是卫生间触电事故的主要原因。这些全部是主控项目，必须逐一点检。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "电气验收",
+      "配电箱",
+      "漏电保护",
+      "导线分色",
+      "等电位",
+      "开关插座",
+      "相位检测"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00013"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 15",
+    "standard_authority": "industry",
+    "standard_requirement": "电气工程主控项目：(1)家居配电箱的回路设置、漏电保护应符合设计和安全要求；(2)室内布线必须穿管保护，导线分色规范（火线红色、零线蓝色、地线黄绿双色）；(3)开关插座安装牢固、接线正确、功能正常；(4)照明灯具安装牢固、接线正确；(5)卫生间等潮湿场所必须做等电位联结。",
+    "compliance_criteria": "逐回路测试漏电保护器动作是否灵敏（按试验按钮）；用相位检测器检查每个插座的接线是否正确（左零右火上接地）；检查导线分色是否规范；检查等电位联结是否连通。",
+    "verification_method": "电笔/相位检测器逐孔检查；漏电保护器试验按钮测试；绝缘电阻测试仪测量绝缘电阻；观察检查导线分色和布线规范。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 15",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00563",
+    "title": "排水管道必须做通水试验且坡度必须满足排水要求",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_PLUMBING"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第17章排水管道验收要求。排水不畅或堵塞是入住后最闹心的问题之一——坡度不够导致排水慢、积水；接口不严导致渗漏。通水试验能在验收阶段发现堵塞和坡度问题，避免入住后维修。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "通水试验",
+      "排水坡度",
+      "排水管道",
+      "排水通畅",
+      "管道验收",
+      "堵塞"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 17",
+    "standard_authority": "industry",
+    "standard_requirement": "排水管道安装完成后应做通水试验，排水应通畅、无堵塞。排水管道的坡度应符合设计要求，设计无要求时应满足规范规定的最小坡度要求。管道接口应严密不渗漏。",
+    "compliance_criteria": "通水试验：从最高处排水口大量放水，检查各排水口排水是否通畅、有无堵塞和返水。坡度检查：用水平尺或坡度尺测量排水管坡度。所有接口无渗漏。",
+    "verification_method": "通水试验（大量放水检查通畅性）；坡度尺测量管道坡度；观察检查接口严密性。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 17",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00570",
+    "title": "智能化工程有线电视电话信息网络必须信号通畅",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_ELECTRICAL"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第16章智能化工程验收要求。弱电系统虽然不像水电那样涉及安全，但信号不通会严重影响入住体验。常见问题包括：网线接头没压好导致接触不良、有线电视线被其他施工拉断、网络面板接线线序错误。验收时逐孔测试最简单有效。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "智能化",
+      "网络验收",
+      "有线电视",
+      "电话",
+      "信号通畅",
+      "弱电验收",
+      "网线测试"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 16",
+    "standard_authority": "industry",
+    "standard_requirement": "智能化工程验收要求：(1)有线电视系统各终端信号应通畅、图像清晰；(2)电话系统各终端应通话清晰；(3)信息网络系统各端口应连通、速率达标。所有弱电线缆应标识清晰、布线规范。",
+    "compliance_criteria": "逐个终端测试：有线电视信号强度和质量达标；电话每个端口拨号通话正常；网络每个端口连通且速率不低于设计标准（如千兆网口实测达到千兆）。",
+    "verification_method": "网线测试仪测试通断和速率；信号测试仪测试有线电视信号；电话机逐孔拨号测试。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 16",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00571",
+    "title": "卫浴工程卫生洁具安装必须牢固且排水连接严密无渗漏",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_BATHROOM"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第14章卫浴工程验收标准。洁具安装不牢固有倾倒伤人风险（尤其壁挂式洗手盆和马桶）；排水连接渗漏会导致柜体发霉、楼下天花板渗水。淋浴间排水坡度不够导致积水是常见问题。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "卫浴验收",
+      "卫生洁具",
+      "安装牢固",
+      "排水渗漏",
+      "淋浴间",
+      "马桶安装"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 14",
+    "standard_authority": "industry",
+    "standard_requirement": "卫浴工程主控项目：(1)卫生洁具的品种、规格、型号应符合设计要求；(2)卫生洁具安装必须牢固稳固；(3)洁具与排水管道连接应严密、无渗漏；(4)淋浴间防水层和排水坡度应满足要求。",
+    "compliance_criteria": "手扳检查安装牢固度；满水试验：洁具放满水后检查排水连接处有无渗漏；淋浴间排水坡度检查：泼水后5分钟内水应完全排走无积水。",
+    "verification_method": "手扳检查牢固度；满水试验检查渗漏；坡度尺测量排水坡度；通水试验检查排水通畅性。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 14",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00572",
+    "title": "厨房工程橱柜安装必须牢固且台面防水处理应达标",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_CABINET"
+    ],
+    "material": [],
+    "description": "JGJ/T 304-2013第13章厨房工程验收标准。橱柜安装不牢固会导致吊柜坠落伤人；台面与墙体接缝不做防水密封，水会沿缝隙渗入柜体导致板材膨胀发霉；灶具安装不规范有燃气泄漏风险。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "厨房验收",
+      "橱柜安装",
+      "台面防水",
+      "灶具安装",
+      "厨房设备",
+      "橱柜牢固"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 13",
+    "standard_authority": "industry",
+    "standard_requirement": "厨房工程主控项目：(1)橱柜安装应牢固，柜门和抽屉启闭灵活；(2)厨房设备（灶具、油烟机、消毒柜等）安装位置正确、连接安全；(3)台面与墙体连接处应做防水密封处理；(4)给排水连接严密无渗漏。",
+    "compliance_criteria": "手扳检查橱柜牢固度；逐门逐抽屉开合检查灵活性；灶具和油烟机试运行；台面与墙体接缝处打胶密封检查；给排水通水试验检查渗漏。",
+    "verification_method": "手扳检查牢固度；观察检查安装质量；通水试验；灶具点火试验。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 13",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00573",
+    "title": "通风与空调工程安装完成后必须进行系统试运转检验",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第18章通风与空调工程验收要求。空调系统安装后的试运转是发现安装问题的最后机会——风管漏接导致风量不足、冷媒管接头渗漏导致制冷效果差、凝结水管坡度不够导致漏水泡顶。这些问题入住后才发现维修代价极大。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "空调验收",
+      "通风系统",
+      "试运转",
+      "风管",
+      "风口",
+      "空调试运行"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 18",
+    "standard_authority": "industry",
+    "standard_requirement": "通风与空调工程验收要求：(1)风口安装位置正确、外观完好；(2)风管连接严密、无破损；(3)设备安装牢固、运行平稳；(4)系统安装完成后应进行系统试运转，运转正常后方可验收。",
+    "compliance_criteria": "逐台设备开机试运转，运行30分钟以上，检查：运行是否平稳无异响、制冷/制热效果是否正常、风口风量是否达标、凝结水排放是否通畅。",
+    "verification_method": "系统试运转（≥30分钟）；观察运行状态、听异响、测出风口温度和风速；检查凝结水排放。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 18",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00578",
+    "title": "建筑外门窗安装必须牢固砌体上严禁用射钉固定",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第6.1.11条，国家强制性条文。射钉在砌体（砖墙、砌块墙）中的握裹力极差，受风力或振动后容易松动脱落，高层外窗脱落有致命风险。必须使用预埋件或膨胀螺栓固定。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止；GB 55032-2022未再单列'砌体上严禁射钉'条款，门窗安装牢固要求由GB 55032-2022第3.3.7条第3款承接。砌体（砖、砌块、灰缝）强度低，射钉固定遇冲击易松动脱落，仍属行业公认高风险做法，应避免。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "门窗安装",
+      "射钉",
+      "砌体",
+      "固定方式",
+      "强制性条文",
+      "6.1.11",
+      "外窗脱落"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553"
+    ],
+    "standard_number": "GB 50210-2018 第6.1.11条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "建筑外门窗安装必须牢固。在砌体上安装门窗严禁采用射钉固定。应采用预埋件连接或膨胀螺栓固定，固定点间距应满足设计要求。",
+    "compliance_criteria": "逐樘检查：手扳检查牢固度；检查固定方式——砌体墙上不得使用射钉；检查固定点数量和间距是否符合设计。",
+    "verification_method": "手扳检查安装牢固度；观察检查固定方式；检查隐蔽工程验收记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 6",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00579",
+    "title": "推拉门窗扇必须牢固必须安装防脱落装置",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第6.1.12条，国家强制性条文。推拉门窗如果没有防脱落装置，在大风或人为用力推拉时，门扇可能从上方轨道脱出坠落，造成人身伤害。这是容易被忽视但极其重要的安全装置。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止，由全文强制标准GB 55032-2022第3.3.7条第3款承接：建筑外门窗应安装牢固，推拉门窗扇应配备防脱落装置。要求不变。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "推拉门窗",
+      "防脱落",
+      "强制性条文",
+      "6.1.12",
+      "门窗安全",
+      "坠落"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553"
+    ],
+    "standard_number": "GB 50210-2018 第6.1.12条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "推拉门窗扇必须牢固，必须安装防脱落装置。防脱落装置应能有效防止门窗扇在风力或外力作用下从轨道中脱出。",
+    "compliance_criteria": "逐樘检查：确认推拉门窗扇安装了防脱落装置；反复推拉5次检查运行是否顺畅、有无脱轨风险。",
+    "verification_method": "手扳检查牢固度；反复启闭检查防脱落装置有效性。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 6",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00580",
+    "title": "重型设备和有振动荷载的设备严禁安装在吊顶龙骨上",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_DESIGNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第7.1.12条，国家强制性条文。吊顶龙骨的设计承重有限，重型设备（如大型吊灯、中央空调内机、投影仪）直接挂在龙骨上会导致龙骨变形、吊顶下沉甚至坍塌。振动设备（如排气扇）长期振动会导致龙骨连接松动。 【效力说明】本条为GB 50210-2018原强制性条文，自2023年3月1日起废止，由全文强制标准GB 55032-2022第3.3.7条第5款承接，且范围扩大为：重量较大的灯具，以及电风扇、投影仪、音箱等有振动荷载的设备仪器，不应安装在吊顶工程的龙骨上。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "吊顶承重",
+      "重型设备",
+      "龙骨",
+      "独立吊挂",
+      "强制性条文",
+      "7.1.12",
+      "吊顶坍塌"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00554"
+    ],
+    "standard_number": "GB 50210-2018 第7.1.12条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "重型设备和有振动荷载的设备严禁安装在吊顶工程的龙骨上。此类设备必须单独设置吊挂系统，直接固定在建筑结构上。",
+    "compliance_criteria": "检查吊顶内是否有重型设备（大型灯具、投影仪、空调内机等）直接固定在龙骨上。如有，必须改为独立吊挂系统。",
+    "verification_method": "观察检查吊顶内设备安装方式；检查设备吊挂系统的固定点是否在建筑结构上。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 7",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00581",
+    "title": "抹灰工程平整度允许偏差：普通抹灰4毫米高级抹灰3毫米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第4章抹灰工程的验收数值标准。抹灰平整度直接影响后续工序——平整度不够会导致瓷砖贴不平、乳胶漆在灯光下显现波浪纹、壁纸起皱。高级抹灰标准更严格，适用于精装房和高级装饰工程。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "抹灰平整度",
+      "4毫米",
+      "3毫米",
+      "2m靠尺",
+      "垂直度",
+      "抹灰验收",
+      "允许偏差"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "GB 50210-2018 Chapter 4（抹灰工程）",
+    "standard_authority": "national",
+    "standard_requirement": "一般抹灰工程的允许偏差：(1)普通抹灰表面平整度≤4mm（用2m靠尺和塞尺检查）；(2)高级抹灰表面平整度≤3mm；(3)普通抹灰立面垂直度≤4mm；(4)高级抹灰立面垂直度≤3mm；(5)阴阳角方正：普通≤4mm，高级≤3mm。",
+    "compliance_criteria": "用2m靠尺和塞尺逐面墙检查平整度和垂直度。普通抹灰偏差>4mm或高级抹灰偏差>3mm为不合格，需返工修补。",
+    "verification_method": "2m靠尺+塞尺测量平整度和垂直度；直角检测尺测量阴阳角方正。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 4",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00582",
+    "title": "饰面砖单块空鼓面积不超过10%且每间不超过总数的5%",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第10章饰面砖工程的验收数值标准。空鼓率10%是单块砖的限值，5%是整间房的限值——两个条件必须同时满足。满粘法施工的饰面砖理论上应无空鼓，但实际操作中允许极少量偏差。空鼓砖在温差变化时可能脱落，特别是墙面砖有坠落伤人风险。 GB 50210-2018条文说明进一步明确：阳角处普遍存在粘结料不饱满和空鼓，45°拼阳角缝易破损，推荐采用阳角条做法；其余部位仅要求距砖边10mm以内的大面无空鼓。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "空鼓率",
+      "10%",
+      "5%",
+      "饰面砖",
+      "瓷砖验收",
+      "小锤检查",
+      "接缝高低差"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00556"
+    ],
+    "standard_number": "GB 50210-2018 Chapter 10（饰面砖工程）+ JGJ/T 304-2013 Chapter 9",
+    "standard_authority": "national",
+    "standard_requirement": "饰面砖工程验收标准：(1)单块砖空鼓面积不超过该砖面积的10%；(2)每自然间（标准间）空鼓砖数不超过总数的5%；(3)墙面砖接缝高低差≤0.5mm；(4)表面平整度≤3mm（用2m靠尺检查）。满粘法施工的饰面砖应无空鼓。",
+    "compliance_criteria": "用小锤逐块敲击检查空鼓，标记空鼓砖并计算比例；用塞尺检查接缝高低差；用2m靠尺检查平整度。",
+    "verification_method": "小锤轻击检查空鼓；塞尺检查接缝高低差；2m靠尺+塞尺检查平整度。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 10",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00583",
+    "title": "吊顶工程主龙骨吊点间距不大于1200毫米起拱为跨度1/200至1/300",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第7章吊顶工程的验收数值标准。吊点间距过大是吊顶下沉开裂的主要原因——龙骨跨度过大产生挠度，日久石膏板接缝处开裂。起拱是为了抵消自重产生的下沉，按跨度的1/200~1/300预留。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "吊顶验收",
+      "吊点间距",
+      "1200毫米",
+      "起拱",
+      "1/200",
+      "主龙骨",
+      "平整度3mm"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00554"
+    ],
+    "standard_number": "GB 50210-2018 Chapter 7（吊顶工程）",
+    "standard_authority": "national",
+    "standard_requirement": "吊顶工程关键验收数值：(1)主龙骨吊点间距≤1200mm；(2)主龙骨水平偏差≤10mm/m；(3)主龙骨起拱（设计无要求时）为短向跨度的1/200~1/300；(4)石膏板面层平整度≤3mm。",
+    "compliance_criteria": "钢卷尺测量吊点间距（≤1200mm）；拉线检查主龙骨水平度；测量跨度计算起拱值是否在1/200~1/300范围内。",
+    "verification_method": "钢卷尺测量吊点间距；拉线+钢卷尺检查水平度；2m靠尺+塞尺检查面层平整度。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 7",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00589",
+    "title": "推拉门窗扇必须有防脱落措施扇框搭接量应符合设计",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50327-2001第10.1.6条，国家强制性条文。与GB 50210-2018第6.1.12条呼应——施工规范和验收标准双重约束。推拉门窗防脱落装置虽小但关乎安全，尤其是外阳台推拉门，一旦脱轨可能坠落。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "推拉门窗",
+      "防脱落措施",
+      "搭接量",
+      "强制性条文",
+      "10.1.6",
+      "门窗施工"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553"
+    ],
+    "standard_number": "GB 50327-2001 第10.1.6条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "推拉门窗扇必须有防脱落措施，扇与框的搭接量应符合设计要求。防脱落装置应可靠有效。",
+    "compliance_criteria": "逐樘检查推拉门窗是否安装防脱落装置；检查搭接量是否满足设计值；反复推拉检查是否顺畅无脱轨风险。",
+    "verification_method": "手扳检查防脱落装置；反复启闭试验；钢卷尺测量搭接量。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50327-2001 Chapter 10",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50327-2001",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00590",
+    "title": "裱糊工程基层处理：混凝土或抹灰基层含水率不大于8%木材基层不大于12%",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第13.1.4条（裱糊与软包工程）对裱糊基层处理的规定。基层含水率过高会导致壁纸、墙布起泡、空鼓；不封闭基层则泛碱会使壁纸变色。关键数值：混凝土或抹灰基层含水率不得大于8%，木材基层含水率不得大于12%（常见误区：把12%套到所有基层上，12%只适用于木材基层）。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "壁纸",
+      "墙布",
+      "裱糊",
+      "基层含水率",
+      "8%",
+      "12%",
+      "封闭底胶",
+      "加强网布",
+      "腻子",
+      "0.3MPa",
+      "高级抹灰"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "GB 50210-2018 第13.1.4条（裱糊与软包工程）",
+    "standard_authority": "national",
+    "standard_requirement": "裱糊前基层处理应达到：(1)新建筑物的混凝土或抹灰基层墙面在刮腻子前应涂刷抗碱封闭底漆；(2)粉化的旧墙面应先除去粉化层，刮腻子前涂刷一层界面处理剂；(3)混凝土或抹灰基层含水率不得大于8%，木材基层含水率不得大于12%；(4)石膏板基层接缝及裂缝处应贴加强网布后再刮腻子；(5)基层腻子应平整、坚实、牢固，无粉化、起皮、空鼓、酥松、裂缝和泛碱，腻子粘结强度不得小于0.3MPa；(6)基层表面平整度、立面垂直度及阴阳角方正应达到本标准第4.2.10条高级抹灰的要求；(7)裱糊前应用封闭底胶涂刷基层。",
+    "compliance_criteria": "混凝土或抹灰基层含水率≤8%（木材基层≤12%）方可裱糊；石膏板接缝已贴加强网布；腻子粘结强度≥0.3MPa；基层平整度、垂直度、阴阳角方正达到高级抹灰允许偏差（3mm）；裱糊前已涂封闭底胶。",
+    "verification_method": "含水率测试仪检测基层含水率；观察+手摸检查腻子起粉、起皮、空鼓；小锤轻击检查空鼓；检查隐蔽工程验收记录（封闭底漆、界面剂、封闭底胶、加强网布）。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 Chapter 11",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web_search: GB 50210-2018",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00593",
+    "title": "涂饰工程基层处理：溶剂型涂料基层含水率不大于8%乳液型不大于10%木材不大于12%",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第12.1.5条（涂饰工程基层处理）。乳胶漆墙面起皮、开裂、泛碱大多源于基层处理不到位：新基层未刷抗碱封闭底漆、旧墙面未清疏松层、基层含水率超标。核心数值：涂刷溶剂型腻子/涂料时基层含水率不得大于8%，乳液型（乳胶漆）不得大于10%，木材基层不得大于12%。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "乳胶漆",
+      "底漆",
+      "抗碱",
+      "界面剂",
+      "含水率",
+      "10%",
+      "8%",
+      "耐水腻子",
+      "起皮",
+      "泛碱",
+      "12.1.5"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00558",
+      "GZ-SY-00590"
+    ],
+    "standard_number": "GB 50210-2018 第12.1.5条（涂饰工程）",
+    "standard_authority": "national",
+    "standard_requirement": "涂饰工程基层处理：(1)新建筑物的混凝土或抹灰基层在用腻子找平或直接涂饰涂料前应涂刷抗碱封闭底漆；(2)既有建筑墙面应清除疏松的旧装修层并涂刷界面剂；(3)混凝土或抹灰基层在用溶剂型腻子找平或直接涂刷溶剂型涂料时含水率不得大于8%，用乳液型腻子找平或直接涂刷乳液型涂料（乳胶漆）时含水率不得大于10%，木材基层含水率不得大于12%；(4)找平层应平整、坚实、牢固，无粉化、起皮和裂缝，内墙找平层粘结强度符合JG/T 298；(5)厨房、卫生间墙面的找平层应使用耐水腻子。",
+    "compliance_criteria": "涂饰前已涂抗碱封闭底漆（新基层）或界面剂（旧基层）；基层含水率：溶剂型≤8%、乳液型≤10%、木材≤12%；厨卫墙面使用耐水腻子；找平层无粉化起皮裂缝。",
+    "verification_method": "含水率测试仪检测基层含水率；观察检查底漆/界面剂涂刷与找平层外观；检查材料合格证书与施工记录。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第12.1.5条（涂饰工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00594",
+    "title": "水性涂料涂饰工程：施工环境温度5至35摄氏度涂饰均匀不得漏涂透底开裂起皮掉粉",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第12.1.6条、第12.2.3条（水性涂料涂饰工程）。冬季低温（低于5℃）或夏季高温（高于35℃）涂刷乳胶漆，成膜质量差，易流坠、开裂、掉粉；验收须在涂层养护期满后进行。颜色、光泽、图案应符合设计，涂层与其他材料衔接处应吻合、界面清晰。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "乳胶漆",
+      "施工温度",
+      "5摄氏度",
+      "35摄氏度",
+      "漏涂",
+      "透底",
+      "流坠",
+      "掉粉",
+      "养护",
+      "12.1.6",
+      "12.2.3"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00593",
+      "GZ-SY-00558"
+    ],
+    "standard_number": "GB 50210-2018 第12.1.6条 + 第12.2.3条（涂饰工程）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)水性涂料涂饰工程施工的环境温度应为5~35℃；(2)水性涂料涂饰工程应涂饰均匀、粘结牢固，不得漏涂、透底、开裂、起皮和掉粉；(3)涂饰工程应在涂层养护期满后进行质量验收；(4)涂层与其他装修材料和设备衔接处应吻合，界面应清晰；(5)检验批：室内每50间为一个检验批，每检验批至少抽查10%且不得少于3间。",
+    "compliance_criteria": "施工期间环境温度在5~35℃范围内；涂层无漏涂、透底、开裂、起皮、掉粉；验收在养护期满后进行；抽查数量不少于检验批的10%且不少于3间。",
+    "verification_method": "温度计记录施工环境温度；观察+手摸检查涂层质量；对照设计检查颜色、光泽、图案。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第12.1.6条 + 第12.2.3条（涂饰工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00595",
+    "title": "壁纸墙布裱糊验收：粘贴牢固不得空鼓翘边拼接横平竖直阴角顺光搭接阳角无接缝",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "trade": [
+      "TRADE_PAINT"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第13.2.3、13.2.4、13.2.9条（裱糊工程）验收要求。壁纸起泡、翘边、显拼缝是常见问题：粘贴必须牢固，不得漏贴、补贴、脱层、空鼓和翘边；各幅拼接应横平竖直，花纹图案吻合，不离缝、不搭接、不显拼缝（距离墙面1.5m处观察）。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "壁纸",
+      "墙布",
+      "空鼓",
+      "翘边",
+      "拼缝",
+      "阴角",
+      "阳角",
+      "搭接",
+      "13.2.4",
+      "13.2.9"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00590",
+      "GZ-SY-00593"
+    ],
+    "standard_number": "GB 50210-2018 第13.2.3条 + 第13.2.4条 + 第13.2.9条（裱糊工程）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)壁纸、墙布应粘贴牢固，不得有漏贴、补贴、脱层、空鼓和翘边；(2)裱糊后各幅拼接应横平竖直，拼接处花纹、图案应吻合，应不离缝、不搭接、不显拼缝；(3)壁纸、墙布阴角处应顺光搭接，阳角处应无接缝；(4)表面应平整，不得有波纹起伏、气泡、裂缝、皱折，色泽一致不得有斑污，斜视时应无胶痕；(5)与装饰线、踢脚板、门窗框交接处应吻合、严密、顺直。",
+    "compliance_criteria": "壁纸墙布无空鼓、翘边、脱层；拼缝处1.5m外观察不显拼缝；阴角顺光搭接、阳角无接缝；表面无气泡、皱折、胶痕。",
+    "verification_method": "距墙面1.5m处观察；手摸检查粘贴牢固度；逐间检查阴阳角与交接部位。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第13.2.3条 + 第13.2.4条 + 第13.2.9条（裱糊工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00596",
+    "title": "临空栏杆净高：六层及以下不低于1.05米七层及以上不低于1.10米垂直杆件净距不大于0.11米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_CRITICAL",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "护栏高度与杆件间距关系到坠落安全，是验收红线。GB 50096-2011《住宅设计规范》第6.1.3条（临空栏杆）与第5.6.3条（阳台栏板）：六层及六层以下不应低于1.05m，七层及七层以上不应低于1.10m；垂直杆件间净距不应大于0.11m；防护栏杆必须采用防止儿童攀登的构造。GB 50210-2018第14.5.4条要求护栏高度、栏杆间距、安装位置符合设计且安装牢固；GB 55032-2022第3.3.7条第4款（强条）明确临空设置的防护栏杆应与主体结构连接牢固。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "护栏",
+      "栏杆",
+      "高度",
+      "1.05",
+      "1.10",
+      "0.11",
+      "净距",
+      "阳台",
+      "飘窗",
+      "扶手",
+      "防坠落",
+      "14.5"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00559",
+      "GZ-SY-00597"
+    ],
+    "standard_number": "GB 50096-2011 第6.1.3条+第5.6.3条 + GB 50210-2018 第14.5.4条 + GB 55032-2022 第3.3.7条第4款",
+    "standard_authority": "national",
+    "standard_requirement": "(1)外廊、内天井及上人屋面等临空处栏杆净高：六层及六层以下不应低于1.05m，七层及七层以上不应低于1.10m；(2)阳台栏板或栏杆净高同上述标准；(3)栏杆垂直杆件间净距不应大于0.11m；(4)防护栏杆必须采用防止儿童攀登的构造；(5)临空设置的用于防护的栏杆应与主体结构连接牢固（GB 55032-2022强条）；(6)护栏高度、栏杆间距、安装位置应符合设计要求（GB 50210-2018 14.5.4）。",
+    "compliance_criteria": "实测净高≥1.05m（≤6层）/≥1.10m（≥7层）；垂直杆件净距≤0.11m；无儿童可攀爬构造；手扳无晃动，与主体结构连接可靠。",
+    "verification_method": "钢卷尺测量净高与杆件净距；手扳检查牢固度；观察儿童攀登构造；检查隐蔽工程验收记录（预埋件连接节点）。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50096-2011 第6.1.3条+第5.6.3条 + GB 50210-2018 第14.5.4条 + GB 55032-2022 第3.3.7条第4款",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00597",
+    "title": "楼梯扶手高度不小于0.90米水平段超0.50米时不小于1.05米窗台净高低于0.90米必须设防护",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "GB 50096-2011《住宅设计规范》楼梯扶手与低窗台防护规定。楼梯水平段扶手过低易导致翻越坠落；低窗台（净高<0.90m）未设防护是儿童坠楼高发隐患，装修封阳台、换窗时必须检查。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "楼梯扶手",
+      "扶手高度",
+      "0.90",
+      "1.05",
+      "窗台",
+      "0.9米",
+      "防护栏杆",
+      "坠楼",
+      "儿童"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00559",
+      "GZ-SY-00596"
+    ],
+    "standard_number": "GB 50096-2011 第6.3.2条 + 第5.8.1条 + 第6.1.1条（住宅设计规范）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)楼梯扶手高度不应小于0.90m；楼梯水平段栏杆长度大于0.50m时，其扶手高度不应小于1.05m；(2)楼梯栏杆垂直杆件间净空不应大于0.11m；(3)窗外没有阳台或平台的外窗，窗台距楼面、地面的净高低于0.90m时，应设置防护设施；(4)楼梯间、电梯厅等共用部分的外窗同样适用。",
+    "compliance_criteria": "楼梯扶手实测高度≥0.90m（水平段>0.50m处≥1.05m）；窗台净高<0.90m的外窗已设防护设施（防护栏杆/护窗栏杆）。",
+    "verification_method": "钢卷尺测量扶手高度、水平段长度与窗台净高；观察防护设施设置情况。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50096-2011 第6.3.2条 + 第5.8.1条 + 第6.1.1条（住宅设计规范）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00598",
+    "title": "塑料门窗安装：固定片间距不大于600毫米框墙缝隙用闭孔弹性材料填嵌滑撑紧固螺钉必须不锈钢",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第6.4.2、6.4.4、6.4.5条（塑料门窗安装工程，条文说明）。塑料门窗热胀冷缩系数大：固定片间距过大会导致窗框固定不牢、受风压变形；框墙缝隙用普通材料填嵌会因温度升降产生裂缝；普通螺钉配不锈钢铰链会因电位差锈蚀，最终导致窗扇脱落。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "塑料门窗",
+      "固定片",
+      "600mm",
+      "间距",
+      "闭孔",
+      "填嵌",
+      "密封胶",
+      "不锈钢螺钉",
+      "滑撑",
+      "铰链",
+      "6.4.2",
+      "6.4.5"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553",
+      "GZ-SY-00578",
+      "GZ-SY-00589",
+      "GZ-SY-00599"
+    ],
+    "standard_number": "GB 50210-2018 第6.4.2条 + 第6.4.4条 + 第6.4.5条（塑料门窗安装工程）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)固定片或膨胀螺钉安装位置应尽量靠近铰链，与墙体连接时其间距不应超过600mm，东南沿海地区可根据设计缩小至不大于400mm；(2)塑料门窗框与墙体间缝隙应采用伸缩性能较好的闭孔弹性材料填嵌，并用密封胶密封；(3)安装滑撑（摩擦铰链）时，紧固螺钉必须使用不锈钢材质，且螺钉应与框扇增强型钢可靠连接，连接处应做防水密封处理；(4)平开窗扇高度大于900mm时锁闭点过少易翘曲变形，应增加锁闭点；(5)推拉门窗扇应安装防脱落装置。",
+    "compliance_criteria": "固定片间距≤600mm（东南沿海≤400mm）；框墙缝隙用闭孔弹性材料+密封胶；滑撑紧固螺钉为不锈钢并可靠连接；大扇平开窗锁闭点足够。",
+    "verification_method": "尺量固定片间距；观察填嵌材料与密封胶；检查螺钉材质（不锈钢）；手扳检查窗扇固定。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第6.4.2条 + 第6.4.4条 + 第6.4.5条（塑料门窗安装工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00599",
+    "title": "门窗玻璃安装：镀膜玻璃镀膜层应朝向室内玻璃不应直接接触型材",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_LOW",
+    "trade": [
+      "TRADE_DOOR"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第6.6.1、6.6.7条（门窗玻璃安装工程，条文说明）。镀膜玻璃装反（镀膜层朝室外）会加速镀膜层损坏；玻璃直接接触型材，框扇胀缩变形时玻璃易破碎——正规做法是玻璃与型材间留间隙并设支承垫块。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "玻璃",
+      "镀膜",
+      "朝向",
+      "垫块",
+      "型材",
+      "中空玻璃",
+      "磨砂",
+      "6.6.1",
+      "6.6.7"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00553",
+      "GZ-SY-00598"
+    ],
+    "standard_number": "GB 50210-2018 第6.6.1条 + 第6.6.7条（门窗玻璃安装工程）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)单面镀膜玻璃的镀膜层应朝向室内；双层玻璃的单面镀膜玻璃应在最外层，镀膜层朝向室内；(2)磨砂玻璃的磨砂面应朝向室内；(3)为防止门窗框、扇型材胀缩变形时导致玻璃破碎，门窗玻璃不应直接接触型材。",
+    "compliance_criteria": "镀膜层朝向室内；磨砂面朝向室内；玻璃与型材间有垫块/间隙不直接接触。",
+    "verification_method": "观察镀膜层朝向（镀膜面反光弱）；观察玻璃与型材间是否设垫块；手推检查玻璃稳固。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第6.6.1条 + 第6.6.7条（门窗玻璃安装工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00600",
+    "title": "石材饰面安装：湿作业法必须做防碱封闭处理满粘法粘结料饱满无空鼓后置埋件须拉拔检验",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_TILE"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第9.2.3、9.2.4、9.2.7条（石板安装工程）。墙面石材泛碱（白斑）几乎都源于湿贴时未做防碱封闭处理，水泥砂浆中的碱随水渗出在石材表面结晶；干挂/背栓安装的埋件必须做现场拉拔检验，否则石板有脱落伤人风险。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "石材",
+      "大理石",
+      "花岗岩",
+      "泛碱",
+      "白斑",
+      "防碱",
+      "湿贴",
+      "干挂",
+      "拉拔",
+      "空鼓",
+      "9.2.7",
+      "9.2.4"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00582",
+      "GZ-SY-00556",
+      "GZ-SY-00592"
+    ],
+    "standard_number": "GB 50210-2018 第9.2.3条 + 第9.2.4条 + 第9.2.7条（饰面板工程-石板安装）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)石板安装工程的预埋件（或后置埋件）、连接件的材质、数量、规格、位置、连接方法和防腐处理应符合设计要求，后置埋件的现场拉拔力应符合设计要求，石板安装应牢固；(2)采用满粘法施工的石板工程，石板与基层之间的粘结料应饱满、无空鼓；(3)采用湿作业法施工的石板安装工程，石板应进行防碱封闭处理，石板与基体之间的灌注材料应饱满、密实；(4)石板表面应无泛碱等污染，填缝应密实、平直；(5)室内用花岗石板应复验放射性。",
+    "compliance_criteria": "湿贴石材已做防碱封闭处理；灌注材料饱满密实（轻击无空鼓声）；后置埋件有现场拉拔检验报告；表面无泛碱、无裂缝缺损。",
+    "verification_method": "小锤轻击检查空鼓；观察表面泛碱情况；检查后置埋件拉拔检验报告与隐蔽工程验收记录；检查放射性复验报告。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第9.2.3条 + 第9.2.4条 + 第9.2.7条（饰面板工程-石板安装）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00606",
+    "title": "楼梯井净宽大于0.11米必须采取防止儿童攀滑的措施",
+    "knowledge_type": "standard",
+    "stage": "STAGE_06",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR",
+      "ROLE_DESIGNER"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "GB 50096-2011第6.3.5条（强制性条文，公告1093号）。复式/跃层/loft 楼梯改造常见遗漏：楼梯井宽度大于0.11m时，儿童会在扶手上做滑梯游戏，易坠落。常见做法：设竖向栏杆、安全网或有机玻璃挡板封闭楼梯井。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "楼梯井",
+      "复式",
+      "loft",
+      "跃层",
+      "防攀滑",
+      "0.11",
+      "儿童",
+      "楼梯扶手",
+      "6.3.5"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00597",
+      "GZ-SY-00596",
+      "GZ-SY-00559"
+    ],
+    "standard_number": "GB 50096-2011 第6.3.5条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "楼梯井净宽大于0.11m时，必须采取防止儿童攀滑的措施（如封闭楼梯井、设竖向杆件等）。配套强条：楼梯栏杆垂直杆件间净空不应大于0.11m（6.3.2）。",
+    "compliance_criteria": "楼梯井净宽>0.11m时已设防攀滑措施；防护措施牢固、无法攀滑。",
+    "verification_method": "尺量楼梯井净宽；观察防攀滑措施设置与牢固度。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50096-2011 第6.3.5条（强制性条文）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 住建部建标[2001]266号公告 + 建标库GB 50327-2001/GB 50096-2011全文",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
   }
 ]

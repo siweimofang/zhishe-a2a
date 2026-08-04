@@ -2430,5 +2430,158 @@
       "柜门",
       "五金"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00543",
+    "title": "装饰装修材料有害物质限量必须符合GB 18580~18588八项国标",
+    "knowledge_type": "standard",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章基本规定明确：所用材料应符合国家有关建筑装饰装修材料有害物质限量标准的规定。这8项国标（GB 18580~18588）是强制性标准，覆盖人造板、涂料、胶粘剂、壁纸、地毯等各类装修材料的甲醛、苯系物、TVOC等有害物质释放量限值。材料进场时必须逐批查验检测报告。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "有害物质",
+      "甲醛限量",
+      "GB 18580",
+      "材料环保",
+      "检测报告",
+      "有害物质限量"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00018"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 3 + GB 18580~18588",
+    "standard_authority": "national",
+    "standard_requirement": "所有装饰装修材料必须符合国家有关建筑装饰装修材料有害物质限量标准的规定，即GB 18580至GB 18588共8项强制性国家标准，涵盖甲醛、苯、甲苯、二甲苯、TVOC、氨、氡等有害物质限量。",
+    "compliance_criteria": "查验每种材料的检测报告，确认有害物质检测值低于GB 18580~18588各项限值。无检测报告或超标的材料不得使用。",
+    "verification_method": "检查产品合格证书、中文说明书及具有CMA资质的检测机构出具的有害物质限量检测报告。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00544",
+    "title": "材料进场必须验收品种规格外观尺寸并查验合格证书和检测报告",
+    "knowledge_type": "standard",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章规定材料进场验收的基本要求。这是防止偷梁换柱、以次充好的第一道关卡。材料进场时不仅要看数量，更要逐批核对品种规格、检查外观质量、查验证明文件。缺少任何一项证明文件的材料不得用于工程。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "材料进场",
+      "进场验收",
+      "合格证书",
+      "检测报告",
+      "品种规格",
+      "材料验收"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 3",
+    "standard_authority": "industry",
+    "standard_requirement": "材料进场时应对品种、规格、外观和尺寸进行验收，应有产品合格证书、中文说明书及相关性能的检测报告，进口产品应按规定进行商品检验。",
+    "compliance_criteria": "每批材料进场时，核对送货单与合同/设计指定的品种、规格是否一致；检查外观有无破损、变形、色差；测量尺寸是否在允许偏差范围内；确认每批材料附有产品合格证书和检测报告。",
+    "verification_method": "逐批检查产品合格证书、中文说明书、性能检测报告；进口产品检查商品检验证书。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00601",
+    "title": "轻钢龙骨石膏板隔墙：门窗洞口和管线部位必须安装加强龙骨封面板前完成隐蔽工程验收",
+    "knowledge_type": "standard",
+    "stage": "STAGE_05",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [
+      "TRADE_CARPENTRY"
+    ],
+    "material": [],
+    "description": "GB 50210-2018第8.3.2、8.3.3、8.1.3条（骨架隔墙工程）。隔墙开裂、门框松动多因洞口未设加强龙骨、沿地沿顶边框龙骨连接不牢；设备管线未验收就封板，后期返工破坏墙体。人造木板（石膏板）进场须复验甲醛释放量。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "隔墙",
+      "轻钢龙骨",
+      "石膏板",
+      "加强龙骨",
+      "隐蔽验收",
+      "甲醛",
+      "复验",
+      "8.3.3",
+      "8.1.3"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00555"
+    ],
+    "standard_number": "GB 50210-2018 第8.3.2条 + 第8.3.3条 + 第8.1.3条（轻质隔墙工程）",
+    "standard_authority": "national",
+    "standard_requirement": "(1)沿地面、顶棚设置的龙骨及边框龙骨是隔墙与主体结构之间的重要传力构件，应与主体结构连接牢固、垂直平整、交接处平直、位置准确，并作为隐蔽工程项目验收；(2)骨架隔墙在有门窗洞口、设备管线安装或其他受力部位，应安装加强龙骨；(3)轻质隔墙施工所使用人造木板的甲醛释放量应进行进场复验；(4)设备管线安装应在骨架隔墙封面板前进行隐蔽工程验收，验收合格后才能封面板。",
+    "compliance_criteria": "沿地沿顶边框龙骨与主体连接牢固（隐蔽验收记录）；门窗洞口、管线部位已设加强龙骨；人造板甲醛复验报告齐全；封板前管线隐蔽验收合格。",
+    "verification_method": "观察+手扳检查龙骨连接；检查隐蔽工程验收记录；检查人造板甲醛释放量复验报告。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "GB 50210-2018 第8.3.2条 + 第8.3.3条 + 第8.1.3条（轻质隔墙工程）",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-04",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
   }
 ]

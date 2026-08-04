@@ -170,5 +170,298 @@
       "供暖",
       "加湿"
     ]
+  },
+  {
+    "ku_id": "GZ-SY-00548",
+    "title": "各工序各分项工程应执行自检互检交接检三检制度",
+    "knowledge_type": "standard",
+    "stage": "STAGE_07",
+    "role": [
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_MEDIUM",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第3章规定的质量检查基本制度。三检制度是过程质量控制的核心手段——自检是施工员自己把关，互检是同事间交叉把关，交接检是上下工序之间把关。三道检查层层过滤，能在隐蔽前发现问题，避免返工损失。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "自检",
+      "互检",
+      "交接检",
+      "三检制度",
+      "工序检查",
+      "质量检查"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 3",
+    "standard_authority": "industry",
+    "standard_requirement": "各工序、各分项工程应自检、互检及交接检。自检为施工人员自我检查；互检为同一工种不同人员之间互相检查；交接检为上下道工序之间的交接检查。",
+    "compliance_criteria": "每道工序完成后，必须有自检记录；不同工种交叉作业时，有互检记录；工序交接时（如水电完工交瓦工），有交接检记录。三检记录应存档备查。",
+    "verification_method": "检查自检、互检、交接检记录表，三方签字确认。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 3",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00564",
+    "title": "住宅室内甲醛浓度限值为不超过0.07毫克每立方米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_07",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第19章室内环境污染控制的核心指标，引用GB 50325-2020的限值。甲醛是一类致癌物，主要来源于人造板材中的脲醛胶、涂料、胶粘剂。0.07mg/m³是I类民用建筑（住宅属于此类）的强制限值。检测前关窗12小时是模拟实际居住时的密闭状态。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "甲醛",
+      "0.07",
+      "甲醛检测",
+      "室内空气质量",
+      "CMA检测",
+      "环境污染"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00018"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 19 + GB 50325-2020 第6.0.4条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "I类民用建筑工程（住宅、医院、学校、幼儿园等）室内甲醛浓度限值为≤0.07mg/m³（依据GB 50325-2020）。检测应在装修工程完工至少7天后进行，检测前应关闭门窗及新风系统12小时。 【效力说明】本条限值出自GB 50325-2020第6.0.4条（强制性条文，住房和城乡建设部公告2020年第46号），必须严格执行。",
+    "compliance_criteria": "委托具有CMA资质的检测机构，按GB 50325-2020规定的方法采样检测。甲醛浓度≤0.07mg/m³为合格。超标必须治理后复检，合格后方可入住。",
+    "verification_method": "CMA资质检测机构上门采样，实验室分析出具检测报告。检测方法：AHMT分光光度法或DNPH高效液相色谱法。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 19",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00565",
+    "title": "住宅室内苯系物和TVOC浓度限值：苯0.06甲苯0.15二甲苯0.20TVOC0.45",
+    "knowledge_type": "standard",
+    "stage": "STAGE_07",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第19章引用GB 50325-2020的苯系物和TVOC限值。苯是强致癌物，主要来源于油漆和胶粘剂中的有机溶剂；TVOC是所有挥发性有机物的总量，来源广泛（涂料、板材、地毯、清洁剂等）。苯系物和TVOC超标会导致头晕、恶心、免疫力下降等症状。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "苯",
+      "TVOC",
+      "甲苯",
+      "二甲苯",
+      "挥发性有机物",
+      "空气质量",
+      "污染物限值"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 19 + GB 50325-2020 第6.0.4条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "I类民用建筑工程（住宅）室内污染物浓度限值（依据GB 50325-2020）：苯≤0.06mg/m³；甲苯≤0.15mg/m³；二甲苯≤0.20mg/m³；TVOC（总挥发性有机化合物）≤0.45mg/m³。 【效力说明】本条限值出自GB 50325-2020第6.0.4条（强制性条文，住房和城乡建设部公告2020年第46号），必须严格执行。",
+    "compliance_criteria": "与甲醛检测相同，委托CMA资质机构采样检测。各项污染物浓度均须低于限值方可判定合格。任一项超标即为不合格，需治理后复检。",
+    "verification_method": "CMA资质检测机构采样，实验室气相色谱法分析。检测条件：关窗12小时后采样。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 19",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00566",
+    "title": "住宅室内氨和氡浓度限值：氨不超过0.15毫克每立方米氡不超过150贝克每立方米",
+    "knowledge_type": "standard",
+    "stage": "STAGE_07",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第19章引用GB 50325-2020的氨和氡限值。氨主要来自冬季施工时混凝土中添加的防冻剂（尿素），会持续释放刺激性气体。氡是天然放射性气体，从地基土壤和花岗岩等天然石材中析出，是仅次于吸烟的肺癌诱因。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "氨",
+      "氡",
+      "放射性",
+      "防冻剂",
+      "室内空气质量",
+      "150Bq",
+      "污染物限值"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 19 + GB 50325-2020 第6.0.4条（强制性条文）",
+    "standard_authority": "national",
+    "standard_requirement": "I类民用建筑工程（住宅）室内污染物浓度限值（依据GB 50325-2020）：氨≤0.15mg/m³；氡≤150Bq/m³。氨主要来源于混凝土防冻剂；氡主要来源于地基土壤和天然石材。 【效力说明】本条限值出自GB 50325-2020第6.0.4条（强制性条文，住房和城乡建设部公告2020年第46号），必须严格执行。",
+    "compliance_criteria": "CMA资质机构采样检测。氨浓度≤0.15mg/m³为合格；氡浓度≤150Bq/m³为合格。氡检测应在房间底层（接触土壤层）进行，因为氡气从地基渗入。",
+    "verification_method": "氨：CMA机构采样，靛酚蓝分光光度法分析。氡：活性炭盒法或连续测氡仪，采样时间≥24小时。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 19",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-04",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-04"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00567",
+    "title": "住宅装饰装修工程必须执行三阶段验收程序",
+    "knowledge_type": "standard",
+    "stage": "STAGE_07",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第20章结合GB 50300-2013的验收程序要求。三阶段验收是国家标准规定的法定程序，不是可选的建议。很多装修纠纷的根源就是跳过了某个阶段——没有交接检验就开工，基层问题说不清；没有自检就验收，质量问题发现太晚。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "验收程序",
+      "三阶段验收",
+      "分户验收",
+      "交接检验",
+      "自检",
+      "质量验收"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [
+      "GZ-SY-00019"
+    ],
+    "standard_number": "JGJ/T 304-2013 Chapter 20 + GB 50300-2013",
+    "standard_authority": "national",
+    "standard_requirement": "住宅室内装饰装修工程质量验收必须执行三阶段程序：(1)第一阶段：施工单位自行检查评定（自检），项目部组织生产、技术、质量、施工员参加，自验标准与正式验收一致；(2)第二阶段：分户交接检验，装修前对毛坯房或交接工程进行检验，填写附录B记录表；(3)第三阶段：分户工程质量验收，以独立户（套）为单位，三方验收填写附录D记录表和附录E汇总表。验收顺序：检验批→分项工程→分部工程→单位工程。",
+    "compliance_criteria": "三个阶段缺一不可。每阶段必须有书面记录：自检报告、分户交接检验记录（附录B）、分户工程质量验收记录（附录D）和汇总表（附录E）。记录需三方签字确认。",
+    "verification_method": "检查三阶段验收记录文件是否齐全、签字是否完整。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 20",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
+  },
+  {
+    "ku_id": "GZ-SY-00568",
+    "title": "检验批质量应按主控项目和一般项目验收主控项目必须全部合格",
+    "knowledge_type": "standard",
+    "stage": "STAGE_07",
+    "role": [
+      "ROLE_OWNER",
+      "ROLE_CONTRACTOR"
+    ],
+    "severity": "SEV_HIGH",
+    "trade": [],
+    "material": [],
+    "description": "JGJ/T 304-2013第20章结合GB 50300-2013的验收判定规则。理解主控项目和一般项目的区别是验收的关键——主控项目是安全底线（如防水不渗漏、护栏牢固、电气安全），必须100%合格没有商量余地；一般项目是观感和精度要求（如平整度、颜色均匀度），允许小幅偏差。",
+    "typical_scenario": "",
+    "how_to_avoid": "",
+    "trigger_keywords": [
+      "主控项目",
+      "一般项目",
+      "检验批",
+      "验收标准",
+      "合格判定",
+      "允许偏差"
+    ],
+    "scope": "universal",
+    "related_ku_ids": [],
+    "standard_number": "JGJ/T 304-2013 Chapter 20 + GB 50300-2013",
+    "standard_authority": "national",
+    "standard_requirement": "检验批的质量应按主控项目和一般项目验收。主控项目是对使用功能、安全、卫生、环保起决定性作用的检验项目，必须全部合格，不合格必须返工。一般项目是除主控项目外的检验项目，允许有一定偏差，但合格率须达到80%以上且最大偏差不超过允许值的1.5倍。",
+    "compliance_criteria": "主控项目：逐条检查，100%合格方可通过，任一条不合格即返工。一般项目：抽查合格率≥80%，且超差点的最大偏差不超过允许偏差值的1.5倍。",
+    "verification_method": "观察、手试/手扳、检查证书、尺量/称量/工具测量（2m靠尺、塞尺、回弹仪、坡度尺、激光测距仪等11种检测工具）。",
+    "evidence": {
+      "source_type": "industry_standard",
+      "source_ref": "JGJ/T 304-2013 Chapter 20",
+      "confidence": "高(多源验证)"
+    },
+    "metadata": {
+      "created_at": "2026-08-03",
+      "updated_at": "2026-08-03",
+      "created_by": "ai",
+      "verified": true,
+      "verify_method": "ai_cross_reference",
+      "version": "1.0",
+      "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
+      "quality_level": "RELIABLE",
+      "expires_at": null,
+      "last_reviewed_at": "2026-08-03"
+    }
   }
 ]
