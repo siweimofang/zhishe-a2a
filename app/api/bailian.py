@@ -20,6 +20,7 @@ POST /bailian/proxy
 """
 import json
 import logging
+from collections import OrderedDict
 import time
 import uuid
 
@@ -28,6 +29,7 @@ from fastapi.responses import JSONResponse
 
 from app.config import settings
 from app.services.llm import chat_with_skill
+from app.api import guard  # 2026-08-06:反调取限流/反拆解探测/反扒水印
 
 # V6.0 Skills 架构(与 openai_compat 相同导入方式)
 try:
@@ -43,6 +45,30 @@ except ImportError as e:
 
 router = APIRouter()
 log = logging.getLogger("bailian")
+
+# 简易 LRU 缓存(2026-08-05):百炼短等待 vs 后端长生成,标准问题命中后秒回
+# 键 = 编排注入后的最终 prompt;TTL 6h 折中时效与命中率;上限 200 条
+_CACHE_MAX = 200
+_CACHE_TTL = 6 * 3600
+_cache = OrderedDict()
+
+
+def _cache_get(key: str):
+    item = _cache.get(key)
+    if not item:
+        return None
+    if time.time() - item[0] > _CACHE_TTL:
+        _cache.pop(key, None)
+        return None
+    _cache.move_to_end(key)
+    return item[1]
+
+
+def _cache_put(key: str, text: str):
+    _cache[key] = (time.time(), text)
+    _cache.move_to_end(key)
+    while len(_cache) > _CACHE_MAX:
+        _cache.popitem(last=False)
 
 
 def _verify_api_key(request: Request) -> bool:
@@ -73,6 +99,24 @@ async def bailian_proxy(request: Request):
     if not _verify_api_key(request):
         raise HTTPException(status_code=401, detail="Invalid API key")
 
+    # 1.5 防护:反调取限流(IP + Key 双维度滑动窗口)
+    client_ip = request.client.host if request.client else "unknown"
+    api_key_for_limit = request.headers.get("X-API-Key")
+    if not api_key_for_limit:
+        auth_h = request.headers.get("Authorization", "")
+        if auth_h.startswith("Bearer "):
+            api_key_for_limit = auth_h[7:].strip()
+    allowed, reason = guard.rate_limit(client_ip, api_key_for_limit)
+    if not allowed:
+        log.warning(
+            "bailian_proxy_rate_limited",
+            extra={"extra_reason": reason, "extra_ip": client_ip},
+        )
+        return JSONResponse(
+            status_code=429,
+            content={"error": "Too many requests, please retry later"},
+        )
+
     # 2. 解析与校验
     try:
         body = await request.json()
@@ -87,6 +131,26 @@ async def bailian_proxy(request: Request):
             content={"error": "prompt is required (non-empty string)"},
         )
     prompt = prompt.strip()
+
+    # 2.1 防护:反拆解(prompt 长度上限 + 探测识别)
+    if len(prompt) > guard.MAX_PROMPT_LEN:
+        log.warning(
+            "bailian_proxy_prompt_too_long",
+            extra={"extra_len": len(prompt), "extra_ip": client_ip},
+        )
+        return JSONResponse(status_code=400, content={"error": "prompt too long"})
+    probe_kind = guard.detect_probe(prompt)
+    if probe_kind != "none":
+        log.warning(
+            "bailian_proxy_probe",
+            extra={"extra_probe": probe_kind, "extra_ip": client_ip},
+        )
+        return JSONResponse(
+            {
+                "text": guard.PROBE_REPLY,
+                "session_id": session_id or uuid.uuid4().hex,
+            }
+        )
 
     log.info(
         "bailian_proxy_call",
@@ -133,15 +197,25 @@ async def bailian_proxy(request: Request):
         except Exception as e:
             log.exception(f"orchestrator 异常: {e}")
 
-    # 4. 核心调用:复用 V1.7 报价注入 + RAG 知识库链路
-    t0 = time.perf_counter()
-    try:
-        assistant_text = await chat_with_skill(prompt)
-    except Exception as e:
-        log.exception("bailian_proxy LLM call failed")
-        return JSONResponse(status_code=500, content={"error": f"Internal error: {str(e)}"})
-
-    latency_ms = round((time.perf_counter() - t0) * 1000, 1)
+    # 4. 核心调用:复用 V1.7 报价注入 + RAG 知识库链路(带 LRU 缓存)
+    cache_key = prompt.strip()
+    cached = _cache_get(cache_key)
+    if cached is not None:
+        log.info(
+            "bailian_proxy_cache_hit",
+            extra={"extra_cache_key_len": len(cache_key)},
+        )
+        assistant_text = cached
+        latency_ms = 0.0
+    else:
+        t0 = time.perf_counter()
+        try:
+            assistant_text = await chat_with_skill(prompt)
+        except Exception as e:
+            log.exception("bailian_proxy LLM call failed")
+            return JSONResponse(status_code=500, content={"error": f"Internal error: {str(e)}"})
+        _cache_put(cache_key, assistant_text)
+        latency_ms = round((time.perf_counter() - t0) * 1000, 1)
 
     # 5. session_id:传入则原样回显(调用方维护),否则新生成(留位)
     if not session_id:
@@ -155,4 +229,7 @@ async def bailian_proxy(request: Request):
         },
     )
 
-    return JSONResponse({"text": assistant_text, "session_id": session_id})
+    # 6. 反扒:回答尾注水印(品牌 + 免责)
+    return JSONResponse(
+        {"text": guard.apply_watermark(assistant_text), "session_id": session_id}
+    )

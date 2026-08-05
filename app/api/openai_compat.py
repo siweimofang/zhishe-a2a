@@ -26,6 +26,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 
 from app.config import settings
 from app.services.llm import chat_with_skill
+from app.api import guard  # 2026-08-06:反调取限流/反拆解探测/反扒水印
 
 # V6.0 升级:导入 Skills 架构
 try:
@@ -90,6 +91,28 @@ async def chat_completions(request: Request):
     if not _verify_api_key(auth):
         raise HTTPException(status_code=401, detail="Invalid API key")
 
+    # 防护:反调取限流(IP + Key 双维度滑动窗口)
+    client_ip = request.client.host if request.client else "unknown"
+    key_for_limit = None
+    if auth and auth.startswith("Bearer "):
+        key_for_limit = auth[7:].strip()
+    allowed, reason = guard.rate_limit(client_ip, key_for_limit)
+    if not allowed:
+        log.warning(
+            "openai_compat_rate_limited",
+            extra={"extra_reason": reason, "extra_ip": client_ip},
+        )
+        return JSONResponse(
+            status_code=429,
+            content={
+                "error": {
+                    "message": "Too many requests, please retry later",
+                    "type": "rate_limit_error",
+                    "code": "rate_limited",
+                }
+            },
+        )
+
     # 解析 body
     try:
         body = await request.json()
@@ -134,6 +157,45 @@ async def chat_completions(request: Request):
                     "code": OPENAI_ERROR_INVALID_REQUEST,
                 }
             },
+        )
+
+    # 防护:反拆解(prompt 长度上限 + 探测识别)
+    if len(user_text) > guard.MAX_PROMPT_LEN:
+        log.warning(
+            "openai_compat_prompt_too_long",
+            extra={"extra_len": len(user_text), "extra_ip": client_ip},
+        )
+        return JSONResponse(
+            status_code=400,
+            content={
+                "error": {
+                    "message": "Input text too long",
+                    "type": "invalid_request_error",
+                    "code": "input_too_long",
+                }
+            },
+        )
+    probe_kind = guard.detect_probe(user_text)
+    if probe_kind != "none":
+        log.warning(
+            "openai_compat_probe",
+            extra={"extra_probe": probe_kind, "extra_ip": client_ip},
+        )
+        return JSONResponse(
+            {
+                "id": f"chatcmpl-{uuid.uuid4()}",
+                "object": "chat.completion",
+                "created": int(time.time()),
+                "model": body.get("model", "zhishe-a2a"),
+                "choices": [
+                    {
+                        "index": 0,
+                        "message": {"role": "assistant", "content": guard.PROBE_REPLY},
+                        "finish_reason": "stop",
+                    }
+                ],
+                "usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0},
+            }
         )
 
     log.info(
@@ -224,7 +286,7 @@ async def chat_completions(request: Request):
                         "index": 0,
                         "message": {
                             "role": "assistant",
-                            "content": assistant_text,
+                            "content": guard.apply_watermark(assistant_text),
                         },
                         "finish_reason": "stop",
                     }
@@ -241,7 +303,7 @@ async def chat_completions(request: Request):
     async def event_generator():
         try:
             # V1.0 简化:还是同步调,再切段发
-            full_text = await chat_with_skill(user_text)
+            full_text = guard.apply_watermark(await chat_with_skill(user_text))
             chunk_id = f"chatcmpl-{uuid.uuid4()}"
             # 按 ~50 字符切
             for i in range(0, len(full_text), 50):

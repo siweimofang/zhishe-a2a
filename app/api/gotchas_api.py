@@ -19,8 +19,10 @@ from datetime import datetime
 from typing import Optional, List
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Depends
 from pydantic import BaseModel
+
+from app.api.auth import require_api_key
 
 # ── 数据路径 ──
 GOTCHAS_DIR = Path(__file__).resolve().parent.parent.parent / "gotchas"
@@ -29,8 +31,12 @@ RELATIONS_PATH = GOTCHAS_DIR / "relations" / "ku_relations_v1.json"
 STATS_PATH = GOTCHAS_DIR / "metadata" / "stats.json"
 USAGE_LOG_PATH = GOTCHAS_DIR / "logs" / "usage_log.json"
 
-# ── Router ──
-router = APIRouter(prefix="/gotchas", tags=["gotchas"])
+# ── Router(2026-08-06:全部端点挂 require_api_key,堵匿名扒库漏洞) ──
+router = APIRouter(
+    prefix="/gotchas",
+    tags=["gotchas"],
+    dependencies=[Depends(require_api_key)],
+)
 
 
 # ── 数据加载（启动时加载到内存） ──
