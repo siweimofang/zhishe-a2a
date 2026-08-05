@@ -16,6 +16,7 @@ from app.api.agent_card_endpoint import router as agent_card_endpoint_router
 from app.api.auth import require_api_key
 from app.api.health import router as health_router
 from app.api.openai_compat import router as openai_router
+from app.api.bailian import router as bailian_router
 from app.api.gotchas_api import router as gotchas_router
 from app.config import settings
 from app.observability import setup_logging, TimingMiddleware
@@ -38,6 +39,7 @@ app.include_router(openai_router, prefix="/v1", tags=["openai-compat"])  # /v1/c
 app.include_router(health_router, prefix="/health", tags=["health"])
 app.include_router(agent_card_endpoint_router, tags=["agent-card"])
 app.include_router(gotchas_router)  # /gotchas/* — Gotchas库V1.1知识库API
+app.include_router(bailian_router, prefix="/bailian", tags=["bailian"])  # /bailian/proxy — 百炼 Agent 2.0 适配端点
 
 # === V6.0 升级:Anthropic Skills 路由 ===
 SKILLS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "skills")
