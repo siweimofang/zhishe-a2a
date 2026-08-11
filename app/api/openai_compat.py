@@ -16,6 +16,7 @@ V6.0 升级(Anthropic Skills 集成):
 复用 chat_with_skill() 的报价+RAG 注入逻辑
 """
 import json
+import re
 import time
 import logging
 import uuid
@@ -76,6 +77,17 @@ def _messages_to_text(messages: List[Dict[str, Any]]) -> str:
                 ]
                 return " ".join(text_parts)
     return ""
+
+
+# V1.7.10(2026-08-08):创作类请求检测——文案/笔记/脚本/说明/大纲等场景
+# 命中即视为文案输出场景,允许更大输出上限;普通咨询不受影响
+_CREATIVE_PATTERN = re.compile(
+    r"(创作|写一篇|写文案|写笔记|写脚本|写说明|写大纲|文案|小红书|抖音|拍摄|脚本|设计说明|PPT|大纲|标题|图文)"
+)
+
+
+def _is_creative_request(user_text: str) -> bool:
+    return bool(_CREATIVE_PATTERN.search(user_text))
 
 
 @router.post("/chat/completions")
@@ -144,7 +156,7 @@ async def chat_completions(request: Request):
     model_name = body.get("model", "zhishe-a2a")
     stream = body.get("stream", False)
     temperature = body.get("temperature", 0.7)
-    max_tokens = body.get("max_tokens", 1200)
+    max_tokens = body.get("max_tokens", 0)  # 0=未指定,下方按请求类型给默认值(V1.7.10)
 
     user_text = _messages_to_text(messages)
     if not user_text:
@@ -158,6 +170,11 @@ async def chat_completions(request: Request):
                 }
             },
         )
+
+    # V1.7.10(2026-08-08):创作类请求(文案/笔记/脚本/说明/大纲)给大输出上限,
+    # 避免小红书笔记等长内容被 max_tokens 截断;咨询问答保持轻量
+    if max_tokens <= 0:
+        max_tokens = 2000 if _is_creative_request(user_text) else 1200
 
     # 防护:反拆解(prompt 长度上限 + 探测识别)
     if len(user_text) > guard.MAX_PROMPT_LEN:
@@ -251,7 +268,7 @@ async def chat_completions(request: Request):
     if not stream:
         t0 = time.perf_counter()
         try:
-            assistant_text = await chat_with_skill(user_text)
+            assistant_text = await chat_with_skill(user_text, max_tokens=max_tokens)
         except Exception as e:
             log.exception("chat_completions LLM call failed")
             return JSONResponse(
@@ -303,7 +320,7 @@ async def chat_completions(request: Request):
     async def event_generator():
         try:
             # V1.0 简化:还是同步调,再切段发
-            full_text = guard.apply_watermark(await chat_with_skill(user_text))
+            full_text = guard.apply_watermark(await chat_with_skill(user_text, max_tokens=max_tokens))
             chunk_id = f"chatcmpl-{uuid.uuid4()}"
             # 按 ~50 字符切
             for i in range(0, len(full_text), 50):
