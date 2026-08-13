@@ -49,3 +49,17 @@ uvicorn.log.err
 
 # Gotchas retriever binary index (rebuildable)
 gotchas/retriever/*.pkl
+
+# 投喂中间产物（可再生成，勿提交）：渲染图/裁剪图/瓦片/OCR临时目录
+feeds/01_原稿/**/rendered/
+feeds/01_原稿/**/rendered_small*/
+feeds/01_原稿/**/cropped/
+feeds/01_原稿/**/crops*/
+feeds/01_原稿/**/ocr*/
+feeds/01_原稿/**/_tiles/
+feeds/01_原稿/**/tiles*/
+feeds/01_原稿/**/_tmp_*/
+feeds/01_原稿/**/_zooms/
+feeds/01_原稿/**/_halves/
+feeds/01_原稿/**/_readable*/
+feeds/01_原稿/**/_trans_crops/

@@ -1,0 +1,5 @@
+y=345 x=107 x1=391 conf=1.00 | 软装设计元素搭配手册
+y=1466 x=111 x1=729 conf=0.94 | DECORATIONBOOK
+y=1696 x=1506 x1=1735 conf=1.00 | 第四章
+y=1813 x=1146 x1=1728 conf=1.00 | 软装壁饰布置
+y=1931 x=1269 x1=1742 conf=0.98 | WALL DECORATION
