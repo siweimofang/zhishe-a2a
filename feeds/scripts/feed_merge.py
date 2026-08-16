@@ -33,7 +33,7 @@ def load_json(path):
 
 def dump_json(path, data):
     with io.open(path, "w", encoding="utf-8", newline="\n") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")
 
 
