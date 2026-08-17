@@ -26,6 +26,7 @@ Gotchas库 V1.1 API Router
   admin 端点使用 A2A_ADMIN_KEY 独立鉴权,未配置整体不可用
 """
 
+import copy
 import json
 import os
 import threading
@@ -1096,10 +1097,11 @@ def admin_persist(include_temp: bool = Query(False, description="是否包含临
 
 
 @admin_router.post("/hooks")
-def admin_register_hook(point: str = Query(..., description="钩子点:pre_search/post_search/pre_llm/post_llm"),
-                        name: str = Query("", description="钩子名称"),
-                        deps_str: str = Query("", description="依赖服务逗号分隔"):
-    """注册一个临时钩子(P3 F2-1)。运行时生效,重启即失,可精确回滚注销。"""
+def admin_register_hook(
+    point: str = Query(..., alias="point", description="钩子点"),
+    name: str = Query("", alias="name", description="钩子名称"),
+):
+    """注册一个临时钩子(P3 F2-1)。运行时生效，重启即失，可精确回滚注销。"""
     from gotchas.runtime.hooks import HookPoint
     try:
         hook_point = HookPoint(point.lower())
@@ -1211,7 +1213,7 @@ def admin_temp_stats():
 
 # ── P3 F3: 创造闭环 API ──
 
-@router.post("/admin/rules/{ku_id}/verify")
+@admin_router.post("/rules/{ku_id}/verify")
 def admin_verify_temp(ku_id: str, q_list: List[str] = Query([], description="验证用问题列表(默认从规则字段提取)")):
     """验证一条临时规则的检索效果(F3-1)。
 
@@ -1221,9 +1223,9 @@ def admin_verify_temp(ku_id: str, q_list: List[str] = Query([], description="验
     - collateral: 同问法下命中条数变化(误伤检测,阈值>=1即判失败)
     """
     rm = _require_runtime()
-    if ku_id not in _index:
+    if ku_id not in _ku_index:
         raise HTTPException(status_code=404, detail=f"规则不存在: {ku_id}")
-    cand = _index[ku_id]
+    cand = _ku_index[ku_id]
     is_temp = False
     # 判断是否为临时规则(batch由registry追踪)
     if _effect_registry:
@@ -1300,7 +1302,7 @@ def admin_verify_temp(ku_id: str, q_list: List[str] = Query([], description="验
     }
 
 
-@router.post("/admin/rules/{ku_id}/finalize")
+@admin_router.post("/rules/{ku_id}/finalize")
 def admin_finalize_temp(ku_id: str, confirm: bool = Query(False, description="人工确认标志(F3-3:禁止自动固化)")):
     """固化一条已验证的临时规则(F3-2/F3-3)。
 
@@ -1310,10 +1312,8 @@ def admin_finalize_temp(ku_id: str, confirm: bool = Query(False, description="�
     rm = _require_runtime()
     if not confirm:
         raise HTTPException(status_code=403, detail="固化需人工确认(confirm=true)")
-    if ku_id not in _index:
+    if ku_id not in _ku_index:
         raise HTTPException(status_code=404, detail=f"规则不存在: {ku_id}")
-
-    # 必须是临时规则
     found_eff = None
     with _effect_registry._lock:
         for eff in _effect_registry._stack:
@@ -1324,7 +1324,7 @@ def admin_finalize_temp(ku_id: str, confirm: bool = Query(False, description="�
         raise HTTPException(status_code=400, detail="非临时规则,无需固化")
 
     # 去除 temp 标记 → 更新规则
-    ku = copy.deepcopy(_index[ku_id])
+    ku = copy.deepcopy(_ku_index[ku_id])
     ku.pop("_temp_batch", None)
     # 标记为固化时间(可选元数据)
     if "metadata" not in ku:
@@ -1334,7 +1334,8 @@ def admin_finalize_temp(ku_id: str, confirm: bool = Query(False, description="�
 
     # 通过 update 重新写入(替换旧条目)
     try:
-        rm.update_rule(ku_id, **{k: v for k, v in ku.items()})
+        patch = {k: v for k, v in ku.items() if k != "ku_id"}
+        rm.update_rule(ku_id, **patch)
     except ValueError:
         # 如果是"已存在"错误,说明update逻辑有问题,跳过
         pass
