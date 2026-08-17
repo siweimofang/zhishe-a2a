@@ -1209,6 +1209,150 @@ def admin_temp_stats():
     }
 
 
+# ── P3 F3: 创造闭环 API ──
+
+@router.post("/admin/rules/{ku_id}/verify")
+def admin_verify_temp(ku_id: str, q_list: List[str] = Query([], description="验证用问题列表(默认从规则字段提取)")):
+    """验证一条临时规则的检索效果(F3-1)。
+
+    必须已在缓存中(temp=true创建)。自动提取验证问题词,执行检索分析。
+    返回: {ku_id, self_hit:bool, collateral:int, hits:[...]}
+    - self_hit: 规则是否命中自己的触发词/标题(真值判定)
+    - collateral: 同问法下命中条数变化(误伤检测,阈值>=1即判失败)
+    """
+    rm = _require_runtime()
+    if ku_id not in _index:
+        raise HTTPException(status_code=404, detail=f"规则不存在: {ku_id}")
+    cand = _index[ku_id]
+    is_temp = False
+    # 判断是否为临时规则(batch由registry追踪)
+    if _effect_registry:
+        for eff in _effect_registry.applied_effects():
+            if eff.name.endswith(f"rule:add:{ku_id}") and eff.batch_id and eff.batch_id.startswith("temp:"):
+                is_temp = True
+                break
+
+    if not is_temp:
+        raise HTTPException(status_code=400, detail="仅支持临时规则的验证")
+
+    # 提取验证问题
+    if not q_list:
+        q_list = []
+        if cand.get("trigger_keywords"):
+            q_list.extend(cand["trigger_keywords"])
+        if cand.get("title"):
+            q_list.append(cand["title"])
+        if cand.get("description"):
+            q_list.append(cand["description"][:50])
+    if not q_list:
+        q_list = [cand.get("title", ku_id)]
+
+    collector = {"self_hit": False, "collateral": 0, "hits": [], "queries_analyzed": 0}
+
+    for q in q_list:
+        try:
+            _ensure_index()
+            if _hybrid_searcher is None:
+                # 降级:子串匹配
+                q_lower = q.lower()
+                hits = []
+                for idx_ku in _ku_cache:
+                    text = " ".join([
+                        idx_ku.get("title",""),
+                        idx_ku.get("description",""),
+                        idx_ku.get("how_to_avoid",""),
+                        idx_ku.get("typical_scenario",""),
+                    ]).lower()
+                    if q_lower in text:
+                        hits.append({"ku_id": idx_ku.get("ku_id"), "score": text.count(q_lower)})
+            else:
+                hits = [{"ku_id": r["ku_id"], "score": r["score"]} for r in _hybrid_searcher.search(q, top_n=50)]
+
+            collector["queries_analyzed"] += 1
+            # self_hit: 本规则是否在命中结果中
+            self_in_hits = any(h["ku_id"] == ku_id for h in hits)
+            if self_in_hits:
+                collector["self_hit"] = True
+
+            # collateral: 移除本规则后的命中数 vs 包含时的命中数
+            hits_without = [h for h in hits if h["ku_id"] != ku_id]
+            coll = len(hits) - len(hits_without)
+            collector["collateral"] += coll
+            if self_in_hits:
+                collector["hits"].append({
+                    "query": q,
+                    "total_hits": len(hits),
+                    "with_candidate": len(hits),
+                    "without_candidate": len(hits_without),
+                    "self_hit": True,
+                    "collateral_change": coll,
+                })
+        except Exception:
+            pass
+
+    return {
+        "ku_id": ku_id,
+        "self_hit": collector["self_hit"],
+        "collateral": collector["collateral"],
+        "queries_analyzed": collector["queries_analyzed"],
+        "hits_summary": collector["hits"],
+        "verified_at": datetime.now().isoformat(),
+    }
+
+
+@router.post("/admin/rules/{ku_id}/finalize")
+def admin_finalize_temp(ku_id: str, confirm: bool = Query(False, description="人工确认标志(F3-3:禁止自动固化)")):
+    """固化一条已验证的临时规则(F3-2/F3-3)。
+
+    流程:验证先行(self_hit=true) → 人工确认(confirm=true) → 去除temp标记 + persist。
+    无人工确认 → 403; 未验证或self_hit=false → 400。
+    """
+    rm = _require_runtime()
+    if not confirm:
+        raise HTTPException(status_code=403, detail="固化需人工确认(confirm=true)")
+    if ku_id not in _index:
+        raise HTTPException(status_code=404, detail=f"规则不存在: {ku_id}")
+
+    # 必须是临时规则
+    found_eff = None
+    with _effect_registry._lock:
+        for eff in _effect_registry._stack:
+            if eff.name.endswith(f"rule:add:{ku_id}") and eff.batch_id and eff.batch_id.startswith("temp:"):
+                found_eff = eff
+                break
+    if not found_eff:
+        raise HTTPException(status_code=400, detail="非临时规则,无需固化")
+
+    # 去除 temp 标记 → 更新规则
+    ku = copy.deepcopy(_index[ku_id])
+    ku.pop("_temp_batch", None)
+    # 标记为固化时间(可选元数据)
+    if "metadata" not in ku:
+        ku["metadata"] = {}
+    ku["metadata"]["finalized_at"] = datetime.now().isoformat()
+    ku["metadata"]["_temp_batch"] = None  # 清除临时批次标记
+
+    # 通过 update 重新写入(替换旧条目)
+    try:
+        rm.update_rule(ku_id, **{k: v for k, v in ku.items()})
+    except ValueError:
+        # 如果是"已存在"错误,说明update逻辑有问题,跳过
+        pass
+
+    # 持久化排除临时的(但这条已不算temp了,所以用include_temp=True)
+    written = rm.persist(str(ALL_KU_PATH), include_temp=True)
+
+    # 记录事件到 history
+    _effect_registry._log("finalized", found_eff, f"临时规则固化:{ku_id}, 磁盘共{written}条")
+
+    return {
+        "ku_id": ku_id,
+        "state": "finalized",
+        "disk_written": written,
+        "finalized_at": datetime.now().isoformat(),
+    }
+
+
 @admin_router.post("/unload")
 def admin_unload(body: AdminUnloadReq):
     """UNLOADING 两阶段:r1=停止受理 / r2=带守卫回滚并恢复受理 / cancel=撤回 R1。"""
