@@ -232,7 +232,7 @@ GET    /gotchas/admin/effects             # 副作用注册表状态（审计/�
 | P1-1 | effects.py + rule_manager.py + admin 端点（增/改/删/回滚） | 热更新+回滚能力上线 | 无（纯增量模块） |
 | P1-2 | 钩子点接入 ask 链路 + guard 三件套封装为 Hook | 防护能力补全+管线可扩展 | P1-1 |
 | P2 | 变更事件日志可视化（/admin/effects）+ 回滚演练脚本 | 可观测性闭环 | P1-2 |
-| P3 | 创造模式（远期）：临时规则/临时钩子（进程内存，重启消失，情报-15 终局形态） | 自演化 Agent 基础 | 情报-04 Harness-R1 路线图对齐 |
+| P3 | 创造模式（远期）：临时规则/临时钩子（进程内存，重启消失，情报-15 终局形态） | 自演化 Agent 基础 | 情报-04 Harness-R1 路线图（已归档 docs/harness_r1_editor_analysis_20260809.md，2026-08-17） |
 
 ## 七、验收标准
 
