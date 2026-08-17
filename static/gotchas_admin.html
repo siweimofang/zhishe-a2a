@@ -187,6 +187,9 @@
       <div class="stat"><div class="k">索引</div><div class="v small" id="st-index">—</div></div>
       <div class="stat"><div class="k">卸载态</div><div class="v small" id="st-unload">—</div></div>
       <div class="stat"><div class="k">钩子</div><div class="v small" id="st-hooks">—</div></div>
+      <div class="stat"><div class="k">临时规则</div><div class="v small" id="st-temp">—</div></div>
+    </div>
+    <div class="stats" style="margin-top:8px;">
       <div class="stat"><div class="k">服务依赖</div><div class="v small" id="st-svc">—</div></div>
     </div>
   </div>
@@ -216,7 +219,32 @@
       </div>
       <div class="op-row">
         <button class="btn" id="btn-reload">重载知识库（从磁盘）</button>
-        <div class="desc">从 all_ku.json 全量重载并重建索引；已施加的未落盘副作用会被覆盖，请先确认栈为空或已固化。</div>
+        <div class="desc">从 all_ku.json 全量重载并重建索引；未落盘的副作用会被覆盖，请先确认栈为空或已固化。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P3: 临时规则管理 -->
+  <div class="card">
+    <h2>临时规则管理 <span style="font-weight:400;font-size:12px;color:#b8b2aa;">(P3 创造模式)</span></h2>
+    <div class="ops">
+      <div class="op-row">
+        <textarea id="inp-temp-rule" rows="3" style="flex:1;min-width:400px;padding:7px 10px;border:1px solid var(--line);border-radius:6px;font-size:13px;font-family:monospace;background:var(--bg);" placeholder='{"ku_id":"自定义","title":"标题","description":"描述","how_to_avoid":"正确做法","stage":"STAGE_04",...}'>{"ku_id":"测试","title":"测试临时规则","description":"测试描述","how_to_avoid":"测试正确做法","stage":"STAGE_04","severity":"SEV_MEDIUM","trigger_keywords":["测试"],"trade":["TRADE_DESIGN"],"role":["ROLE_OWNER"],"scope":"universal"}</textarea>
+      </div>
+      <div class="op-row">
+        <button class="btn btn-primary" id="btn-create-temp">创建临时规则 (temp=true)</button>
+        <button class="btn" id="btn-persist-now">持久化当前缓存</button>
+        <div class="desc">创建临时规则：不写磁盘，重启/reload 即失。持久化：排除临时规则写入 all_ku.json（含 include_temp=true 可选）。</div>
+      </div>
+      <div class="op-row">
+        <button class="btn" id="btn-register-hook">注册临时钩子 (pre_search)</button>
+        <div class="desc">注册临时钩子：运行时生效，可精确回滚注销（上限 10 个）。</div>
+      </div>
+      <div class="op-sep"></div>
+      <div class="op-row">
+        <input type="text" id="inp-temp-kw" placeholder="关键词搜索临时规则批次">
+        <button class="btn" id="btn-rollback-temp-batch">回滚选中临时批次</button>
+        <div class="desc">通过 batch_id 精确回滚某个临时批次的全部规则。</div>
       </div>
     </div>
   </div>
@@ -232,6 +260,7 @@
         <option value="fail">失败</option>
         <option value="skip">跳过</option>
         <option value="unload">卸载</option>
+        <option value="temp">临时</option>
         <option value="other">其他</option>
       </select>
       <input type="text" id="f-kw" placeholder="关键词（名称 / ID / 批次）">
@@ -249,7 +278,7 @@
 <script>
 (function () {
   "use strict";
-  var BIZ_KEY = "", ADMIN_KEY = "", CONNECTED = false, TIMER = null;
+  var BIZ_KEY = "", ADMIN_KEY = "", CONNECTED = false, TIMER = null, MAX_TEMP = 50;
 
   // ── 工具 ──
   var $ = function (id) { return document.getElementById(id); };
@@ -289,6 +318,8 @@
     if (e.indexOf("failed") >= 0) return { cls: "fail", label: "失败" };
     if (e.indexOf("skip") >= 0 || e === "apply_duplicate") return { cls: "skip", label: "跳过" };
     if (e.indexOf("unload") >= 0 || e.indexOf("rollback_batch") >= 0) return { cls: "unload", label: "卸载/批次" };
+    // P3 F4-2: 临时规则生命周期事件
+    if (e.indexOf("temp_") >= 0 || (ev.batch_id && ev.batch_id.startsWith("temp:"))) return { cls: "applied", label: "临时" };
     return { cls: "other", label: "其他" };
   }
 
@@ -304,6 +335,11 @@
     un.textContent = s.unloading ? s.unloading : "正常";
     un.className = "v small" + (s.unloading ? " bad" : "");
     $("st-hooks").textContent = s.hook_count;
+    // P3: 临时规则统计
+    var tc = s.temp_rule_count || 0, tm = s.temp_max || MAX_TEMP;
+    $("st-temp").textContent = tc + "/" + tm;
+    $("st-temp").className = "v small" + (tc >= tm ? " bad" : tc > 0 ? " warn" : "");
+    // services
     var svc = s.services || {};
     var keys = Object.keys(svc);
     var ready = keys.filter(function (k) { return svc[k]; }).length;
@@ -316,7 +352,7 @@
     var fType = $("f-type").value, kw = $("f-kw").value.trim().toLowerCase(), batch = $("f-batch").value.trim();
     var list = events.filter(function (ev) {
       var c = classify(ev);
-      if (fType && c.cls !== fType) return false;
+      if (fType && c.cls !== fType && !(fType === "temp" && (c.label === "临时" || ev.batch_id && ev.batch_id.startsWith("temp:")))) return false;
       if (kw) {
         var hay = ((ev.name || "") + " " + (ev.effect_id || "") + " " + (ev.batch_id || "") + " " + (ev.detail || "")).toLowerCase();
         if (hay.indexOf(kw) < 0) return false;
@@ -456,6 +492,33 @@
     $("f-kw").addEventListener("input", function () { if (CONNECTED) poll(); });
     $("f-batch").addEventListener("input", function () { if (CONNECTED) poll(); });
     $("f-type").addEventListener("change", function () { if (CONNECTED) poll(); });
+  });
+
+  // ── P3: 临时规则管理 ──
+  $("btn-create-temp").addEventListener("click", function () {
+    var txt = $("inp-temp-rule").value.trim();
+    if (!txt) { toast("请输入规则 JSON", true); return; }
+    var ku;
+    try { ku = JSON.parse(txt); } catch (e) { toast("JSON 格式错误: " + e.message, true); return; }
+    doAction("POST", "/gotchas/admin/rules", { ku: ku, temp: true },
+      "创建临时规则完成：", "确认创建临时规则？");
+  });
+
+  $("btn-persist-now").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/persist", {},
+      "持久化完成：", "确认将当前缓存写入磁盘（排除临时规则）？");
+  });
+
+  $("btn-register-hook").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/hooks?point=pre_search&name=temp-" + Date.now(),
+      null, "注册临时钩子完成：", "确认注册预搜索临时钩子？");
+  });
+
+  $("btn-rollback-temp-batch").addEventListener("click", function () {
+    var b = $("inp-temp-kw").value.trim();
+    if (!b) { toast("请输入批次号", true); return; }
+    doAction("POST", "/gotchas/admin/rollback", { batch_id: b },
+      "临时批次回滚完成：", "确认回滚批次 " + b + "？");
   });
 })();
 </script>
