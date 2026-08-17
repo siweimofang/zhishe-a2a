@@ -9,7 +9,7 @@ AIGC:
     ReservedCode2: ""
 ---
 
-> **情报-04 编号确认（2026-08-17 归档）**：本文即《Gotchas引擎可逆副作用实现方案_v0.1.md》P3 前置栏所引"情报-04 Harness-R1 路线图"的原稿。
+> **Harness-R1 归档确认（曾用编号情报-04，2026-08-17 归档）**：本文即《Gotchas引擎可逆副作用实现方案_v0.1.md》P3 前置栏所引"Harness-R1 路线图"的原稿。
 > 原稿位置：E:\小红书\学习AI大模型如何应用\.md\2026.08\L3_Harness-R1编辑器_改Harness是可学习能力.md（投喂评估体系，L3 9/10 双打分）。
 > 与 2026-08-04 归档的 deepseek_v4flash_harness_analysis_20260804.md（DeepSeek V4-Flash 后训练）为两篇独立资料，索引"Harness 验证链"：V4-Flash后训练(8/6) → Harness-R1编辑器(8/9) → Qwen3.8趋同(8/13) → V4 Pro翻车(8/13)。
 > 直接支撑 P3 创造模式设计依据：Gotchas 库 = 装修行业 Harness-R1（见文内"第一性原理"与"与知设方向关联契合度"）。

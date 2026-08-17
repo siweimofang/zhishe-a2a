@@ -232,7 +232,7 @@ GET    /gotchas/admin/effects             # 副作用注册表状态（审计/�
 | P1-1 | effects.py + rule_manager.py + admin 端点（增/改/删/回滚） | 热更新+回滚能力上线 | 无（纯增量模块） |
 | P1-2 | 钩子点接入 ask 链路 + guard 三件套封装为 Hook | 防护能力补全+管线可扩展 | P1-1 |
 | P2 | 变更事件日志可视化（/admin/effects）+ 回滚演练脚本 | 可观测性闭环 | P1-2 |
-| P3 | 创造模式（远期）：临时规则/临时钩子（进程内存，重启消失，情报-15 终局形态） | 自演化 Agent 基础 | 情报-04 Harness-R1 路线图（已归档 docs/harness_r1_editor_analysis_20260809.md，2026-08-17） |
+| P3 | 创造模式（远期）：临时规则/临时钩子（进程内存，重启消失，情报-15 终局形态） | 自演化 Agent 基础 | Harness-R1 路线图（曾用编号情报-04，已归档 docs/harness_r1_editor_analysis_20260809.md，2026-08-17） |
 
 ## 七、验收标准
 
@@ -284,4 +284,4 @@ GET    /gotchas/admin/effects             # 副作用注册表状态（审计/�
    ok=false + 提示,不误杀)。单条 rollback(effect_id) 仍不受 protected 限制(明确指定可精确回滚)。
 4. **unload 端点新增 stage=cancel**:撤回 R1(registry.cancel_unload() 本就存在,API 面补齐)。
 5. **P2 计划文档**:`docs/下一阶段开发计划_P2事件可视化_P3创造模式_v1.0.md`
-   (含 P3 调研结论:情报-04 Harness-R1 路线图仓库内不存在,技术推演 + 解锁条件)。
+   (含 P3 调研结论:Harness-R1 路线图(曾用编号情报-04)仓库内不存在,技术推演 + 解锁条件)。
