@@ -11,18 +11,33 @@ Gotchas库 V1.1 API Router
   GET  /gotchas/{ku_id}       — 单条KU详情
   GET  /gotchas/{ku_id}/related — 关联KU
   POST /gotchas/log           — 记录KU使用日志
+  GET  /gotchas/ask           — 自然语言问答
+
+可逆副作用运行时(2026-08-17,方案 docs/Gotchas引擎可逆副作用实现方案_v0.1.md):
+  POST   /gotchas/admin/rules           — 热新增规则
+  PUT    /gotchas/admin/rules/{ku_id}   — 热更新规则(字段级补丁)
+  DELETE /gotchas/admin/rules/{ku_id}   — 热删除规则
+  POST   /gotchas/admin/rules/batch     — 批量加载(可整体回滚)
+  POST   /gotchas/admin/reload          — 全量重载
+  POST   /gotchas/admin/rollback        — 回滚指定/批次/全部副作用
+  GET    /gotchas/admin/effects         — 副作用事件日志
+  GET    /gotchas/admin/status          — 运行时状态
+  POST   /gotchas/admin/unload          — UNLOADING 两阶段(R1停受理/R2带守卫回滚)
+  admin 端点使用 A2A_ADMIN_KEY 独立鉴权,未配置整体不可用
 """
 
 import json
 import os
+import threading
 from datetime import datetime
 from typing import Optional, List
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException, Query, Depends
+from fastapi import APIRouter, HTTPException, Query, Depends, Header, Request
 from pydantic import BaseModel
 
 from app.api.auth import require_api_key
+from app.config import settings
 
 # ── 数据路径 ──
 GOTCHAS_DIR = Path(__file__).resolve().parent.parent.parent / "gotchas"
@@ -43,20 +58,40 @@ router = APIRouter(
 _ku_cache: list = []
 _ku_index: dict = {}
 _relations_cache: list = []
+_data_lock = threading.Lock()
+_index_dirty = False  # 检索索引过期标记(汇流性:变更只改缓存,检索前幂等重建)
+
+
+def _mark_index_dirty():
+    """标记检索索引过期。规则热更新后调用,下次检索前自动重建。"""
+    global _index_dirty
+    _index_dirty = True
 
 
 def _load_data():
-    """加载KU和关联关系到内存"""
-    global _ku_cache, _ku_index, _relations_cache
+    """加载KU和关联关系到内存(启动时)"""
+    _reload_data()
 
-    if ALL_KU_PATH.exists():
-        with open(ALL_KU_PATH, "r", encoding="utf-8") as f:
-            _ku_cache = json.load(f)
-        _ku_index = {ku["ku_id"]: ku for ku in _ku_cache}
 
-    if RELATIONS_PATH.exists():
-        with open(RELATIONS_PATH, "r", encoding="utf-8") as f:
-            _relations_cache = json.load(f)
+def _reload_data():
+    """全量重载(热更新入口,admin/reload 调用)。
+
+    用 clear/extend 就地更新,保持 _ku_cache/_ku_index 的对象引用稳定
+    (RuleManager 持有引用);重载后标记索引过期,下次检索前幂等重建。
+    """
+    global _ku_cache, _ku_index, _relations_cache, _index_dirty
+    with _data_lock:
+        _ku_cache.clear()
+        _ku_index.clear()
+        if ALL_KU_PATH.exists():
+            with open(ALL_KU_PATH, "r", encoding="utf-8") as f:
+                _ku_cache.extend(json.load(f))
+            _ku_index.update({ku["ku_id"]: ku for ku in _ku_cache})
+        if RELATIONS_PATH.exists():
+            with open(RELATIONS_PATH, "r", encoding="utf-8") as f:
+                _relations_cache = json.load(f)
+        _index_dirty = True
+    return len(_ku_cache)
 
 
 # 模块加载时初始化
@@ -82,6 +117,102 @@ def _init_retriever():
         _hybrid_searcher = None
 
 _init_retriever()
+
+
+# ── 可逆副作用运行时导入(2026-08-17,方案 docs/Gotchas引擎可逆副作用实现方案_v0.1.md) ──
+try:
+    import sys as _sys
+    _GT_PARENT = str(GOTCHAS_DIR.parent)
+    if _GT_PARENT not in _sys.path:
+        _sys.path.insert(0, _GT_PARENT)
+    from gotchas.runtime.effects import EffectRegistry
+    from gotchas.runtime.rule_manager import RuleManager
+    from gotchas.runtime.hooks import HookManager, HookPoint
+    RUNTIME_READY = True
+except Exception as _runtime_err:  # noqa: BLE001
+    EffectRegistry = RuleManager = HookManager = HookPoint = None
+    RUNTIME_READY = False
+    print(f"[Gotchas] Runtime import failed (fallback to plain API): {_runtime_err}")
+
+
+def _ensure_index():
+    """检索前检查:索引过期则内存直通重建(汇流性落地)。
+
+    规则热更新只改缓存(_index_dirty 标记),这里把最新缓存注入检索器
+    并幂等重建索引 —— 最终状态只取决于当前缓存,与操作历史无关。
+    """
+    global _index_dirty
+    if _hybrid_searcher is None:
+        return
+    if not _index_dirty:
+        return
+    try:
+        _hybrid_searcher.set_data(_ku_cache)
+        _hybrid_searcher.build_index()
+        _index_dirty = False
+        print(f"[Gotchas] Index rebuilt (confluence): {len(_ku_cache)} docs")
+    except Exception as e:  # noqa: BLE001
+        print(f"[Gotchas] Index rebuild failed: {e}")
+
+
+# ── 运行时单例(热更新/回滚/钩子) ──
+_effect_registry = None
+_rule_manager = None
+_hook_manager = None
+
+
+def _init_runtime():
+    """初始化可逆副作用运行时(失败不影响原有API)。"""
+    global _effect_registry, _rule_manager, _hook_manager
+    if not RUNTIME_READY:
+        return
+    _effect_registry = EffectRegistry()
+    _rule_manager = RuleManager(
+        _ku_cache, _ku_index,
+        registry=_effect_registry,
+        mark_dirty=_mark_index_dirty,
+    )
+    _hook_manager = HookManager(registry=_effect_registry)
+    _register_guard_hooks()
+
+
+def _register_guard_hooks():
+    """guard 三件套以钩子接入(补齐 guard 未接 gotchas 的存量缺口)。
+
+    PRE_SEARCH: 限流(IP+Key 双维度) / 探测识别(提示词套取、整库导出)
+    POST_LLM:   回答水印(反扒,幂等防重复叠加)
+    """
+    try:
+        from app.api import guard as _guard_mod
+    except Exception as e:  # noqa: BLE001
+        print(f"[Gotchas] guard import failed: {e}")
+        return
+    _hook_manager.set_services({"guard": _guard_mod})
+
+    def _h_rate_limit(ctx):
+        client_ip = ctx.get("client_ip") or "unknown"
+        api_key = ctx.get("api_key")
+        allowed, reason = _guard_mod.rate_limit(client_ip, api_key)
+        if not allowed:
+            ctx["rate_limited"] = reason  # 端点据此返回 429
+
+    def _h_detect_probe(ctx):
+        kind = _guard_mod.detect_probe(ctx.get("query", ""))
+        if kind != "none":
+            ctx["probe_reply"] = _guard_mod.PROBE_REPLY  # 标准话术,不暴露防护存在
+
+    def _h_watermark(ctx):
+        answer = ctx.get("answer")
+        if answer:
+            ctx["answer"] = _guard_mod.apply_watermark(answer)
+
+    _hook_manager.register(HookPoint.PRE_SEARCH, _h_rate_limit, deps=["guard"], name="guard_rate_limit")
+    _hook_manager.register(HookPoint.PRE_SEARCH, _h_detect_probe, deps=["guard"], name="guard_detect_probe")
+    _hook_manager.register(HookPoint.POST_LLM, _h_watermark, deps=["guard"], name="guard_watermark")
+    print("[Gotchas] Guard hooks registered: rate_limit / detect_probe / watermark")
+
+
+_init_runtime()
 
 
 # ── 辅助函数 ──
@@ -259,6 +390,8 @@ def search_kus(
     min_severity: Optional[str] = None,
     limit: int = Query(10, ge=1, le=50),
     use_rewriter: bool = Query(True, description="启用P5+P6查询改写"),
+    request: Request = None,
+    authorization: Optional[str] = Header(default=None),
 ):
     """
     Gotchas智能检索（P0-P6全链路）
@@ -266,15 +399,45 @@ def search_kus(
     检索链路: 领域映射 -> LLM扩展 -> BM25+TF-IDF双路 -> RRF融合 -> 精排
     降级策略: 检索器不可用时回退到子串匹配
     """
+    # 钩子:PRE_SEARCH(限流/探测) —— 拦截则短路返回
+    ctx = {
+        "query": q,
+        "client_ip": request.client.host if request and request.client else None,
+        "api_key": authorization,
+    }
+    if _hook_manager is not None:
+        _hook_manager.run(HookPoint.PRE_SEARCH, ctx)
+    if ctx.get("rate_limited"):
+        raise HTTPException(status_code=429, detail=f"rate limited: {ctx['rate_limited']}")
+    if ctx.get("probe_reply"):
+        return {
+            "query": q,
+            "engine": "probe_guard",
+            "total": 0,
+            "results": [],
+            "reply": ctx["probe_reply"],
+        }
+
+    # 汇流性:索引过期则内存直通重建(规则热更新后自动生效)
+    _ensure_index()
+
+    def _post_search(_results):
+        """POST_SEARCH 钩子:results 可被钩子改写(过滤/重排)。"""
+        if _hook_manager is not None:
+            _pctx = {"query": q, "results": _results}
+            _hook_manager.run(HookPoint.POST_SEARCH, _pctx)
+            return _pctx.get("results") or _results
+        return _results
+
     # 优先使用Hybrid检索器
     if _hybrid_searcher is not None:
         try:
-            results = _hybrid_searcher.search(
+            results = _post_search(_hybrid_searcher.search(
                 q, top_n=limit,
                 stage=stage, trade=trade,
                 min_severity=min_severity,
                 use_rewriter=use_rewriter
-            )
+            ))
             return {
                 "query": q,
                 "engine": "hybrid_p6",
@@ -317,6 +480,7 @@ def search_kus(
             results.append({"score": score, "ku": ku})
 
     results.sort(key=lambda x: x["score"], reverse=True)
+    results = _post_search(results)
     return {
         "query": q,
         "engine": "substring_fallback",
@@ -403,6 +567,8 @@ ASK_MIXED_PROMPT = """你是知设装修顾问，兼具20年实战经验和扎�
 def ask_gotchas(
     q: str = Query(..., min_length=2, description="你的装修问题（自然语言）"),
     context_kus: int = Query(3, ge=1, le=5, description="内部参考知识条数"),
+    request: Request = None,
+    authorization: Optional[str] = Header(default=None),
 ):
     """
     装修避坑问答（自然语言回答）
@@ -410,6 +576,27 @@ def ask_gotchas(
     对外只返回AI生成的口语化回答 + 来源标题。
     不暴露结构化KU数据（description/scenario/trigger_keywords/causal_chain）。
     """
+    # 钩子:PRE_SEARCH(限流/探测) —— 拦截则短路返回
+    ctx = {
+        "query": q,
+        "client_ip": request.client.host if request and request.client else None,
+        "api_key": authorization,
+    }
+    if _hook_manager is not None:
+        _hook_manager.run(HookPoint.PRE_SEARCH, ctx)
+    if ctx.get("rate_limited"):
+        raise HTTPException(status_code=429, detail=f"rate limited: {ctx['rate_limited']}")
+    if ctx.get("probe_reply"):
+        return {
+            "question": q,
+            "answer": ctx["probe_reply"],
+            "sources": [],
+            "engine": "probe_guard",
+        }
+
+    # 汇流性:索引过期则内存直通重建(规则热更新后自动生效)
+    _ensure_index()
+
     # 1. 内部检索（完整内容，不对外暴露）
     if _hybrid_searcher is None:
         raise HTTPException(status_code=503, detail="检索引擎未就绪")
@@ -418,6 +605,12 @@ def ask_gotchas(
         results = _hybrid_searcher.search(q, top_n=context_kus, use_rewriter=True)
     except Exception:
         raise HTTPException(status_code=500, detail="检索失败")
+
+    # 钩子:POST_SEARCH(检索结果可被钩子改写:过滤/重排/注入)
+    if _hook_manager is not None:
+        _pctx = {"query": q, "results": results}
+        _hook_manager.run(HookPoint.POST_SEARCH, _pctx)
+        results = _pctx.get("results") or results
     
     if not results:
         return {
@@ -502,8 +695,10 @@ def ask_gotchas(
                 else:
                     fallback_parts.append(ku.get("how_to_avoid", "")[:150])
             fallback_answer = "；".join(filter(None, fallback_parts))[:300]
+            fallback_answer = _post_llm(fallback_answer)
         else:
             fallback_answer = results[0].get("avoid", "")[:200]
+            fallback_answer = _post_llm(fallback_answer)
         return {
             "question": q,
             "answer": fallback_answer,
@@ -512,7 +707,31 @@ def ask_gotchas(
         }
     
     user_msg = f"用户问题：{q}\n\n参考知识：\n{context_text}"
-    
+
+    def _post_llm(_answer):
+        """POST_LLM 钩子:回答可被钩子改写(水印/脱敏)。"""
+        if _hook_manager is not None:
+            _lctx = {"answer": _answer}
+            _hook_manager.run(HookPoint.POST_LLM, _lctx)
+            return _lctx.get("answer") or _answer
+        return _answer
+
+    # 钩子:PRE_LLM(改写prompt / 中止调用)
+    if _hook_manager is not None:
+        _llm_ctx = {"prompt": user_msg, "system_prompt": system_prompt}
+        _hook_manager.run(HookPoint.PRE_LLM, _llm_ctx)
+        if _llm_ctx.get("abort_reason"):
+            return {
+                "question": q,
+                "answer": _post_llm(
+                    _llm_ctx.get("abort_answer") or "这个问题暂时无法回答,建议咨询现场专业人员。"
+                ),
+                "sources": sources,
+                "engine": "pre_llm_abort",
+            }
+        user_msg = _llm_ctx.get("prompt") or user_msg
+        system_prompt = _llm_ctx.get("system_prompt") or system_prompt
+
     try:
         payload = json.dumps({
             "model": "deepseek-chat",
@@ -549,6 +768,7 @@ def ask_gotchas(
             answer = "；".join(filter(None, fallback_parts))[:300]
         else:
             answer = results[0].get("avoid", "暂时无法回答，请稍后再试。")[:300]
+        answer = _post_llm(answer)
         return {
             "question": q,
             "answer": answer,
@@ -556,6 +776,7 @@ def ask_gotchas(
             "engine": "fallback_llm_error",
         }
     
+    answer = _post_llm(answer)
     return {
         "question": q,
         "answer": answer,
@@ -730,3 +951,195 @@ def _generate_recommendations(stage_count: dict, trade_count: dict) -> list:
         recs.append("P0: 地板(TRADE_FLOOR)工种完全空白")
 
     return recs
+
+
+# ══════════════════════════════════════════
+# 管理端点(2026-08-17,可逆副作用运行时)
+# 独立鉴权 A2A_ADMIN_KEY:未配置 → 整体不可用(安全默认,不本地放行)
+# 注:挂在 /gotchas 下,同时受业务 key(A2A_API_KEY)约束 —— 双 key 权限面更大
+# ══════════════════════════════════════════
+
+def require_admin_key(x_admin_key: Optional[str] = Header(default=None, alias="X-Admin-Key")):
+    """管理端点独立鉴权。未配置 A2A_ADMIN_KEY → 503(不默认放行)。
+
+    注意:管理密钥走独立请求头 X-Admin-Key,不走 Authorization
+    (后者已被 require_api_key 占用业务密钥,共用同一头会互相覆盖)。
+    """
+    if not settings.A2A_ADMIN_KEY:
+        raise HTTPException(status_code=503, detail="A2A_ADMIN_KEY 未配置,管理端点不可用")
+    if not x_admin_key:
+        raise HTTPException(status_code=401, detail="Invalid admin key")
+    if x_admin_key.strip() != settings.A2A_ADMIN_KEY:
+        raise HTTPException(status_code=401, detail="Invalid admin key")
+    return x_admin_key
+
+
+admin_router = APIRouter(
+    prefix="/admin",
+    tags=["gotchas-admin"],
+    dependencies=[Depends(require_admin_key)],
+)
+
+
+class AdminRuleAdd(BaseModel):
+    ku: dict
+    batch_id: Optional[str] = None
+
+
+class AdminRulePatch(BaseModel):
+    patch: dict
+
+
+class AdminRuleBatch(BaseModel):
+    kus: List[dict]
+    batch_id: Optional[str] = None
+
+
+class AdminRollbackReq(BaseModel):
+    effect_id: Optional[str] = None
+    batch_id: Optional[str] = None
+    mode: Optional[str] = None  # "top" = 回滚栈顶最新一条
+
+
+class AdminUnloadReq(BaseModel):
+    stage: str = "r2"  # r1=停受理 / r2=带守卫回滚
+
+
+def _require_runtime():
+    """管理端点依赖可逆副作用运行时,未就绪 → 503。"""
+    if not RUNTIME_READY or _rule_manager is None:
+        raise HTTPException(status_code=503, detail="可逆副作用运行时未就绪")
+    return _rule_manager
+
+
+@admin_router.post("/rules")
+def admin_add_rule(body: AdminRuleAdd):
+    """热新增规则(undo=从缓存删除,可回滚)。"""
+    rm = _require_runtime()
+    try:
+        eff = rm.add_rule(body.ku, batch_id=body.batch_id)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return {
+        "effect_id": eff.effect_id,
+        "state": eff.state,
+        "ku_id": body.ku.get("ku_id"),
+        "batch_id": eff.batch_id,
+    }
+
+
+@admin_router.put("/rules/{ku_id}")
+def admin_update_rule(ku_id: str, body: AdminRulePatch):
+    """热更新规则(字段级补丁,undo=恢复旧快照)。"""
+    rm = _require_runtime()
+    try:
+        eff = rm.update_rule(ku_id, **body.patch)
+    except ValueError as e:
+        status = 404 if "不存在" in str(e) else 400
+        raise HTTPException(status_code=status, detail=str(e))
+    return {
+        "effect_id": eff.effect_id,
+        "state": eff.state,
+        "ku_id": ku_id,
+        "patch": list(body.patch.keys()),
+    }
+
+
+@admin_router.delete("/rules/{ku_id}")
+def admin_remove_rule(ku_id: str):
+    """热删除规则(undo=恢复快照)。"""
+    rm = _require_runtime()
+    try:
+        eff = rm.remove_rule(ku_id)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    return {"effect_id": eff.effect_id, "state": eff.state, "ku_id": ku_id}
+
+
+@admin_router.post("/rules/batch")
+def admin_load_batch(body: AdminRuleBatch):
+    """批量加载(新增或覆盖,以 ku_id 为准,可整体回滚)。"""
+    rm = _require_runtime()
+    try:
+        eff = rm.load_batch(body.kus, batch_id=body.batch_id)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return {
+        "effect_id": eff.effect_id,
+        "state": eff.state,
+        "batch_id": eff.batch_id,
+        "count": len(body.kus),
+    }
+
+
+@admin_router.post("/reload")
+def admin_reload():
+    """全量重载(从磁盘重新加载 + 重建索引)。"""
+    total = _reload_data()
+    _ensure_index()
+    return {"total_kus": total, "index_rebuilt": not _index_dirty}
+
+
+@admin_router.post("/rollback")
+def admin_rollback(body: AdminRollbackReq):
+    """回滚副作用:mode=top 栈顶 / effect_id / 批次 batch_id / 缺省全部(LIFO 逆序)。"""
+    registry = _require_runtime().registry
+    if body.mode == "top":
+        # 栈顶 = 最新一条"业务"副作用(跳过 protected 系统钩子,防面板误杀水印/限流等防护)
+        applied = [e for e in registry.applied_effects() if not e.protected]
+        if not applied:
+            return {"mode": "top", "ok": False, "effect_id": "", "detail": "栈内仅剩系统级副作用,无可回滚业务副作用"}
+        eid = applied[-1].effect_id
+        ok = registry.rollback(eid)
+        return {"mode": "top", "ok": ok, "effect_id": eid}
+    if body.effect_id:
+        ok = registry.rollback(body.effect_id)
+        return {"mode": "effect", "ok": ok, "effect_id": body.effect_id}
+    if body.batch_id:
+        ok = registry.rollback_batch(body.batch_id)
+        return {"mode": "batch", "ok": ok, "batch_id": body.batch_id}
+    return {"mode": "all", **registry.rollback_all()}
+
+
+@admin_router.get("/effects")
+def admin_effects(limit: int = Query(200, ge=1, le=500)):
+    """副作用事件日志(审计,新的在前)。"""
+    registry = _require_runtime().registry
+    return {"total": len(registry.history(limit)), "events": registry.history(limit)}
+
+
+@admin_router.get("/status")
+def admin_status():
+    """运行时状态:栈大小/卸载态/索引标记/条数/钩子/依赖就绪。"""
+    rm = _require_runtime()
+    registry = rm.registry
+    return {
+        "runtime_ready": RUNTIME_READY,
+        "total_kus": len(_ku_cache),
+        "index_dirty": _index_dirty,
+        "effects_stack": registry.size,
+        "unloading": registry.unloading,
+        "hook_count": len(_hook_manager.hooks()) if _hook_manager else 0,
+        "services": _hook_manager.service_status() if _hook_manager else {},
+        "last_events": registry.history(5),
+    }
+
+
+@admin_router.post("/unload")
+def admin_unload(body: AdminUnloadReq):
+    """UNLOADING 两阶段:r1=停止受理 / r2=带守卫回滚并恢复受理 / cancel=撤回 R1。"""
+    registry = _require_runtime().registry
+    stage = (body.stage or "r2").lower()
+    if stage == "r1":
+        ok = registry.begin_unload()
+        return {"stage": "r1", "ok": ok, "unloading": registry.unloading}
+    if stage == "r2":
+        return {"stage": "r2", **registry.finish_unload()}
+    if stage == "cancel":
+        ok = registry.cancel_unload()
+        return {"stage": "cancel", "ok": ok, "unloading": registry.unloading}
+    raise HTTPException(status_code=400, detail="stage 仅支持 r1 / r2 / cancel")
+
+
+# 挂载管理路由:最终路径 /gotchas/admin/*
+router.include_router(admin_router)

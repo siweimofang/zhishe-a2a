@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     # === 千问 A2A 鉴权 ===
     A2A_API_KEY: str = ""
 
+    # === Gotchas 管理端点独立鉴权(2026-08-17) ===
+    # 与 A2A_API_KEY 分离:管理端点可热更新/回滚规则,权限面更大。
+    # 未配置 → 管理端点整体不可用(安全默认,不本地放行)。
+    A2A_ADMIN_KEY: str = ""
+
     # === 服务 ===
     HOST: str = "0.0.0.0"
     PORT: int = 8000

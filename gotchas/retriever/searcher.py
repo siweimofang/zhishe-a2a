@@ -203,6 +203,16 @@ class GotchasHybrid:
         with open(self.all_ku_file, 'r', encoding='utf-8') as f:
             self.all_ku = json.load(f)
         return len(self.all_ku)
+
+    def set_data(self, all_ku):
+        """热更新数据源(内存直通,不落盘):替换全量数据并标记索引需重建。
+
+        配合 gotchas_api._ensure_index() 使用 —— 规则热更新只改内存缓存,
+        这里直接换数据源,下次 build_index() 幂等重建(汇流性落地)。
+        """
+        self.all_ku = all_ku
+        self.index_built = False
+        return len(self.all_ku)
     
     def build_index(self):
         """构建双索引（BM25 + TF-IDF）"""

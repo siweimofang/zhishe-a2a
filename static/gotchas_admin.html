@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知设 Gotchas 运维面板</title>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --card: #ffffff;
+    --ink: #2b2b2b;
+    --ink-soft: #6b6560;
+    --line: #e8e2da;
+    --accent: #7a2e2e;
+    --accent-soft: #f4eae6;
+    --ok: #3d7a4e;
+    --warn: #b07a2e;
+    --bad: #a63a3a;
+    --skip: #8a8a8a;
+    --unload: #4a5d7a;
+    --radius: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  header { margin-bottom: 28px; }
+  header h1 { font-size: 20px; font-weight: 600; letter-spacing: 1px; }
+  header .sub { color: var(--ink-soft); font-size: 12px; margin-top: 4px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+
+  /* 鉴权区 */
+  .auth-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .auth-row input {
+    flex: 1;
+    min-width: 220px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 13px;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .auth-row input:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+  .btn {
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--ink);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    font-family: inherit;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #8f3a3a; color: #fff; }
+  .btn-danger { border-color: var(--bad); color: var(--bad); }
+  .btn-danger:hover { background: var(--bad); color: #fff; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .hint { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
+  .conn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; margin-left: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--skip); display: inline-block; }
+  .dot.on { background: var(--ok); }
+  .dot.err { background: var(--bad); }
+
+  /* 状态卡 */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+  .stat { border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; }
+  .stat .k { font-size: 12px; color: var(--ink-soft); }
+  .stat .v { font-size: 22px; font-weight: 600; margin-top: 2px; }
+  .stat .v.small { font-size: 15px; }
+  .stat .v.accent { color: var(--accent); }
+  .stat .v.ok { color: var(--ok); }
+  .stat .v.bad { color: var(--bad); }
+  .stat .v.warn { color: var(--warn); }
+
+  /* 操作区 */
+  .ops { display: flex; flex-direction: column; gap: 12px; }
+  .op-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .op-row .desc { font-size: 12px; color: var(--ink-soft); flex-basis: 100%; }
+  .op-row input[type=text] {
+    width: 220px; padding: 7px 10px;
+    border: 1px solid var(--line); border-radius: 6px;
+    font-size: 13px; background: var(--bg);
+  }
+  .op-sep { border-top: 1px dashed var(--line); margin: 4px 0; }
+
+  /* 事件流 */
+  .filters { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .filters select, .filters input {
+    padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px;
+    font-size: 13px; background: var(--bg); color: var(--ink); font-family: inherit;
+  }
+  .filters .count { margin-left: auto; font-size: 12px; color: var(--ink-soft); align-self: center; }
+  .timeline { position: relative; padding-left: 22px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 6px; top: 4px; bottom: 4px;
+    width: 1px; background: var(--line);
+  }
+  .ev { position: relative; padding: 10px 0; border-bottom: 1px solid #f3efe9; }
+  .ev:last-child { border-bottom: none; }
+  .ev::before {
+    content: ""; position: absolute; left: -20px; top: 15px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--skip); border: 2px solid var(--bg);
+  }
+  .ev.applied::before { background: var(--ok); }
+  .ev.rolled_back::before { background: var(--warn); }
+  .ev.fail::before { background: var(--bad); }
+  .ev.skip::before { background: #c9c4bc; }
+  .ev.unload::before { background: var(--unload); }
+  .ev-top { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .ev-time { font-size: 12px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .tag {
+    font-size: 11px; padding: 1px 8px; border-radius: 10px;
+    background: var(--skip); color: #fff; letter-spacing: .5px;
+  }
+  .tag.applied { background: var(--ok); }
+  .tag.rolled_back { background: var(--warn); }
+  .tag.fail { background: var(--bad); }
+  .tag.skip { background: #c9c4bc; }
+  .tag.unload { background: var(--unload); }
+  .ev-name { font-weight: 600; font-size: 13px; }
+  .ev-meta { font-size: 12px; color: var(--ink-soft); margin-top: 2px; word-break: break-all; }
+  .ev-detail { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+  .empty { color: var(--ink-soft); text-align: center; padding: 40px 0; font-size: 13px; }
+  .toast {
+    position: fixed; top: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: #fff; padding: 10px 20px; border-radius: 6px;
+    font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .25s; z-index: 99;
+    max-width: 80vw;
+  }
+  .toast.show { opacity: .95; }
+  .toast.err { background: var(--bad); }
+  footer { text-align: center; color: #b8b2aa; font-size: 12px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>知设 Gotchas 运维面板</h1>
+    <div class="sub">可逆副作用运行时 · 事件日志 / 状态 / 回滚 · 数据源 /gotchas/admin/*</div>
+  </header>
+
+  <!-- 鉴权 -->
+  <div class="card">
+    <h2>鉴权</h2>
+    <div class="auth-row">
+      <input id="key-biz" type="password" placeholder="业务密钥（A2A_API_KEY）" autocomplete="off">
+      <input id="key-admin" type="password" placeholder="管理密钥（A2A_ADMIN_KEY）" autocomplete="off">
+      <button class="btn btn-primary" id="btn-connect">连接</button>
+      <span class="conn"><span class="dot" id="conn-dot"></span><span id="conn-text">未连接</span></span>
+    </div>
+    <div class="hint">密钥仅保存在本页内存中，刷新页面需重新输入；页面文件不含任何密钥。</div>
+  </div>
+
+  <!-- 状态 -->
+  <div class="card">
+    <h2>运行时状态 <span id="refresh-hint" style="font-weight:400;text-transform:none;letter-spacing:0;color:#b8b2aa;font-size:12px;"></span></h2>
+    <div class="stats" id="stats">
+      <div class="stat"><div class="k">知识库条目</div><div class="v small" id="st-kus">—</div></div>
+      <div class="stat"><div class="k">副作用栈</div><div class="v" id="st-stack">—</div></div>
+      <div class="stat"><div class="k">索引</div><div class="v small" id="st-index">—</div></div>
+      <div class="stat"><div class="k">卸载态</div><div class="v small" id="st-unload">—</div></div>
+      <div class="stat"><div class="k">钩子</div><div class="v small" id="st-hooks">—</div></div>
+      <div class="stat"><div class="k">服务依赖</div><div class="v small" id="st-svc">—</div></div>
+    </div>
+  </div>
+
+  <!-- 操作 -->
+  <div class="card">
+    <h2>回滚与卸载</h2>
+    <div class="ops">
+      <div class="op-row">
+        <button class="btn" id="btn-rollback-top">回滚最新一条</button>
+        <button class="btn" id="btn-rollback-all">全量回滚（保护系统钩子）</button>
+        <div class="desc">回滚最新一条：撤销栈顶副作用（LIFO）。全量回滚：逆序撤销全部业务副作用，系统级钩子自动保留。</div>
+      </div>
+      <div class="op-row">
+        <input type="text" id="inp-effect-id" placeholder="副作用 ID（12 位十六进制）">
+        <button class="btn" id="btn-rollback-id">按 ID 回滚</button>
+        <input type="text" id="inp-batch-id" placeholder="批次号（batch_id）">
+        <button class="btn" id="btn-rollback-batch">按批次回滚</button>
+        <div class="desc">按 ID 回滚会连同其上方的副作用一并回滚（LIFO 语义）；目标上方的依赖可能挂在它身上。</div>
+      </div>
+      <div class="op-sep"></div>
+      <div class="op-row">
+        <button class="btn" id="btn-unload-r1">卸载 R1（停止受理）</button>
+        <button class="btn" id="btn-unload-r2">卸载 R2（带守卫回滚）</button>
+        <button class="btn" id="btn-unload-cancel">取消卸载</button>
+        <div class="desc">R1：进入只读态，拒绝一切新副作用；R2：带守卫回滚全部已施加副作用后恢复受理；取消仅限 R1 阶段。</div>
+      </div>
+      <div class="op-row">
+        <button class="btn" id="btn-reload">重载知识库（从磁盘）</button>
+        <div class="desc">从 all_ku.json 全量重载并重建索引；已施加的未落盘副作用会被覆盖，请先确认栈为空或已固化。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 事件流 -->
+  <div class="card">
+    <h2>事件日志</h2>
+    <div class="filters">
+      <select id="f-type">
+        <option value="">全部类型</option>
+        <option value="applied">施加</option>
+        <option value="rolled_back">回滚</option>
+        <option value="fail">失败</option>
+        <option value="skip">跳过</option>
+        <option value="unload">卸载</option>
+        <option value="other">其他</option>
+      </select>
+      <input type="text" id="f-kw" placeholder="关键词（名称 / ID / 批次）">
+      <input type="text" id="f-batch" placeholder="按批次筛选" style="width:160px">
+      <span class="count" id="ev-count"></span>
+    </div>
+    <div id="timeline"><div class="empty">请先连接面板</div></div>
+  </div>
+
+  <footer>知设 · Gotchas 可逆副作用运行时 · P2 事件日志可视化</footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  "use strict";
+  var BIZ_KEY = "", ADMIN_KEY = "", CONNECTED = false, TIMER = null;
+
+  // ── 工具 ──
+  var $ = function (id) { return document.getElementById(id); };
+  var toast = function (msg, isErr) {
+    var t = $("toast");
+    t.textContent = msg;
+    t.className = "toast show" + (isErr ? " err" : "");
+    setTimeout(function () { t.className = "toast"; }, 2600);
+  };
+  var esc = function (s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  };
+
+  // ── 请求 ──
+  function api(method, path, body) {
+    var headers = { "Authorization": "Bearer " + BIZ_KEY, "X-Admin-Key": ADMIN_KEY };
+    var opts = { method: method, headers: headers };
+    if (body !== undefined) {
+      headers["Content-Type"] = "application/json";
+      opts.body = JSON.stringify(body);
+    }
+    return fetch(path, opts).then(function (r) {
+      if (r.status === 401) throw { code: 401, msg: "密钥无效或缺失，请检查双密钥" };
+      if (r.status === 503) throw { code: 503, msg: "管理端点未配置或运行时未就绪（服务端 A2A_ADMIN_KEY 缺失？）" };
+      if (!r.ok) return r.json().then(function (j) { throw { code: r.status, msg: j.detail || ("请求失败 " + r.status) }; });
+      return r.json();
+    });
+  }
+
+  // ── 事件分类 ──
+  function classify(ev) {
+    var e = ev.event || "";
+    if (e === "applied") return { cls: "applied", label: "施加" };
+    if (e === "rolled_back") return { cls: "rolled_back", label: "回滚" };
+    if (e.indexOf("failed") >= 0) return { cls: "fail", label: "失败" };
+    if (e.indexOf("skip") >= 0 || e === "apply_duplicate") return { cls: "skip", label: "跳过" };
+    if (e.indexOf("unload") >= 0 || e.indexOf("rollback_batch") >= 0) return { cls: "unload", label: "卸载/批次" };
+    return { cls: "other", label: "其他" };
+  }
+
+  // ── 状态渲染 ──
+  function renderStatus(s) {
+    $("st-kus").textContent = s.total_kus;
+    $("st-stack").textContent = s.effects_stack;
+    $("st-stack").className = "v" + (s.effects_stack > 0 ? " accent" : "");
+    var idx = $("st-index");
+    idx.textContent = s.index_dirty ? "待重建" : "就绪";
+    idx.className = "v small" + (s.index_dirty ? " warn" : " ok");
+    var un = $("st-unload");
+    un.textContent = s.unloading ? s.unloading : "正常";
+    un.className = "v small" + (s.unloading ? " bad" : "");
+    $("st-hooks").textContent = s.hook_count;
+    var svc = s.services || {};
+    var keys = Object.keys(svc);
+    var ready = keys.filter(function (k) { return svc[k]; }).length;
+    $("st-svc").textContent = keys.length ? ready + "/" + keys.length + " 就绪" : "—";
+    $("st-svc").className = "v small" + (keys.length && ready < keys.length ? " warn" : "");
+  }
+
+  // ── 事件流渲染 ──
+  function renderEvents(events) {
+    var fType = $("f-type").value, kw = $("f-kw").value.trim().toLowerCase(), batch = $("f-batch").value.trim();
+    var list = events.filter(function (ev) {
+      var c = classify(ev);
+      if (fType && c.cls !== fType) return false;
+      if (kw) {
+        var hay = ((ev.name || "") + " " + (ev.effect_id || "") + " " + (ev.batch_id || "") + " " + (ev.detail || "")).toLowerCase();
+        if (hay.indexOf(kw) < 0) return false;
+      }
+      if (batch && (ev.batch_id || "") !== batch) return false;
+      return true;
+    });
+    $("ev-count").textContent = "显示 " + list.length + " / 共 " + events.length + " 条";
+    var box = $("timeline");
+    if (!list.length) { box.innerHTML = '<div class="empty">暂无事件</div>'; return; }
+    var html = "";
+    list.slice(0, 300).forEach(function (ev) {
+      var c = classify(ev);
+      html += '<div class="ev ' + c.cls + '">' +
+        '<div class="ev-top">' +
+        '<span class="ev-time">' + esc(ev.ts) + '</span>' +
+        '<span class="tag ' + c.cls + '">' + c.label + '</span>' +
+        '<span class="ev-name">' + esc(ev.event) + (ev.name ? " · " + esc(ev.name) : "") + '</span>' +
+        '</div>';
+      var meta = [];
+      if (ev.effect_id) meta.push("ID: " + esc(ev.effect_id));
+      if (ev.batch_id) meta.push("批次: " + esc(ev.batch_id));
+      if (ev.state) meta.push("状态: " + esc(ev.state));
+      if (meta.length) html += '<div class="ev-meta">' + meta.join("　") + '</div>';
+      if (ev.detail) html += '<div class="ev-detail">' + esc(ev.detail) + '</div>';
+      html += '</div>';
+    });
+    box.innerHTML = html;
+  }
+
+  // ── 轮询 ──
+  function poll() {
+    if (!CONNECTED) return;
+    Promise.all([
+      api("GET", "/gotchas/admin/status"),
+      api("GET", "/gotchas/admin/effects?limit=500")
+    ]).then(function (res) {
+      renderStatus(res[0]);
+      renderEvents(res[1].events || []);
+    }).catch(function (err) {
+      if (err.code === 401 || err.code === 503) {
+        disconnect(err.msg);
+      } else {
+        $("conn-dot").className = "dot err";
+        $("conn-text").textContent = "连接异常，5 秒后重试";
+      }
+    });
+  }
+
+  function connect() {
+    BIZ_KEY = $("key-biz").value.trim();
+    ADMIN_KEY = $("key-admin").value.trim();
+    if (!BIZ_KEY || !ADMIN_KEY) { toast("请先填入业务密钥和管理密钥", true); return; }
+    CONNECTED = true;
+    $("conn-dot").className = "dot on";
+    $("conn-text").textContent = "已连接";
+    $("btn-connect").textContent = "已连接";
+    $("refresh-hint").textContent = "（每 5 秒刷新）";
+    poll();
+    if (TIMER) clearInterval(TIMER);
+    TIMER = setInterval(poll, 5000);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden && TIMER) { clearInterval(TIMER); TIMER = null; }
+      else if (!document.hidden && !TIMER && CONNECTED) TIMER = setInterval(poll, 5000);
+    });
+  }
+
+  function disconnect(reason) {
+    CONNECTED = false;
+    if (TIMER) { clearInterval(TIMER); TIMER = null; }
+    $("conn-dot").className = "dot err";
+    $("conn-text").textContent = "已断开";
+    $("btn-connect").textContent = "重新连接";
+    $("refresh-hint").textContent = "";
+    if (reason) toast(reason, true);
+  }
+
+  function doAction(method, path, body, successMsg, confirmMsg) {
+    if (!CONNECTED) { toast("请先连接面板", true); return; }
+    if (confirmMsg && !window.confirm(confirmMsg)) return;
+    api(method, path, body).then(function (res) {
+      toast(successMsg + JSON.stringify(res), false);
+      poll();
+    }).catch(function (err) { toast(err.msg || "操作失败", true); });
+  }
+
+  // ── 事件绑定 ──
+  $("btn-connect").addEventListener("click", connect);
+  $("key-biz").addEventListener("keydown", function (e) { if (e.key === "Enter") connect(); });
+  $("key-admin").addEventListener("keydown", function (e) { if (e.key === "Enter") connect(); });
+
+  $("btn-rollback-top").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/rollback",
+      { mode: "top" }, "", "回滚栈顶最新一条副作用？");
+  });
+
+  $("btn-rollback-all").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/rollback", {},
+      "全量回滚完成：", "确认全量回滚？系统级钩子（限流/探测/水印）将保留。");
+  });
+
+  $("btn-rollback-id").addEventListener("click", function () {
+    var id = $("inp-effect-id").value.trim();
+    if (!id) { toast("请输入副作用 ID", true); return; }
+    doAction("POST", "/gotchas/admin/rollback", { effect_id: id },
+      "回滚完成：", "确认按 ID 回滚？其上方的副作用也会一并回滚。");
+  });
+
+  $("btn-rollback-batch").addEventListener("click", function () {
+    var b = $("inp-batch-id").value.trim();
+    if (!b) { toast("请输入批次号", true); return; }
+    doAction("POST", "/gotchas/admin/rollback", { batch_id: b },
+      "批次回滚完成：", "确认回滚批次 " + b + " 的全部副作用？");
+  });
+
+  $("btn-unload-r1").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/unload", { stage: "r1" },
+      "R1 执行完成：", "确认进入卸载态 R1？之后一切新副作用将被拒收。");
+  });
+
+  $("btn-unload-r2").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/unload", { stage: "r2" },
+      "R2 执行完成：", "确认执行卸载 R2？将带守卫回滚全部已施加副作用。");
+  });
+
+  $("btn-unload-cancel").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/unload", { stage: "cancel" },
+      "取消卸载完成：", "确认撤回 R1 卸载态？");
+  });
+
+  $("btn-reload").addEventListener("click", function () {
+    doAction("POST", "/gotchas/admin/reload", {},
+      "重载完成：", "确认从磁盘全量重载知识库？未落盘的副作用将被覆盖。");
+  });
+
+  ["f-type", "f-kw", "f-batch"].forEach(function (id) {
+    $("f-kw").addEventListener("input", function () { if (CONNECTED) poll(); });
+    $("f-batch").addEventListener("input", function () { if (CONNECTED) poll(); });
+    $("f-type").addEventListener("change", function () { if (CONNECTED) poll(); });
+  });
+})();
+</script>
+</body>
+</html>
