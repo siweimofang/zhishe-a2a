@@ -24,6 +24,39 @@ from .effects import Effect, EffectRegistry
 DEFAULT_BATCH_ID = "batch"  # load_batch 未显式给 batch_id 时的默认批次
 MAX_TEMP_RULES = 50         # 临时规则总量上限(防 Agent 失控创建)
 
+# ── F5-1 窄规则校验器:宽泛词表 (静态规则,v1.0) ──
+# 这些词过于宽泛,作为临时规则会污染检索精度(蒸馏禁区运行时边界)
+BROAD_KEYWORDS = frozenset([
+    "注意", "小心", "安全", "应该", "必须",
+    "重要", "关键", "一定", "千万", "务必",
+])
+
+
+def validate_narrow_rule(ku: dict) -> Optional[str]:
+    """F5-1 窄规则校验器:拦截宽泛/过短的 question。
+
+    校验规则:
+    1. question 长度 >= 8 字符
+    2. question 不含 BROAD_KEYWORDS 中的宽泛词
+
+    返回违规原因字符串,无违规返回 None。
+    """
+    question = ku.get("question") or ku.get("title", "")
+    if not question:
+        return "question 或 title 为空"
+
+    # 长度检查
+    q_len = len(question.strip())
+    if q_len < 8:
+        return f"question 过短({q_len}字),至少 8 字"
+
+    # 宽泛词检查
+    for kw in BROAD_KEYWORDS:
+        if kw in question:
+            return f"question 含宽泛词「{kw}」,请改窄到具体场景"
+
+    return None
+
 
 class RuleManager:
     """规则热更新管理器(持有缓存引用,变更登记进注册表)。"""
@@ -105,6 +138,11 @@ class RuleManager:
         temp=True: 临时规则——自动使用 TMP-<ts>-<seq> 命名,batch_id="temp:<ts>",
                    detail 标记"临时",受 MAX_TEMP_RULES 容量限制,重启/reload 即失。
         """
+        # ── F5-1 窄规则校验 ──
+        narrow_err = validate_narrow_rule(ku)
+        if narrow_err:
+            raise ValueError(f"窄规则校验失败:{narrow_err}")
+
         ts = time.time()
         if temp:
             # 临时规则:强制 UID + 容量检查
