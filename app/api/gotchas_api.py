@@ -984,6 +984,7 @@ admin_router = APIRouter(
 class AdminRuleAdd(BaseModel):
     ku: dict
     batch_id: Optional[str] = None
+    temp: bool = False  # P3 F1-1: 临时规则标记
 
 
 class AdminRulePatch(BaseModel):
@@ -993,6 +994,7 @@ class AdminRulePatch(BaseModel):
 class AdminRuleBatch(BaseModel):
     kus: List[dict]
     batch_id: Optional[str] = None
+    include_temp: bool = False  # P3 F1: 批量加载时是否视为临时规则
 
 
 class AdminRollbackReq(BaseModel):
@@ -1014,10 +1016,10 @@ def _require_runtime():
 
 @admin_router.post("/rules")
 def admin_add_rule(body: AdminRuleAdd):
-    """热新增规则(undo=从缓存删除,可回滚)。"""
+    """热新增规则(undo=从缓存删除,可回滚)。temp=true → 临时规则。"""
     rm = _require_runtime()
     try:
-        eff = rm.add_rule(body.ku, batch_id=body.batch_id)
+        eff = rm.add_rule(body.ku, batch_id=body.batch_id, temp=body.temp)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     return {
@@ -1025,6 +1027,7 @@ def admin_add_rule(body: AdminRuleAdd):
         "state": eff.state,
         "ku_id": body.ku.get("ku_id"),
         "batch_id": eff.batch_id,
+        "temp": body.temp,
     }
 
 
@@ -1058,10 +1061,10 @@ def admin_remove_rule(ku_id: str):
 
 @admin_router.post("/rules/batch")
 def admin_load_batch(body: AdminRuleBatch):
-    """批量加载(新增或覆盖,以 ku_id 为准,可整体回滚)。"""
+    """批量加载(新增或覆盖,以 ku_id 为准,可整体回滚)。include_temp=true → 临时批次。"""
     rm = _require_runtime()
     try:
-        eff = rm.load_batch(body.kus, batch_id=body.batch_id)
+        eff = rm.load_batch(body.kus, batch_id=body.batch_id, include_temp=body.include_temp)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     return {
@@ -1069,6 +1072,7 @@ def admin_load_batch(body: AdminRuleBatch):
         "state": eff.state,
         "batch_id": eff.batch_id,
         "count": len(body.kus),
+        "include_temp": body.include_temp,
     }
 
 
@@ -1078,6 +1082,53 @@ def admin_reload():
     total = _reload_data()
     _ensure_index()
     return {"total_kus": total, "index_rebuilt": not _index_dirty}
+
+
+@admin_router.post("/persist")
+def admin_persist(include_temp: bool = Query(False, description="是否包含临时规则")):
+    """持久化缓存到磁盘。include_temp=false(默认)=排除临时规则。"""
+    rm = _require_runtime()
+    try:
+        count = rm.persist(str(ALL_KU_PATH), include_temp=include_temp)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    return {"written": count, "include_temp": include_temp}
+
+
+@admin_router.post("/hooks")
+def admin_register_hook(point: str = Query(..., description="钩子点:pre_search/post_search/pre_llm/post_llm"),
+                        name: str = Query("", description="钩子名称"),
+                        deps_str: str = Query("", description="依赖服务逗号分隔"):
+    """注册一个临时钩子(P3 F2-1)。运行时生效,重启即失,可精确回滚注销。"""
+    from gotchas.runtime.hooks import HookPoint
+    try:
+        hook_point = HookPoint(point.lower())
+    except ValueError:
+        raise HTTPException(status_code=400, detail=f"无效钩子点:{point},支持:{[p.value for p in HookPoint]}")
+
+    rm = _require_runtime()
+
+    # P3 F2-3: 临时钩子上限 10 个(不含 protected 系统钩子)
+    all_hooks = _hook_manager.hooks() if _hook_manager else []
+    non_protected_temp_count = sum(
+        1 for h in all_hooks
+        if not getattr(h, "protected", False) and (not h.name.startswith("guard_"))
+    )
+    if non_protected_temp_count >= 10:
+        raise HTTPException(status_code=429, detail=f"临时钩子已达上限(10个),当前已注册{non_protected_temp_count}个")
+
+    def _noop(ctx):
+        pass  # 占位,实际 fn 由前端/客户端通过 JSON body 传递逻辑时暂不支持,仅用于审计标记
+
+    eff = _hook_manager.register(hook_point, _noop, name=name or f"temp-{int(time.time())}")
+    return {
+        "effect_id": eff.effect_id,
+        "state": eff.state,
+        "name": eff.name,
+        "point": point.lower(),
+        "temp": True,
+        "detail": f"[临时] 钩子 {eff.name} @ {hook_point.value}",
+    }
 
 
 @admin_router.post("/rollback")
@@ -1110,9 +1161,10 @@ def admin_effects(limit: int = Query(200, ge=1, le=500)):
 
 @admin_router.get("/status")
 def admin_status():
-    """运行时状态:栈大小/卸载态/索引标记/条数/钩子/依赖就绪。"""
+    """运行时状态:栈大小/卸载态/索引标记/条数/钩子/依赖就绪/临时规则统计。"""
     rm = _require_runtime()
     registry = rm.registry
+    temp_count = rm.count_temp_effects()
     return {
         "runtime_ready": RUNTIME_READY,
         "total_kus": len(_ku_cache),
@@ -1122,6 +1174,38 @@ def admin_status():
         "hook_count": len(_hook_manager.hooks()) if _hook_manager else 0,
         "services": _hook_manager.service_status() if _hook_manager else {},
         "last_events": registry.history(5),
+        # P3 F4-3: 临时规则统计
+        "temp_rule_count": temp_count,
+        "temp_max": rm._max_temp_rules,
+    }
+
+
+@admin_router.get("/temp-stats")
+def admin_temp_stats():
+    """获取临时规则详细统计(P3 F4-3)。"""
+    rm = _require_runtime()
+    registry = rm.registry
+    temp_count = rm.count_temp_effects()
+    # 按批次分组统计
+    batches: dict = {}
+    with registry._lock:
+        for eff in registry._stack:
+            if eff.batch_id and eff.batch_id.startswith("temp:"):
+                bid = eff.batch_id
+                if bid not in batches:
+                    batches[bid] = {"batch_id": bid, "count": 0, "effects": []}
+                batches[bid]["count"] += 1
+                batches[bid]["effects"].append({
+                    "effect_id": eff.effect_id,
+                    "name": eff.name,
+                    "state": eff.state,
+                    "detail": eff.detail,
+                })
+    return {
+        "temp_rule_count": temp_count,
+        "temp_max": rm._max_temp_rules,
+        "remaining": rm._max_temp_rules - temp_count,
+        "batches": list(batches.values()),
     }
 
 
