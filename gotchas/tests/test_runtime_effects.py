@@ -43,7 +43,9 @@ def snapshot(cache):
 
 def make_ku(ku_id, title, **extra):
     ku = {
-        "ku_id": ku_id, "title": title, "stage": "STAGE_02",
+        "ku_id": ku_id, "title": title,
+        "question": f"{title}的具体问题是什么情况",  # ≥8字,满足窄规则校验
+        "stage": "STAGE_02",
         "severity": "SEV_MEDIUM", "knowledge_type": "gotcha",
         "description": f"{title}的描述", "how_to_avoid": f"{title}的正确做法",
         "typical_scenario": f"{title}场景", "trigger_keywords": [title],

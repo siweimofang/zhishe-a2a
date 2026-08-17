@@ -41,7 +41,9 @@ def check(name, cond, detail=""):
 
 def make_ku(ku_id, title, **extra):
     ku = {
-        "ku_id": ku_id, "title": title, "stage": "STAGE_02",
+        "ku_id": ku_id, "title": title,
+        "question": f"{title}的具体问题是什么情况",  # ≥8字,满足窄规则校验
+        "stage": "STAGE_02",
         "severity": "SEV_MEDIUM", "knowledge_type": "gotcha",
         "description": f"{title}的描述", "how_to_avoid": f"{title}的正确做法",
         "typical_scenario": f"{title}场景", "trigger_keywords": [title],
@@ -85,7 +87,7 @@ check("临时规则使用了自动生成UID", e1.name.startswith("rule:add:TMP-"
 uid1_actual = e1.name.split(":")[2]
 check("自生成UID以TMP-开头", uid1_actual.startswith("TMP-"))
 
-e2 = rm.add_rule({"ku_id": "ALSO-CUSTOM", "title": "也会被覆盖"}, temp=True)
+e2 = rm.add_rule({"ku_id": "ALSO-CUSTOM", "title": "也会被覆盖", "question": "自定义ID也会被覆盖的问题"}, temp=True)
 uid2_actual = e2.name.split(":")[2]
 check("即使输入有ku_id也会覆盖为TMP格式", "ALSO-CUSTOM" not in index)
 check("第二行也生成了TMP UID", e2.name.startswith("rule:add:TMP-"))
