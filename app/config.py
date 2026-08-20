@@ -13,7 +13,12 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    # === 主力模型:DeepSeek-V4-Pro ===
+    # === 主力模型选择 (2026-08-20 百炼迁移) ===
+    # 可选值: deepseek | bailian
+    # 切换主力模型只需改这一行，无需改代码
+    PRIMARY_MODEL: str = "deepseek"
+
+    # === DeepSeek-V4-Pro ===
     DEEPSEEK_API_KEY: str = ""
 
     # === 千问 A2A 鉴权 ===
@@ -23,6 +28,11 @@ class Settings(BaseSettings):
     # 与 A2A_API_KEY 分离:管理端点可热更新/回滚规则,权限面更大。
     # 未配置 → 管理端点整体不可用(安全默认,不本地放行)。
     A2A_ADMIN_KEY: str = ""
+
+    # === 千问百炼 API(2026-08-17) ===
+    BAILIAN_API_KEY: str = ""
+    BAILIAN_BASE_URL: str = "https://llm-fjhp3zgzyusrt8vy.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+    BAILIAN_MODEL: str = "qwen3.8-max"
 
     # === 服务 ===
     HOST: str = "0.0.0.0"

@@ -1,13 +1,18 @@
 """
 千问百炼 API 调用封装 (2026-08-17)
 
+V2.0 (2026-08-20): 升级为 LLM 主力模型
+- 通过 PRIMARY_MODEL=bailian 激活 (llm.py 调度)
+- DeepSeek 降为兜底
+
 主力模型: qwen3.8-max (OpenAI 兼容接口)
-Base URL: 从 .env BAILIAN_BASE_URL 读取(业务空间专属域名)
+Base URL: 从 .env BAILIAN_BASE_URL 读取 (业务空间专属域名)
 
 用途:
-- 作为 DeepSeek 的备用 LLM 后端(故障切换)
-- 知识条目批量生成(从文档/书籍提取结构化知识)
-- 语义增强检索(本地关键词搜索的补充)
+- 主力 LLM 后端 (llm.py chat_with_skill 调度)
+- DeepSeek 的备用 LLM 后端 (故障切换)
+- 知识条目批量生成 (从文档/书籍提取结构化知识)
+- 语义增强检索 (本地关键词搜索的补充)
 """
 import asyncio
 import logging
