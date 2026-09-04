@@ -34,6 +34,43 @@ def resolve_sid(results, sid):
     return None
 
 
+def assign_items(rows, items):
+    """P6: (名,价)联合贪心匹配——仅用于价格对拍。
+
+    旧口径 first-match 的缺陷: 同名行(瓷砖地砖×15、门及门套×6)全部对到第一个
+    同名 AI 条目,对价被系统性记错。新口径: 有价真值行按价距升序贪心 1:1 分配,
+    每条 AI 条目最多被消耗一次;无分配对时调用方回退 first-match。
+    注意: 召回/坑命中不走本分配(保持旧 any-match 口径可与历史直比)——
+    严格 1:1 消耗叠加上双向子串匹配会让短泛名真值行跨名抢条目(0904实踩:
+    召回 94→55、坑 4/4→2/4)。
+    返回 {真值行下标: 分配到的AI条目};未分配的真值行不在字典中。
+    """
+    pairs = []  # (unpriced_flag, dist, 真值行下标, AI条目下标)
+    for ri, r in enumerate(rows):
+        te = r['truth_entry'].strip()
+        tp = r.get('truth_price', '').strip()
+        for ii, it in enumerate(items):
+            n = str(it.get('item') or '')
+            if te in n or n in te:
+                if tp:
+                    try:
+                        d = abs(float(it.get('unit_price')) - float(tp)) / max(abs(float(tp)), 1e-9)
+                    except (TypeError, ValueError):
+                        d = 9.9
+                    pairs.append((0, d, ri, ii))
+                else:
+                    pairs.append((1, 0.0, ri, ii))
+    pairs.sort(key=lambda p: (p[0], p[1]))
+    assigned = {}
+    used = set()
+    for _flag, _d, ri, ii in pairs:
+        if ri in assigned or ii in used:
+            continue
+        assigned[ri] = items[ii]
+        used.add(ii)
+    return assigned
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--prefill', required=True)
@@ -120,18 +157,20 @@ def main():
             items = rep.get('results') or []
             ai_items = [str(i.get('item') or '') for i in items]
             missing = [str(m) for m in (rep.get('missing_items') or [])]
-            for r in rows:
+            assigned = assign_items(rows, items)  # P6: (名,价)1:1贪心——仅用于价格对拍
+            for ri, r in enumerate(rows):
                 te = r['truth_entry'].strip()
                 tot_truth += 1
-                cand = next((i for i in items if te in str(i.get('item') or '') or str(i.get('item') or '') in te), None)
-                if cand is not None:
+                first_any = next((i for i in items if te in str(i.get('item') or '') or str(i.get('item') or '') in te), None)
+                cand = assigned.get(ri) or first_any
+                if first_any is not None:
                     recalled += 1
                     if r.get('truth_price', '').strip():
                         price_n += 1
                         price_ok += close_num(cand.get('unit_price'), r['truth_price'], 0.01)
                 if r.get('is_pit', '').strip() == '1':
                     pits += 1
-                    pit_hit = cand is not None and str(cand.get('status', '')).startswith('warning')
+                    pit_hit = first_any is not None and str(first_any.get('status', '')).startswith('warning')
                     if not pit_hit and r.get('pit_type', '') == 'missing' and any(te in m or m in te for m in missing):
                         pit_hit = True
                     hits += pit_hit
