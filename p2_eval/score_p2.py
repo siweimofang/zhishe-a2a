@@ -22,6 +22,18 @@ def close_num(a, b, tol=0.05):
     return abs(a - b) / abs(b) <= tol
 
 
+def resolve_sid(results, sid):
+    """真值 sid → 结果 job id: 兼容 '#rN' 后缀与 repeat-1 无后缀两种形态"""
+    if sid in results:
+        return sid
+    base = sid.split('#')[0]
+    if '#' in sid and base in results:
+        return base
+    if '#' not in sid and f'{sid}#r1' in results:
+        return f'{sid}#r1'
+    return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--prefill', required=True)
@@ -34,10 +46,10 @@ def main():
     if os.path.isfile(fc):
         pairs = []
         for row in csv.DictReader(open(fc, encoding='utf-8-sig')):
-            sid = row['sample_id']
-            x = results.get(sid)
-            if not x:
+            jid = resolve_sid(results, row['sample_id'])
+            if not jid:
                 continue
+            x = results[jid]
             cl = (x.get('result') or {}).get('clauses') or {}
             au = (x.get('result') or {}).get('audit') or {}
             pairs.append((row, cl, au))
@@ -94,16 +106,16 @@ def main():
     fq = os.path.join(HERE, 'truth_quote.csv')
     if os.path.isfile(fq):
         truth = [r for r in csv.DictReader(open(fq, encoding='utf-8-sig'))]
-        by_sid = {}
+        groups = {}  # 解析后的 job id → 真值行(同一结果只扫一次 FP, 真值行逐行计召回)
         for r in truth:
-            by_sid.setdefault(r['sample_id'], []).append(r)
-        tot_truth = recalled = price_ok = price_n = pits = hits = 0
-        flagged = 0
-        false_pos = 0
-        for sid, rows in by_sid.items():
-            x = results.get(sid)
-            if not x:
+            jid = resolve_sid(results, r['sample_id'])
+            if not jid:
                 continue
+            groups.setdefault(jid, []).append(r)
+        tot_truth = recalled = price_ok = price_n = pits = hits = 0
+        false_pos = 0
+        for jid, rows in groups.items():
+            x = results[jid]
             rep = (x.get('result') or {}).get('report') or {}
             items = rep.get('results') or []
             ai_items = [str(i.get('item') or '') for i in items]
@@ -129,14 +141,14 @@ def main():
                                   for r in rows)
                     if not matched:
                         false_pos += 1
-        lines.append(f'## 报价单侧(样本 {len(by_sid)})')
+        lines.append(f'## 报价单侧(样本 {len(groups)})')
         if tot_truth:
             lines.append(f'- 条目召回率: {recalled}/{tot_truth} = {recalled/tot_truth:.1%}')
         if price_n:
             lines.append(f'- 单价提取准确率(±1%): {price_ok}/{price_n} = {price_ok/price_n:.1%}')
         if pits:
             lines.append(f'- 坑命中率: {hits}/{pits} = {hits/pits:.1%}')
-        if flagged + false_pos:
+        if false_pos:
             lines.append(f'- 误报(无坑报坑): {false_pos} 处')
         lines.append('')
     lines.append('---')
