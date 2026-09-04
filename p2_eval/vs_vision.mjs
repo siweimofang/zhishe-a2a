@@ -111,6 +111,7 @@ async function runOne(sample, provider, mode) {
             unknown_labels: report.results.filter(r => r.status === 'unknown').map(r => r.risk?.label).join('/') || '-',
         }),
         usage: extraction.usage || null,
+        offpeak: extraction.offpeak ? extraction.offpeak.offpeak : null, // v0.5.1 批次二: 峰谷标记入行
     };
 }
 
