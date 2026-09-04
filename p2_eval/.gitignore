@@ -1,0 +1,8 @@
+# 评测数据 = 客户数据, 严禁入库上云(隐私壁垒)
+eval_inbox/
+synthetic/
+results/
+*_confirm_*.csv
+truth_contract.csv
+truth_quote.csv
+__pycache__/
