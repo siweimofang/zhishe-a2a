@@ -1,6 +1,6 @@
-# 合规硬路由 Spec v1.0（定稿草稿）
+# 合规硬路由 Spec v1.0（已定稿）
 
-> 批次四交付物①。状态：**草稿待拍板**（3 个待拍板项见 §7）。拍板后实现工作量约 0.5 天（估）。
+> 批次四交付物①。状态：**已定稿**（0905 三项拍板完成，记录见 §7）。实现工作量约 0.5 天（估），触发条件=BAILIAN_VL_MODEL 配置 + 百炼实测 1 张脱敏样张。
 > 依据（代码事实）：
 > - `contract_ocr.js:8-11` 红线注释：合同原件属红档永不上云；v0.5.0 检出 PII 且供应商非百炼时附 `compliance_warning`（提示级），「未脱净只走百炼或拒收」硬路由留待本 spec。
 > - `providers.js` v0.5.0：双路线注册表 `deepseek`（默认）/ `bailian`（BAILIAN_API_KEY + BAILIAN_VL_MODEL 注入型号，**当前环境未配置**）。
@@ -64,16 +64,16 @@
 | `BAILIAN_VL_MODEL` | 百炼控制台当前主力 VL 型号 | **当前未配置**——strict 前置条件 |
 | `VISION_PROVIDER` | deepseek / bailian | 仅默认通道，不覆盖工具级强制 |
 
-## 6. 实现落点（拍板后 0.5 天估）
+## 6. 实现落点（0.5 天估；拍板已完成，仅待切换条件①②）
 
 1. `contract_ocr.js` `extractContractFromImages` 入口加预检门：strict + 解析供应商≠bailian → 直接 return `{success:false, compliance_refused:true, error:文案}`（复用 `resolveVisionProvider` 解析结果，不新增请求）。
-2. `contract_ocr.js` 后检分支按 mode 分流：strict 时输出 `compliance_blocked` 标记（advisory 保持 `compliance_warning` 原样，**零行为变化**）。
+2. `contract_ocr.js` 后检分支按 mode 分流：strict 时输出 `compliance_blocked` 标记；`index.js` 报告装配层对 blocked 结果在**报告顶部内嵌红档警告横幅**（拍板③选 B，横幅文案沿用 v0.5.0 compliance_warning 措辞收紧）；advisory 保持 `compliance_warning` 原样，**零行为变化**。
 3. `index.js` `hetong_shenhe` 工具层透出拒收错误；工具描述补一句"strict 模式下未脱敏件将被拒收"。
 4. 测试：`test/` 新增 3 断言（strict+deepseek→拒收不发起调用；strict+bailian→放行；advisory+deepseek+PII→warning 文案与 v0.5.0 逐字一致）。
-5. **切换条件**（advisory→strict）：①BAILIAN_VL_MODEL 配置就位；②百炼路线实测 1 张脱敏合同样张提取成功；③用户拍板。
+5. **切换条件**（advisory→strict）：①BAILIAN_VL_MODEL 配置就位；②百炼路线实测 1 张脱敏合同样张提取成功；③拍板（0905 已落，见 §7）。
 
-## 7. 待拍板项（3 个）
+## 7. 拍板记录（0905 三项全落，spec 随此定稿）
 
-1. **strict 切换时机**：建议=百炼 VL 验证通过后即切；代价=未配百炼的新环境合同图片功能不可用（文案会引导文本路径）。
-2. **报价单是否升级为红档**：建议=暂不（报价单 PII 密度低且已有后检提示；升级会牺牲报价图片在 DeepSeek 路线的可用性）。若升级，`baojia_image_audit` 同样受预检门约束。
-3. **strict 下"结果封存"口径**：检出 PII 且走错通道时，结果标记 compliance_blocked 后——A 仅日志警示（建议，改动最小）；B 报告内嵌红色横幅；C 直接丢弃本次结果要求重跑。涉对外交付时的口径需明确。
+1. **strict 切换时机**：拍板=百炼验证后即切。维持 §6 切换三条件（BAILIAN_VL_MODEL 就位 + 百炼 VL 实测 1 张脱敏样张 + 本拍板）；验证完成前 advisory 运行（=现状零行为变化）。
+2. **报价单档级**：拍板=暂不升级，维持蓝档。`baojia_image_audit` 不受预检门约束，PII 后检提示照旧；保住报价图片在 DeepSeek 路线的可用性与成本优势。若后续报价样张 PII 检出率上升可重议。
+3. **结果封存口径**：拍板=B（日志警示 + 报告红横幅）。strict 下绕行检出 PII：结果标记 `compliance_blocked` 并保留本机核对（禁止进入对外交付物）+ 事件进日志 + 报告顶部内嵌红档警告横幅（文案沿用 v0.5.0 compliance_warning 措辞收紧）；不丢弃结果、不要求重跑。
