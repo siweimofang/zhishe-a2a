@@ -184,7 +184,7 @@
     "material": [],
     "description": "JGJ/T 304-2013第3章规定的质量检查基本制度。三检制度是过程质量控制的核心手段——自检是施工员自己把关，互检是同事间交叉把关，交接检是上下工序之间把关。三道检查层层过滤，能在隐蔽前发现问题，避免返工损失。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "签合同时明确要求施工方提供三检记录，并约定每道工序完成后需通知你到场确认。施工时多去现场，重点检查水电改造、防水等关键工序，要求工人出示自检记录。不同工种交接时（如水电完工交瓦工），要求项目经理组织交接检并拍照留底。验收时抽查记录是否齐全，缺失可视为未执行三检制度。",
     "trigger_keywords": [
       "自检",
       "互检",
@@ -195,9 +195,9 @@
     ],
     "scope": "universal",
     "related_ku_ids": [],
-    "standard_number": "JGJ/T 304-2013 Chapter 3",
+    "standard_number": "GB 50300-2013 第3.0.2条（各工序质量控制与专业间交接检验） + 行业通行三检制度",
     "standard_authority": "industry",
-    "standard_requirement": "各工序、各分项工程应自检、互检及交接检。自检为施工人员自我检查；互检为同一工种不同人员之间互相检查；交接检为上下道工序之间的交接检查。",
+    "standard_requirement": "GB 50300-2013第3.0.2条：各施工工序应按施工技术标准进行质量控制，每道工序完成后应进行检查；相关各专业工种之间应进行交接检验，并形成记录。结合行业通行做法落实为三检制度：自检为施工人员自我检查；互检为同一工种不同人员之间互相检查；交接检为上下道工序之间的交接检查。",
     "compliance_criteria": "每道工序完成后，必须有自检记录；不同工种交叉作业时，有互检记录；工序交接时（如水电完工交瓦工），有交接检记录。三检记录应存档备查。",
     "verification_method": "检查自检、互检、交接检记录表，三方签字确认。",
     "evidence": {
@@ -207,7 +207,7 @@
     },
     "metadata": {
       "created_at": "2026-08-03",
-      "updated_at": "2026-08-03",
+      "updated_at": "2026-08-04",
       "created_by": "ai",
       "verified": true,
       "verify_method": "ai_cross_reference",
@@ -215,7 +215,12 @@
       "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-03"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -232,7 +237,7 @@
     "material": [],
     "description": "JGJ/T 304-2013第19章室内环境污染控制的核心指标，引用GB 50325-2020的限值。甲醛是一类致癌物，主要来源于人造板材中的脲醛胶、涂料、胶粘剂。0.07mg/m³是I类民用建筑（住宅属于此类）的强制限值。检测前关窗12小时是模拟实际居住时的密闭状态。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "装修完工后至少7天再检测，检测前关窗12小时。选择有CMA资质的检测机构，不要用便携式仪器。签合同时约定甲醛超标由施工方负责治理并复检。材料尽量选环保等级高的，减少甲醛来源。检测合格后再入住。",
     "trigger_keywords": [
       "甲醛",
       "0.07",
@@ -265,7 +270,12 @@
       "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-04"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -282,7 +292,7 @@
     "material": [],
     "description": "JGJ/T 304-2013第19章引用GB 50325-2020的苯系物和TVOC限值。苯是强致癌物，主要来源于油漆和胶粘剂中的有机溶剂；TVOC是所有挥发性有机物的总量，来源广泛（涂料、板材、地毯、清洁剂等）。苯系物和TVOC超标会导致头晕、恶心、免疫力下降等症状。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "与甲醛检测同时进行，同样要求CMA资质机构。签合同时明确苯系物和TVOC超标处理责任。施工时监督油漆、胶粘剂等材料，要求提供环保检测报告。完工后通风至少1个月再检测。超标必须治理后复检，不要急于入住。",
     "trigger_keywords": [
       "苯",
       "TVOC",
@@ -314,7 +324,12 @@
       "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-04"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -331,7 +346,7 @@
     "material": [],
     "description": "JGJ/T 304-2013第19章引用GB 50325-2020的氨和氡限值。氨主要来自冬季施工时混凝土中添加的防冻剂（尿素），会持续释放刺激性气体。氡是天然放射性气体，从地基土壤和花岗岩等天然石材中析出，是仅次于吸烟的肺癌诱因。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "氡检测要在底层房间进行，因为氡从地基渗入。签合同时要求提供混凝土防冻剂和石材的放射性检测报告。如果地基土壤氡含量高，施工时做好防氡处理。检测时同样找CMA机构，氨和氡超标都要治理后复检。",
     "trigger_keywords": [
       "氨",
       "氡",
@@ -363,7 +378,12 @@
       "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-04"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -380,7 +400,7 @@
     "material": [],
     "description": "JGJ/T 304-2013第20章结合GB 50300-2013的验收程序要求。三阶段验收是国家标准规定的法定程序，不是可选的建议。很多装修纠纷的根源就是跳过了某个阶段——没有交接检验就开工，基层问题说不清；没有自检就验收，质量问题发现太晚。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "签合同时明确三阶段验收流程，并约定每阶段需三方签字确认。施工前参与交接检验，确认基层质量。施工中定期检查，保留过程记录。分户验收时按户逐项检查，填写记录。不要跳过任何阶段，发现问题及时整改，避免后期纠纷。",
     "trigger_keywords": [
       "验收程序",
       "三阶段验收",
@@ -393,9 +413,9 @@
     "related_ku_ids": [
       "GZ-SY-00019"
     ],
-    "standard_number": "JGJ/T 304-2013 Chapter 20 + GB 50300-2013",
+    "standard_number": "JGJ/T 304-2013 第3.0.5条（施工前交接检验）+ 第20.0.3条（分户验收程序） + GB 50300-2013",
     "standard_authority": "national",
-    "standard_requirement": "住宅室内装饰装修工程质量验收必须执行三阶段程序：(1)第一阶段：施工单位自行检查评定（自检），项目部组织生产、技术、质量、施工员参加，自验标准与正式验收一致；(2)第二阶段：分户交接检验，装修前对毛坯房或交接工程进行检验，填写附录B记录表；(3)第三阶段：分户工程质量验收，以独立户（套）为单位，三方验收填写附录D记录表和附录E汇总表。验收顺序：检验批→分项工程→分部工程→单位工程。",
+    "standard_requirement": "住宅室内装饰装修工程质量验收程序（『三阶段』为行业对以下条文的归纳）：(1)施工前交接检验：验收时应提供施工前的交接检验记录，按附录A、附录B执行（3.0.5）；(2)过程检验：各分项工程按主控/一般项目全数检查（3.0.8）；(3)分户工程质量验收：按20.0.3执行——确定分户验收范围、按户检查各分项工程并填写附录D记录，按附录E、附录F汇总。验收顺序：检验批→分项工程→分部工程→单位工程（GB 50300-2013）。",
     "compliance_criteria": "三个阶段缺一不可。每阶段必须有书面记录：自检报告、分户交接检验记录（附录B）、分户工程质量验收记录（附录D）和汇总表（附录E）。记录需三方签字确认。",
     "verification_method": "检查三阶段验收记录文件是否齐全、签字是否完整。",
     "evidence": {
@@ -405,7 +425,7 @@
     },
     "metadata": {
       "created_at": "2026-08-03",
-      "updated_at": "2026-08-03",
+      "updated_at": "2026-08-04",
       "created_by": "ai",
       "verified": true,
       "verify_method": "ai_cross_reference",
@@ -413,7 +433,12 @@
       "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-03"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -430,7 +455,7 @@
     "material": [],
     "description": "JGJ/T 304-2013第20章结合GB 50300-2013的验收判定规则。理解主控项目和一般项目的区别是验收的关键——主控项目是安全底线（如防水不渗漏、护栏牢固、电气安全），必须100%合格没有商量余地；一般项目是观感和精度要求（如平整度、颜色均匀度），允许小幅偏差。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "验收时，先问清楚哪些是主控项目（如防水、电路、护栏），这些必须100%合格，不合格坚决返工。一般项目（如墙面平整度）允许小偏差，但合格率要达80%以上。签合同时写明主控项目清单，验收时逐项核对，别被装修公司糊弄。",
     "trigger_keywords": [
       "主控项目",
       "一般项目",
@@ -461,7 +486,12 @@
       "source_file": "L3知识库/05_施工与材料/JGJT304-2013_住宅室内装饰装修工程质量验收规范.md",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-03"
+      "last_reviewed_at": "2026-08-03",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   }
 ]

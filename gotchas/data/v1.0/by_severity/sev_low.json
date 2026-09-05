@@ -5871,7 +5871,7 @@
     "material": [],
     "description": "GB 50210-2018第13.2.3、13.2.4、13.2.9条（裱糊工程）验收要求。壁纸起泡、翘边、显拼缝是常见问题：粘贴必须牢固，不得漏贴、补贴、脱层、空鼓和翘边；各幅拼接应横平竖直，花纹图案吻合，不离缝、不搭接、不显拼缝（距离墙面1.5m处观察）。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "贴壁纸前检查墙面平整干燥，胶水要涂刷均匀。验收时站在1.5米外观察拼缝是否明显，用手触摸检查空鼓翘边。阴角处要求顺光搭接，阳角不能有接缝。发现气泡用针筒注胶处理，严重时要求重贴。",
     "trigger_keywords": [
       "壁纸",
       "墙布",
@@ -5909,7 +5909,12 @@
       "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-04"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -5928,7 +5933,7 @@
     "material": [],
     "description": "GB 50210-2018第6.6.1、6.6.7条（门窗玻璃安装工程，条文说明）。镀膜玻璃装反（镀膜层朝室外）会加速镀膜层损坏；玻璃直接接触型材，框扇胀缩变形时玻璃易破碎——正规做法是玻璃与型材间留间隙并设支承垫块。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "签合同时注明镀膜玻璃朝向，材料进场时检查玻璃镀膜层标识。安装时盯着工人，确保镀膜层朝室内，磨砂面朝室内。验收时从室外看镀膜玻璃应看不到镀膜层反光，从室内看应清晰。玻璃与型材之间必须有橡胶垫块，不能直接接触。用塞尺检查玻璃与型材间隙是否均匀。",
     "trigger_keywords": [
       "玻璃",
       "镀膜",
@@ -5965,7 +5970,12 @@
       "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-04"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   },
   {
@@ -5984,7 +5994,7 @@
     "material": [],
     "description": "GB 50210-2018第15.0.4条（条文说明）给出的分部验收容忍规则：涉及安全、主要使用功能、节能、环保的项目列为主控项目必须全部合格；一般项目多为外观质量，允许20%以下的抽查样本存在既不影响使用功能也不明显影响装饰效果的缺陷，但其中允许偏差的检验项目最大偏差不得超过规定值的1.5倍。这也是验收时扯皮最少的依据。",
     "typical_scenario": "",
-    "how_to_avoid": "",
+    "how_to_avoid": "验收时别被'20%缺陷'忽悠了。主控项目（安全、功能、环保）必须全部合格，一个都不能放过。一般项目外观小瑕疵可以容忍，但偏差超过规定值1.5倍必须返工。建议请独立监理或第三方检测，重点查主控项目，对偏差项目用尺子实测，别只看表面。",
     "trigger_keywords": [
       "验收",
       "主控项目",
@@ -6020,7 +6030,12 @@
       "source_file": "web: 建标库GB 50210-2018全文 + GB 50096-2011 + GB 55032-2022",
       "quality_level": "RELIABLE",
       "expires_at": null,
-      "last_reviewed_at": "2026-08-04"
+      "last_reviewed_at": "2026-08-04",
+      "verified_by": {
+        "model": "deepseek-chat",
+        "method": "layer2_independent",
+        "date": "2026-08-04"
+      }
     }
   }
 ]
