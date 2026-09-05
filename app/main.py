@@ -89,6 +89,38 @@ if os.path.isdir(STATIC_DIR):
     app.mount("/static", StaticFiles(directory=STATIC_DIR, html=True), name="static")
 
 
+def _static_path(name: str) -> str:
+    """返回 static/ 目录下文件的绝对路径"""
+    return os.path.join(STATIC_DIR, name)
+
+
+@app.get("/privacy", include_in_schema=False)
+async def privacy_page():
+    """隐私政策 — tunnel.zhishe.top/privacy (小艺审核要求)"""
+    p = _static_path("privacy.html")
+    if os.path.isfile(p):
+        return FileResponse(p, media_type="text/html; charset=utf-8")
+    return JSONResponse(status_code=404, content={"error": "隐私政策页面不存在"})
+
+
+@app.get("/terms", include_in_schema=False)
+async def terms_page():
+    """用户协议 — tunnel.zhishe.top/terms"""
+    p = _static_path("terms.html")
+    if os.path.isfile(p):
+        return FileResponse(p, media_type="text/html; charset=utf-8")
+    return JSONResponse(status_code=404, content={"error": "用户协议页面不存在"})
+
+
+@app.get("/faq-gb-standards", include_in_schema=False)
+async def faq_gb_page():
+    """国标知识库 FAQ"""
+    p = _static_path("faq-gb-standards.html")
+    if os.path.isfile(p):
+        return FileResponse(p, media_type="text/html; charset=utf-8")
+    return JSONResponse(status_code=404, content={"error": "FAQ 页面不存在"})
+
+
 @app.get("/.well-known/agent.json", include_in_schema=False)
 async def agent_card():
     """千问通过这个端点发现 Agent 能力(A2A 规范要求)"""

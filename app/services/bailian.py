@@ -5,6 +5,11 @@ V2.0 (2026-08-20): 升级为 LLM 主力模型
 - 通过 PRIMARY_MODEL=bailian 激活 (llm.py 调度)
 - DeepSeek 降为兜底
 
+V2.1 重试升级 (2026-08-26):
+- 3 次重试 + 指数退避(2s→4s→8s)
+- 错误分类: 负载高 → 重试; 鉴权/内容 → 立即放弃
+- 响应体错误检测 + 熔断器联动
+
 主力模型: qwen3.8-max (OpenAI 兼容接口)
 Base URL: 从 .env BAILIAN_BASE_URL 读取 (业务空间专属域名)
 
@@ -36,6 +41,8 @@ async def chat(
     """
     调用千问 API 获取回复文本。
 
+    V2.1 (2026-08-26): 3 次重试 + 指数退避 + 错误分类 + 熔断器
+
     Args:
         messages: OpenAI 兼容的消息列表 [{role, content}, ...]
         max_tokens: 最大输出 token 数
@@ -46,6 +53,14 @@ async def chat(
     """
     if not settings.BAILIAN_API_KEY:
         log.warning("BAILIAN_API_KEY 未配置,跳过千问调用")
+        return ""
+
+    # 延迟导入避免循环依赖
+    from app.services.llm import breaker, backoff_sleep, classify_error, LLMErrorType
+
+    # 熔断检查
+    if breaker.is_open("bailian"):
+        log.warning("百炼 熔断中, 跳过调用")
         return ""
 
     headers = {
@@ -60,22 +75,69 @@ async def chat(
     }
 
     last_err = None
-    for attempt in range(2):
+    data = None
+    max_attempts = 3
+
+    for attempt in range(max_attempts):
         try:
             async with httpx.AsyncClient(timeout=60.0) as client:
                 resp = await client.post(BAILIAN_CHAT_URL, headers=headers, json=payload)
-                resp.raise_for_status()
-                data = resp.json()
-            break
+                body_text = resp.text
+
+                if resp.status_code == 200:
+                    body = resp.json()
+                    # 检查响应体中的错误
+                    if "error" in body:
+                        err_msg = body["error"].get("message", str(body["error"]))
+                        err_type = classify_error(None, err_msg)
+                        log.warning(f"百炼 响应体错误 (attempt {attempt + 1}): {err_msg}")
+                        if err_type in (LLMErrorType.AUTH, LLMErrorType.CONTENT):
+                            breaker.record_failure("bailian")
+                            return ""
+                        last_err = Exception(err_msg)
+                        await backoff_sleep(attempt)
+                        continue
+                    data = body
+                    break
+                else:
+                    err_type = classify_error(resp.status_code, body_text)
+                    log.warning(
+                        f"百炼 HTTP {resp.status_code} (attempt {attempt + 1}), "
+                        f"错误类型={err_type}"
+                    )
+                    if err_type in (LLMErrorType.AUTH, LLMErrorType.CONTENT):
+                        breaker.record_failure("bailian")
+                        return ""
+                    last_err = Exception(f"HTTP {resp.status_code}: {body_text[:200]}")
+                    if attempt < max_attempts - 1:
+                        await backoff_sleep(attempt)
+
+        except httpx.TimeoutException as e:
+            last_err = e
+            log.warning(f"百炼 超时 (attempt {attempt + 1}/{max_attempts})")
+            if attempt < max_attempts - 1:
+                await backoff_sleep(attempt)
+        except httpx.ConnectError as e:
+            last_err = e
+            log.warning(f"百炼 连接失败 (attempt {attempt + 1}/{max_attempts}): {e}")
+            if attempt < max_attempts - 1:
+                await backoff_sleep(attempt)
         except Exception as e:
             last_err = e
-            log.warning(f"千问调用 attempt {attempt + 1} 失败: {e}")
-            if attempt == 0:
-                await asyncio.sleep(1.0)
-    else:
-        log.error(f"千问调用最终失败: {last_err}")
+            err_type = classify_error(None, str(e))
+            log.warning(f"百炼 attempt {attempt + 1} 失败: {e} (type={err_type})")
+            if err_type in (LLMErrorType.AUTH, LLMErrorType.CONTENT):
+                breaker.record_failure("bailian")
+                return ""
+            if attempt < max_attempts - 1:
+                await backoff_sleep(attempt)
+
+    if data is None:
+        breaker.record_failure("bailian")
+        log.error(f"百炼 调用最终失败: {last_err}")
         return ""
 
+    breaker.record_success("bailian")
     choice = data.get("choices", [{}])[0]
     reply = choice.get("message", {}).get("content", "")
 

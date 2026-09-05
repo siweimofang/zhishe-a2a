@@ -34,6 +34,12 @@ class Settings(BaseSettings):
     BAILIAN_BASE_URL: str = "https://llm-fjhp3zgzyusrt8vy.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
     BAILIAN_MODEL: str = "qwen3.8-max"
 
+    # === 智谱 GLM-4-Flash 免费兜底(2026-08-26) ===
+    # 当百炼+DeepSeek 都负载高时, 用免费的 GLM-4-Flash 兜底, 至少用户不看到"服务不可用"
+    ZHIPU_API_KEY: str = ""
+    ZHIPU_BASE_URL: str = "https://open.bigmodel.cn/api/paas/v4"
+    ZHIPU_MODEL: str = "glm-4-flash"
+
     # === 服务 ===
     HOST: str = "0.0.0.0"
     PORT: int = 8000
@@ -45,6 +51,25 @@ class Settings(BaseSettings):
 
     # === 日志 ===
     LOG_LEVEL: str = "INFO"
+
+    # === 测试模式(小艺平台审核用) ===
+    # true=所有端点跳过鉴权,返回预设回复(仅用于平台测试,生产环境必须false)
+    TEST_MODE: bool = False
+
+    # === 测试端点预设回复(小艺平台审核用) ===
+    TEST_REPLY: str = (
+        "您好！我是知设AI装修顾问。根据您提供的信息，以下是专业建议：\n\n"
+        "【装修报价参考】\n"
+        "以沈阳市场为例，90㎡半包装修参考价格区间为6-9万元，其中：\n"
+        "- 人工费：约2.5-3.5万元（水电、瓦工、木工、油漆）\n"
+        "- 辅材费：约1-1.5万元（水泥、沙子、电线、水管）\n"
+        "- 管理费：约0.5-1万元\n\n"
+        "【避坑提醒】\n"
+        "1. 水电改造注意：避免绕线计米，要求点对点直线走线\n"
+        "2. 防水施工：卫生间防水至少刷2遍，闭水试验48小时以上\n"
+        "3. 橱柜台面：避免用人造石，易渗色开裂，建议选石英石\n\n"
+        "以上数据基于2026年Q2全国装修市场调研，仅供参考。"
+    )
 
 
 settings = Settings()

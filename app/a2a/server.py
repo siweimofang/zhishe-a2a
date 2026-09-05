@@ -40,7 +40,7 @@ def _jsonrpc_err(id: str, code: int, message: str) -> Dict[str, Any]:
 def _verify_api_key(authorization: Optional[str]) -> bool:
     """验证千问调你时的 X-API-Key"""
     if not settings.A2A_API_KEY:
-        return True  # 未配置则不校验(本地联调)
+        return True  # 未配置则不校验 (本地联调)
     if not authorization:
         return False
     token = authorization.replace("Bearer ", "").strip()
@@ -53,6 +53,34 @@ async def message_send(request: Request):
     A2A JSON-RPC 同步端点
     接收千问发来的 user message,返回 Agent 回复
     """
+    # === 测试模式 (小艺平台审核用) ===
+    # ⚠️ 必须在鉴权之前检查，否则 ?test=1 会被 auth 拦截返回 401
+    test_param = request.query_params.get("test")
+    if test_param == "1" or settings.TEST_MODE:
+        log.info(
+            "test_mode_active",
+            extra={"extra_test_reply_len": len(settings.TEST_REPLY)},
+        )
+        test_reply = settings.TEST_REPLY
+        task_id = f"task-test-{uuid.uuid4()}"
+        context_id = "ctx-test"
+        response_task = {
+            "id": task_id,
+            "contextId": context_id,
+            "kind": "task",
+            "status": {
+                "state": "completed",
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            },
+            "artifacts": [
+                {
+                    "artifactId": f"art-test-{uuid.uuid4()}",
+                    "parts": [{"kind": "text", "text": test_reply}],
+                }
+            ],
+        }
+        return JSONResponse(_jsonrpc_ok("test", response_task))
+
     auth = request.headers.get("X-API-Key") or request.headers.get("Authorization")
     if not _verify_api_key(auth):
         raise HTTPException(status_code=401, detail="Invalid API Key")
@@ -68,15 +96,52 @@ async def message_send(request: Request):
 
     log.info("a2a_call", extra={"extra_method": method, "extra_req_id": req_id})
 
-    # === method 检查(先于 parts 检查,符合 A2A 协议惯例)===
+    # === method 检查 (先于 parts 检查，符合 A2A 协议惯例)===
     # 流式分支
     if method == "message/stream":
+        # 测试模式：直接返回预设回复 (单条 SSE event)
+        if test_param == "1" or settings.TEST_MODE:
+            test_reply = settings.TEST_REPLY
+            task_id = f"task-test-{uuid.uuid4()}"
+            context_id = "ctx-test"
+            event = {
+                "jsonrpc": "2.0",
+                "id": "test",
+                "result": {
+                    "id": task_id,
+                    "contextId": context_id,
+                    "kind": "task",
+                    "status": {
+                        "state": "completed",
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
+                    },
+                    "artifacts": [
+                        {
+                            "artifactId": f"art-test-{uuid.uuid4()}",
+                            "parts": [{"kind": "text", "text": test_reply}],
+                        }
+                    ],
+                },
+            }
+            event_data = f"data: {json.dumps(event, ensure_ascii=False)}\n\n".encode("utf-8")
+            done_data = b"data: [DONE]\n\n"
+
+            async def _test_stream():
+                yield event_data
+                yield done_data
+
+            return StreamingResponse(
+                _test_stream(),
+                media_type="text/event-stream",
+                headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+            )
+
         if not settings.STREAMING_ENABLED:
             return JSONResponse(_jsonrpc_err(
                 req_id, -32601,
                 "Streaming not enabled. Set STREAMING_ENABLED=true in .env to use message/stream."
             ))
-        # 流式响应必须先有 user_text,流式不需要重新提取
+        # 流式响应必须先有 user_text，流式不需要重新提取
         message = params.get("message", {})
         parts = message.get("parts", [])
         user_text = ""
@@ -93,7 +158,7 @@ async def message_send(request: Request):
             headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
         )
 
-    # 同步分支:非 message/send 都返 -32601
+    # 同步分支：非 message/send 都返 -32601
     if method != "message/send":
         return JSONResponse(_jsonrpc_err(
             req_id, -32601, f"Method not found: {method}"
@@ -113,8 +178,8 @@ async def message_send(request: Request):
 
     log.info("a2a_llm_start", extra={"extra_text_len": len(user_text), "extra_req_id": req_id})
 
-    # === Phase 1 Wait! 自纠错(2026-06-25 接入)===
-    # 先 parse 出 package/tier/area,触发自纠错
+    # === Phase 1 Wait! 自纠错 (2026-06-25 接入)===
+    # 先 parse 出 package/tier/area，触发自纠错
     intent = parse_user_intent(user_text)
     wait_text = ""
     if intent.get("package") and intent.get("tier") and intent.get("area"):
@@ -124,7 +189,7 @@ async def message_send(request: Request):
                 tier=intent["tier"],
                 area=float(intent["area"]),
                 user_text=user_text,
-                city=None,  # V1.3 未解析 city,V2.0 加城市字段
+                city=None,  # V1.3 未解析 city，V2.0 加城市字段
             )
             if wait_text:
                 log.info(
@@ -193,8 +258,8 @@ async def _stream_llm_response(
     req_id: str, user_text: str, message: Dict[str, Any]
 ) -> AsyncIterator[bytes]:
     """
-    流式响应生成器(假流式:V1.0 简化 —— 同步调 LLM,再 SSE 一段段发)
-    真正的 token 级流式需要换 LLM SDK(支持 stream=True),V2.0+ 再做
+    流式响应生成器 (假流式：V1.0 简化 —— 同步调 LLM，再 SSE 一段段发)
+    真正的 token 级流式需要换 LLM SDK(支持 stream=True)，V2.0+ 再做
     """
     from app.prompts.xiaozhi import XIAOZHI_SYSTEM_PROMPT  # 留作升级真流式用
 
@@ -203,8 +268,8 @@ async def _stream_llm_response(
 
     t0 = time.perf_counter()
     try:
-        # V1.0 简化:还是同步调,得到完整文本后切成多段 SSE 发
-        # 真流式要 httpx stream=True + DeepSeek stream=True,V2.0 做
+        # V1.0 简化：还是同步调，得到完整文本后切成多段 SSE 发
+        # 真流式要 httpx stream=True + DeepSeek stream=True，V2.0 做
         full_text = await chat_with_skill(user_text)
     except Exception as e:
         log.exception("Stream LLM call failed")
@@ -222,7 +287,7 @@ async def _stream_llm_response(
         extra={"extra_req_id": req_id, "extra_llm_latency_ms": llm_ms, "extra_reply_len": len(full_text)},
     )
 
-    # 切分成 ~50 字符一段,逐段发
+    # 切分成 ~50 字符一段，逐段发
     chunk_size = 50
     task_id = f"task-{uuid.uuid4()}"
     context_id = message.get("contextId", f"ctx-{uuid.uuid4()}")
@@ -250,8 +315,8 @@ async def _stream_llm_response(
             },
         }
         yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n".encode("utf-8")
-        # 真实场景下这里不该 await,客户端拉得动才发 —— V2.0+ 优化
-        await asyncio.sleep(0.05)  # 让出事件循环,客户端能持续收到
+        # 真实场景下这里不该 await，客户端拉得动才发 —— V2.0+ 优化
+        await asyncio.sleep(0.05)  # 让出事件循环，客户端能持续收到
 
     # 结束标记
     yield b"data: [DONE]\n\n"
