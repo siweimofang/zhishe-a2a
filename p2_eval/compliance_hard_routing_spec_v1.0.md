@@ -1,6 +1,7 @@
 # 合规硬路由 Spec v1.0（已定稿）
 
 > 批次四交付物①。状态：**已定稿**（0905 三项拍板完成，记录见 §7）。实现工作量约 0.5 天（估），触发条件=BAILIAN_VL_MODEL 配置 + 百炼实测 1 张脱敏样张。
+> **实现落地（0905 批次五）**：插件 v0.6.0 已实现本 spec 全部落点，npm test 54 断言全过；切换三条件①②③齐，`COMPLIANCE_MODE=strict` 已 setx 用户级生效。
 > 依据（代码事实）：
 > - `contract_ocr.js:8-11` 红线注释：合同原件属红档永不上云；v0.5.0 检出 PII 且供应商非百炼时附 `compliance_warning`（提示级），「未脱净只走百炼或拒收」硬路由留待本 spec。
 > - `providers.js` v0.5.0：双路线注册表 `deepseek`（默认）/ `bailian`（BAILIAN_API_KEY + BAILIAN_VL_MODEL 注入型号，**当前环境未配置**）。
@@ -47,6 +48,8 @@
 | 检出 PII + 供应商≠bailian | 调用已发生不可撤回 → 结果标记 `compliance_blocked: true`，报告顶部红档警告 + **结果封存口径**（§7-③）：该样张结论仅限本机核对，禁止进入对外交付物；并在日志记录事件 | `compliance_warning` 提示文案（v0.5.0 现状，一字不改） |
 | 未检出 PII | 正常 | 正常 |
 
+**v0.6.0 实现补注（0905）**：上表 strict + 供应商≠bailian 的落地语义为「**路由优先于拒收**」——先试自动改道百炼（`resolveVisionProvider` 解析通过即 reroute，调用方无感，结果附 `compliance_rerouted` 提示行）；仅当百炼未配置（不可路由）才拒收且不发起任何视觉调用。矩阵中"拒收"读作"**不可路由时**拒收"。另：后检 `compliance_blocked` 落地为警示文案字段（含封存口径措辞），非布尔。
+
 关键设计说明（为什么预检按工具类型不按内容）：PII 扫描发生在 OCR **之后**（contract_ocr.js:118 先提取后打码），"检出 PII 再改走百炼重发"意味着敏感图已经发过一次 DeepSeek——违规已成事实。所以硬路由必须是**事前门**（合同工具=红档，默认走百炼），PII 后检只能做"事后封存+警示"，两者缺一不可。
 
 ## 4. 降级路径（不装死原则，对应框架自查第十节④：框架外活动不得泄漏）
@@ -64,7 +67,7 @@
 | `BAILIAN_VL_MODEL` | 百炼控制台当前主力 VL 型号 | **当前未配置**——strict 前置条件 |
 | `VISION_PROVIDER` | deepseek / bailian | 仅默认通道，不覆盖工具级强制 |
 
-## 6. 实现落点（0.5 天估；拍板已完成，仅待切换条件①②）
+## 6. 实现落点（**已实现 0905**，插件 v0.6.0，test/compliance_mode.mjs 9 断言 + 全量 54 断言全过）
 
 1. `contract_ocr.js` `extractContractFromImages` 入口加预检门：strict + 解析供应商≠bailian → 直接 return `{success:false, compliance_refused:true, error:文案}`（复用 `resolveVisionProvider` 解析结果，不新增请求）。
 2. `contract_ocr.js` 后检分支按 mode 分流：strict 时输出 `compliance_blocked` 标记；`index.js` 报告装配层对 blocked 结果在**报告顶部内嵌红档警告横幅**（拍板③选 B，横幅文案沿用 v0.5.0 compliance_warning 措辞收紧）；advisory 保持 `compliance_warning` 原样，**零行为变化**。
