@@ -98,6 +98,8 @@ async function runOne(sample, provider, mode) {
         provider_actual: extraction.provider, model: extraction.model,
         pages: extraction.pages_total || sample.images.length,
         items_extracted: items.length,
+        // v0.6.0 批次六: 条目明细落盘(召回对拍需要名字/单价, summary.md 表格不展示)
+        items: items.map(x => ({ name: String(x.name || ''), unit: x.unit ?? null, qty: x.quantity ?? null, unit_price: x.unit_price ?? null, total_price: x.total_price ?? null })),
         ...(extraction.json_parse_failures != null && { json_parse_failures: extraction.json_parse_failures }),
         ...(extraction.data?.duplicate_warnings?.length && { duplicate_groups: extraction.data.duplicate_warnings.length }),
         ...(extraction.ocr_warnings?.length && { ocr_warning_groups: extraction.ocr_warnings.length }),
