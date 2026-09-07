@@ -1,0 +1,38 @@
+{
+ "meta": {
+  "batch": "RN14挂账单例补丁 k16397+k18297 人→入2op (判定线定谳, 用户拍板; k12134合法结案不修)",
+  "notice": "_rn2_patch_notice.txt md5=8ea11f04cebac739de895a75b848ef38",
+  "pre_state": {
+   "HEAD": "7199ffe66b147f8f58aeadb227fb8f67d533fc24",
+   "blob": "4fd00c032cf9d720d4dfb56f1d73728c51358b7d",
+   "sha256": "1fb31fae6b18851aabe1f5371a68161d6a21a5477d13b6f2f5eb5a6b8d6d7de1",
+   "bytes": 39248524,
+   "entries": 29788
+  },
+  "craft": "2op长窗锚自证; 红线=13处合法充人(补充人员等跨词子串)仅k18297.answer场内单锚严禁波及",
+  "post_census_expect": {
+   "全库人料口": 0,
+   "全库充人": 13
+  }
+ },
+ "expect": {
+  "numstat": "以实态diff为准",
+  "entries": 2,
+  "ops": 2,
+  "points": 2
+ },
+ "fixlist": [
+  {
+   "id": "k16397",
+   "field": "answer",
+   "old": "成型机人料口",
+   "new": "成型机入料口"
+  },
+  {
+   "id": "k18297",
+   "field": "answer",
+   "old": "充人铜屑",
+   "new": "充入铜屑"
+  }
+ ]
+}
