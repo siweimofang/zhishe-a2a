@@ -1,0 +1,3281 @@
+{
+ "meta": {
+  "batch": "J1他轨OCR误识批 峻族536(峻工→竣工522+劈词13+k19333峻1)+拌1+椎1+十2 共541字符/op540",
+  "notice": "_j1_patch_notice.txt md5=62df29a2effb7a059a466f61dc44d26a",
+  "pre_state": {
+   "HEAD": "69737d445d6c5a9b5efc231ed2d306c48f87b99a",
+   "blob": "e601b8bf90f0c17f115d931c9c87e691bd39127d",
+   "sha256": "a5a8693fbd0aa1b063a8728e7ba844b1e855b91b37b7bac38d4a2a55a76002e0",
+   "bytes": 39248524,
+   "entries": 29788
+  },
+  "craft": "A族峻工522逐位最小唯一窗op在前(窗不触他bigram位/不触显式span/场内唯一), 16条显式op照令在后; 红线照令四: 合法峻30位(冷峻连写18+冷⏎峻劈词1@k20125+严峻9+崇山峻岭1@k11688+吴峻1@k15731)/搅拌1056/S批十族领域禁入(全库十3148仅2op)/k4224预理=1冻结/九批修位不回退/13合法充人/挂账4项不碰",
+  "post_census_expect": {
+   "峻工": 0,
+   "峻\\n工": 0,
+   "峻1": 0,
+   "峻": 30,
+   "竣工": 1010,
+   "拌倒": 0,
+   "绊倒": 13,
+   "搅拌": 1056,
+   "木椎": 0,
+   "木榫": 6,
+   "500十": 0,
+   "1500十": 0,
+   "500+（": 1,
+   "1500+64": 1,
+   "十": 3146,
+   "bytes": 39248522,
+   "entries": 29788
+  }
+ },
+ "expect": {
+  "numstat": "以实态diff为准",
+  "entries": 280,
+  "ops": 540,
+  "points": 541
+ },
+ "fixlist": [
+  {
+   "id": "k10047",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10049",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10302",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10319",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10873",
+   "field": "question",
+   "old": "峻工验收报告。",
+   "new": "竣工验收报告。"
+  },
+  {
+   "id": "k10873",
+   "field": "question",
+   "old": "。工程峻工",
+   "new": "。工程竣工"
+  },
+  {
+   "id": "k10874",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10880",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10881",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11015",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11047",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11052",
+   "field": "answer",
+   "old": "峻工时",
+   "new": "竣工时"
+  },
+  {
+   "id": "k11052",
+   "field": "answer",
+   "old": "设工程峻工",
+   "new": "设工程竣工"
+  },
+  {
+   "id": "k11052",
+   "field": "answer",
+   "old": "峻工结算一",
+   "new": "竣工结算一"
+  },
+  {
+   "id": "k11052",
+   "field": "answer",
+   "old": "的峻工",
+   "new": "的竣工"
+  },
+  {
+   "id": "k11052",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11053",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11053",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11125",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11139",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11151",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11155",
+   "field": "answer",
+   "old": "峻工图的",
+   "new": "竣工图的"
+  },
+  {
+   "id": "k11155",
+   "field": "answer",
+   "old": "为峻工",
+   "new": "为竣工"
+  },
+  {
+   "id": "k11155",
+   "field": "answer",
+   "old": "峻工图”章作",
+   "new": "竣工图”章作"
+  },
+  {
+   "id": "k11155",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k11155",
+   "field": "answer",
+   "old": "峻工图”章\n",
+   "new": "竣工图”章\n"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "为峻工",
+   "new": "为竣工"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "峻工图一",
+   "new": "竣工图一"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "。峻工",
+   "new": "。竣工"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "制峻工",
+   "new": "制竣工"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "峻工图按",
+   "new": "竣工图按"
+  },
+  {
+   "id": "k11156",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k11245",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11894",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k11978",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k12437",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k12830",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k12839",
+   "field": "answer",
+   "old": "到峻工",
+   "new": "到竣工"
+  },
+  {
+   "id": "k12839",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k12839",
+   "field": "answer",
+   "old": "价峻工",
+   "new": "价竣工"
+  },
+  {
+   "id": "k12840",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k12841",
+   "field": "answer",
+   "old": "、峻工",
+   "new": "、竣工"
+  },
+  {
+   "id": "k12841",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k12841",
+   "field": "answer",
+   "old": "目峻工",
+   "new": "目竣工"
+  },
+  {
+   "id": "k12841",
+   "field": "answer",
+   "old": "1.峻工",
+   "new": "1.竣工"
+  },
+  {
+   "id": "k12841",
+   "field": "answer",
+   "old": "2.峻工",
+   "new": "2.竣工"
+  },
+  {
+   "id": "k12842",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k12843",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k12846",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13285",
+   "field": "answer",
+   "old": ")峻工",
+   "new": ")竣工"
+  },
+  {
+   "id": "k13285",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13302",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13304",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13320",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13321",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13322",
+   "field": "answer",
+   "old": "峻工项",
+   "new": "竣工项"
+  },
+  {
+   "id": "k13322",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k13322",
+   "field": "answer",
+   "old": "峻工后",
+   "new": "竣工后"
+  },
+  {
+   "id": "k13322",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13323",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13337",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13339",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13341",
+   "field": "answer",
+   "old": "'—参照工程在峻工",
+   "new": "'—参照工程在竣工"
+  },
+  {
+   "id": "k13341",
+   "field": "answer",
+   "old": "其在峻工",
+   "new": "其在竣工"
+  },
+  {
+   "id": "k13341",
+   "field": "answer",
+   "old": "-—参照工程在峻工",
+   "new": "-—参照工程在竣工"
+  },
+  {
+   "id": "k13459",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13459",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13461",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13461",
+   "field": "question",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k13461",
+   "field": "question",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k13462",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13462",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13463",
+   "field": "answer",
+   "old": "对峻工",
+   "new": "对竣工"
+  },
+  {
+   "id": "k13463",
+   "field": "answer",
+   "old": "的峻工",
+   "new": "的竣工"
+  },
+  {
+   "id": "k13463",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13465",
+   "field": "answer",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k13465",
+   "field": "answer",
+   "old": "峻工未",
+   "new": "竣工未"
+  },
+  {
+   "id": "k13465",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13468",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13468",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13502",
+   "field": "answer",
+   "old": "程峻工结",
+   "new": "程竣工结"
+  },
+  {
+   "id": "k13502",
+   "field": "answer",
+   "old": "得峻工",
+   "new": "得竣工"
+  },
+  {
+   "id": "k13502",
+   "field": "answer",
+   "old": "在峻工",
+   "new": "在竣工"
+  },
+  {
+   "id": "k13502",
+   "field": "answer",
+   "old": "峻工图",
+   "new": "竣工图"
+  },
+  {
+   "id": "k13502",
+   "field": "answer",
+   "old": "制峻工",
+   "new": "制竣工"
+  },
+  {
+   "id": "k13503",
+   "field": "answer",
+   "old": "和峻工",
+   "new": "和竣工"
+  },
+  {
+   "id": "k13503",
+   "field": "answer",
+   "old": "支峻工",
+   "new": "支竣工"
+  },
+  {
+   "id": "k13503",
+   "field": "answer",
+   "old": "目峻工",
+   "new": "目竣工"
+  },
+  {
+   "id": "k13503",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13503",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k13504",
+   "field": "answer",
+   "old": "峻工决",
+   "new": "竣工决"
+  },
+  {
+   "id": "k13504",
+   "field": "answer",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k13508",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13509",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "程峻工验",
+   "new": "程竣工验"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "是峻工",
+   "new": "是竣工"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "峻工决",
+   "new": "竣工决"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "峻工项",
+   "new": "竣工项"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "峻工\n",
+   "new": "竣工\n"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "峻工后",
+   "new": "竣工后"
+  },
+  {
+   "id": "k13514",
+   "field": "answer",
+   "old": "报峻工",
+   "new": "报竣工"
+  },
+  {
+   "id": "k13515",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13677",
+   "field": "answer",
+   "old": "产生的费用在办理峻工",
+   "new": "产生的费用在办理竣工"
+  },
+  {
+   "id": "k13677",
+   "field": "answer",
+   "old": "发生的费用在办理峻工",
+   "new": "发生的费用在办理竣工"
+  },
+  {
+   "id": "k13677",
+   "field": "answer",
+   "old": "于峻工",
+   "new": "于竣工"
+  },
+  {
+   "id": "k13677",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13678",
+   "field": "answer",
+   "old": "。峻工",
+   "new": "。竣工"
+  },
+  {
+   "id": "k13678",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13678",
+   "field": "answer",
+   "old": "目峻工",
+   "new": "目竣工"
+  },
+  {
+   "id": "k13678",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k13678",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "峻工结算的",
+   "new": "竣工结算的"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "成峻工",
+   "new": "成竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "交峻工验",
+   "new": "交竣工验"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "人提交峻工",
+   "new": "人提交竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "内提交峻工",
+   "new": "内提交竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "人提交的峻工",
+   "new": "人提交的竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "次提交的峻工",
+   "new": "次提交的竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "在峻工",
+   "new": "在竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "，峻工",
+   "new": "，竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "answer",
+   "old": "到峻工",
+   "new": "到竣工"
+  },
+  {
+   "id": "k13680",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13687",
+   "field": "answer",
+   "old": "峻工的",
+   "new": "竣工的"
+  },
+  {
+   "id": "k13687",
+   "field": "answer",
+   "old": "峻工每",
+   "new": "竣工每"
+  },
+  {
+   "id": "k13687",
+   "field": "answer",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k13687",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13694",
+   "field": "answer",
+   "old": "）\n峻工",
+   "new": "）\n竣工"
+  },
+  {
+   "id": "k13694",
+   "field": "answer",
+   "old": "付峻工",
+   "new": "付竣工"
+  },
+  {
+   "id": "k13694",
+   "field": "answer",
+   "old": "注\n峻工",
+   "new": "注\n竣工"
+  },
+  {
+   "id": "k13694",
+   "field": "answer",
+   "old": "付的峻工",
+   "new": "付的竣工"
+  },
+  {
+   "id": "k13694",
+   "field": "answer",
+   "old": "出的峻工",
+   "new": "出的竣工"
+  },
+  {
+   "id": "k13694",
+   "field": "answer",
+   "old": "，峻工",
+   "new": "，竣工"
+  },
+  {
+   "id": "k13744",
+   "field": "answer",
+   "old": "4峻工",
+   "new": "4竣工"
+  },
+  {
+   "id": "k13744",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13790",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13805",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13815",
+   "field": "answer",
+   "old": "峻工的",
+   "new": "竣工的"
+  },
+  {
+   "id": "k13815",
+   "field": "answer",
+   "old": ".峻工",
+   "new": ".竣工"
+  },
+  {
+   "id": "k13815",
+   "field": "answer",
+   "old": "，峻工",
+   "new": "，竣工"
+  },
+  {
+   "id": "k13822",
+   "field": "answer",
+   "old": "、峻工",
+   "new": "、竣工"
+  },
+  {
+   "id": "k13822",
+   "field": "answer",
+   "old": "至峻工",
+   "new": "至竣工"
+  },
+  {
+   "id": "k13868",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13880",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k13880",
+   "field": "answer",
+   "old": "峻工决",
+   "new": "竣工决"
+  },
+  {
+   "id": "k13887",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "念\n峻工",
+   "new": "念\n竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "峻工决算，",
+   "new": "竣工决算，"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "1)峻工",
+   "new": "1)竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "映峻工",
+   "new": "映竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "2)峻工",
+   "new": "2)竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "，通过峻工",
+   "new": "，通过竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "。\n峻工",
+   "new": "。\n竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "了峻工",
+   "new": "了竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "由峻工",
+   "new": "由竣工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "、峻工",
+   "new": "、竣工"
+  },
+  {
+   "id": "k13957",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k13964",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k13964",
+   "field": "answer",
+   "old": "目峻工",
+   "new": "目竣工"
+  },
+  {
+   "id": "k13964",
+   "field": "answer",
+   "old": "项工程峻工",
+   "new": "项工程竣工"
+  },
+  {
+   "id": "k13964",
+   "field": "answer",
+   "old": "位工程峻工",
+   "new": "位工程竣工"
+  },
+  {
+   "id": "k13995",
+   "field": "answer",
+   "old": "支峻工",
+   "new": "支竣工"
+  },
+  {
+   "id": "k13995",
+   "field": "answer",
+   "old": "项工程峻工",
+   "new": "项工程竣工"
+  },
+  {
+   "id": "k13995",
+   "field": "answer",
+   "old": "峻工结算的",
+   "new": "竣工结算的"
+  },
+  {
+   "id": "k13995",
+   "field": "answer",
+   "old": "在峻工",
+   "new": "在竣工"
+  },
+  {
+   "id": "k14016",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k14041",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k14041",
+   "field": "answer",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k14118",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k14120",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "成峻工",
+   "new": "成竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "对峻工",
+   "new": "对竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "，峻工",
+   "new": "，竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "的峻工",
+   "new": "的竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "）峻工",
+   "new": "）竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "将峻工",
+   "new": "将竣工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k14843",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k14871",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k14933",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k14934",
+   "field": "answer",
+   "old": "标\n峻工",
+   "new": "标\n竣工"
+  },
+  {
+   "id": "k14934",
+   "field": "answer",
+   "old": "峻工结算书",
+   "new": "竣工结算书"
+  },
+  {
+   "id": "k14934",
+   "field": "answer",
+   "old": "峻工结算总",
+   "new": "竣工结算总"
+  },
+  {
+   "id": "k14934",
+   "field": "answer",
+   "old": "目峻工",
+   "new": "目竣工"
+  },
+  {
+   "id": "k14934",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k14934",
+   "field": "answer",
+   "old": "号\n峻工",
+   "new": "号\n竣工"
+  },
+  {
+   "id": "k15000",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k15051",
+   "field": "answer",
+   "old": ".峻工",
+   "new": ".竣工"
+  },
+  {
+   "id": "k15051",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k15109",
+   "field": "answer",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k15109",
+   "field": "answer",
+   "old": "峻工决",
+   "new": "竣工决"
+  },
+  {
+   "id": "k16792",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k16820",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17123",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17383",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17384",
+   "field": "answer",
+   "old": "峻工时",
+   "new": "竣工时"
+  },
+  {
+   "id": "k17384",
+   "field": "answer",
+   "old": "峻工后",
+   "new": "竣工后"
+  },
+  {
+   "id": "k17385",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17391",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17569",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17744",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k17791",
+   "field": "answer",
+   "old": "付峻工",
+   "new": "付竣工"
+  },
+  {
+   "id": "k17791",
+   "field": "answer",
+   "old": "峻工经",
+   "new": "竣工经"
+  },
+  {
+   "id": "k17791",
+   "field": "answer",
+   "old": "程峻工验",
+   "new": "程竣工验"
+  },
+  {
+   "id": "k17791",
+   "field": "answer",
+   "old": "的峻工",
+   "new": "的竣工"
+  },
+  {
+   "id": "k18074",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18098",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18413",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18414",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18418",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18421",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18436",
+   "field": "answer",
+   "old": "峻工的日期延误，经",
+   "new": "竣工的日期延误，经"
+  },
+  {
+   "id": "k18436",
+   "field": "answer",
+   "old": "峻工的日期延误，工",
+   "new": "竣工的日期延误，工"
+  },
+  {
+   "id": "k18438",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18507",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18540",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18850",
+   "field": "answer",
+   "old": "的峻工验",
+   "new": "的竣工验"
+  },
+  {
+   "id": "k18850",
+   "field": "answer",
+   "old": "）峻工",
+   "new": "）竣工"
+  },
+  {
+   "id": "k18850",
+   "field": "answer",
+   "old": "峻工资",
+   "new": "竣工资"
+  },
+  {
+   "id": "k18850",
+   "field": "answer",
+   "old": "过峻工",
+   "new": "过竣工"
+  },
+  {
+   "id": "k18852",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18867",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k18881",
+   "field": "answer",
+   "old": "峻工时",
+   "new": "竣工时"
+  },
+  {
+   "id": "k18881",
+   "field": "answer",
+   "old": "峻工图",
+   "new": "竣工图"
+  },
+  {
+   "id": "k18899",
+   "field": "answer",
+   "old": "峻工验收是指",
+   "new": "竣工验收是指"
+  },
+  {
+   "id": "k18899",
+   "field": "answer",
+   "old": "峻工验收是装",
+   "new": "竣工验收是装"
+  },
+  {
+   "id": "k18899",
+   "field": "answer",
+   "old": "峻工验收，",
+   "new": "竣工验收，"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "行峻工自",
+   "new": "行竣工自"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "行峻工验",
+   "new": "行竣工验"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "峻工预",
+   "new": "竣工预"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "峻工检",
+   "new": "竣工检"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "查峻工",
+   "new": "查竣工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "。峻工自",
+   "new": "。竣工自"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "由峻工",
+   "new": "由竣工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "加峻工",
+   "new": "加竣工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "式峻工",
+   "new": "式竣工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "《峻工",
+   "new": "《竣工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "交峻工",
+   "new": "交竣工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "峻工工",
+   "new": "竣工工"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "；峻工自",
+   "new": "；竣工自"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "峻工图；",
+   "new": "竣工图；"
+  },
+  {
+   "id": "k18902",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k19333",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k19638",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k19889",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k19892",
+   "field": "answer",
+   "old": "过峻工",
+   "new": "过竣工"
+  },
+  {
+   "id": "k19892",
+   "field": "answer",
+   "old": "峻工日",
+   "new": "竣工日"
+  },
+  {
+   "id": "k19892",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k19892",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k20013",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k20162",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k20236",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k20381",
+   "field": "answer",
+   "old": "峻工这",
+   "new": "竣工这"
+  },
+  {
+   "id": "k20381",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k20572",
+   "field": "answer",
+   "old": "峻工：",
+   "new": "竣工："
+  },
+  {
+   "id": "k20572",
+   "field": "answer",
+   "old": "峻工。",
+   "new": "竣工。"
+  },
+  {
+   "id": "k20697",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k21095",
+   "field": "answer",
+   "old": "峻工验收基",
+   "new": "竣工验收基"
+  },
+  {
+   "id": "k21095",
+   "field": "answer",
+   "old": "峻工验收要",
+   "new": "竣工验收要"
+  },
+  {
+   "id": "k21179",
+   "field": "answer",
+   "old": "峻工交",
+   "new": "竣工交"
+  },
+  {
+   "id": "k21179",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k21183",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k21499",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k21755",
+   "field": "answer",
+   "old": "从峻工",
+   "new": "从竣工"
+  },
+  {
+   "id": "k21755",
+   "field": "answer",
+   "old": "宅峻工",
+   "new": "宅竣工"
+  },
+  {
+   "id": "k21787",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22007",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22087",
+   "field": "answer",
+   "old": ".峻工",
+   "new": ".竣工"
+  },
+  {
+   "id": "k22087",
+   "field": "answer",
+   "old": "行峻工",
+   "new": "行竣工"
+  },
+  {
+   "id": "k22320",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22356",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22370",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22393",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22410",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22411",
+   "field": "answer",
+   "old": "峻工并",
+   "new": "竣工并"
+  },
+  {
+   "id": "k22411",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k22432",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22484",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22484",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22488",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22496",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22505",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22935",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22938",
+   "field": "answer",
+   "old": "，峻工",
+   "new": "，竣工"
+  },
+  {
+   "id": "k22938",
+   "field": "answer",
+   "old": "经峻工",
+   "new": "经竣工"
+  },
+  {
+   "id": "k22939",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22941",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k22941",
+   "field": "answer",
+   "old": "峻工图",
+   "new": "竣工图"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "）峻工",
+   "new": "）竣工"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "峻工验收5",
+   "new": "竣工验收5"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "将峻工",
+   "new": "将竣工"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "峻工验收进",
+   "new": "竣工验收进"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "自工程峻工",
+   "new": "自工程竣工"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "设工程峻工",
+   "new": "设工程竣工"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "送工程峻工",
+   "new": "送工程竣工"
+  },
+  {
+   "id": "k22958",
+   "field": "answer",
+   "old": "在工程峻工",
+   "new": "在工程竣工"
+  },
+  {
+   "id": "k22966",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22966",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k22968",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23001",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23016",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23017",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23044",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23053",
+   "field": "answer",
+   "old": "峻工验收前",
+   "new": "竣工验收前"
+  },
+  {
+   "id": "k23053",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k23053",
+   "field": "answer",
+   "old": "峻工验收3",
+   "new": "竣工验收3"
+  },
+  {
+   "id": "k23067",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k23067",
+   "field": "answer",
+   "old": "峻工阶",
+   "new": "竣工阶"
+  },
+  {
+   "id": "k23070",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23098",
+   "field": "answer",
+   "old": "峻工日",
+   "new": "竣工日"
+  },
+  {
+   "id": "k23098",
+   "field": "answer",
+   "old": "峻工资",
+   "new": "竣工资"
+  },
+  {
+   "id": "k23098",
+   "field": "answer",
+   "old": "、峻工",
+   "new": "、竣工"
+  },
+  {
+   "id": "k23098",
+   "field": "answer",
+   "old": "加峻工",
+   "new": "加竣工"
+  },
+  {
+   "id": "k23109",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23121",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23145",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23150",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23154",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23163",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23416",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k23755",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k24805",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k24856",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k24888",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k24891",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k25028",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k25229",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k25297",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k25298",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k25302",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k25309",
+   "field": "answer",
+   "old": "署峻工",
+   "new": "署竣工"
+  },
+  {
+   "id": "k25309",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k26617",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "峻工验收合",
+   "new": "竣工验收合"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "设工程峻工",
+   "new": "设工程竣工"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "和峻工",
+   "new": "和竣工"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "送工程峻工",
+   "new": "送工程竣工"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "织峻工",
+   "new": "织竣工"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "理工程峻工",
+   "new": "理工程竣工"
+  },
+  {
+   "id": "k26660",
+   "field": "answer",
+   "old": "峻工验收无",
+   "new": "竣工验收无"
+  },
+  {
+   "id": "k26926",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26958",
+   "field": "answer",
+   "old": "理工程峻工",
+   "new": "理工程竣工"
+  },
+  {
+   "id": "k26958",
+   "field": "answer",
+   "old": "设工程峻工",
+   "new": "设工程竣工"
+  },
+  {
+   "id": "k26958",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26959",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26959",
+   "field": "question",
+   "old": "峻工验收合",
+   "new": "竣工验收合"
+  },
+  {
+   "id": "k26959",
+   "field": "question",
+   "old": "峻工验收备",
+   "new": "竣工验收备"
+  },
+  {
+   "id": "k26960",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k26960",
+   "field": "answer",
+   "old": "A.峻工",
+   "new": "A.竣工"
+  },
+  {
+   "id": "k26960",
+   "field": "answer",
+   "old": "B.峻工",
+   "new": "B.竣工"
+  },
+  {
+   "id": "k26960",
+   "field": "answer",
+   "old": "C.峻工",
+   "new": "C.竣工"
+  },
+  {
+   "id": "k26960",
+   "field": "answer",
+   "old": "D.峻工",
+   "new": "D.竣工"
+  },
+  {
+   "id": "k26961",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26962",
+   "field": "answer",
+   "old": "A.工程峻工",
+   "new": "A.工程竣工"
+  },
+  {
+   "id": "k26962",
+   "field": "answer",
+   "old": "B.工程峻工",
+   "new": "B.工程竣工"
+  },
+  {
+   "id": "k26962",
+   "field": "answer",
+   "old": "C.工程峻工",
+   "new": "C.工程竣工"
+  },
+  {
+   "id": "k26962",
+   "field": "answer",
+   "old": "D.工程峻工",
+   "new": "D.工程竣工"
+  },
+  {
+   "id": "k26962",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26963",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26963",
+   "field": "question",
+   "old": "峻工验收的备",
+   "new": "竣工验收的备"
+  },
+  {
+   "id": "k26963",
+   "field": "question",
+   "old": "将峻工",
+   "new": "将竣工"
+  },
+  {
+   "id": "k26964",
+   "field": "answer",
+   "old": "峻工验收备",
+   "new": "竣工验收备"
+  },
+  {
+   "id": "k26964",
+   "field": "answer",
+   "old": "峻工验收报",
+   "new": "竣工验收报"
+  },
+  {
+   "id": "k26964",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k26972",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27042",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27070",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27078",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27086",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27088",
+   "field": "answer",
+   "old": "峻工的",
+   "new": "竣工的"
+  },
+  {
+   "id": "k27088",
+   "field": "answer",
+   "old": "峻工协",
+   "new": "竣工协"
+  },
+  {
+   "id": "k27088",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "于峻工",
+   "new": "于竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "经峻工",
+   "new": "经竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "或峻工",
+   "new": "或竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": ".峻工",
+   "new": ".竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "的峻工",
+   "new": "的竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "合峻工",
+   "new": "合竣工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "峻工报",
+   "new": "竣工报"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k27091",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27091",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27093",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27102",
+   "field": "answer",
+   "old": "峻工，",
+   "new": "竣工，"
+  },
+  {
+   "id": "k27102",
+   "field": "answer",
+   "old": "峻工为",
+   "new": "竣工为"
+  },
+  {
+   "id": "k27112",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工报告，",
+   "new": "竣工报告，"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工报告须",
+   "new": "竣工报告须"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工报告后",
+   "new": "竣工报告后"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工验收7",
+   "new": "竣工验收7"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工验收。\n①",
+   "new": "竣工验收。\n①"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工验收意",
+   "new": "竣工验收意"
+  },
+  {
+   "id": "k27136",
+   "field": "answer",
+   "old": "峻工验收。\n出",
+   "new": "竣工验收。\n出"
+  },
+  {
+   "id": "k27136",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27137",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27137",
+   "field": "question",
+   "old": "峻工验收备",
+   "new": "竣工验收备"
+  },
+  {
+   "id": "k27137",
+   "field": "question",
+   "old": "峻工验收合",
+   "new": "竣工验收合"
+  },
+  {
+   "id": "k27138",
+   "field": "answer",
+   "old": "峻工移",
+   "new": "竣工移"
+  },
+  {
+   "id": "k27138",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k27138",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27155",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27158",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27189",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27190",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27287",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27290",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27298",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27326",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27335",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27339",
+   "field": "answer",
+   "old": "峻工交",
+   "new": "竣工交"
+  },
+  {
+   "id": "k27339",
+   "field": "answer",
+   "old": "峻工工",
+   "new": "竣工工"
+  },
+  {
+   "id": "k27339",
+   "field": "answer",
+   "old": "峻工时",
+   "new": "竣工时"
+  },
+  {
+   "id": "k27427",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27432",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27449",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27450",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27451",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "条峻工",
+   "new": "条竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "备峻工",
+   "new": "备竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "峻工资",
+   "new": "竣工资"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "和峻工",
+   "new": "和竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "峻工图",
+   "new": "竣工图"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "到峻工验",
+   "new": "到竣工验"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "的峻工",
+   "new": "的竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "峻工协",
+   "new": "竣工协"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "。峻工",
+   "new": "。竣工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "峻工结",
+   "new": "竣工结"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "峻工工",
+   "new": "竣工工"
+  },
+  {
+   "id": "k27459",
+   "field": "answer",
+   "old": "到峻工报",
+   "new": "到竣工报"
+  },
+  {
+   "id": "k27459",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27462",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27464",
+   "field": "answer",
+   "old": "峻工日",
+   "new": "竣工日"
+  },
+  {
+   "id": "k27464",
+   "field": "answer",
+   "old": "峻工报",
+   "new": "竣工报"
+  },
+  {
+   "id": "k27465",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27466",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27523",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27526",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27529",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27531",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k27531",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k27531",
+   "field": "answer",
+   "old": "织峻工",
+   "new": "织竣工"
+  },
+  {
+   "id": "k27533",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27535",
+   "field": "answer",
+   "old": "织峻工",
+   "new": "织竣工"
+  },
+  {
+   "id": "k27535",
+   "field": "answer",
+   "old": "程峻工",
+   "new": "程竣工"
+  },
+  {
+   "id": "k27697",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27745",
+   "field": "answer",
+   "old": "，以峻工",
+   "new": "，以竣工"
+  },
+  {
+   "id": "k27745",
+   "field": "answer",
+   "old": "：以峻工",
+   "new": "：以竣工"
+  },
+  {
+   "id": "k27768",
+   "field": "answer",
+   "old": "\n峻工",
+   "new": "\n竣工"
+  },
+  {
+   "id": "k27768",
+   "field": "answer",
+   "old": "为峻工",
+   "new": "为竣工"
+  },
+  {
+   "id": "k27772",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27781",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27808",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27829",
+   "field": "answer",
+   "old": "峻工违",
+   "new": "竣工违"
+  },
+  {
+   "id": "k27829",
+   "field": "answer",
+   "old": "峻工不",
+   "new": "竣工不"
+  },
+  {
+   "id": "k27842",
+   "field": "answer",
+   "old": "峻工验收是装饰装修工程项目进行的最后一",
+   "new": "竣工验收是装饰装修工程项目进行的最后一"
+  },
+  {
+   "id": "k27842",
+   "field": "answer",
+   "old": "，峻工",
+   "new": "，竣工"
+  },
+  {
+   "id": "k27842",
+   "field": "answer",
+   "old": "峻工验收工",
+   "new": "竣工验收工"
+  },
+  {
+   "id": "k27842",
+   "field": "answer",
+   "old": "．装饰装修工程项目峻工",
+   "new": "．装饰装修工程项目竣工"
+  },
+  {
+   "id": "k27842",
+   "field": "answer",
+   "old": "过峻工",
+   "new": "过竣工"
+  },
+  {
+   "id": "k27842",
+   "field": "answer",
+   "old": "峻工验收可",
+   "new": "竣工验收可"
+  },
+  {
+   "id": "k27847",
+   "field": "answer",
+   "old": "峻工自",
+   "new": "竣工自"
+  },
+  {
+   "id": "k27847",
+   "field": "answer",
+   "old": "峻工预",
+   "new": "竣工预"
+  },
+  {
+   "id": "k27847",
+   "field": "answer",
+   "old": "峻工图",
+   "new": "竣工图"
+  },
+  {
+   "id": "k27848",
+   "field": "answer",
+   "old": "峻工自",
+   "new": "竣工自"
+  },
+  {
+   "id": "k27848",
+   "field": "answer",
+   "old": "峻工标",
+   "new": "竣工标"
+  },
+  {
+   "id": "k27849",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27850",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27851",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k27851",
+   "field": "answer",
+   "old": "峻工自",
+   "new": "竣工自"
+  },
+  {
+   "id": "k27851",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27852",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27853",
+   "field": "answer",
+   "old": "发《峻工",
+   "new": "发《竣工"
+  },
+  {
+   "id": "k27853",
+   "field": "answer",
+   "old": "在《峻工",
+   "new": "在《竣工"
+  },
+  {
+   "id": "k27855",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27857",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27864",
+   "field": "answer",
+   "old": "峻工决算报表包",
+   "new": "竣工决算报表包"
+  },
+  {
+   "id": "k27864",
+   "field": "answer",
+   "old": "种峻工",
+   "new": "种竣工"
+  },
+  {
+   "id": "k27864",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27865",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27865",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27866",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27867",
+   "field": "answer",
+   "old": "。峻工",
+   "new": "。竣工"
+  },
+  {
+   "id": "k27867",
+   "field": "answer",
+   "old": "查峻工",
+   "new": "查竣工"
+  },
+  {
+   "id": "k27868",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27869",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27872",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27874",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27903",
+   "field": "answer",
+   "old": "峻工的",
+   "new": "竣工的"
+  },
+  {
+   "id": "k27903",
+   "field": "answer",
+   "old": "峻工验",
+   "new": "竣工验"
+  },
+  {
+   "id": "k27920",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k27937",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k28060",
+   "field": "answer",
+   "old": "度峻工",
+   "new": "度竣工"
+  },
+  {
+   "id": "k28060",
+   "field": "answer",
+   "old": "行峻工",
+   "new": "行竣工"
+  },
+  {
+   "id": "k28152",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k29804",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k3734",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k4557",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k4562",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k4571",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k4861",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k4876",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k5004",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k5111",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k5357",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6033",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6087",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6280",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6281",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6284",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6285",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k6464",
+   "field": "answer",
+   "old": "峻工结算书",
+   "new": "竣工结算书"
+  },
+  {
+   "id": "k6464",
+   "field": "answer",
+   "old": "峻工结算总",
+   "new": "竣工结算总"
+  },
+  {
+   "id": "k9393",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k9447",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k9483",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k9835",
+   "field": "question",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k9880",
+   "field": "answer",
+   "old": "峻工",
+   "new": "竣工"
+  },
+  {
+   "id": "k10872",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k11155",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k13929",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k14121",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k17053",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k18851",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k19941",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k22432",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k27042",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k27090",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k27773",
+   "field": "answer",
+   "old": "峻\n工",
+   "new": "竣\n工"
+  },
+  {
+   "id": "k9393",
+   "field": "answer",
+   "old": "峻\n工\n验\n收",
+   "new": "竣\n工\n验\n收"
+  },
+  {
+   "id": "k12731",
+   "field": "answer",
+   "old": "在峻\n",
+   "new": "在竣\n"
+  },
+  {
+   "id": "k19333",
+   "field": "answer",
+   "old": "峻1验收",
+   "new": "竣工验收"
+  },
+  {
+   "id": "k13712",
+   "field": "question",
+   "old": "1500十64",
+   "new": "1500+64"
+  },
+  {
+   "id": "k26697",
+   "field": "answer",
+   "old": "500十（",
+   "new": "500+（"
+  },
+  {
+   "id": "k12185",
+   "field": "answer",
+   "old": "拌倒",
+   "new": "绊倒"
+  },
+  {
+   "id": "k22327",
+   "field": "answer",
+   "old": "木椎",
+   "new": "木榫"
+  }
+ ]
+}
