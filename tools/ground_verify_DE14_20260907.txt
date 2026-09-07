@@ -1,0 +1,42 @@
+DE14 两批 pre/post blob 独立地面终验留档（tools/ground_verify.py 首次入仓实测记录）
+执行时点: 2026-09-07  会话: KB写手 f696b9f8  实态HEAD=27950b2
+工具: tools/ground_verify.py（参数化版, 本留档即其DE14双批实测记录）
+
+======== 批1: DE主批14op ========
+命令: python tools/ground_verify.py --pre 4071feb --post 3b6737d
+      --fixlist 修复微批_DE合并取优与登记字伤_fixlist_20260907.json
+      --bak-pre data/knowledge_backup_20260907_preDE14.json
+      --expect-pre-sha 950e536a --expect-post-sha 32ae65d2
+      --entries 29788 --anchors <DE主批锚12项>
+pre  4071feb  blob=950e536ada324b52f1f5b73b1b09ed0a9b9e2c42
+post 3b6737d blob=32ae65d22dc6dd5093cdef124ae1e25984183f4d
+[PASS] A1 pre/post blob sha 与期望相符
+[PASS] A2 pre blob→CRLF == bak-pre 字节全等
+[PASS] A3 post blob→CRLF == 现盘字节全等 (post≠HEAD, 自动跳过现盘比对)
+[PASS] A4 pre态每op old在该(id,field)内count==1 (14/14)
+[PASS] A5 pre+fixlist重放 == post blob(CRLF归一)
+[PASS] A6 post entries数 (29788)
+[PASS] A7 现态锚抽查 (12项全过)
+GROUND ALL GREEN  EXIT=0
+
+======== 批2: 补丁1 k11179部→剖 ========
+命令: python tools/ground_verify.py --pre 3b6737d --post 27950b2
+      --fixlist 修复微批_DE合并取优与登记字伤_fixlist_补丁1_20260907.json
+      --bak-pre data/knowledge_backup_20260907_preDE14p1.json
+      --expect-post-sha d8fa6f56
+      --entries 29788 --anchors <两批现态全量锚14项>
+pre  3b6737d  blob=32ae65d22dc6dd5093cdef124ae1e25984183f4d
+post 27950b2 blob=d8fa6f56d7de39fff770ee77b02d1a161e9a139a
+[PASS] A1 pre/post blob sha 与期望相符
+[PASS] A2 pre blob→CRLF == bak-pre 字节全等
+[PASS] A3 post blob→CRLF == 现盘字节全等 (post=HEAD=27950b2, 实比)
+[PASS] A4 pre态每op old在该(id,field)内count==1 (1/1)
+[PASS] A5 pre+fixlist重放 == post blob(CRLF归一)
+[PASS] A6 post entries数 (29788)
+[PASS] A7 现态锚抽查 (14项全过, 含k23232在库/出处尾噪已除)
+GROUND ALL GREEN  EXIT=0
+
+======== 备注 ========
+- 三点blob链: 950e536a(4071feb) → 32ae65d2(3b6737d) → d8fa6f56(27950b2), 链间无缝衔接。
+- 锚集口径: 锚属于「哪一拍的post态」就用于哪一批, 跨批混用会红(首测即红于此, 非工具缺陷)。
+- 本工具此后各微批复用: 换 --pre/--post/--fixlist 与当批锚即可。
