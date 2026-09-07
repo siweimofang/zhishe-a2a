@@ -1,0 +1,5 @@
+1 post格式保真 OK: bytes=39248524 sha256=30c7c120d738c363 entries=29788
+2 BAK sha256 == 补丁令pre基线(=RN14 post盘) OK
+3 post终验点 OK: k3655 锤人=0/锤入=1(锤入油灰内在场); 全库census 锤人=0
+4 未触碰29787条逐条全等 OK; RN14成果抽查(k18043埋入/k10520清理入库/k10647锤入/k3655钉入)不回退
+K3655_VERIFY_GREEN

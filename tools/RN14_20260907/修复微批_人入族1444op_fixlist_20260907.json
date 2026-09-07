@@ -1,0 +1,8687 @@
+{
+ "meta": {
+  "batch": "RN14 人→入族全量 修复微批 (9片判定单合并执行)",
+  "gen": "gen_rn14_fixlist.py; 解析器rn14_resolve.py v3(L1精确窗口内全出现位/L2maili修复/L3剥行/L4省略号/L5注记/L6唯一位/L7模糊 + 位点指派置换集不变性); 埋理批421op fixlist做ctx修复与终态覆盖证据",
+  "craft": "逐gid逐ctx锚定禁replace-all(op=最小唯一窗口count==1); 手术定谳3条(000713总人口/000929插人同轴电缆/002799压人木台豁口,带硬断言与census证据); 跨片重复申报1条(s3:001240=s2:000517同位)跳过; 聚类最小唯一窗口rn13机器",
+  "blocked": "终态拦截9: s1八双字位(k3963/k10716/k11657/k12097/k12358/k17249/k18816/k21665,埋理批已修埋入)+k13005(埋理批顺手人→入); maili窗口覆盖证据+old=0双证",
+  "skip_note": "各片skip_special一律未执行(48跨片dup+4片内同位+11存疑+1 maili已修位由判定单承担); 11条uncertain与BACKLOG_NEW 6条不入库(蒸馏禁区)",
+  "pre_state": "HEAD=2db593aaa blob=8858ac86 entries=29788 bytes=39248524 sha1=1b1d88f44e",
+  "families": "执行1444记录(ren 1445点人→入含双字位分量+理→埋1+情→惰1); mode {'exact': 1390, 'stripped': 6, 'exact_split': 37, 'manual_frag': 1, 'note': 1, 'manual_census': 2, 'fuzzy': 5, 'uniq': 1, 'repaired': 1}"
+ },
+ "expect": {
+  "numstat": "以实态diff为准",
+  "entries": 1051,
+  "ops": 1444,
+  "points": 1446,
+  "exec_records": 1444,
+  "blocked_terminal": 9,
+  "skip_dup": 1,
+  "lesion_records": 1454
+ },
+ "fixlist": [
+  {
+   "id": "k10037",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10046",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10048",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10050",
+   "field": "answer",
+   "old": "误人",
+   "new": "误入"
+  },
+  {
+   "id": "k10064",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10071",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10113",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10147",
+   "field": "answer",
+   "old": "塞人",
+   "new": "塞入"
+  },
+  {
+   "id": "k10148",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10151",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k10163",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10169",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10181",
+   "field": "answer",
+   "old": "人前",
+   "new": "入前"
+  },
+  {
+   "id": "k10181",
+   "field": "answer",
+   "old": "人。",
+   "new": "入。"
+  },
+  {
+   "id": "k10183",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10189",
+   "field": "answer",
+   "old": "滴人",
+   "new": "滴入"
+  },
+  {
+   "id": "k10189",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k10189",
+   "field": "answer",
+   "old": "拧人",
+   "new": "拧入"
+  },
+  {
+   "id": "k10189",
+   "field": "answer",
+   "old": "塞人",
+   "new": "塞入"
+  },
+  {
+   "id": "k10192",
+   "field": "answer",
+   "old": "冲人",
+   "new": "冲入"
+  },
+  {
+   "id": "k10193",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10196",
+   "field": "answer",
+   "old": "口注人",
+   "new": "口注入"
+  },
+  {
+   "id": "k10196",
+   "field": "answer",
+   "old": "内注人",
+   "new": "内注入"
+  },
+  {
+   "id": "k10219",
+   "field": "answer",
+   "old": "编人",
+   "new": "编入"
+  },
+  {
+   "id": "k10231",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10242",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10244",
+   "field": "answer",
+   "old": "于注人",
+   "new": "于注入"
+  },
+  {
+   "id": "k10244",
+   "field": "answer",
+   "old": "边注人",
+   "new": "边注入"
+  },
+  {
+   "id": "k10244",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k10252",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10276",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k10282",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k10282",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k10326",
+   "field": "answer",
+   "old": "员人",
+   "new": "员入"
+  },
+  {
+   "id": "k10330",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10335",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10355",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10361",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10368",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k10373",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10380",
+   "field": "answer",
+   "old": "在人",
+   "new": "在入"
+  },
+  {
+   "id": "k10381",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k10382",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k10406",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k10418",
+   "field": "answer",
+   "old": "人板",
+   "new": "入板"
+  },
+  {
+   "id": "k10418",
+   "field": "answer",
+   "old": "人，",
+   "new": "入，"
+  },
+  {
+   "id": "k10423",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10432",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k10432",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10433",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10442",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10456",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10463",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k10466",
+   "field": "answer",
+   "old": "料槽插人",
+   "new": "料槽插入"
+  },
+  {
+   "id": "k10466",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k10466",
+   "field": "answer",
+   "old": "定槽插人",
+   "new": "定槽插入"
+  },
+  {
+   "id": "k10488",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k10489",
+   "field": "answer",
+   "old": "、人",
+   "new": "、入"
+  },
+  {
+   "id": "k10489",
+   "field": "answer",
+   "old": "其人",
+   "new": "其入"
+  },
+  {
+   "id": "k10489",
+   "field": "answer",
+   "old": "自人",
+   "new": "自入"
+  },
+  {
+   "id": "k10491",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10517",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10520",
+   "field": "answer",
+   "old": "理人",
+   "new": "理入"
+  },
+  {
+   "id": "k10531",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k10565",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10567",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10571",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10597",
+   "field": "answer",
+   "old": "人部",
+   "new": "入部"
+  },
+  {
+   "id": "k10597",
+   "field": "answer",
+   "old": "人砖",
+   "new": "入砖"
+  },
+  {
+   "id": "k10603",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10607",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10614",
+   "field": "answer",
+   "old": "拧人",
+   "new": "拧入"
+  },
+  {
+   "id": "k10614",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10644",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10646",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k10646",
+   "field": "answer",
+   "old": "人洞",
+   "new": "入洞"
+  },
+  {
+   "id": "k10647",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10647",
+   "field": "answer",
+   "old": "锤人",
+   "new": "锤入"
+  },
+  {
+   "id": "k10689",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10692",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10712",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k10713",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k10713",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k10716",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10720",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10722",
+   "field": "answer",
+   "old": "\n灌人",
+   "new": "\n灌入"
+  },
+  {
+   "id": "k10722",
+   "field": "answer",
+   "old": "出灌人",
+   "new": "出灌入"
+  },
+  {
+   "id": "k10726",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10728",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10743",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k10747",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10761",
+   "field": "answer",
+   "old": "人节",
+   "new": "入节"
+  },
+  {
+   "id": "k10761",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人度时",
+   "new": "入度时"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人度应",
+   "new": "入度应"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人度的百",
+   "new": "入度的百"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人度满",
+   "new": "入度满"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人度当",
+   "new": "入度当"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人。",
+   "new": "入。"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人深度，",
+   "new": "入深度，"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人百分\n",
+   "new": "入百分\n"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人深度和9",
+   "new": "入深度和9"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人百分率",
+   "new": "入百分率"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人深度和边",
+   "new": "入深度和边"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人防",
+   "new": "入防"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人度的确",
+   "new": "入度的确"
+  },
+  {
+   "id": "k10762",
+   "field": "answer",
+   "old": "人的",
+   "new": "入的"
+  },
+  {
+   "id": "k10763",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10764",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10805",
+   "field": "answer",
+   "old": "气人",
+   "new": "气入"
+  },
+  {
+   "id": "k10805",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k10813",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k10813",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k10817",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10825",
+   "field": "answer",
+   "old": "推人",
+   "new": "推入"
+  },
+  {
+   "id": "k10825",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10826",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k10826",
+   "field": "answer",
+   "old": "落人",
+   "new": "落入"
+  },
+  {
+   "id": "k10827",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10831",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k10841",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k10841",
+   "field": "answer",
+   "old": "塞人",
+   "new": "塞入"
+  },
+  {
+   "id": "k10844",
+   "field": "answer",
+   "old": "人阀",
+   "new": "入阀"
+  },
+  {
+   "id": "k10844",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k10844",
+   "field": "answer",
+   "old": "人涂",
+   "new": "入涂"
+  },
+  {
+   "id": "k10915",
+   "field": "answer",
+   "old": "人的",
+   "new": "入的"
+  },
+  {
+   "id": "k10915",
+   "field": "answer",
+   "old": "人了",
+   "new": "入了"
+  },
+  {
+   "id": "k10916",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k10980",
+   "field": "answer",
+   "old": "或排人",
+   "new": "或排入"
+  },
+  {
+   "id": "k10980",
+   "field": "answer",
+   "old": "水排人",
+   "new": "水排入"
+  },
+  {
+   "id": "k11010",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k11071",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k11087",
+   "field": "answer",
+   "old": "混人",
+   "new": "混入"
+  },
+  {
+   "id": "k11159",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11163",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11173",
+   "field": "answer",
+   "old": "人任",
+   "new": "入任"
+  },
+  {
+   "id": "k11173",
+   "field": "answer",
+   "old": "人图",
+   "new": "入图"
+  },
+  {
+   "id": "k11181",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11184",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11187",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11196",
+   "field": "answer",
+   "old": "括出人",
+   "new": "括出入"
+  },
+  {
+   "id": "k11196",
+   "field": "answer",
+   "old": "要出人",
+   "new": "要出入"
+  },
+  {
+   "id": "k11201",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11204",
+   "field": "answer",
+   "old": "筑人",
+   "new": "筑入"
+  },
+  {
+   "id": "k11204",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11204",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k11210",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11211",
+   "field": "answer",
+   "old": "读人",
+   "new": "读入"
+  },
+  {
+   "id": "k11211",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k11212",
+   "field": "answer",
+   "old": "4·\n装饰装修施工图识读人",
+   "new": "4·\n装饰装修施工图识读入"
+  },
+  {
+   "id": "k11212",
+   "field": "answer",
+   "old": "）经常出人",
+   "new": "）经常出入"
+  },
+  {
+   "id": "k11212",
+   "field": "answer",
+   "old": "员经常出人",
+   "new": "员经常出入"
+  },
+  {
+   "id": "k11212",
+   "field": "answer",
+   "old": "2·\n装饰装修施工图识读人",
+   "new": "2·\n装饰装修施工图识读入"
+  },
+  {
+   "id": "k11212",
+   "field": "answer",
+   "old": "筑经常出人",
+   "new": "筑经常出入"
+  },
+  {
+   "id": "k11214",
+   "field": "answer",
+   "old": "读人",
+   "new": "读入"
+  },
+  {
+   "id": "k11216",
+   "field": "answer",
+   "old": "读人",
+   "new": "读入"
+  },
+  {
+   "id": "k11217",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11218",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11222",
+   "field": "answer",
+   "old": "从人",
+   "new": "从入"
+  },
+  {
+   "id": "k11232",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11241",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11251",
+   "field": "answer",
+   "old": "人口",
+   "new": "入口"
+  },
+  {
+   "id": "k11251",
+   "field": "answer",
+   "old": "人方",
+   "new": "入方"
+  },
+  {
+   "id": "k11253",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11264",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11298",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11304",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k11308",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k11322",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11324",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k11327",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11394",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k11420",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11428",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11439",
+   "field": "answer",
+   "old": "钻人",
+   "new": "钻入"
+  },
+  {
+   "id": "k11439",
+   "field": "answer",
+   "old": "套人",
+   "new": "套入"
+  },
+  {
+   "id": "k11473",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11476",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11483",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k11488",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11500",
+   "field": "answer",
+   "old": "卷人",
+   "new": "卷入"
+  },
+  {
+   "id": "k11501",
+   "field": "answer",
+   "old": "浸人",
+   "new": "浸入"
+  },
+  {
+   "id": "k11511",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11512",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11513",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11514",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k11514",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k11521",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11528",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11554",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11590",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11611",
+   "field": "answer",
+   "old": "掉人",
+   "new": "掉入"
+  },
+  {
+   "id": "k11624",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11639",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k11646",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k11656",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k11659",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11678",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11704",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11706",
+   "field": "answer",
+   "old": "人锅\n",
+   "new": "入锅\n"
+  },
+  {
+   "id": "k11706",
+   "field": "answer",
+   "old": "人锅内",
+   "new": "入锅内"
+  },
+  {
+   "id": "k11706",
+   "field": "answer",
+   "old": "人一",
+   "new": "入一"
+  },
+  {
+   "id": "k11707",
+   "field": "answer",
+   "old": "置人",
+   "new": "置入"
+  },
+  {
+   "id": "k11707",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k11707",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k11712",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11720",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k11771",
+   "field": "answer",
+   "old": "闯人",
+   "new": "闯入"
+  },
+  {
+   "id": "k11798",
+   "field": "answer",
+   "old": "致人",
+   "new": "致入"
+  },
+  {
+   "id": "k11806",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11821",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11841",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k11869",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k11877",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11888",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k11891",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k11896",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11906",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11919",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11933",
+   "field": "answer",
+   "old": "，吸人",
+   "new": "，吸入"
+  },
+  {
+   "id": "k11933",
+   "field": "answer",
+   "old": "员吸人",
+   "new": "员吸入"
+  },
+  {
+   "id": "k11937",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k11941",
+   "field": "answer",
+   "old": "冲人",
+   "new": "冲入"
+  },
+  {
+   "id": "k11941",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k11954",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k11976",
+   "field": "answer",
+   "old": "端人",
+   "new": "端入"
+  },
+  {
+   "id": "k11976",
+   "field": "answer",
+   "old": "间人",
+   "new": "间入"
+  },
+  {
+   "id": "k11980",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k11989",
+   "field": "answer",
+   "old": "人高",
+   "new": "入高"
+  },
+  {
+   "id": "k11989",
+   "field": "answer",
+   "old": "人，",
+   "new": "入，"
+  },
+  {
+   "id": "k12001",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k12020",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12034",
+   "field": "answer",
+   "old": "冰\n箱不能连人",
+   "new": "冰\n箱不能连入"
+  },
+  {
+   "id": "k12034",
+   "field": "answer",
+   "old": "V\n箱不能连人",
+   "new": "V\n箱不能连入"
+  },
+  {
+   "id": "k12038",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12044",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12046",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k12046",
+   "field": "answer",
+   "old": "人，",
+   "new": "入，"
+  },
+  {
+   "id": "k12046",
+   "field": "answer",
+   "old": "旋人",
+   "new": "旋入"
+  },
+  {
+   "id": "k12071",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12076",
+   "field": "answer",
+   "old": "人电",
+   "new": "入电"
+  },
+  {
+   "id": "k12076",
+   "field": "answer",
+   "old": "人插",
+   "new": "入插"
+  },
+  {
+   "id": "k12078",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12087",
+   "field": "answer",
+   "old": "搬人",
+   "new": "搬入"
+  },
+  {
+   "id": "k12087",
+   "field": "answer",
+   "old": "。人",
+   "new": "。入"
+  },
+  {
+   "id": "k12096",
+   "field": "answer",
+   "old": "闯人",
+   "new": "闯入"
+  },
+  {
+   "id": "k12096",
+   "field": "answer",
+   "old": "由人",
+   "new": "由入"
+  },
+  {
+   "id": "k12113",
+   "field": "answer",
+   "old": "打\n人",
+   "new": "打\n入"
+  },
+  {
+   "id": "k12115",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k12116",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12118",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12120",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12120",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k12126",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12134",
+   "field": "answer",
+   "old": "线人",
+   "new": "线入"
+  },
+  {
+   "id": "k12135",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k12136",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12138",
+   "field": "answer",
+   "old": "传人",
+   "new": "传入"
+  },
+  {
+   "id": "k12138",
+   "field": "answer",
+   "old": "窜人",
+   "new": "窜入"
+  },
+  {
+   "id": "k12138",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k12143",
+   "field": "answer",
+   "old": "未人",
+   "new": "未入"
+  },
+  {
+   "id": "k12143",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12143",
+   "field": "answer",
+   "old": "落人",
+   "new": "落入"
+  },
+  {
+   "id": "k12145",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12160",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12174",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k12198",
+   "field": "answer",
+   "old": "键人",
+   "new": "键入"
+  },
+  {
+   "id": "k12200",
+   "field": "answer",
+   "old": "准人",
+   "new": "准入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "许人",
+   "new": "许入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "未人",
+   "new": "未入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "定的人",
+   "new": "定的入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "显的人",
+   "new": "显的入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "。人",
+   "new": "。入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "效的人",
+   "new": "效的入"
+  },
+  {
+   "id": "k12201",
+   "field": "answer",
+   "old": "准人",
+   "new": "准入"
+  },
+  {
+   "id": "k12204",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12210",
+   "field": "answer",
+   "old": "引人",
+   "new": "引入"
+  },
+  {
+   "id": "k12221",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12237",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12242",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k12244",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12245",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k12249",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k12252",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12253",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k12256",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12326",
+   "field": "answer",
+   "old": "人劣",
+   "new": "入劣"
+  },
+  {
+   "id": "k12326",
+   "field": "answer",
+   "old": "人了",
+   "new": "入了"
+  },
+  {
+   "id": "k12331",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12362",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12393",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k12408",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12411",
+   "field": "answer",
+   "old": "2）对接插人",
+   "new": "2）对接插入"
+  },
+  {
+   "id": "k12411",
+   "field": "answer",
+   "old": "1）对接插人",
+   "new": "1）对接插入"
+  },
+  {
+   "id": "k12419",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k12428",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k12439",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k12440",
+   "field": "answer",
+   "old": "外人",
+   "new": "外入"
+  },
+  {
+   "id": "k12441",
+   "field": "answer",
+   "old": "光射人",
+   "new": "光射入"
+  },
+  {
+   "id": "k12441",
+   "field": "answer",
+   "old": "接射人",
+   "new": "接射入"
+  },
+  {
+   "id": "k12442",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12451",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k12457",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12477",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12481",
+   "field": "answer",
+   "old": "站人",
+   "new": "站入"
+  },
+  {
+   "id": "k12481",
+   "field": "answer",
+   "old": "厢人",
+   "new": "厢入"
+  },
+  {
+   "id": "k12482",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k12485",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12487",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k12487",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k12505",
+   "field": "answer",
+   "old": "人热",
+   "new": "入热"
+  },
+  {
+   "id": "k12505",
+   "field": "answer",
+   "old": "人法连接\n（2",
+   "new": "入法连接\n（2"
+  },
+  {
+   "id": "k12505",
+   "field": "answer",
+   "old": "人法连接\n（a",
+   "new": "入法连接\n（a"
+  },
+  {
+   "id": "k12505",
+   "field": "answer",
+   "old": "人阴",
+   "new": "入阴"
+  },
+  {
+   "id": "k12505",
+   "field": "answer",
+   "old": "人部",
+   "new": "入部"
+  },
+  {
+   "id": "k12529",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12538",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k12538",
+   "field": "answer",
+   "old": "窜人",
+   "new": "窜入"
+  },
+  {
+   "id": "k12551",
+   "field": "answer",
+   "old": "人部",
+   "new": "入部"
+  },
+  {
+   "id": "k12551",
+   "field": "answer",
+   "old": "人连",
+   "new": "入连"
+  },
+  {
+   "id": "k12551",
+   "field": "answer",
+   "old": "人直",
+   "new": "入直"
+  },
+  {
+   "id": "k12551",
+   "field": "answer",
+   "old": "人套",
+   "new": "入套"
+  },
+  {
+   "id": "k12553",
+   "field": "answer",
+   "old": "吹人",
+   "new": "吹入"
+  },
+  {
+   "id": "k12553",
+   "field": "answer",
+   "old": "圈穿人",
+   "new": "圈穿入"
+  },
+  {
+   "id": "k12553",
+   "field": "answer",
+   "old": "线穿人",
+   "new": "线穿入"
+  },
+  {
+   "id": "k12554",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12558",
+   "field": "answer",
+   "old": "旋人",
+   "new": "旋入"
+  },
+  {
+   "id": "k12559",
+   "field": "answer",
+   "old": "人木",
+   "new": "入木"
+  },
+  {
+   "id": "k12576",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12603",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12620",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12624",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12628",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k12648",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k12652",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12727",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12743",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12745",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12842",
+   "field": "answer",
+   "old": "录人",
+   "new": "录入"
+  },
+  {
+   "id": "k12842",
+   "field": "answer",
+   "old": "涌人",
+   "new": "涌入"
+  },
+  {
+   "id": "k12845",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12846",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k12919",
+   "field": "answer",
+   "old": "与人",
+   "new": "与入"
+  },
+  {
+   "id": "k12919",
+   "field": "answer",
+   "old": "物人",
+   "new": "物入"
+  },
+  {
+   "id": "k12992",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13004",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k13019",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13033",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13035",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13098",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13106",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13171",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13172",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13189",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13194",
+   "field": "answer",
+   "old": "填人",
+   "new": "填入"
+  },
+  {
+   "id": "k13240",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13291",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k13305",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13306",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13316",
+   "field": "answer",
+   "old": "准人",
+   "new": "准入"
+  },
+  {
+   "id": "k13317",
+   "field": "answer",
+   "old": "涌人",
+   "new": "涌入"
+  },
+  {
+   "id": "k13343",
+   "field": "answer",
+   "old": "应调人",
+   "new": "应调入"
+  },
+  {
+   "id": "k13343",
+   "field": "answer",
+   "old": "需调人",
+   "new": "需调入"
+  },
+  {
+   "id": "k13351",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k13352",
+   "field": "answer",
+   "old": "人地",
+   "new": "入地"
+  },
+  {
+   "id": "k13352",
+   "field": "answer",
+   "old": "人单",
+   "new": "入单"
+  },
+  {
+   "id": "k13377",
+   "field": "answer",
+   "old": "并填人",
+   "new": "并填入"
+  },
+  {
+   "id": "k13377",
+   "field": "answer",
+   "old": "别填人",
+   "new": "别填入"
+  },
+  {
+   "id": "k13386",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13387",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13397",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13418",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13424",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13470",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13497",
+   "field": "answer",
+   "old": "存人",
+   "new": "存入"
+  },
+  {
+   "id": "k13499",
+   "field": "answer",
+   "old": "导人",
+   "new": "导入"
+  },
+  {
+   "id": "k13501",
+   "field": "answer",
+   "old": "步人",
+   "new": "步入"
+  },
+  {
+   "id": "k13513",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13516",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13539",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13554",
+   "field": "question",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13562",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13677",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13687",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13695",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13697",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13726",
+   "field": "answer",
+   "old": "地人",
+   "new": "地入"
+  },
+  {
+   "id": "k13792",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13801",
+   "field": "question",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13804",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k13806",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13811",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13822",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k13824",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13825",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13874",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k13882",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k13902",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k13933",
+   "field": "answer",
+   "old": "代人",
+   "new": "代入"
+  },
+  {
+   "id": "k13957",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k13957",
+   "field": "answer",
+   "old": "\n列人",
+   "new": "\n列入"
+  },
+  {
+   "id": "k13957",
+   "field": "answer",
+   "old": "额列人",
+   "new": "额列入"
+  },
+  {
+   "id": "k14012",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14013",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14017",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14030",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14081",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k14083",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k14140",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k14168",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14184",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k14200",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14220",
+   "field": "answer",
+   "old": "人结构构件的工",
+   "new": "入结构构件的工"
+  },
+  {
+   "id": "k14220",
+   "field": "answer",
+   "old": "人所",
+   "new": "入所"
+  },
+  {
+   "id": "k14220",
+   "field": "answer",
+   "old": "人结构构件的价",
+   "new": "入结构构件的价"
+  },
+  {
+   "id": "k14322",
+   "field": "answer",
+   "old": "料槽插人",
+   "new": "料槽插入"
+  },
+  {
+   "id": "k14322",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k14322",
+   "field": "answer",
+   "old": "定槽插人",
+   "new": "定槽插入"
+  },
+  {
+   "id": "k14713",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14717",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14833",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14852",
+   "field": "answer",
+   "old": "人长",
+   "new": "入长"
+  },
+  {
+   "id": "k14852",
+   "field": "answer",
+   "old": "人平",
+   "new": "入平"
+  },
+  {
+   "id": "k14865",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14873",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k14873",
+   "field": "answer",
+   "old": "刻人",
+   "new": "刻入"
+  },
+  {
+   "id": "k14873",
+   "field": "answer",
+   "old": "人、",
+   "new": "入、"
+  },
+  {
+   "id": "k14875",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k14914",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15051",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15053",
+   "field": "answer",
+   "old": "换人",
+   "new": "换入"
+  },
+  {
+   "id": "k15072",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k15093",
+   "field": "answer",
+   "old": "地人",
+   "new": "地入"
+  },
+  {
+   "id": "k15098",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k15098",
+   "field": "answer",
+   "old": "充人情",
+   "new": "充入惰"
+  },
+  {
+   "id": "k15123",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k15129",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k15138",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k15140",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k15144",
+   "field": "answer",
+   "old": "填人",
+   "new": "填入"
+  },
+  {
+   "id": "k15156",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k15156",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k15173",
+   "field": "answer",
+   "old": "写人",
+   "new": "写入"
+  },
+  {
+   "id": "k15254",
+   "field": "answer",
+   "old": "人人",
+   "new": "人入"
+  },
+  {
+   "id": "k15377",
+   "field": "answer",
+   "old": "近人",
+   "new": "近入"
+  },
+  {
+   "id": "k15379",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15503",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15627",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k15627",
+   "field": "answer",
+   "old": "转人",
+   "new": "转入"
+  },
+  {
+   "id": "k15630",
+   "field": "answer",
+   "old": "推人",
+   "new": "推入"
+  },
+  {
+   "id": "k15630",
+   "field": "answer",
+   "old": "在人",
+   "new": "在入"
+  },
+  {
+   "id": "k15638",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k15638",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15639",
+   "field": "answer",
+   "old": "倾人",
+   "new": "倾入"
+  },
+  {
+   "id": "k15639",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k15639",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k15640",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15642",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15646",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15647",
+   "field": "answer",
+   "old": "带人",
+   "new": "带入"
+  },
+  {
+   "id": "k15647",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k15650",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15654",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15661",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15665",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15668",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k15668",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k15674",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15682",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15699",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k15944",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16313",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16315",
+   "field": "answer",
+   "old": "人压光机二次挤压、整光，",
+   "new": "入压光机二次挤压、整光，"
+  },
+  {
+   "id": "k16315",
+   "field": "answer",
+   "old": "人温",
+   "new": "入温"
+  },
+  {
+   "id": "k16315",
+   "field": "answer",
+   "old": "人压光机二次挤压、整光；",
+   "new": "入压光机二次挤压、整光；"
+  },
+  {
+   "id": "k16315",
+   "field": "answer",
+   "old": "人制",
+   "new": "入制"
+  },
+  {
+   "id": "k16316",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16317",
+   "field": "answer",
+   "old": "人5",
+   "new": "入5"
+  },
+  {
+   "id": "k16317",
+   "field": "answer",
+   "old": "人石",
+   "new": "入石"
+  },
+  {
+   "id": "k16318",
+   "field": "answer",
+   "old": "人石",
+   "new": "入石"
+  },
+  {
+   "id": "k16318",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k16318",
+   "field": "answer",
+   "old": "人模",
+   "new": "入模"
+  },
+  {
+   "id": "k16319",
+   "field": "answer",
+   "old": "人\n厘",
+   "new": "入\n厘"
+  },
+  {
+   "id": "k16319",
+   "field": "answer",
+   "old": "人\n匣",
+   "new": "入\n匣"
+  },
+  {
+   "id": "k16319",
+   "field": "answer",
+   "old": "人匣\n",
+   "new": "入匣\n"
+  },
+  {
+   "id": "k16319",
+   "field": "answer",
+   "old": "、人",
+   "new": "、入"
+  },
+  {
+   "id": "k16319",
+   "field": "answer",
+   "old": "人匣钵",
+   "new": "入匣钵"
+  },
+  {
+   "id": "k16320",
+   "field": "answer",
+   "old": "置人",
+   "new": "置入"
+  },
+  {
+   "id": "k16320",
+   "field": "answer",
+   "old": "喷人",
+   "new": "喷入"
+  },
+  {
+   "id": "k16320",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k16321",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16322",
+   "field": "answer",
+   "old": "人制",
+   "new": "入制"
+  },
+  {
+   "id": "k16322",
+   "field": "answer",
+   "old": "人搅",
+   "new": "入搅"
+  },
+  {
+   "id": "k16322",
+   "field": "answer",
+   "old": "倾人",
+   "new": "倾入"
+  },
+  {
+   "id": "k16324",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k16324",
+   "field": "answer",
+   "old": "移人",
+   "new": "移入"
+  },
+  {
+   "id": "k16326",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16329",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16331",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16338",
+   "field": "answer",
+   "old": "添加剂，倒人",
+   "new": "添加剂，倒入"
+  },
+  {
+   "id": "k16338",
+   "field": "answer",
+   "old": "\n加剂，倒人",
+   "new": "\n加剂，倒入"
+  },
+  {
+   "id": "k16347",
+   "field": "answer",
+   "old": "铝放人",
+   "new": "铝放入"
+  },
+  {
+   "id": "k16347",
+   "field": "answer",
+   "old": "料放人",
+   "new": "料放入"
+  },
+  {
+   "id": "k16347",
+   "field": "answer",
+   "old": "液放人",
+   "new": "液放入"
+  },
+  {
+   "id": "k16347",
+   "field": "answer",
+   "old": "喷人",
+   "new": "喷入"
+  },
+  {
+   "id": "k16347",
+   "field": "answer",
+   "old": "转人",
+   "new": "转入"
+  },
+  {
+   "id": "k16352",
+   "field": "answer",
+   "old": "通人",
+   "new": "通入"
+  },
+  {
+   "id": "k16352",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16359",
+   "field": "answer",
+   "old": "剂和水置人",
+   "new": "剂和水置入"
+  },
+  {
+   "id": "k16359",
+   "field": "answer",
+   "old": "酸和水置人",
+   "new": "酸和水置入"
+  },
+  {
+   "id": "k16360",
+   "field": "answer",
+   "old": "人清",
+   "new": "入清"
+  },
+  {
+   "id": "k16360",
+   "field": "answer",
+   "old": "人容",
+   "new": "入容"
+  },
+  {
+   "id": "k16370",
+   "field": "answer",
+   "old": "浇人",
+   "new": "浇入"
+  },
+  {
+   "id": "k16370",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16371",
+   "field": "answer",
+   "old": "体的各原料混合搅拌均匀后，灌\n注人",
+   "new": "体的各原料混合搅拌均匀后，灌\n注入"
+  },
+  {
+   "id": "k16371",
+   "field": "answer",
+   "old": "层的各原料混合搅拌均匀后，灌\n注人",
+   "new": "层的各原料混合搅拌均匀后，灌\n注入"
+  },
+  {
+   "id": "k16372",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16372",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16373",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16375",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k16375",
+   "field": "answer",
+   "old": "人造粒",
+   "new": "入造粒"
+  },
+  {
+   "id": "k16375",
+   "field": "answer",
+   "old": "人造\n",
+   "new": "入造\n"
+  },
+  {
+   "id": "k16377",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16378",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k16381",
+   "field": "answer",
+   "old": "人挤",
+   "new": "入挤"
+  },
+  {
+   "id": "k16381",
+   "field": "answer",
+   "old": "放人搅",
+   "new": "放入搅"
+  },
+  {
+   "id": "k16381",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k16381",
+   "field": "answer",
+   "old": "人水",
+   "new": "入水"
+  },
+  {
+   "id": "k16381",
+   "field": "answer",
+   "old": "料倒人",
+   "new": "料倒入"
+  },
+  {
+   "id": "k16386",
+   "field": "answer",
+   "old": "\n送人",
+   "new": "\n送入"
+  },
+  {
+   "id": "k16386",
+   "field": "answer",
+   "old": "通人",
+   "new": "通入"
+  },
+  {
+   "id": "k16386",
+   "field": "answer",
+   "old": "人密",
+   "new": "入密"
+  },
+  {
+   "id": "k16386",
+   "field": "answer",
+   "old": "置人",
+   "new": "置入"
+  },
+  {
+   "id": "k16386",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16387",
+   "field": "answer",
+   "old": "人基",
+   "new": "入基"
+  },
+  {
+   "id": "k16387",
+   "field": "answer",
+   "old": "人模",
+   "new": "入模"
+  },
+  {
+   "id": "k16387",
+   "field": "answer",
+   "old": "人盐",
+   "new": "入盐"
+  },
+  {
+   "id": "k16387",
+   "field": "answer",
+   "old": "人破",
+   "new": "入破"
+  },
+  {
+   "id": "k16387",
+   "field": "answer",
+   "old": "人切",
+   "new": "入切"
+  },
+  {
+   "id": "k16387",
+   "field": "answer",
+   "old": "人清",
+   "new": "入清"
+  },
+  {
+   "id": "k16395",
+   "field": "answer",
+   "old": "、人",
+   "new": "、入"
+  },
+  {
+   "id": "k16395",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16397",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k16397",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k16398",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k16399",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16401",
+   "field": "answer",
+   "old": "包人",
+   "new": "包入"
+  },
+  {
+   "id": "k16401",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "后，倒人",
+   "new": "后，倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "次倒人",
+   "new": "次倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "浆倒人",
+   "new": "浆倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "、搅拌，倒人",
+   "new": "、搅拌，倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "\n水、搅拌、过滤，倒人",
+   "new": "\n水、搅拌、过滤，倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "，搅拌，倒人",
+   "new": "，搅拌，倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "\n过滤，倒人",
+   "new": "\n过滤，倒入"
+  },
+  {
+   "id": "k16404",
+   "field": "answer",
+   "old": "加水、搅拌、过滤，倒人",
+   "new": "加水、搅拌、过滤，倒入"
+  },
+  {
+   "id": "k16407",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16411",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16416",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16421",
+   "field": "answer",
+   "old": "人甲",
+   "new": "入甲"
+  },
+  {
+   "id": "k16421",
+   "field": "answer",
+   "old": "人乙",
+   "new": "入乙"
+  },
+  {
+   "id": "k16421",
+   "field": "answer",
+   "old": "人磷",
+   "new": "入磷"
+  },
+  {
+   "id": "k16424",
+   "field": "answer",
+   "old": "\n放人",
+   "new": "\n放入"
+  },
+  {
+   "id": "k16424",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k16424",
+   "field": "answer",
+   "old": "并放人",
+   "new": "并放入"
+  },
+  {
+   "id": "k16428",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16430",
+   "field": "answer",
+   "old": "人搅",
+   "new": "入搅"
+  },
+  {
+   "id": "k16430",
+   "field": "answer",
+   "old": "人容",
+   "new": "入容"
+  },
+  {
+   "id": "k16431",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16432",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16434",
+   "field": "answer",
+   "old": "泵人",
+   "new": "泵入"
+  },
+  {
+   "id": "k16434",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16435",
+   "field": "answer",
+   "old": "人研",
+   "new": "入研"
+  },
+  {
+   "id": "k16435",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k16435",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k16439",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16440",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16440",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16445",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16448",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k16449",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16451",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16456",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16457",
+   "field": "answer",
+   "old": "人消",
+   "new": "入消"
+  },
+  {
+   "id": "k16457",
+   "field": "answer",
+   "old": "滴人",
+   "new": "滴入"
+  },
+  {
+   "id": "k16457",
+   "field": "answer",
+   "old": "人搅",
+   "new": "入搅"
+  },
+  {
+   "id": "k16465",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16466",
+   "field": "answer",
+   "old": "行人",
+   "new": "行入"
+  },
+  {
+   "id": "k16466",
+   "field": "answer",
+   "old": "人消",
+   "new": "入消"
+  },
+  {
+   "id": "k16466",
+   "field": "answer",
+   "old": "人搅",
+   "new": "入搅"
+  },
+  {
+   "id": "k16466",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k16470",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16471",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16477",
+   "field": "answer",
+   "old": "置人",
+   "new": "置入"
+  },
+  {
+   "id": "k16477",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16478",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16479",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16482",
+   "field": "answer",
+   "old": "浸人",
+   "new": "浸入"
+  },
+  {
+   "id": "k16482",
+   "field": "answer",
+   "old": "人调",
+   "new": "入调"
+  },
+  {
+   "id": "k16482",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k16482",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k16483",
+   "field": "answer",
+   "old": "人铁",
+   "new": "入铁"
+  },
+  {
+   "id": "k16483",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16483",
+   "field": "answer",
+   "old": "人不",
+   "new": "入不"
+  },
+  {
+   "id": "k16484",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16485",
+   "field": "answer",
+   "old": "可人",
+   "new": "可入"
+  },
+  {
+   "id": "k16487",
+   "field": "answer",
+   "old": "人混",
+   "new": "入混"
+  },
+  {
+   "id": "k16487",
+   "field": "answer",
+   "old": "人并",
+   "new": "入并"
+  },
+  {
+   "id": "k16487",
+   "field": "answer",
+   "old": "酐放人",
+   "new": "酐放入"
+  },
+  {
+   "id": "k16487",
+   "field": "answer",
+   "old": "倒人容",
+   "new": "倒入容"
+  },
+  {
+   "id": "k16487",
+   "field": "answer",
+   "old": "人由",
+   "new": "入由"
+  },
+  {
+   "id": "k16492",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16493",
+   "field": "answer",
+   "old": "人高",
+   "new": "入高"
+  },
+  {
+   "id": "k16493",
+   "field": "answer",
+   "old": "人十",
+   "new": "入十"
+  },
+  {
+   "id": "k16495",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k16499",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16508",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16511",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k16511",
+   "field": "answer",
+   "old": "浸人",
+   "new": "浸入"
+  },
+  {
+   "id": "k16511",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k16512",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k16512",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k16512",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k16513",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k16513",
+   "field": "answer",
+   "old": "移人",
+   "new": "移入"
+  },
+  {
+   "id": "k16518",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16597",
+   "field": "answer",
+   "old": "写人",
+   "new": "写入"
+  },
+  {
+   "id": "k16601",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k16603",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16606",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k16670",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k16676",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k16678",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k16702",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k16702",
+   "field": "answer",
+   "old": "射人",
+   "new": "射入"
+  },
+  {
+   "id": "k16715",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16716",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16722",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k16728",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k16728",
+   "field": "answer",
+   "old": "框人",
+   "new": "框入"
+  },
+  {
+   "id": "k16738",
+   "field": "answer",
+   "old": "人苯",
+   "new": "入苯"
+  },
+  {
+   "id": "k16738",
+   "field": "answer",
+   "old": "人高",
+   "new": "入高"
+  },
+  {
+   "id": "k16748",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16749",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16750",
+   "field": "answer",
+   "old": "带人",
+   "new": "带入"
+  },
+  {
+   "id": "k16750",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k16754",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k16755",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k16760",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k16761",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k16763",
+   "field": "answer",
+   "old": "射人",
+   "new": "射入"
+  },
+  {
+   "id": "k16763",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k16802",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k16823",
+   "field": "answer",
+   "old": "传人",
+   "new": "传入"
+  },
+  {
+   "id": "k16825",
+   "field": "answer",
+   "old": "外传人",
+   "new": "外传入"
+  },
+  {
+   "id": "k16825",
+   "field": "answer",
+   "old": "量传人",
+   "new": "量传入"
+  },
+  {
+   "id": "k16838",
+   "field": "answer",
+   "old": "夹人",
+   "new": "夹入"
+  },
+  {
+   "id": "k16841",
+   "field": "answer",
+   "old": "归人",
+   "new": "归入"
+  },
+  {
+   "id": "k16864",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16885",
+   "field": "answer",
+   "old": "塞人",
+   "new": "塞入"
+  },
+  {
+   "id": "k16887",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16890",
+   "field": "answer",
+   "old": "排人",
+   "new": "排入"
+  },
+  {
+   "id": "k16892",
+   "field": "answer",
+   "old": "走人",
+   "new": "走入"
+  },
+  {
+   "id": "k16892",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k16894",
+   "field": "answer",
+   "old": "信号传人",
+   "new": "信号传入"
+  },
+  {
+   "id": "k16894",
+   "field": "answer",
+   "old": "\n号传人",
+   "new": "\n号传入"
+  },
+  {
+   "id": "k16896",
+   "field": "answer",
+   "old": "排人",
+   "new": "排入"
+  },
+  {
+   "id": "k16938",
+   "field": "answer",
+   "old": "导人",
+   "new": "导入"
+  },
+  {
+   "id": "k16940",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k16944",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k16962",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k16968",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k16973",
+   "field": "answer",
+   "old": "人空",
+   "new": "入空"
+  },
+  {
+   "id": "k16973",
+   "field": "answer",
+   "old": "人大",
+   "new": "入大"
+  },
+  {
+   "id": "k16973",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k16976",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k16980",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k16997",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17019",
+   "field": "answer",
+   "old": "落人",
+   "new": "落入"
+  },
+  {
+   "id": "k17021",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k17023",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k17025",
+   "field": "answer",
+   "old": "镶人",
+   "new": "镶入"
+  },
+  {
+   "id": "k17030",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17041",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17043",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k17071",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k17092",
+   "field": "answer",
+   "old": "射人",
+   "new": "射入"
+  },
+  {
+   "id": "k17093",
+   "field": "answer",
+   "old": "排人",
+   "new": "排入"
+  },
+  {
+   "id": "k17157",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17163",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17165",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17174",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17209",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17211",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17215",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17221",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17233",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k17284",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17302",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k17303",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k17309",
+   "field": "answer",
+   "old": "闯人",
+   "new": "闯入"
+  },
+  {
+   "id": "k17312",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17317",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k17319",
+   "field": "answer",
+   "old": "浸人",
+   "new": "浸入"
+  },
+  {
+   "id": "k17363",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k17364",
+   "field": "answer",
+   "old": "带人",
+   "new": "带入"
+  },
+  {
+   "id": "k17376",
+   "field": "answer",
+   "old": "引人",
+   "new": "引入"
+  },
+  {
+   "id": "k17392",
+   "field": "answer",
+   "old": "写人",
+   "new": "写入"
+  },
+  {
+   "id": "k17468",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17481",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k17481",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k17504",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k17519",
+   "field": "answer",
+   "old": "人高浓\n",
+   "new": "入高浓\n"
+  },
+  {
+   "id": "k17519",
+   "field": "answer",
+   "old": "人大",
+   "new": "入大"
+  },
+  {
+   "id": "k17519",
+   "field": "answer",
+   "old": "人高浓度",
+   "new": "入高浓度"
+  },
+  {
+   "id": "k17528",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17529",
+   "field": "answer",
+   "old": "准人",
+   "new": "准入"
+  },
+  {
+   "id": "k17596",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17624",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17629",
+   "field": "answer",
+   "old": "是基性侵人",
+   "new": "是基性侵入"
+  },
+  {
+   "id": "k17629",
+   "field": "answer",
+   "old": "的基性侵人",
+   "new": "的基性侵入"
+  },
+  {
+   "id": "k17630",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17797",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k17861",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k17975",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k17988",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k17995",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18009",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18019",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18027",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18039",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18043",
+   "field": "answer",
+   "old": "理人",
+   "new": "埋入"
+  },
+  {
+   "id": "k18045",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18051",
+   "field": "answer",
+   "old": "人销",
+   "new": "入销"
+  },
+  {
+   "id": "k18051",
+   "field": "answer",
+   "old": "人钢",
+   "new": "入钢"
+  },
+  {
+   "id": "k18072",
+   "field": "answer",
+   "old": "介人",
+   "new": "介入"
+  },
+  {
+   "id": "k18127",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18142",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18157",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18160",
+   "field": "answer",
+   "old": "人木料\n",
+   "new": "入木料\n"
+  },
+  {
+   "id": "k18160",
+   "field": "answer",
+   "old": "人产",
+   "new": "入产"
+  },
+  {
+   "id": "k18160",
+   "field": "answer",
+   "old": "人木料内",
+   "new": "入木料内"
+  },
+  {
+   "id": "k18160",
+   "field": "answer",
+   "old": "人木料。",
+   "new": "入木料。"
+  },
+  {
+   "id": "k18161",
+   "field": "answer",
+   "old": "楔人",
+   "new": "楔入"
+  },
+  {
+   "id": "k18161",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k18162",
+   "field": "answer",
+   "old": "切人",
+   "new": "切入"
+  },
+  {
+   "id": "k18168",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k18183",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18186",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k18186",
+   "field": "answer",
+   "old": "镶人",
+   "new": "镶入"
+  },
+  {
+   "id": "k18192",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k18193",
+   "field": "answer",
+   "old": "套人",
+   "new": "套入"
+  },
+  {
+   "id": "k18193",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k18208",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18218",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18219",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18221",
+   "field": "answer",
+   "old": "人1",
+   "new": "入1"
+  },
+  {
+   "id": "k18221",
+   "field": "answer",
+   "old": "次打人",
+   "new": "次打入"
+  },
+  {
+   "id": "k18221",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k18230",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18236",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k18236",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k18238",
+   "field": "answer",
+   "old": "人木",
+   "new": "入木"
+  },
+  {
+   "id": "k18238",
+   "field": "answer",
+   "old": "人板",
+   "new": "入板"
+  },
+  {
+   "id": "k18247",
+   "field": "answer",
+   "old": "填人",
+   "new": "填入"
+  },
+  {
+   "id": "k18251",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18258",
+   "field": "answer",
+   "old": "镶人",
+   "new": "镶入"
+  },
+  {
+   "id": "k18281",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18297",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k18297",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k18314",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k18314",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k18317",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18324",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18325",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18330",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18332",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18337",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18343",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k18343",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k18348",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18355",
+   "field": "answer",
+   "old": "塞人",
+   "new": "塞入"
+  },
+  {
+   "id": "k18355",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k18357",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k18358",
+   "field": "answer",
+   "old": "人城",
+   "new": "入城"
+  },
+  {
+   "id": "k18358",
+   "field": "answer",
+   "old": "人室外排水管道（",
+   "new": "入室外排水管道（"
+  },
+  {
+   "id": "k18358",
+   "field": "answer",
+   "old": "人水",
+   "new": "入水"
+  },
+  {
+   "id": "k18358",
+   "field": "answer",
+   "old": "人室外排水管道和",
+   "new": "入室外排水管道和"
+  },
+  {
+   "id": "k18367",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k18367",
+   "field": "answer",
+   "old": "人塑",
+   "new": "入塑"
+  },
+  {
+   "id": "k18367",
+   "field": "answer",
+   "old": "料倒人",
+   "new": "料倒入"
+  },
+  {
+   "id": "k18367",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k18367",
+   "field": "answer",
+   "old": "混人",
+   "new": "混入"
+  },
+  {
+   "id": "k18368",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k18379",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18381",
+   "field": "answer",
+   "old": "，循环水泵吸人",
+   "new": "，循环水泵吸入"
+  },
+  {
+   "id": "k18381",
+   "field": "answer",
+   "old": "于吸人",
+   "new": "于吸入"
+  },
+  {
+   "id": "k18381",
+   "field": "answer",
+   "old": "使循环水泵吸人",
+   "new": "使循环水泵吸入"
+  },
+  {
+   "id": "k18383",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18393",
+   "field": "answer",
+   "old": "棒流人",
+   "new": "棒流入"
+  },
+  {
+   "id": "k18393",
+   "field": "answer",
+   "old": "人中",
+   "new": "入中"
+  },
+  {
+   "id": "k18393",
+   "field": "answer",
+   "old": "慢流人",
+   "new": "慢流入"
+  },
+  {
+   "id": "k18393",
+   "field": "answer",
+   "old": "人酸",
+   "new": "入酸"
+  },
+  {
+   "id": "k18396",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k18396",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k18404",
+   "field": "answer",
+   "old": "人深",
+   "new": "入深"
+  },
+  {
+   "id": "k18404",
+   "field": "answer",
+   "old": "端插人",
+   "new": "端插入"
+  },
+  {
+   "id": "k18408",
+   "field": "answer",
+   "old": "人深",
+   "new": "入深"
+  },
+  {
+   "id": "k18408",
+   "field": "answer",
+   "old": "人法",
+   "new": "入法"
+  },
+  {
+   "id": "k18434",
+   "field": "answer",
+   "old": "方人",
+   "new": "方入"
+  },
+  {
+   "id": "k18519",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k18519",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k18570",
+   "field": "question",
+   "old": "新人",
+   "new": "新入"
+  },
+  {
+   "id": "k18581",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18593",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18595",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18599",
+   "field": "answer",
+   "old": "转人",
+   "new": "转入"
+  },
+  {
+   "id": "k18599",
+   "field": "answer",
+   "old": "浸人",
+   "new": "浸入"
+  },
+  {
+   "id": "k18605",
+   "field": "answer",
+   "old": "人涂",
+   "new": "入涂"
+  },
+  {
+   "id": "k18605",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k18605",
+   "field": "answer",
+   "old": "人容",
+   "new": "入容"
+  },
+  {
+   "id": "k18611",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18612",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18617",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18622",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18634",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18636",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18669",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18755",
+   "field": "answer",
+   "old": "归人",
+   "new": "归入"
+  },
+  {
+   "id": "k18758",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18759",
+   "field": "answer",
+   "old": "）人",
+   "new": "）入"
+  },
+  {
+   "id": "k18759",
+   "field": "answer",
+   "old": "、人",
+   "new": "、入"
+  },
+  {
+   "id": "k18767",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18768",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18786",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18804",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18806",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18811",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18814",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k18814",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k18816",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18834",
+   "field": "answer",
+   "old": "人一",
+   "new": "入一"
+  },
+  {
+   "id": "k18834",
+   "field": "answer",
+   "old": "人螺",
+   "new": "入螺"
+  },
+  {
+   "id": "k18835",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k18844",
+   "field": "answer",
+   "old": "推人",
+   "new": "推入"
+  },
+  {
+   "id": "k18844",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k18854",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18863",
+   "field": "answer",
+   "old": "，分别填人",
+   "new": "，分别填入"
+  },
+  {
+   "id": "k18863",
+   "field": "answer",
+   "old": "量分别填人",
+   "new": "量分别填入"
+  },
+  {
+   "id": "k18867",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k18881",
+   "field": "answer",
+   "old": "得穿人",
+   "new": "得穿入"
+  },
+  {
+   "id": "k18881",
+   "field": "answer",
+   "old": "应穿人",
+   "new": "应穿入"
+  },
+  {
+   "id": "k18893",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18896",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18912",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k18925",
+   "field": "answer",
+   "old": "垫人",
+   "new": "垫入"
+  },
+  {
+   "id": "k18925",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k19052",
+   "field": "answer",
+   "old": "归人",
+   "new": "归入"
+  },
+  {
+   "id": "k19055",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k19060",
+   "field": "answer",
+   "old": "族人",
+   "new": "族入"
+  },
+  {
+   "id": "k19073",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k19084",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k19085",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k19339",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k19339",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k19622",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k19635",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k19706",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k19709",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k19711",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k19856",
+   "field": "answer",
+   "old": "下人",
+   "new": "下入"
+  },
+  {
+   "id": "k19859",
+   "field": "answer",
+   "old": "用人",
+   "new": "用入"
+  },
+  {
+   "id": "k19864",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k19871",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k19877",
+   "field": "answer",
+   "old": "水人",
+   "new": "水入"
+  },
+  {
+   "id": "k19877",
+   "field": "answer",
+   "old": "旋人",
+   "new": "旋入"
+  },
+  {
+   "id": "k19881",
+   "field": "answer",
+   "old": "迁人",
+   "new": "迁入"
+  },
+  {
+   "id": "k19884",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k19884",
+   "field": "answer",
+   "old": "旋人",
+   "new": "旋入"
+  },
+  {
+   "id": "k19913",
+   "field": "answer",
+   "old": "堂人",
+   "new": "堂入"
+  },
+  {
+   "id": "k19918",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k19937",
+   "field": "answer",
+   "old": "写人",
+   "new": "写入"
+  },
+  {
+   "id": "k19942",
+   "field": "answer",
+   "old": "陷人",
+   "new": "陷入"
+  },
+  {
+   "id": "k19943",
+   "field": "answer",
+   "old": "混人",
+   "new": "混入"
+  },
+  {
+   "id": "k19944",
+   "field": "answer",
+   "old": "于人",
+   "new": "于入"
+  },
+  {
+   "id": "k19948",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k20003",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20012",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k20012",
+   "field": "answer",
+   "old": "人同",
+   "new": "入同"
+  },
+  {
+   "id": "k20012",
+   "field": "answer",
+   "old": "人配",
+   "new": "入配"
+  },
+  {
+   "id": "k20012",
+   "field": "answer",
+   "old": "相人",
+   "new": "相入"
+  },
+  {
+   "id": "k20019",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20020",
+   "field": "answer",
+   "old": "人踢",
+   "new": "入踢"
+  },
+  {
+   "id": "k20020",
+   "field": "answer",
+   "old": "人卡",
+   "new": "入卡"
+  },
+  {
+   "id": "k20026",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k20043",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20048",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20057",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k20072",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k20076",
+   "field": "answer",
+   "old": "易人",
+   "new": "易入"
+  },
+  {
+   "id": "k20092",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k20098",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k20101",
+   "field": "answer",
+   "old": "人打",
+   "new": "入打"
+  },
+  {
+   "id": "k20101",
+   "field": "answer",
+   "old": "人水",
+   "new": "入水"
+  },
+  {
+   "id": "k20104",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20105",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k20106",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k20116",
+   "field": "answer",
+   "old": "道人",
+   "new": "道入"
+  },
+  {
+   "id": "k20126",
+   "field": "answer",
+   "old": "不人",
+   "new": "不入"
+  },
+  {
+   "id": "k20128",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k20133",
+   "field": "answer",
+   "old": "步人",
+   "new": "步入"
+  },
+  {
+   "id": "k20137",
+   "field": "answer",
+   "old": "渐人",
+   "new": "渐入"
+  },
+  {
+   "id": "k20139",
+   "field": "answer",
+   "old": "混人",
+   "new": "混入"
+  },
+  {
+   "id": "k20143",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k20147",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k20147",
+   "field": "answer",
+   "old": "呼人",
+   "new": "呼入"
+  },
+  {
+   "id": "k20159",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20162",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20188",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20189",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20196",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20208",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20431",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20431",
+   "field": "question",
+   "old": "在大门人",
+   "new": "在大门入"
+  },
+  {
+   "id": "k20431",
+   "field": "question",
+   "old": "冲大门人",
+   "new": "冲大门入"
+  },
+  {
+   "id": "k20434",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20447",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k20472",
+   "field": "answer",
+   "old": "免人",
+   "new": "免入"
+  },
+  {
+   "id": "k20481",
+   "field": "answer",
+   "old": "龙人",
+   "new": "龙入"
+  },
+  {
+   "id": "k20481",
+   "field": "answer",
+   "old": "凡人",
+   "new": "凡入"
+  },
+  {
+   "id": "k20483",
+   "field": "answer",
+   "old": "透人",
+   "new": "透入"
+  },
+  {
+   "id": "k20493",
+   "field": "answer",
+   "old": "冲人",
+   "new": "冲入"
+  },
+  {
+   "id": "k20497",
+   "field": "answer",
+   "old": "传人",
+   "new": "传入"
+  },
+  {
+   "id": "k20556",
+   "field": "answer",
+   "old": "搬人",
+   "new": "搬入"
+  },
+  {
+   "id": "k20556",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k21096",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21124",
+   "field": "answer",
+   "old": "卷人",
+   "new": "卷入"
+  },
+  {
+   "id": "k21125",
+   "field": "answer",
+   "old": "人节",
+   "new": "入节"
+  },
+  {
+   "id": "k21125",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k21130",
+   "field": "answer",
+   "old": "种玻璃射人",
+   "new": "种玻璃射入"
+  },
+  {
+   "id": "k21130",
+   "field": "answer",
+   "old": "明玻璃射人",
+   "new": "明玻璃射入"
+  },
+  {
+   "id": "k21159",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k21160",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k21160",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k21173",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21216",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21220",
+   "field": "answer",
+   "old": "，流人",
+   "new": "，流入"
+  },
+  {
+   "id": "k21220",
+   "field": "answer",
+   "old": "网流人",
+   "new": "网流入"
+  },
+  {
+   "id": "k21220",
+   "field": "answer",
+   "old": "滤流人",
+   "new": "滤流入"
+  },
+  {
+   "id": "k21233",
+   "field": "answer",
+   "old": "\n沉人",
+   "new": "\n沉入"
+  },
+  {
+   "id": "k21233",
+   "field": "answer",
+   "old": "定其沉人",
+   "new": "定其沉入"
+  },
+  {
+   "id": "k21233",
+   "field": "answer",
+   "old": "得其沉人",
+   "new": "得其沉入"
+  },
+  {
+   "id": "k21243",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21261",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21330",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21333",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21335",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21338",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21345",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21357",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k21357",
+   "field": "answer",
+   "old": "人胶",
+   "new": "入胶"
+  },
+  {
+   "id": "k21364",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21378",
+   "field": "answer",
+   "old": "人保温层（或找平层）\n",
+   "new": "入保温层（或找平层）\n"
+  },
+  {
+   "id": "k21378",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k21378",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k21378",
+   "field": "answer",
+   "old": "人尼",
+   "new": "入尼"
+  },
+  {
+   "id": "k21378",
+   "field": "answer",
+   "old": "人保温层（或找平层）内",
+   "new": "入保温层（或找平层）内"
+  },
+  {
+   "id": "k21388",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21391",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21400",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21405",
+   "field": "answer",
+   "old": "编人",
+   "new": "编入"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人度满",
+   "new": "入度满"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人度当",
+   "new": "入度当"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人。",
+   "new": "入。"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人深度，",
+   "new": "入深度，"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人百分率，",
+   "new": "入百分率，"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人深度和9",
+   "new": "入深度和9"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人百分\n",
+   "new": "入百分\n"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人深度和边",
+   "new": "入深度和边"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人防",
+   "new": "入防"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人深度除",
+   "new": "入深度除"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人百分率\n",
+   "new": "入百分率\n"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人深度或",
+   "new": "入深度或"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人度的",
+   "new": "入度的"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人的",
+   "new": "入的"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人深度/",
+   "new": "入深度/"
+  },
+  {
+   "id": "k21441",
+   "field": "answer",
+   "old": "人度应",
+   "new": "入度应"
+  },
+  {
+   "id": "k21452",
+   "field": "answer",
+   "old": "人。",
+   "new": "入。"
+  },
+  {
+   "id": "k21452",
+   "field": "answer",
+   "old": "人；",
+   "new": "入；"
+  },
+  {
+   "id": "k21469",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21471",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21479",
+   "field": "answer",
+   "old": "4人",
+   "new": "4入"
+  },
+  {
+   "id": "k21482",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21492",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k21492",
+   "field": "answer",
+   "old": "补人",
+   "new": "补入"
+  },
+  {
+   "id": "k21517",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21518",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k21520",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21586",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21638",
+   "field": "answer",
+   "old": "带人",
+   "new": "带入"
+  },
+  {
+   "id": "k21658",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k21660",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21670",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k21672",
+   "field": "answer",
+   "old": "迁人",
+   "new": "迁入"
+  },
+  {
+   "id": "k21681",
+   "field": "answer",
+   "old": "排人",
+   "new": "排入"
+  },
+  {
+   "id": "k21688",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21698",
+   "field": "answer",
+   "old": "主人",
+   "new": "主入"
+  },
+  {
+   "id": "k21698",
+   "field": "answer",
+   "old": "近人",
+   "new": "近入"
+  },
+  {
+   "id": "k21718",
+   "field": "answer",
+   "old": "引人",
+   "new": "引入"
+  },
+  {
+   "id": "k21719",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21731",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21737",
+   "field": "answer",
+   "old": "介人",
+   "new": "介入"
+  },
+  {
+   "id": "k21896",
+   "field": "answer",
+   "old": "在人",
+   "new": "在入"
+  },
+  {
+   "id": "k21900",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21901",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k21904",
+   "field": "question",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k21971",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21979",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k21997",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22003",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k22003",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k22004",
+   "field": "question",
+   "old": "从人",
+   "new": "从入"
+  },
+  {
+   "id": "k22220",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k22240",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22253",
+   "field": "answer",
+   "old": "介人",
+   "new": "介入"
+  },
+  {
+   "id": "k22267",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k22271",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22290",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22320",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k22327",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k22327",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k22328",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22332",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22443",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k22445",
+   "field": "answer",
+   "old": "人证，",
+   "new": "入证，"
+  },
+  {
+   "id": "k22445",
+   "field": "answer",
+   "old": "人证规",
+   "new": "入证规"
+  },
+  {
+   "id": "k22445",
+   "field": "answer",
+   "old": "人安",
+   "new": "入安"
+  },
+  {
+   "id": "k22469",
+   "field": "answer",
+   "old": "纳人",
+   "new": "纳入"
+  },
+  {
+   "id": "k22870",
+   "field": "answer",
+   "old": "D.点光源在一表面上形成的照度和人",
+   "new": "D.点光源在一表面上形成的照度和入"
+  },
+  {
+   "id": "k22870",
+   "field": "answer",
+   "old": "B.点光源在一表面上形成的照度和人",
+   "new": "B.点光源在一表面上形成的照度和入"
+  },
+  {
+   "id": "k22913",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22914",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k22928",
+   "field": "answer",
+   "old": "内人",
+   "new": "内入"
+  },
+  {
+   "id": "k22942",
+   "field": "answer",
+   "old": "的人",
+   "new": "的入"
+  },
+  {
+   "id": "k22942",
+   "field": "answer",
+   "old": "人人",
+   "new": "人入"
+  },
+  {
+   "id": "k22947",
+   "field": "answer",
+   "old": "存人",
+   "new": "存入"
+  },
+  {
+   "id": "k23013",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23020",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23040",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k23042",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k23046",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23053",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23066",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k23073",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23090",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23093",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k23111",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k23124",
+   "field": "answer",
+   "old": "受人",
+   "new": "受入"
+  },
+  {
+   "id": "k23126",
+   "field": "answer",
+   "old": "的人",
+   "new": "的入"
+  },
+  {
+   "id": "k23126",
+   "field": "answer",
+   "old": "人人",
+   "new": "人入"
+  },
+  {
+   "id": "k23131",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23139",
+   "field": "answer",
+   "old": "人人",
+   "new": "人入"
+  },
+  {
+   "id": "k23140",
+   "field": "answer",
+   "old": "落人",
+   "new": "落入"
+  },
+  {
+   "id": "k23167",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k23168",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k23198",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k23231",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k23235",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23238",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23294",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23295",
+   "field": "answer",
+   "old": "人溶",
+   "new": "入溶"
+  },
+  {
+   "id": "k23295",
+   "field": "answer",
+   "old": "人涂",
+   "new": "入涂"
+  },
+  {
+   "id": "k23336",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k23379",
+   "field": "answer",
+   "old": "人有",
+   "new": "入有"
+  },
+  {
+   "id": "k23379",
+   "field": "answer",
+   "old": "人油",
+   "new": "入油"
+  },
+  {
+   "id": "k23438",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k23438",
+   "field": "answer",
+   "old": "排人",
+   "new": "排入"
+  },
+  {
+   "id": "k23456",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k23457",
+   "field": "answer",
+   "old": "人托",
+   "new": "入托"
+  },
+  {
+   "id": "k23462",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23463",
+   "field": "answer",
+   "old": "陷人",
+   "new": "陷入"
+  },
+  {
+   "id": "k23519",
+   "field": "answer",
+   "old": "填人",
+   "new": "填入"
+  },
+  {
+   "id": "k23522",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k23540",
+   "field": "answer",
+   "old": "法人",
+   "new": "法入"
+  },
+  {
+   "id": "k23540",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k23540",
+   "field": "answer",
+   "old": "范人",
+   "new": "范入"
+  },
+  {
+   "id": "k23576",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k23581",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23598",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k23600",
+   "field": "answer",
+   "old": "备人",
+   "new": "备入"
+  },
+  {
+   "id": "k23631",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k23652",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k23757",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k23909",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k23910",
+   "field": "answer",
+   "old": "门人",
+   "new": "门入"
+  },
+  {
+   "id": "k24107",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24283",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24315",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24370",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24524",
+   "field": "answer",
+   "old": "厅人",
+   "new": "厅入"
+  },
+  {
+   "id": "k24677",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24682",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k24694",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k24714",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24716",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k24768",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k24772",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k25409",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k25422",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k25423",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26169",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k26183",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26191",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26211",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26263",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k26263",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k26288",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26435",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26451",
+   "field": "answer",
+   "old": "和人",
+   "new": "和入"
+  },
+  {
+   "id": "k26453",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26454",
+   "field": "answer",
+   "old": "屋人",
+   "new": "屋入"
+  },
+  {
+   "id": "k26468",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26557",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k26608",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k26629",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k26664",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k26697",
+   "field": "answer",
+   "old": "筑人",
+   "new": "筑入"
+  },
+  {
+   "id": "k26703",
+   "field": "answer",
+   "old": "E.消防值班室距出人",
+   "new": "E.消防值班室距出入"
+  },
+  {
+   "id": "k26703",
+   "field": "answer",
+   "old": "B.消防值班室距出人",
+   "new": "B.消防值班室距出入"
+  },
+  {
+   "id": "k26743",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k26950",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27041",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27101",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k27210",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27267",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27277",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27288",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k27396",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27397",
+   "field": "answer",
+   "old": "不列人",
+   "new": "不列入"
+  },
+  {
+   "id": "k27397",
+   "field": "answer",
+   "old": "费，可另行结算或列人",
+   "new": "费，可另行结算或列入"
+  },
+  {
+   "id": "k27397",
+   "field": "answer",
+   "old": "更，可另行结算或列人",
+   "new": "更，可另行结算或列入"
+  },
+  {
+   "id": "k27463",
+   "field": "answer",
+   "old": "致意见写人",
+   "new": "致意见写入"
+  },
+  {
+   "id": "k27463",
+   "field": "answer",
+   "old": "的意见写人",
+   "new": "的意见写入"
+  },
+  {
+   "id": "k27464",
+   "field": "answer",
+   "old": "写人",
+   "new": "写入"
+  },
+  {
+   "id": "k27539",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k27657",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27673",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27739",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27774",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27775",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27780",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27781",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27886",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27894",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k27953",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k28060",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k28060",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k28061",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k28422",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k28448",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k28481",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k28965",
+   "field": "question",
+   "old": "和人",
+   "new": "和入"
+  },
+  {
+   "id": "k29039",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29062",
+   "field": "answer",
+   "old": "人”",
+   "new": "入”"
+  },
+  {
+   "id": "k29062",
+   "field": "answer",
+   "old": "人完",
+   "new": "入完"
+  },
+  {
+   "id": "k29064",
+   "field": "answer",
+   "old": "成导人",
+   "new": "成导入"
+  },
+  {
+   "id": "k29064",
+   "field": "answer",
+   "old": "人范",
+   "new": "入范"
+  },
+  {
+   "id": "k29085",
+   "field": "answer",
+   "old": "登人",
+   "new": "登入"
+  },
+  {
+   "id": "k29086",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29138",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29149",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29619",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29656",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29736",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k29757",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3653",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3655",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k3731",
+   "field": "answer",
+   "old": "出人",
+   "new": "出入"
+  },
+  {
+   "id": "k3765",
+   "field": "answer",
+   "old": "填人",
+   "new": "填入"
+  },
+  {
+   "id": "k3766",
+   "field": "answer",
+   "old": "雪人",
+   "new": "雪入"
+  },
+  {
+   "id": "k3768",
+   "field": "answer",
+   "old": "界物质人",
+   "new": "界物质入"
+  },
+  {
+   "id": "k3768",
+   "field": "answer",
+   "old": "染物质人",
+   "new": "染物质入"
+  },
+  {
+   "id": "k3775",
+   "field": "answer",
+   "old": "寒人",
+   "new": "寒入"
+  },
+  {
+   "id": "k3775",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k3778",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3781",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k3781",
+   "field": "answer",
+   "old": "，雨雪人",
+   "new": "，雨雪入"
+  },
+  {
+   "id": "k3781",
+   "field": "answer",
+   "old": "，人",
+   "new": "，入"
+  },
+  {
+   "id": "k3781",
+   "field": "answer",
+   "old": "或雨雪人",
+   "new": "或雨雪入"
+  },
+  {
+   "id": "k3789",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3847",
+   "field": "answer",
+   "old": "】由石材工厂加工生产，废止在施工现场批量生产板块的落后施工；弯曲面或弧形平面板块应由石材工厂专用设备（如电脑数控机床、仿形铣床、超高压水射流切割机一一水刀）加工制作。石材进场应按《天然花岗石建筑板材》（GB/T18601一2009）的规定检查外观质量，检查内容包括规格尺寸、平面度、角度、外观缺陷等。超出允许偏差者，应退货或磨边修整，阳角板块斜边宜略小于1/2阳角角度，利于填人",
+   "new": "】由石材工厂加工生产，废止在施工现场批量生产板块的落后施工；弯曲面或弧形平面板块应由石材工厂专用设备（如电脑数控机床、仿形铣床、超高压水射流切割机一一水刀）加工制作。石材进场应按《天然花岗石建筑板材》（GB/T18601一2009）的规定检查外观质量，检查内容包括规格尺寸、平面度、角度、外观缺陷等。超出允许偏差者，应退货或磨边修整，阳角板块斜边宜略小于1/2阳角角度，利于填入"
+  },
+  {
+   "id": "k3847",
+   "field": "answer",
+   "old": "应由石材工厂加工生产，废止在施工现场批量生产板块的落后施工；弯曲面或弧形平面板块应由石材工厂专用设备（如电脑数控机床、仿形铣床、超高压水射流切割机一一水刀）加工制作。石材进场应按《天然花岗石建筑板材》（GB/T18601一2009）的规定检查外观质量，检查内容包括规格尺寸、平面度、角度、外观缺陷等。超出允许偏差者，应退货或磨边修整，阳角板块斜边宜略小于1/2阳角角度，利于填人",
+   "new": "应由石材工厂加工生产，废止在施工现场批量生产板块的落后施工；弯曲面或弧形平面板块应由石材工厂专用设备（如电脑数控机床、仿形铣床、超高压水射流切割机一一水刀）加工制作。石材进场应按《天然花岗石建筑板材》（GB/T18601一2009）的规定检查外观质量，检查内容包括规格尺寸、平面度、角度、外观缺陷等。超出允许偏差者，应退货或磨边修整，阳角板块斜边宜略小于1/2阳角角度，利于填入"
+  },
+  {
+   "id": "k3850",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3852",
+   "field": "answer",
+   "old": "】根据标准规定，大理石板块长、宽只允许负偏差。面积较大的饰面，若板缝干接，其板缝可适当放宽至2mm左右。\n（6）大理石板块安装应先做样板墙，经建设、设计、监理、施工等单位共同确认后，再大面积铺开。\n1）安装前应进行试拼，使大理石板与板之间上下左右接缝平直、均匀，试拼后由下至上逐块编写镶贴顺序，然后对号人",
+   "new": "】根据标准规定，大理石板块长、宽只允许负偏差。面积较大的饰面，若板缝干接，其板缝可适当放宽至2mm左右。\n（6）大理石板块安装应先做样板墙，经建设、设计、监理、施工等单位共同确认后，再大面积铺开。\n1）安装前应进行试拼，使大理石板与板之间上下左右接缝平直、均匀，试拼后由下至上逐块编写镶贴顺序，然后对号入"
+  },
+  {
+   "id": "k3852",
+   "field": "answer",
+   "old": "。根据标准规定，大理石板块长、宽只允许负偏差。面积较大的饰面，若板缝干接，其板缝可适当放宽至2mm左右。\n（6）大理石板块安装应先做样板墙，经建设、设计、监理、施工等单位共同确认后，再大面积铺开。\n1）安装前应进行试拼，使大理石板与板之间上下左右接缝平直、均匀，试拼后由下至上逐块编写镶贴顺序，然后对号人",
+   "new": "。根据标准规定，大理石板块长、宽只允许负偏差。面积较大的饰面，若板缝干接，其板缝可适当放宽至2mm左右。\n（6）大理石板块安装应先做样板墙，经建设、设计、监理、施工等单位共同确认后，再大面积铺开。\n1）安装前应进行试拼，使大理石板与板之间上下左右接缝平直、均匀，试拼后由下至上逐块编写镶贴顺序，然后对号入"
+  },
+  {
+   "id": "k3853",
+   "field": "answer",
+   "old": "溶人",
+   "new": "溶入"
+  },
+  {
+   "id": "k3853",
+   "field": "answer",
+   "old": "浸人",
+   "new": "浸入"
+  },
+  {
+   "id": "k3856",
+   "field": "answer",
+   "old": "】（或灌浆）砂浆强度低，干缩量大，粘结力差。\n（6）砖缝不能防水，雨水易人",
+   "new": "】（或灌浆）砂浆强度低，干缩量大，粘结力差。\n（6）砖缝不能防水，雨水易入"
+  },
+  {
+   "id": "k3856",
+   "field": "answer",
+   "old": "析】外墙饰面砖空鼓、松动脱落、开裂、渗漏（\n（2）外墙找平层一次成活，抹灰过厚，导致抹灰层空鼓、开裂、下坠、砂眼、接槎不严实，成为藏水空隙、渗水通道。\n（3）外墙砖粘贴前找平层及饰面砖未经淋水湿润，粘贴砂浆失水过快，影响粘结质量。\n（4）饰面砖粘贴时粘贴砂浆没有满铺（仅靠手工挤压上墙），尤其砖块的周边（特别是四个角位）砂浆不饱满，留下渗水空隙和通道。\n（5）粘贴（或灌浆）砂浆强度低，干缩量大，粘结力差。\n（6）砖缝不能防水，雨水易人",
+   "new": "析】外墙饰面砖空鼓、松动脱落、开裂、渗漏（\n（2）外墙找平层一次成活，抹灰过厚，导致抹灰层空鼓、开裂、下坠、砂眼、接槎不严实，成为藏水空隙、渗水通道。\n（3）外墙砖粘贴前找平层及饰面砖未经淋水湿润，粘贴砂浆失水过快，影响粘结质量。\n（4）饰面砖粘贴时粘贴砂浆没有满铺（仅靠手工挤压上墙），尤其砖块的周边（特别是四个角位）砂浆不饱满，留下渗水空隙和通道。\n（5）粘贴（或灌浆）砂浆强度低，干缩量大，粘结力差。\n（6）砖缝不能防水，雨水易入"
+  },
+  {
+   "id": "k3856",
+   "field": "answer",
+   "old": "现】外墙饰面砖空鼓、松动脱落、开裂、渗漏（\n（2）外墙找平层一次成活，抹灰过厚，导致抹灰层空鼓、开裂、下坠、砂眼、接槎不严实，成为藏水空隙、渗水通道。\n（3）外墙砖粘贴前找平层及饰面砖未经淋水湿润，粘贴砂浆失水过快，影响粘结质量。\n（4）饰面砖粘贴时粘贴砂浆没有满铺（仅靠手工挤压上墙），尤其砖块的周边（特别是四个角位）砂浆不饱满，留下渗水空隙和通道。\n（5）粘贴（或灌浆）砂浆强度低，干缩量大，粘结力差。\n（6）砖缝不能防水，雨水易人",
+   "new": "现】外墙饰面砖空鼓、松动脱落、开裂、渗漏（\n（2）外墙找平层一次成活，抹灰过厚，导致抹灰层空鼓、开裂、下坠、砂眼、接槎不严实，成为藏水空隙、渗水通道。\n（3）外墙砖粘贴前找平层及饰面砖未经淋水湿润，粘贴砂浆失水过快，影响粘结质量。\n（4）饰面砖粘贴时粘贴砂浆没有满铺（仅靠手工挤压上墙），尤其砖块的周边（特别是四个角位）砂浆不饱满，留下渗水空隙和通道。\n（5）粘贴（或灌浆）砂浆强度低，干缩量大，粘结力差。\n（6）砖缝不能防水，雨水易入"
+  },
+  {
+   "id": "k3893",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k3893",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k3894",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3896",
+   "field": "answer",
+   "old": "析】（2）隔墙与侧面墙体及顶板相接处，没有粘结50mm宽玻璃纤维带，只用接缝腻子找平。\n防治措施（1）根据设计放出隔墙位置线，并引测到主体结构侧面墙体及顶板上。\n（2）将边框龙骨即沿地龙骨、沿顶龙骨、沿墙（柱）龙骨与主体结构固定，固定前先铺垫一层橡胶条或沥青泡沫塑料条。边框龙骨与墙、顶、地固定做法如\n（3）根据设置要求，在沿顶、沿地龙骨上分档画线，按分档位置安装竖龙骨，竖龙骨上端、下端插人",
+   "new": "析】（2）隔墙与侧面墙体及顶板相接处，没有粘结50mm宽玻璃纤维带，只用接缝腻子找平。\n防治措施（1）根据设计放出隔墙位置线，并引测到主体结构侧面墙体及顶板上。\n（2）将边框龙骨即沿地龙骨、沿顶龙骨、沿墙（柱）龙骨与主体结构固定，固定前先铺垫一层橡胶条或沥青泡沫塑料条。边框龙骨与墙、顶、地固定做法如\n（3）根据设置要求，在沿顶、沿地龙骨上分档画线，按分档位置安装竖龙骨，竖龙骨上端、下端插入"
+  },
+  {
+   "id": "k3896",
+   "field": "answer",
+   "old": "现】（2）隔墙与侧面墙体及顶板相接处，没有粘结50mm宽玻璃纤维带，只用接缝腻子找平。\n防治措施（1）根据设计放出隔墙位置线，并引测到主体结构侧面墙体及顶板上。\n（2）将边框龙骨即沿地龙骨、沿顶龙骨、沿墙（柱）龙骨与主体结构固定，固定前先铺垫一层橡胶条或沥青泡沫塑料条。边框龙骨与墙、顶、地固定做法如\n（3）根据设置要求，在沿顶、沿地龙骨上分档画线，按分档位置安装竖龙骨，竖龙骨上端、下端插人",
+   "new": "现】（2）隔墙与侧面墙体及顶板相接处，没有粘结50mm宽玻璃纤维带，只用接缝腻子找平。\n防治措施（1）根据设计放出隔墙位置线，并引测到主体结构侧面墙体及顶板上。\n（2）将边框龙骨即沿地龙骨、沿顶龙骨、沿墙（柱）龙骨与主体结构固定，固定前先铺垫一层橡胶条或沥青泡沫塑料条。边框龙骨与墙、顶、地固定做法如\n（3）根据设置要求，在沿顶、沿地龙骨上分档画线，按分档位置安装竖龙骨，竖龙骨上端、下端插入"
+  },
+  {
+   "id": "k3898",
+   "field": "answer",
+   "old": "析】当采用复合石膏板时，由于预留缝隙较大，后填人",
+   "new": "析】当采用复合石膏板时，由于预留缝隙较大，后填入"
+  },
+  {
+   "id": "k3898",
+   "field": "answer",
+   "old": "现】当采用复合石膏板时，由于预留缝隙较大，后填人",
+   "new": "现】当采用复合石膏板时，由于预留缝隙较大，后填入"
+  },
+  {
+   "id": "k3908",
+   "field": "answer",
+   "old": "析】一般因采用纯粘结法安装，板材抗剪能力差，负荷后易松动或脱落。\n防治措施可采用胶粘木销的方法安装隔板承托及挂镜线。做法是：用手电钻将墙板一面钻成p42mm孔，将p40mm蘸胶圆木塞人",
+   "new": "析】一般因采用纯粘结法安装，板材抗剪能力差，负荷后易松动或脱落。\n防治措施可采用胶粘木销的方法安装隔板承托及挂镜线。做法是：用手电钻将墙板一面钻成p42mm孔，将p40mm蘸胶圆木塞入"
+  },
+  {
+   "id": "k3908",
+   "field": "answer",
+   "old": "现】一般因采用纯粘结法安装，板材抗剪能力差，负荷后易松动或脱落。\n防治措施可采用胶粘木销的方法安装隔板承托及挂镜线。做法是：用手电钻将墙板一面钻成p42mm孔，将p40mm蘸胶圆木塞人",
+   "new": "现】一般因采用纯粘结法安装，板材抗剪能力差，负荷后易松动或脱落。\n防治措施可采用胶粘木销的方法安装隔板承托及挂镜线。做法是：用手电钻将墙板一面钻成p42mm孔，将p40mm蘸胶圆木塞入"
+  },
+  {
+   "id": "k3911",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3918",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k3918",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k3943",
+   "field": "answer",
+   "old": "拧人",
+   "new": "拧入"
+  },
+  {
+   "id": "k3948",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3952",
+   "field": "answer",
+   "old": "析】8mm深、宽的槽口，填嵌密封材料。由于只有一道防水，如果密封膏质量没有保证（易老化、开裂）或填嵌不密实，或无预留槽口（嵌缝膏厚度不足）、清理不干净、密封膏粘结不牢，或保护门窗框的临时性塑料薄膜未清除干净，雨水便可能从缝隙人",
+   "new": "析】8mm深、宽的槽口，填嵌密封材料。由于只有一道防水，如果密封膏质量没有保证（易老化、开裂）或填嵌不密实，或无预留槽口（嵌缝膏厚度不足）、清理不干净、密封膏粘结不牢，或保护门窗框的临时性塑料薄膜未清除干净，雨水便可能从缝隙入"
+  },
+  {
+   "id": "k3952",
+   "field": "answer",
+   "old": "现】8mm深、宽的槽口，填嵌密封材料。由于只有一道防水，如果密封膏质量没有保证（易老化、开裂）或填嵌不密实，或无预留槽口（嵌缝膏厚度不足）、清理不干净、密封膏粘结不牢，或保护门窗框的临时性塑料薄膜未清除干净，雨水便可能从缝隙人",
+   "new": "现】8mm深、宽的槽口，填嵌密封材料。由于只有一道防水，如果密封膏质量没有保证（易老化、开裂）或填嵌不密实，或无预留槽口（嵌缝膏厚度不足）、清理不干净、密封膏粘结不牢，或保护门窗框的临时性塑料薄膜未清除干净，雨水便可能从缝隙入"
+  },
+  {
+   "id": "k3972",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k3993",
+   "field": "answer",
+   "old": "】定，预装后检查贴脸板盖住抹灰和其他面层，盖宽不小于10mm。\n（5）将贴脸板钉固在门窗框上，钉帽砸扁冲人",
+   "new": "】定，预装后检查贴脸板盖住抹灰和其他面层，盖宽不小于10mm。\n（5）将贴脸板钉固在门窗框上，钉帽砸扁冲入"
+  },
+  {
+   "id": "k3993",
+   "field": "answer",
+   "old": "析】击时松动、脱落，影响装饰质量和使用效果。\n原因分析安装贴脸板部位的抹灰或面层装饰工作，以及地面未做完，就进行贴脸板安装，贴脸板未钉固在门窗框上。\n（1）贴脸板安装前门窗框应安装完毕，嵌缝及抹灰工作已结束，地面已做完。\n（2）木制贴脸板应采用门窗框相同树种的木材，含水率不大于12%。不得有裂纹、扭曲、死节等缺陷。\n（3）根据贴脸安装位置，空好长度和接头，转角应采取45°角斜面对接。\n（4）先预装后固定，预装后检查贴脸板盖住抹灰和其他面层，盖宽不小于10mm。\n（5）将贴脸板钉固在门窗框上，钉帽砸扁冲人",
+   "new": "析】击时松动、脱落，影响装饰质量和使用效果。\n原因分析安装贴脸板部位的抹灰或面层装饰工作，以及地面未做完，就进行贴脸板安装，贴脸板未钉固在门窗框上。\n（1）贴脸板安装前门窗框应安装完毕，嵌缝及抹灰工作已结束，地面已做完。\n（2）木制贴脸板应采用门窗框相同树种的木材，含水率不大于12%。不得有裂纹、扭曲、死节等缺陷。\n（3）根据贴脸安装位置，空好长度和接头，转角应采取45°角斜面对接。\n（4）先预装后固定，预装后检查贴脸板盖住抹灰和其他面层，盖宽不小于10mm。\n（5）将贴脸板钉固在门窗框上，钉帽砸扁冲入"
+  },
+  {
+   "id": "k3993",
+   "field": "answer",
+   "old": "现】击时松动、脱落，影响装饰质量和使用效果。\n原因分析安装贴脸板部位的抹灰或面层装饰工作，以及地面未做完，就进行贴脸板安装，贴脸板未钉固在门窗框上。\n（1）贴脸板安装前门窗框应安装完毕，嵌缝及抹灰工作已结束，地面已做完。\n（2）木制贴脸板应采用门窗框相同树种的木材，含水率不大于12%。不得有裂纹、扭曲、死节等缺陷。\n（3）根据贴脸安装位置，空好长度和接头，转角应采取45°角斜面对接。\n（4）先预装后固定，预装后检查贴脸板盖住抹灰和其他面层，盖宽不小于10mm。\n（5）将贴脸板钉固在门窗框上，钉帽砸扁冲人",
+   "new": "现】击时松动、脱落，影响装饰质量和使用效果。\n原因分析安装贴脸板部位的抹灰或面层装饰工作，以及地面未做完，就进行贴脸板安装，贴脸板未钉固在门窗框上。\n（1）贴脸板安装前门窗框应安装完毕，嵌缝及抹灰工作已结束，地面已做完。\n（2）木制贴脸板应采用门窗框相同树种的木材，含水率不大于12%。不得有裂纹、扭曲、死节等缺陷。\n（3）根据贴脸安装位置，空好长度和接头，转角应采取45°角斜面对接。\n（4）先预装后固定，预装后检查贴脸板盖住抹灰和其他面层，盖宽不小于10mm。\n（5）将贴脸板钉固在门窗框上，钉帽砸扁冲入"
+  },
+  {
+   "id": "k4019",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4037",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4062",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4063",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k4065",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4094",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k4099",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4112",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4139",
+   "field": "answer",
+   "old": "人更",
+   "new": "入更"
+  },
+  {
+   "id": "k4139",
+   "field": "answer",
+   "old": "人至",
+   "new": "入至"
+  },
+  {
+   "id": "k4140",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4152",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4154",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k4154",
+   "field": "answer",
+   "old": "的人",
+   "new": "的入"
+  },
+  {
+   "id": "k4155",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4156",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4157",
+   "field": "answer",
+   "old": "管人",
+   "new": "管入"
+  },
+  {
+   "id": "k4158",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4168",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k4168",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k4170",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4172",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4175",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4177",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4178",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4179",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4180",
+   "field": "answer",
+   "old": "子穿人",
+   "new": "子穿入"
+  },
+  {
+   "id": "k4180",
+   "field": "answer",
+   "old": "，穿人",
+   "new": "，穿入"
+  },
+  {
+   "id": "k4181",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4183",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4185",
+   "field": "answer",
+   "old": "人到",
+   "new": "入到"
+  },
+  {
+   "id": "k4185",
+   "field": "answer",
+   "old": "人B",
+   "new": "入B"
+  },
+  {
+   "id": "k4185",
+   "field": "answer",
+   "old": "拧人",
+   "new": "拧入"
+  },
+  {
+   "id": "k4185",
+   "field": "answer",
+   "old": "人同",
+   "new": "入同"
+  },
+  {
+   "id": "k4185",
+   "field": "answer",
+   "old": "人有",
+   "new": "入有"
+  },
+  {
+   "id": "k4204",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4206",
+   "field": "answer",
+   "old": "人散热器，",
+   "new": "入散热器，"
+  },
+  {
+   "id": "k4206",
+   "field": "answer",
+   "old": "人另",
+   "new": "入另"
+  },
+  {
+   "id": "k4206",
+   "field": "answer",
+   "old": "人散热器内",
+   "new": "入散热器内"
+  },
+  {
+   "id": "k4208",
+   "field": "answer",
+   "old": "人深",
+   "new": "入深"
+  },
+  {
+   "id": "k4208",
+   "field": "answer",
+   "old": "人管",
+   "new": "入管"
+  },
+  {
+   "id": "k4209",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4213",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4216",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4220",
+   "field": "answer",
+   "old": "人室",
+   "new": "入室"
+  },
+  {
+   "id": "k4225",
+   "field": "answer",
+   "old": "再穿人",
+   "new": "再穿入"
+  },
+  {
+   "id": "k4225",
+   "field": "answer",
+   "old": "地穿人",
+   "new": "地穿入"
+  },
+  {
+   "id": "k4226",
+   "field": "answer",
+   "old": "人短",
+   "new": "入短"
+  },
+  {
+   "id": "k4226",
+   "field": "answer",
+   "old": "人补",
+   "new": "入补"
+  },
+  {
+   "id": "k4227",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4233",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k4234",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4239",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4242",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k4242",
+   "field": "answer",
+   "old": "套人",
+   "new": "套入"
+  },
+  {
+   "id": "k4259",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k4259",
+   "field": "answer",
+   "old": "力人",
+   "new": "力入"
+  },
+  {
+   "id": "k4264",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k4286",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4298",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4299",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4300",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4304",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4306",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4310",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4311",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4314",
+   "field": "answer",
+   "old": "套人",
+   "new": "套入"
+  },
+  {
+   "id": "k4316",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4319",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4325",
+   "field": "answer",
+   "old": "人配",
+   "new": "入配"
+  },
+  {
+   "id": "k4325",
+   "field": "answer",
+   "old": "人管",
+   "new": "入管"
+  },
+  {
+   "id": "k4326",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4327",
+   "field": "answer",
+   "old": "人法连接\n",
+   "new": "入法连接\n"
+  },
+  {
+   "id": "k4327",
+   "field": "answer",
+   "old": "人阴",
+   "new": "入阴"
+  },
+  {
+   "id": "k4327",
+   "field": "answer",
+   "old": "人部",
+   "new": "入部"
+  },
+  {
+   "id": "k4327",
+   "field": "answer",
+   "old": "人法连接的",
+   "new": "入法连接的"
+  },
+  {
+   "id": "k4327",
+   "field": "answer",
+   "old": "人法连接和",
+   "new": "入法连接和"
+  },
+  {
+   "id": "k4330",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k4330",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k4332",
+   "field": "answer",
+   "old": "穿人管",
+   "new": "穿入管"
+  },
+  {
+   "id": "k4332",
+   "field": "answer",
+   "old": "人钢",
+   "new": "入钢"
+  },
+  {
+   "id": "k4332",
+   "field": "answer",
+   "old": "人线",
+   "new": "入线"
+  },
+  {
+   "id": "k4332",
+   "field": "answer",
+   "old": "牵人",
+   "new": "牵入"
+  },
+  {
+   "id": "k4332",
+   "field": "answer",
+   "old": "人\n",
+   "new": "入\n"
+  },
+  {
+   "id": "k4332",
+   "field": "answer",
+   "old": "人另",
+   "new": "入另"
+  },
+  {
+   "id": "k4337",
+   "field": "answer",
+   "old": "人式熔断器\n",
+   "new": "入式熔断器\n"
+  },
+  {
+   "id": "k4337",
+   "field": "answer",
+   "old": "人底",
+   "new": "入底"
+  },
+  {
+   "id": "k4337",
+   "field": "answer",
+   "old": "人式熔断器又",
+   "new": "入式熔断器又"
+  },
+  {
+   "id": "k4347",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4350",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4358",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4367",
+   "field": "answer",
+   "old": "插人",
+   "new": "插入"
+  },
+  {
+   "id": "k4371",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4379",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4391",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4392",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4395",
+   "field": "answer",
+   "old": "人配",
+   "new": "入配"
+  },
+  {
+   "id": "k4395",
+   "field": "answer",
+   "old": "人同一根管内。",
+   "new": "入同一根管内。"
+  },
+  {
+   "id": "k4395",
+   "field": "answer",
+   "old": "人同一根管内，",
+   "new": "入同一根管内，"
+  },
+  {
+   "id": "k4401",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4406",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4430",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4485",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4493",
+   "field": "answer",
+   "old": "2）对接插人",
+   "new": "2）对接插入"
+  },
+  {
+   "id": "k4493",
+   "field": "answer",
+   "old": "1）对接插人",
+   "new": "1）对接插入"
+  },
+  {
+   "id": "k4495",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4501",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4523",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k4538",
+   "field": "answer",
+   "old": "代人",
+   "new": "代入"
+  },
+  {
+   "id": "k4573",
+   "field": "answer",
+   "old": "列人",
+   "new": "列入"
+  },
+  {
+   "id": "k4597",
+   "field": "answer",
+   "old": "送人",
+   "new": "送入"
+  },
+  {
+   "id": "k5192",
+   "field": "answer",
+   "old": "陷人",
+   "new": "陷入"
+  },
+  {
+   "id": "k5194",
+   "field": "answer",
+   "old": "掉人",
+   "new": "掉入"
+  },
+  {
+   "id": "k5194",
+   "field": "answer",
+   "old": "倒人",
+   "new": "倒入"
+  },
+  {
+   "id": "k5198",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k5205",
+   "field": "answer",
+   "old": "道人",
+   "new": "道入"
+  },
+  {
+   "id": "k5211",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k5218",
+   "field": "answer",
+   "old": "吸人",
+   "new": "吸入"
+  },
+  {
+   "id": "k5220",
+   "field": "answer",
+   "old": "流人",
+   "new": "流入"
+  },
+  {
+   "id": "k5226",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k5242",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k5242",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k5242",
+   "field": "answer",
+   "old": "折人",
+   "new": "折入"
+  },
+  {
+   "id": "k5242",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k5249",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k5251",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k5251",
+   "field": "answer",
+   "old": "折人",
+   "new": "折入"
+  },
+  {
+   "id": "k5256",
+   "field": "answer",
+   "old": "侵人",
+   "new": "侵入"
+  },
+  {
+   "id": "k5276",
+   "field": "answer",
+   "old": "人的",
+   "new": "入的"
+  },
+  {
+   "id": "k5276",
+   "field": "answer",
+   "old": "人。",
+   "new": "入。"
+  },
+  {
+   "id": "k5278",
+   "field": "answer",
+   "old": "不人",
+   "new": "不入"
+  },
+  {
+   "id": "k5282",
+   "field": "answer",
+   "old": "搬人",
+   "new": "搬入"
+  },
+  {
+   "id": "k5283",
+   "field": "answer",
+   "old": "\n人",
+   "new": "\n入"
+  },
+  {
+   "id": "k5283",
+   "field": "answer",
+   "old": "搬人",
+   "new": "搬入"
+  },
+  {
+   "id": "k5293",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k5293",
+   "field": "answer",
+   "old": "引人",
+   "new": "引入"
+  },
+  {
+   "id": "k5294",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k5306",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5309",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k5310",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k5311",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k5312",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k5334",
+   "field": "answer",
+   "old": "搬人",
+   "new": "搬入"
+  },
+  {
+   "id": "k5345",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5363",
+   "field": "answer",
+   "old": "早人",
+   "new": "早入"
+  },
+  {
+   "id": "k5423",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5423",
+   "field": "question",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5656",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5831",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5842",
+   "field": "answer",
+   "old": "打人",
+   "new": "打入"
+  },
+  {
+   "id": "k5842",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k5843",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k5844",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5845",
+   "field": "answer",
+   "old": "伸人",
+   "new": "伸入"
+  },
+  {
+   "id": "k5846",
+   "field": "answer",
+   "old": "注人",
+   "new": "注入"
+  },
+  {
+   "id": "k5846",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k5846",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k5864",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5874",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5898",
+   "field": "answer",
+   "old": "放人",
+   "new": "放入"
+  },
+  {
+   "id": "k5898",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k5899",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5908",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5915",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5916",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5920",
+   "field": "answer",
+   "old": "人深",
+   "new": "入深"
+  },
+  {
+   "id": "k5920",
+   "field": "answer",
+   "old": "人预留洞的",
+   "new": "入预留洞的"
+  },
+  {
+   "id": "k5920",
+   "field": "answer",
+   "old": "人预留洞口",
+   "new": "入预留洞口"
+  },
+  {
+   "id": "k5921",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5924",
+   "field": "answer",
+   "old": "装人",
+   "new": "装入"
+  },
+  {
+   "id": "k5924",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k5924",
+   "field": "answer",
+   "old": "拧人",
+   "new": "拧入"
+  },
+  {
+   "id": "k5925",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5954",
+   "field": "answer",
+   "old": "灌人",
+   "new": "灌入"
+  },
+  {
+   "id": "k5956",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5957",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5960",
+   "field": "answer",
+   "old": "钉人",
+   "new": "钉入"
+  },
+  {
+   "id": "k5962",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5971",
+   "field": "answer",
+   "old": "，冲人",
+   "new": "，冲入"
+  },
+  {
+   "id": "k5971",
+   "field": "answer",
+   "old": "纹冲人",
+   "new": "纹冲入"
+  },
+  {
+   "id": "k5979",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k5983",
+   "field": "answer",
+   "old": "冲人",
+   "new": "冲入"
+  },
+  {
+   "id": "k6012",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6013",
+   "field": "answer",
+   "old": "类人",
+   "new": "类入"
+  },
+  {
+   "id": "k6013",
+   "field": "answer",
+   "old": "的人",
+   "new": "的入"
+  },
+  {
+   "id": "k6014",
+   "field": "answer",
+   "old": "雪人",
+   "new": "雪入"
+  },
+  {
+   "id": "k6014",
+   "field": "answer",
+   "old": "的人",
+   "new": "的入"
+  },
+  {
+   "id": "k6025",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6028",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6029",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6030",
+   "field": "answer",
+   "old": "隙人",
+   "new": "隙入"
+  },
+  {
+   "id": "k6030",
+   "field": "answer",
+   "old": "中人",
+   "new": "中入"
+  },
+  {
+   "id": "k6033",
+   "field": "answer",
+   "old": "，雨雪人",
+   "new": "，雨雪入"
+  },
+  {
+   "id": "k6033",
+   "field": "answer",
+   "old": "，人",
+   "new": "，入"
+  },
+  {
+   "id": "k6033",
+   "field": "answer",
+   "old": "或雨雪人",
+   "new": "或雨雪入"
+  },
+  {
+   "id": "k6035",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6048",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6065",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6078",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6080",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6081",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6082",
+   "field": "answer",
+   "old": "）沉人",
+   "new": "）沉入"
+  },
+  {
+   "id": "k6082",
+   "field": "answer",
+   "old": "头沉人",
+   "new": "头沉入"
+  },
+  {
+   "id": "k6453",
+   "field": "answer",
+   "old": "填人",
+   "new": "填入"
+  },
+  {
+   "id": "k6892",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6900",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k6907",
+   "field": "answer",
+   "old": "融人",
+   "new": "融入"
+  },
+  {
+   "id": "k9363",
+   "field": "answer",
+   "old": "塞人",
+   "new": "塞入"
+  },
+  {
+   "id": "k9392",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  },
+  {
+   "id": "k9392",
+   "field": "answer",
+   "old": "选信息资料记人",
+   "new": "选信息资料记入"
+  },
+  {
+   "id": "k9392",
+   "field": "answer",
+   "old": "性信息资料记人",
+   "new": "性信息资料记入"
+  },
+  {
+   "id": "k9432",
+   "field": "answer",
+   "old": "深人",
+   "new": "深入"
+  },
+  {
+   "id": "k9458",
+   "field": "answer",
+   "old": "人肺",
+   "new": "入肺"
+  },
+  {
+   "id": "k9458",
+   "field": "answer",
+   "old": "人后",
+   "new": "入后"
+  },
+  {
+   "id": "k9468",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9479",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9500",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9515",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9526",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9558",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9854",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9870",
+   "field": "answer",
+   "old": "个人",
+   "new": "个入"
+  },
+  {
+   "id": "k9873",
+   "field": "answer",
+   "old": "人",
+   "new": "入"
+  },
+  {
+   "id": "k9874",
+   "field": "answer",
+   "old": "穿人",
+   "new": "穿入"
+  }
+ ]
+}

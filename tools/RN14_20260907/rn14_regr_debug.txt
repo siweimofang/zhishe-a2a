@@ -1,0 +1,33 @@
+REGR-DRIFT {'人人': (66, 53)}
+  k5242 answer T='人人' pre=1 post=0 gid=002277 old='深人' new='深入' pos=11650
+  k5242 answer T='人人' pre=1 post=0 gid=002326 old='注人' new='注入' pos=15300
+  k5242 answer T='人人' pre=1 post=0 gid=003058 old='侵人' new='侵入' pos=21447
+  k5242 answer T='人人' pre=1 post=0 gid=004347 old='折人' new='折入' pos=15201
+    hit@11651 pre='环保材料”等理念的深人人心，越来越多的业主在' post='环保材料”等理念的深入人心，越来越多的业主在'
+  k5249 answer T='人人' pre=1 post=0 gid=002278 old='深人' new='深入' pos=96
+    hit@97 pre='环保材料”等理念的深人人心，越来越多的业主在' post='环保材料”等理念的深入人心，越来越多的业主在'
+  k12441 answer T='人人' pre=2 post=0 gid=003363 old='射人' new='射入' pos=696
+  k12441 answer T='人人' pre=2 post=0 gid=003364 old='射人' new='射入' pos=727
+    hit@697 pre='光源发出的光线直接射人人眼\n反射眩光\n具有光' post='光源发出的光线直接射入人眼\n反射眩光\n具有光'
+    hit@728 pre='面等物面上反射的光射人人眼\n3-200\n光源' post='面等物面上反射的光射入人眼\n3-200\n光源'
+  k15254 answer T='人人' pre=1 post=0 gid=004385 old='人眠' new='入眠' pos=56
+    hit@55 pre='得鲜活，但是却不易让人人眠，相对而言淡雅的中' post='得鲜活，但是却不易让人入眠，相对而言淡雅的中'
+  k17319 answer T='人人' pre=1 post=0 gid=003665 old='浸人' new='浸入' pos=435
+    hit@436 pre='\n深部感染，还可能浸人人的皮肤、呼吸道、外耳' post='\n深部感染，还可能浸入人的皮肤、呼吸道、外耳'
+  k17481 answer T='人人' pre=1 post=0 gid=002568 old='吸人' new='吸入' pos=251
+  k17481 answer T='人人' pre=1 post=0 gid=003069 old='侵人' new='侵入' pos=46
+    hit@47 pre='气体形式通过呼吸道侵人人体，致使人体中毒。苯' post='气体形式通过呼吸道侵入人体，致使人体中毒。苯'
+  k19871 answer T='人人' pre=1 post=0 gid=002303 old='深人' new='深入' pos=493
+    hit@494 pre='因为它传统、普及、深人人心。确定了地板种类以' post='因为它传统、普及、深入人心。确定了地板种类以'
+  k19948 answer T='人人' pre=1 post=0 gid=002304 old='深人' new='深入' pos=39
+    hit@40 pre='统、最为普及和最为深人人心的地板。但在种类繁' post='统、最为普及和最为深入人心的地板。但在种类繁'
+  k22942 answer T='人人' pre=1 post=0 gid=003726 old='人场' new='入场' pos=254
+  k22942 answer T='人人' pre=1 post=0 gid=003727 old='人场' new='入场' pos=276
+    hit@253 pre='需要而确立。\n①新工人人场前应完成三级安全教' post='需要而确立。\n①新工人入场前应完成三级安全教'
+  k23126 answer T='人人' pre=1 post=0 gid=003729 old='人场' new='入场' pos=6
+  k23126 answer T='人人' pre=1 post=0 gid=003730 old='人场' new='入场' pos=28
+    hit@5 pre='（1）新工人人场前应完成三级安全教' post='（1）新工人入场前应完成三级安全教'
+  k23139 answer T='人人' pre=1 post=0 gid=003731 old='人场' new='入场' pos=563
+    hit@562 pre='学会安\n全知识；新工人人场三级教育、事故典型' post='学会安\n全知识；新工人入场三级教育、事故典型'
+  k23522 answer T='人人' pre=1 post=0 gid=002317 old='深人' new='深入' pos=634
+    hit@635 pre='\n统、最普及、也最深人人心的木地板。它的天然' post='\n统、最普及、也最深入人心的木地板。它的天然'

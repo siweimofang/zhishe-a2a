@@ -1,0 +1,12 @@
+[0] fixlist=rn_patch_k3655_fixlist.json ops=1 expect={'numstat': '以实态diff为准', 'entries': 1, 'ops': 1, 'points': 1, 'post_census': {'全库锤人': 0, 'k3655.锤入': 1, 'k3655.锤入油灰': 1}}
+[0] pre盘 sha1=1b748baeb7311a3569913d6371e8ee0bb1b34646 size=39248524
+[0] entries=29788 (参考值29788)
+[1] 重dump字节全等(LF→CRLF归一): OK
+[2] 防重放: 全op old count==1 [1] → 未执行过, 正常执行
+[2] op0 k3655.answer old整串count=1 确认
+[3] BAK=knowledge_backup_20260907_preK3655.json (39248524B)
+[4] touched=['k3655'] (1条目)
+[5] post校验: entries=29788 未触碰29787条逐条全等 | op旧值除/新值在 → 全绿
+[6] apply落盘: post sha1=e5ec7ac07c8c723bc081254575c8e0d6168f9aa7 size=39248524
+[7] ground1: HEAD blob(d8fb138b)→CRLF == pre盘字节 OK
+[8] ground2: BAK+fixlist序替重放 == post盘字节 OK

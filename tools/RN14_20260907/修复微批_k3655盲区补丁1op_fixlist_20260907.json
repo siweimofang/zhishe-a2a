@@ -1,0 +1,33 @@
+{
+ "meta": {
+  "batch": "RN14盲区补丁 k3655 锤人→锤入 (9片眼筛漏筛位, 判定线定谳, 用户拍板)",
+  "notice": "_k3655_patch_notice.txt md5=613a2bbe4c6a11c3d2f9e1248a948b5a",
+  "pre_state": {
+   "HEAD": "614a5c1a56dae77fd032a332a5b2f20f5daee261",
+   "blob": "40afa17a258db6009594ae7e88a9a4c1cf664d4f",
+   "sha256": "5eb9be1070192d4a33a3f6205a7be11036fc2c3753a2625e6ea41319467794bd",
+   "bytes": 39248524,
+   "entries": 29788
+  },
+  "craft": "1op长窗锚锤人油灰(唯一)自证; 三态判定照旧; 全库census锤人=1(k3655.answer)→修后0"
+ },
+ "expect": {
+  "numstat": "以实态diff为准",
+  "entries": 1,
+  "ops": 1,
+  "points": 1,
+  "post_census": {
+   "全库锤人": 0,
+   "k3655.锤入": 1,
+   "k3655.锤入油灰": 1
+  }
+ },
+ "fixlist": [
+  {
+   "id": "k3655",
+   "field": "answer",
+   "old": "锤人油灰",
+   "new": "锤入油灰"
+  }
+ ]
+}

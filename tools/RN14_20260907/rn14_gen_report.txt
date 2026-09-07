@@ -1,0 +1,16 @@
+0 pre门 OK entries=29788 bytes=39248524 HEAD=2db593aaa blob=8858ac86 sha1=1b1d88f44e
+1 resolve: {'BLOCKED': 9, 'EXEC': 1437, 'SURFACE': 8}
+2a dup拆分: [(2, '000517', 'k16483', 'answer', '装人', [(3, '001240')])]
+2c surgical s2 000713 k18317.answer 总人口→总入口 @199
+2c surgical s3 000929 k4185.answer 插人→插入 @295
+2c surgical s6 002799 k12559.answer 压人→压入 @558
+2 surgical后: {'BLOCKED': 9, 'EXEC': 1444, 'SKIP_DUP': 1}
+3 位点=1446 对账 {('人', '入'): 1444, ('理', '埋'): 1, ('情', '惰'): 1}
+4 聚类: fields=1057 multi-pos簇=2
+5 ops=1444 fields=1057 entries=1051 points=1446
+5b 顺序仿真+位点重derive OK (1057 fields)
+5d 回归门 OK {'预理': 4, '理件': 0, '理设': 61, '重理': 0, '设计人员': 94, '施工人员': 644, '人员': 3020, '人们': 2069, '绊倒人': 1, '人造石': 530, '人人': 66}
+5e spots OK (28)
+6 TXT合法同现flags=208 ["k10050.answer '误人口中' occ==位 但TXT s9:004357(非病灶)ctx含该token", "k10113.answer '打人' occ==位 但TXT s7:003033(非病灶)ctx含该token", "k10433.answer '塞人' occ==位 但TXT s8:003788(非病灶)ctx含该token", "k10520.answer '清理人库' occ==位 但TXT s8:003898(非病灶)ctx含该token", "k10531.answer '出人口' occ==位 但TXT s4:001493(非病灶)ctx含该token", "k10647.answer '钉人' occ==位 但TXT s7:003347(非病灶)ctx含该token", "k10713.answer '流人' occ==位 但TXT s8:003761(非病灶)ctx含该token", "k10716.answer '打人' occ==位 但TXT s7:003461(非病灶)ctx含该token", "k10764.answer '倒人' occ==位 但TXT s7:003209(非病灶)ctx含该token", "k10813.answer '打人' occ==位 但TXT s7:003042(非病灶)ctx含该token"]
+7 fixlist双路落盘字节全等 (153116 B): D:\projects\非默认outputs\修复微批_人入族1444op_fixlist_20260907.json
+RN14_FIXLIST_GREEN

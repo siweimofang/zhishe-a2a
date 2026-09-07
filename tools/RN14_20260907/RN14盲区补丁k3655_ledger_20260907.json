@@ -1,0 +1,21 @@
+{
+ "batch": "RN14盲区补丁k3655",
+ "date": "2026-09-07",
+ "records": [
+  {
+   "gid": "PATCH-k3655-01",
+   "id": "k3655",
+   "fld": "answer",
+   "op": "锤人→锤入",
+   "window": "锤人油灰→锤入油灰",
+   "evidence": "判定线22:4x全库census唯一; 钉入=1同条目互证; OCR人→入高置信(钉子锤入油灰内)",
+   "status": "EXEC",
+   "pre_census_全库锤人": 1
+  }
+ ],
+ "cumulative": {
+  "RN14主批": 1454,
+  "本补丁": 1,
+  "累计": 1455
+ }
+}

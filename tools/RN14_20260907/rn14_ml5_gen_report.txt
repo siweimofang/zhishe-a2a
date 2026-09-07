@@ -1,0 +1,6 @@
+0 pre基线 OK: HEAD=f47bf4c blob=9d58facc sha256=30c7c120d738c363 bytes=39248524 entries=29788 盘净
+1 5位锚全唯一(census基线 预理=4含k4224疑点/理设=61含59合法子串) OK
+2 仿真 OK: post全库 预理=1(k4224疑点) 理设=59(全合法子串)
+3 fixlist双路落盘字节全等 (1853B): D:\projects\非默认outputs\修复微批_埋理补漏5op_fixlist_20260907.json
+4 ledger留档 OK
+ML5_GEN_GREEN

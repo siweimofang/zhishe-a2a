@@ -1,0 +1,5 @@
+1 post格式保真 OK: bytes=39248524 sha256=1fb31fae6b18851a entries=29788
+2 BAK sha256 == k3655 post盘(本批pre) OK
+3 post终验 OK: 5位旧除新在; 全库预理=1(k4224疑点) 理设=59; 合法子串(水处理设备/合理设计/监理设施)不动
+4 未触碰29783条逐条全等 OK; 前批成果抽查(RN14/k3655)不回退
+ML5_VERIFY_GREEN

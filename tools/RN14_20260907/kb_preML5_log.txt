@@ -1,0 +1,16 @@
+[0] fixlist=rn_patch_ml5_fixlist.json ops=5 expect={'numstat': '以实态diff为准', 'entries': 5, 'ops': 5, 'points': 5, 'post_census': {'全库预理': 1, '全库理设': 59}}
+[0] pre盘 sha1=e5ec7ac07c8c723bc081254575c8e0d6168f9aa7 size=39248524
+[0] entries=29788 (参考值29788)
+[1] 重dump字节全等(LF→CRLF归一): OK
+[2] 防重放: 全op old count==1 [1, 1, 1, 1, 1] → 未执行过, 正常执行
+[2] op0 k4347.answer old整串count=1 确认
+[2] op1 k12427.answer old整串count=1 确认
+[2] op2 k18474.answer old整串count=1 确认
+[2] op3 k3675.answer old整串count=1 确认
+[2] op4 k17349.answer old整串count=1 确认
+[3] BAK=knowledge_backup_20260907_preML5.json (39248524B)
+[4] touched=['k12427', 'k17349', 'k18474', 'k3675', 'k4347'] (5条目)
+[5] post校验: entries=29788 未触碰29783条逐条全等 | op旧值除/新值在 → 全绿
+[6] apply落盘: post sha1=e8c86af0b70c25b08d5568c61a07e63e4bd42893 size=39248524
+[7] ground1: HEAD blob(667d83b9)→CRLF == pre盘字节 OK
+[8] ground2: BAK+fixlist序替重放 == post盘字节 OK
