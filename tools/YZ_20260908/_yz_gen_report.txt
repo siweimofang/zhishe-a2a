@@ -1,0 +1,71 @@
+[pre] bytes=39247547 sha1=8a46a197 条目=29788
+[pre] 充许=65 不充许=33 允许=2386 不允许=624 充=3866 十=2611 竣工=1015 倒干=12
+[范围闭合] 其他允X伤候选: {'充准': 0, '充诺': 0, '充从': 0, '充服': 0, '所充': 0} (未充=14已定谳合法)
+[定位] 总位=65 B类(不充许)=33 A类(充许)=32
+[形态] 劈词位(充⏎许)=0 连写充许=65 自洽=True
+[post仿真] {'充许(norm)': 0, '不充许(norm)': 0, '允许': 2451, '不允许': 657, '充': 3801, '十': 2611, '竣工': 1015, '倒干': 12}
+[字节账] sim_dump=39247547 pre=39247547 delta=0 (逐op等长应=0)
+[字符映射账] {"充->允": 65}
+
+[meta]
+op k10195.answer pos565-565 n=1 类=A win=29c
+op k10253.answer pos756-756 n=1 类=B win=29c
+op k10284.answer pos449-449 n=1 类=A win=29c
+op k11597.answer pos84-84 n=1 类=B win=29c
+op k11658.question pos16-16 n=1 类=B win=29c
+op k11753.answer pos123-123 n=1 类=A win=29c
+op k12129.answer pos44-80 n=2 类=A win=89c
+op k12129.answer pos134-134 n=1 类=A win=29c
+op k12200.answer pos624-624 n=1 类=B win=29c
+op k12525.answer pos330-330 n=1 类=A win=29c
+op k12580.answer pos338-338 n=1 类=B win=29c
+op k12623.answer pos156-156 n=1 类=B win=29c
+op k13884.answer pos466-466 n=1 类=B win=29c
+op k14198.answer pos207-207 n=1 类=B win=29c
+op k14213.answer pos156-156 n=1 类=A win=29c
+op k14925.answer pos324-324 n=1 类=A win=29c
+op k15124.answer pos323-323 n=1 类=A win=29c
+op k15523.answer pos295-295 n=1 类=A win=29c
+op k16983.answer pos275-275 n=1 类=A win=29c
+op k17013.answer pos342-342 n=1 类=B win=29c
+op k17022.answer pos259-259 n=1 类=A win=29c
+op k17027.answer pos260-260 n=1 类=B win=29c
+op k17121.answer pos741-741 n=1 类=B win=29c
+op k17200.answer pos572-572 n=1 类=A win=29c
+op k18191.answer pos633-633 n=1 类=A win=29c
+op k18208.answer pos402-430 n=2 类=A win=73c
+op k18239.answer pos227-241 n=2 类=A win=45c
+op k18731.answer pos24-24 n=1 类=B win=29c
+op k19306.answer pos24-24 n=1 类=A win=29c
+op k20110.answer pos237-237 n=1 类=A win=29c
+op k20819.answer pos492-492 n=1 类=A win=29c
+op k21232.answer pos484-484 n=1 类=B win=29c
+op k21523.answer pos700-700 n=1 类=B win=29c
+op k21524.answer pos641-641 n=1 类=A win=29c
+op k22719.answer pos182-182 n=1 类=B win=29c
+op k23267.answer pos323-323 n=1 类=B win=29c
+op k23591.answer pos156-156 n=1 类=B win=29c
+op k23870.answer pos366-366 n=1 类=A win=29c
+op k24825.answer pos447-447 n=1 类=A win=29c
+op k24914.question pos26-26 n=1 类=B win=29c
+op k25114.answer pos207-207 n=1 类=B win=29c
+op k28534.answer pos107-107 n=1 类=A win=29c
+op k3999.answer pos931-931 n=1 类=B win=29c
+op k4006.answer pos157-157 n=1 类=A win=29c
+op k4319.answer pos129-129 n=1 类=B win=29c
+op k4538.answer pos495-495 n=1 类=A win=29c
+op k4740.answer pos183-202 n=2 类=B win=56c
+op k4975.answer pos205-205 n=1 类=B win=29c
+op k5018.answer pos399-399 n=1 类=A win=29c
+op k5032.answer pos156-156 n=1 类=B win=29c
+op k5032.answer pos240-240 n=1 类=B win=29c
+op k5208.answer pos876-876 n=1 类=A win=29c
+op k5322.answer pos818-818 n=1 类=B win=29c
+op k5323.answer pos94-94 n=1 类=B win=29c
+op k5694.answer pos352-352 n=1 类=A win=29c
+op k5924.answer pos197-197 n=1 类=A win=29c
+op k9572.answer pos285-285 n=1 类=B win=29c
+op k9728.answer pos116-116 n=1 类=B win=29c
+op k9764.answer pos161-161 n=1 类=B win=29c
+op k9801.answer pos399-399 n=1 类=B win=29c
+op k9875.answer pos589-589 n=1 类=A win=29c
