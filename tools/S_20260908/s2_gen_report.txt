@@ -1,0 +1,4 @@
+0 pre OK: 39247547B 29788条 | 十2611/倒十1/倒干11/竣工1015 | 2op场内+全库双count==1
+1 仿真 OK: 倒十0/倒干12/k12456十一槽还原 | 十2610 | bytes=39247547(等长±0)
+2 fixlist双路落盘字节全等 (926B): D:\projects\非默认outputs\修复微批_S批修正2op_fixlist_20260908.json
+S2_GEN_GREEN

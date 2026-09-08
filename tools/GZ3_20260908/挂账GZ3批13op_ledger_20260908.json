@@ -1,0 +1,134 @@
+{
+ "batch": "挂账GZ3批13op",
+ "date": "2026-09-08",
+ "verdict_basis": "四见证互证+姊妹书clean+用户两轮拍板",
+ "records": [
+  {
+   "gid": "GZ3-01",
+   "id": "k20013",
+   "fld": "answer",
+   "op": "'工程工时'→'工程竣工时'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-02",
+   "id": "k3740",
+   "fld": "answer",
+   "op": "'工程工时'→'工程竣工时'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-03",
+   "id": "k17753",
+   "fld": "answer",
+   "op": "'工程工时'→'工程竣工时'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-04",
+   "id": "k20013",
+   "fld": "answer",
+   "op": "'不充许'→'不允许'",
+   "tag": "eyescreen",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-05",
+   "id": "k22327",
+   "fld": "answer",
+   "op": "'装修\\n现在居室装修'→'现在居室装修'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-06",
+   "id": "k22327",
+   "fld": "answer",
+   "op": "'全吊顶天\\n我做\\n花。'→'全吊顶天\\n花。'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-07",
+   "id": "k22327",
+   "fld": "answer",
+   "op": "'用电锤\\n主\\n在分档处'→'用电锤\\n在分档处'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-08",
+   "id": "k22432",
+   "fld": "answer",
+   "op": "'设备工图'→'设备竣工图'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-09",
+   "id": "k22432",
+   "fld": "answer",
+   "op": "'工程工图'→'工程竣工图'",
+   "tag": "core",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-10",
+   "id": "k22432",
+   "fld": "answer",
+   "op": "'安装、便用和维护保养'→'安装、使用和维护保养'",
+   "tag": "eyescreen",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-11",
+   "id": "k22432",
+   "fld": "answer",
+   "op": "'（-·）竣工总平面图'→'（一）竣工总平面图'",
+   "tag": "eyescreen",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-12",
+   "id": "k22432",
+   "fld": "answer",
+   "op": "'（二.）设施设备'→'（二）设施设备'",
+   "tag": "eyescreen",
+   "status": "EXEC"
+  },
+  {
+   "gid": "GZ3-13",
+   "id": "k22432",
+   "fld": "answer",
+   "op": "'为口后的物业管理'→'为日后的物业管理'",
+   "tag": "eyescreen",
+   "status": "EXEC"
+  }
+ ],
+ "suspended": [
+  {
+   "id": "k4874",
+   "fld": "answer",
+   "lesion": "将在工程工时退还",
+   "reason": "完工/竣工两可, 原稿库仅本书且同为病灶, 无clean见证",
+   "status": "HOLD"
+  },
+  {
+   "family": "不充许(允→充族)",
+   "count": "全库34位",
+   "reason": "族级病灶超出本批眼筛范围, 本批仅修k20013同场1位, 余33位留账报判定线",
+   "status": "HOLD"
+  }
+ ],
+ "closed": {
+  "k22327": "游离主字挂账结案(连我做/装修页眉三散字一并清)",
+  "k20013": "缺竣字挂账结案",
+  "k22432": "缺竣工图x2挂账结案",
+  "k3740": "缺竣字同族扩围结案",
+  "k17753": "缺竣字同族扩围结案"
+ },
+ "witness": "原稿库full_text两书+家居装修技能培训教程同句+物业管理条例第29条+邹泓荣姊妹书P6+原稿库15处同句式"
+}
